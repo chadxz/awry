@@ -4,9 +4,9 @@
   "description": "An ARI websocket and request helper",
   "main": "src/index.js",
   "scripts": {
-    "test": "eslint . && mocha",
-    "test-ci": "eslint . && lcov",
     "lint": "eslint .",
+    "test": "npm run lint && mocha",
+    "test-ci": "npm run lint && npm run lcov",
     "cover": "istanbul cover --report html _mocha",
     "lcov": "istanbul cover _mocha"
   },
