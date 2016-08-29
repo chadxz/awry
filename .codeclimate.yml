@@ -1,4 +1,13 @@
 engines:
   eslint:
     enabled: true
-    channel: eslint-2
+    channel: "eslint-2"
+    checks:
+      import/no-unresolved:
+        enabled: false
+ratings:
+  paths:
+  - "**.js"
+  - "**.jsx"
+exclude_paths:
+- test/
