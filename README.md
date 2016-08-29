@@ -1,6 +1,8 @@
 # awry
 
-[![Build Status][Build Status Image]][Build Link] [![Test Coverage][Test Coverage Image]][Test Coverage Link]
+[![Build Status][Build Status Image]][Build Link]
+[![Code Climate][Code Climate GPA Image]][Code Climate Link]
+[![Test Coverage][Test Coverage Image]][Test Coverage Link]
 
 An [Asterisk REST Interface][] websocket and request helper.
 
@@ -14,3 +16,5 @@ An [Asterisk REST Interface][] websocket and request helper.
 [Build Link]: https://travis-ci.org/chadxz/awry
 [Test Coverage Image]: https://codeclimate.com/github/chadxz/awry/badges/coverage.svg
 [Test Coverage Link]: https://codeclimate.com/github/chadxz/awry/coverage
+[Code Climate GPA Image]: https://codeclimate.com/github/chadxz/awry/badges/gpa.svg
+[Code Climate Link]: https://codeclimate.com/github/chadxz/awry
