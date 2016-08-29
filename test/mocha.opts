@@ -1,0 +1,6 @@
+--timeout 10000
+--reporter spec
+--recursive
+--full-trace
+--require env-test
+--require intelli-espower-loader
