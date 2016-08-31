@@ -33,13 +33,16 @@ const debug = require('debug')('awry:reconnecting-websocket');
  * - 'close' - fired when the websocket disconnects and will not be
  *   reconnected, due to either having exhaused all reconnect attempts or
  *   reconnects being disabled. signature ()
+ *
+ * @extends events.EventEmitter
  */
 class ReconnectingWebSocket extends events.EventEmitter {
   /**
    * Create a websocket connection that can automatically reconnect upon
    * disconnect.
    *
-   * @param {string} params.url
+   * @param {object} params
+   * @param {string} params.url The url to connect to
    * @param {boolean} [params.reconnect=true] Whether to attempt a reconnect
    *  upon being disconnected either by an error or by having the socket close
    * @param {number} [params.maxRetries=10] The maximum number of times to
@@ -57,7 +60,7 @@ class ReconnectingWebSocket extends events.EventEmitter {
     this.reconnect = reconnect;
     this.maxRetries = maxRetries;
 
-    debug('attempting initial connection');
+    debug('attempting initial connection', { url });
     this.connect(err => {
       if (err) {
         this.emit('error', err);
@@ -128,7 +131,7 @@ class ReconnectingWebSocket extends events.EventEmitter {
    * enabled. Otherwise, it only feeds the 'error' that occurred back up
    * the chain and closes the connection.
    *
-   * @api private
+   * @private
    */
   handleError(err) {
     debug('an error occurred.', err);
@@ -157,7 +160,7 @@ class ReconnectingWebSocket extends events.EventEmitter {
    * Websocket 'close' handler that attempts to reconnect if reconnect is
    * enabled. Otherwise, it only feeds the 'close' event back up the chain.
    *
-   * @api private
+   * @private
    */
   handleClose(code, message) {
     debug('connection closed', code, message);
