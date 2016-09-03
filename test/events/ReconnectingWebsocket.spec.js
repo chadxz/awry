@@ -1,7 +1,8 @@
 'use strict';
 const WebSocketServer = require('ws').Server;
-const ReconnectingWebSocket = require('../src/ReconnectingWebSocket');
 const assert = require('power-assert');
+const ReconnectingWebSocket =
+  require('../../src/events/ReconnectingWebSocket');
 
 /**
  * @#)$(@#)($@#$)   CAUTION!   @#)$(!@#%)(!@

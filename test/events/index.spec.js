@@ -3,7 +3,7 @@ const url = require('url');
 const qs = require('querystring');
 const assert = require('power-assert');
 const WebSocketServer = require('ws').Server;
-const Events = require('../src/Events');
+const Events = require('../../src/events');
 
 describe('Events create() returned observable', () => {
 
