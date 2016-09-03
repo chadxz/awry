@@ -106,7 +106,7 @@ class ApplicationsAPI {
    *  deviceState, it is the `deviceName`.
    * @returns {Promise.<Application>} Resolves to the application details
    *  matching the provided application name. Rejects if the application
-   *  does not exist (404 status), the application is not currently to
+   *  does not exist (404 status), the application is not currently
    *  subscribed to one of the provided eventSources (409), or one of the
    *  provided eventSources does not exist (422 status).
    */
@@ -130,9 +130,9 @@ module.exports = ApplicationsAPI;
  * @name Application
  * @typedef Application
  * @type {object}
- * @property {string[]} bridge_ids The ids of bridges that this application is subscribed to.
- * @property {string[]} channel_ids The ids of channels that this application is subscribed to.
- * @property {string[]} device_names The names of devices that this application is subscribed to.
- * @property {string[]} endpoint_ids The endpoints that this application is subscribed to, in the format `{tech}/{resource}` i.e. 'PJSIP/6001'.
+ * @property {Array.<string>} bridge_ids The ids of bridges that this application is subscribed to.
+ * @property {Array.<string>} channel_ids The ids of channels that this application is subscribed to.
+ * @property {Array.<string>} device_names The names of devices that this application is subscribed to.
+ * @property {Array.<string>} endpoint_ids The endpoints that this application is subscribed to, in the format `{tech}/{resource}` i.e. 'PJSIP/6001'.
  * @property {string} name The name of this application.
  */
