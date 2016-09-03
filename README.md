@@ -6,7 +6,30 @@
 
 An [Asterisk REST Interface][] websocket and request helper.
 
-~Under Construction~
+**UNDER CONSTRUCTION**
+
+```js
+const awry = require('awry');
+
+const api = new awry.API({
+  baseUrl: 'http://asterisk.local:8088/ari',
+  username: 'asterisk',
+  password: 'asterisk'
+});
+
+api.applications.list().then(apps => {
+  console.log(apps);
+});
+
+awry.Events.create({
+  app: 'someApp',
+  url: 'http://asterisk.local:8088/ari/events',
+  username: 'asterisk',
+  password: 'asterisk'
+}).subscribe(event => {
+  console.log('event', event);
+});
+```
 
 ### license
 [MIT](LICENSE-MIT)

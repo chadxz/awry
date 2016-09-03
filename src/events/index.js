@@ -12,7 +12,7 @@ module.exports = {
    * from the Asterisk server.
    *
    * @param {object} params
-   * @param {string|Array<string>} params.app The app(s) to receive events for.
+   * @param {string|Array.<string>} params.app The app(s) to receive events for.
    * @param {string} params.url The ARI events url with 'ws' protocol, i.e.
    *  'ws://asterisk.local:8088/ari/events'
    * @param {string} params.username The username to use for the connection

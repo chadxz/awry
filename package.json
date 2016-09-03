@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "debug": "^2.2.0",
+    "request-promise-native": "^1.0.3",
     "retry": "^0.10.0",
     "rxjs": "^5.0.0-beta.11",
     "ws": "^1.1.1"
@@ -37,6 +38,7 @@
     "intelli-espower-loader": "^1.0.1",
     "istanbul": "^0.4.5",
     "mocha": "^3.0.2",
+    "nock": "^8.0.0",
     "power-assert": "^1.4.1"
   }
 }
