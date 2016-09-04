@@ -4,7 +4,8 @@
 [![Code Climate][Code Climate GPA Image]][Code Climate Link]
 [![Test Coverage][Test Coverage Image]][Test Coverage Link]
 
-An [Asterisk REST Interface][] websocket and request helper.
+An [Asterisk REST Interface][] websocket and API client library for node.js
+v6+.
 
 **UNDER CONSTRUCTION**
 
