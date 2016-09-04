@@ -74,10 +74,10 @@ describe('the Applications API', () => {
     });
   });
 
-  describe('the get method', () => {
+  describe('get method', () => {
 
     // TODO: add more tests
-    it('does not explode', () => {
+    it('makes the right request', () => {
       const mock = nock('http://fake.local')
         .get('/ari/applications/foo')
         .reply(200, { foo: 'bar' });
@@ -94,10 +94,10 @@ describe('the Applications API', () => {
     });
   });
 
-  describe('the subscribe method', () => {
+  describe('subscribe method', () => {
 
     // TODO: add more tests
-    it('does not explode', () => {
+    it('makes the right request', () => {
       const mock = nock('http://fake.local')
         .post('/ari/applications/foo/subscription')
         .query({ eventSource: 'device234' })
@@ -118,10 +118,10 @@ describe('the Applications API', () => {
     });
   });
 
-  describe('the unsubscribe method', () => {
+  describe('unsubscribe method', () => {
 
     // TODO: add more tests
-    it('does not explode', () => {
+    it('makes the right request', () => {
       const mock = nock('http://fake.local')
         .delete('/ari/applications/foo/subscription')
         .query({ eventSource: 'device234' })
