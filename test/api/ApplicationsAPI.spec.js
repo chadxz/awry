@@ -1,5 +1,5 @@
 'use strict';
-const ApplicationsAPI = require('../../src/api/Applications');
+const ApplicationsAPI = require('../../src/api/ApplicationsAPI');
 const nock = require('nock');
 
 describe('the Applications API', () => {
