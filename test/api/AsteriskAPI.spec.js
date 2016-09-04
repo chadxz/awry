@@ -250,7 +250,7 @@ describe('the Asterisk API', () => {
     it('makes the right request', () => {
       const mock = nock('http://fake.local')
         .post('/ari/asterisk/logging/my%20log%20channel')
-        .query({ configuration: "i have no idea what i'm doing"})
+        .query({ configuration: "i have no idea what i'm doing" })
         .reply(200, { foo: 'bar' });
 
       const api = new AsteriskAPI({
