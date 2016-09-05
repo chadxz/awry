@@ -69,14 +69,11 @@ describe('the Applications API', () => {
           mock.done();
         });
       });
-
-      // TODO: add more tests
     });
   });
 
   describe('get method', () => {
 
-    // TODO: add more tests
     it('makes the right request', () => {
       const mock = nock('http://fake.local')
         .get('/ari/applications/foo')
@@ -96,7 +93,6 @@ describe('the Applications API', () => {
 
   describe('subscribe method', () => {
 
-    // TODO: add more tests
     it('makes the right request', () => {
       const mock = nock('http://fake.local')
         .post('/ari/applications/foo/subscription')
@@ -120,7 +116,6 @@ describe('the Applications API', () => {
 
   describe('unsubscribe method', () => {
 
-    // TODO: add more tests
     it('makes the right request', () => {
       const mock = nock('http://fake.local')
         .delete('/ari/applications/foo/subscription')

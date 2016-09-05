@@ -14,7 +14,6 @@ describe('the Asterisk API', () => {
 
   describe('getObject method', () => {
 
-    // TODO: add more tests
     it('makes the right request', () => {
       const mock = nock('http://fake.local')
         .get('/ari/asterisk/config/dynamic/fooClass/barType/baz')
@@ -38,7 +37,6 @@ describe('the Asterisk API', () => {
 
   describe('updateObject method', () => {
 
-    // TODO: add more tests
     it('makes the right request', () => {
       const mock = nock('http://fake.local')
         .put('/ari/asterisk/config/dynamic/fooClass/barType/baz', {
@@ -71,7 +69,6 @@ describe('the Asterisk API', () => {
 
   describe('deleteObject method', () => {
 
-    // TODO: add more tests
     it('makes the right request', () => {
       const mock = nock('http://fake.local')
         .delete('/ari/asterisk/config/dynamic/fooClass/barType/baz')
@@ -95,7 +92,6 @@ describe('the Asterisk API', () => {
 
   describe('getInfo method', () => {
 
-    // TODO: add more tests
     it('makes the right request', () => {
       const mock = nock('http://fake.local')
         .get('/ari/asterisk/info')
@@ -118,7 +114,6 @@ describe('the Asterisk API', () => {
 
   describe('listModules method', () => {
 
-    // TODO: add more tests
     it('makes the right request', () => {
       const mock = nock('http://fake.local')
         .get('/ari/asterisk/modules')
@@ -138,7 +133,6 @@ describe('the Asterisk API', () => {
 
   describe('getModule method', () => {
 
-    // TODO: add more tests
     it('makes the right request', () => {
       const mock = nock('http://fake.local')
         .get('/ari/asterisk/modules/myModule')
@@ -160,7 +154,6 @@ describe('the Asterisk API', () => {
 
   describe('loadModule method', () => {
 
-    // TODO: add more tests
     it('makes the right request', () => {
       const mock = nock('http://fake.local')
         .post('/ari/asterisk/modules/my%20Module')
@@ -182,7 +175,6 @@ describe('the Asterisk API', () => {
 
   describe('unloadModule method', () => {
 
-    // TODO: add more tests
     it('makes the right request', () => {
       const mock = nock('http://fake.local')
         .delete('/ari/asterisk/modules/my%20Module')
@@ -204,7 +196,6 @@ describe('the Asterisk API', () => {
 
   describe('reloadModule method', () => {
 
-    // TODO: add more tests
     it('makes the right request', () => {
       const mock = nock('http://fake.local')
         .put('/ari/asterisk/modules/my%20Module')
@@ -226,7 +217,6 @@ describe('the Asterisk API', () => {
 
   describe('listLogChannels method', () => {
 
-    // TODO: add more tests
     it('makes the right request', () => {
       const mock = nock('http://fake.local')
         .get('/ari/asterisk/logging')
@@ -246,7 +236,6 @@ describe('the Asterisk API', () => {
 
   describe('addLog method', () => {
 
-    // TODO: add more tests
     it('makes the right request', () => {
       const mock = nock('http://fake.local')
         .post('/ari/asterisk/logging/my%20log%20channel')
@@ -270,7 +259,6 @@ describe('the Asterisk API', () => {
 
   describe('deleteLog method', () => {
 
-    // TODO: add more tests
     it('makes the right request', () => {
       const mock = nock('http://fake.local')
         .delete('/ari/asterisk/logging/my%20log%20channel')
@@ -292,7 +280,6 @@ describe('the Asterisk API', () => {
 
   describe('rotateLog method', () => {
 
-    // TODO: add more tests
     it('makes the right request', () => {
       const mock = nock('http://fake.local')
         .put('/ari/asterisk/logging/my%20log%20channel/rotate')
@@ -314,7 +301,6 @@ describe('the Asterisk API', () => {
 
   describe('getGlobalVariable method', () => {
 
-    // TODO: add more tests
     it('makes the right request', () => {
       const mock = nock('http://fake.local')
         .get('/ari/asterisk/variable')
@@ -337,7 +323,6 @@ describe('the Asterisk API', () => {
 
   describe('setGlobalVariable method', () => {
 
-    // TODO: add more tests
     it('makes the right request', () => {
       const mock = nock('http://fake.local')
         .post('/ari/asterisk/variable')
