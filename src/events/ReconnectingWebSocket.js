@@ -51,7 +51,7 @@ class ReconnectingWebSocket extends events.EventEmitter {
    *  1:1 to the `ws` WebSocket constructor.
    * @constructor
    */
-  constructor(params) {
+  constructor(params = {}) {
     super();
     const { url, wsOptions, reconnect = true, maxRetries = 10 } = params;
 

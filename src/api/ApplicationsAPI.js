@@ -17,7 +17,7 @@ class ApplicationsAPI {
    *  of the root Asterisk ARI endpoint. i.e. 'http://myserver.local:8088/ari'.
    * @constructor
    */
-  constructor(params) {
+  constructor(params = {}) {
     const { username, password } = params;
     this.baseUrl = params.baseUrl;
     this.request = rp.defaults({
@@ -54,7 +54,7 @@ class ApplicationsAPI {
    *  matching the provided application name. Rejects if the application
    *  does not exist (404 status).
    */
-  get(params) {
+  get(params = {}) {
     const { applicationName } = params;
     const app = encodeURIComponent(applicationName);
 
@@ -81,7 +81,7 @@ class ApplicationsAPI {
    *  does not exist (404 status) or one of the provided eventSources does
    *  not exist (422 status).
    */
-  subscribe(params) {
+  subscribe(params = {}) {
     const { eventSource, applicationName } = params;
     const app = encodeURIComponent(applicationName);
 
@@ -110,7 +110,7 @@ class ApplicationsAPI {
    *  subscribed to one of the provided eventSources (409), or one of the
    *  provided eventSources does not exist (422 status).
    */
-  unsubscribe(params) {
+  unsubscribe(params = {}) {
     const { eventSource, applicationName } = params;
     const app = encodeURIComponent(applicationName);
 

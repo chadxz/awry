@@ -1,5 +1,6 @@
 'use strict';
 const rp = require('request-promise-native');
+
 /**
  * REST API Resource for interacting with Asterisk variables, modules,
  * logging, and configuration.
@@ -17,7 +18,7 @@ class AsteriskAPI {
    *  of the root Asterisk ARI endpoint. i.e. 'http://myserver.local:8088/ari'.
    * @constructor
    */
-  constructor(params) {
+  constructor(params = {}) {
     const { username, password } = params;
     this.baseUrl = params.baseUrl;
     this.request = rp.defaults({
@@ -41,7 +42,7 @@ class AsteriskAPI {
    *  pairs. Rejects if the `configClass`, `objectType`, or `id` do not exist
    *  (404 status)
    */
-  getObject(params) {
+  getObject(params = {}) {
     const configClass = encodeURIComponent(params.configClass);
     const objectType = encodeURIComponent(params.objectType);
     const id = encodeURIComponent(params.id);
@@ -71,7 +72,7 @@ class AsteriskAPI {
    *  potentially also reject due to a permissions issue creating or updating
    *  the specified object (403 status).
    */
-  updateObject(params) {
+  updateObject(params = {}) {
     const { fields } = params;
     const configClass = encodeURIComponent(params.configClass);
     const objectType = encodeURIComponent(params.objectType);
@@ -100,7 +101,7 @@ class AsteriskAPI {
    *  `objectType`, or `id` do not exist (404 status), or if a permissions
    *  issue prevented the deletion (403 status).
    */
-  deleteObject(params) {
+  deleteObject(params = {}) {
     const configClass = encodeURIComponent(params.configClass);
     const objectType = encodeURIComponent(params.objectType);
     const id = encodeURIComponent(params.id);
@@ -123,7 +124,7 @@ class AsteriskAPI {
    * @returns {Promise.<AsteriskInfo>} Resolves with the requested Asterisk
    *  system information.
    */
-  getInfo(params) {
+  getInfo(params = {}) {
     const { only } = params;
 
     return this.request({
@@ -159,7 +160,7 @@ class AsteriskAPI {
    *  the module could not be found in the loaded modules (status 404) or
    *  the module information could not be retrieved for some reason (status 409).
    */
-  getModule(params) {
+  getModule(params = {}) {
     const { moduleName } = params;
     const name = encodeURIComponent(moduleName);
 
@@ -179,7 +180,7 @@ class AsteriskAPI {
    * @returns {Promise} Resolves if the module was successfully loaded.
    *  Rejects if the module could not be loaded for some reason (status 409).
    */
-  loadModule(params) {
+  loadModule(params = {}) {
     const { moduleName } = params;
     const name = encodeURIComponent(moduleName);
 
@@ -200,7 +201,7 @@ class AsteriskAPI {
    *  Rejects if the module could not be found in the loaded modules (status 404)
    *  or the module information could not be unloaded for some reason (status 409).
    */
-  unloadModule(params) {
+  unloadModule(params = {}) {
     const { moduleName } = params;
     const name = encodeURIComponent(moduleName);
 
@@ -221,7 +222,7 @@ class AsteriskAPI {
    *  Rejects if the module could not be found in the loaded modules (status 404)
    *  or the module information could not be reloaded for some reason (status 409).
    */
-  reloadModule(params) {
+  reloadModule(params = {}) {
     const { moduleName } = params;
     const name = encodeURIComponent(moduleName);
 
@@ -258,7 +259,7 @@ class AsteriskAPI {
    *  Rejects if the configuration data is malformed (status 400) or if the
    *  log channel could not be added for some reason {status 409)
    */
-  addLog(params) {
+  addLog(params = {}) {
     const { logChannelName, configuration } = params;
     const name = encodeURIComponent(logChannelName);
 
@@ -279,7 +280,7 @@ class AsteriskAPI {
    * @returns {Promise} Resolves if the log channel was successfully removed.
    *  Rejects if the log channel could not be found (status 404).
    */
-  deleteLog(params) {
+  deleteLog(params = {}) {
     const { logChannelName } = params;
     const name = encodeURIComponent(logChannelName);
 
@@ -299,7 +300,7 @@ class AsteriskAPI {
    * @returns {Promise} Resolves if the log channel was successfully rotated.
    *  Rejects if the log channel could not be found (status 404).
    */
-  rotateLog(params) {
+  rotateLog(params = {}) {
     const { logChannelName } = params;
     const name = encodeURIComponent(logChannelName);
 
@@ -321,7 +322,7 @@ class AsteriskAPI {
    *  of the specified variable. Rejects if the variable name is not properly
    *  specified (status 400).
    */
-  getGlobalVariable(params) {
+  getGlobalVariable(params = {}) {
     const { variable } = params;
 
     return this.request({
@@ -343,7 +344,7 @@ class AsteriskAPI {
    * @returns {Promise} Resolves when the variable has successfully been set.
    *  Rejects if the variable name is not properly set (status 400).
    */
-  setGlobalVariable(params) {
+  setGlobalVariable(params = {}) {
     const { variable, value } = params;
 
     return this.request({
