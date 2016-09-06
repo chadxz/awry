@@ -3,6 +3,7 @@
 [![Build Status][Build Status Image]][Build Link]
 [![Code Climate][Code Climate GPA Image]][Code Climate Link]
 [![Test Coverage][Test Coverage Image]][Test Coverage Link]
+[![Dependencies Status][Dependencies Status Image]][Dependencies Status Link]
 
 An [Asterisk REST Interface][] websocket and API client library for node.js
 v6+.
@@ -42,3 +43,5 @@ awry.Events.create({
 [Test Coverage Link]: https://codeclimate.com/github/chadxz/awry/coverage
 [Code Climate GPA Image]: https://codeclimate.com/github/chadxz/awry/badges/gpa.svg
 [Code Climate Link]: https://codeclimate.com/github/chadxz/awry
+[Dependencies Status Image]: https://david-dm.org/chadxz/awry.svg
+[Dependencies Status Link]: https://david-dm.org/chadxz/awry
