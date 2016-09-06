@@ -2,7 +2,11 @@
 const ApplicationsAPI = require('./ApplicationsAPI');
 const AsteriskAPI = require('./AsteriskAPI');
 const BridgesAPI = require('./BridgesAPI');
+const DeviceStatesAPI = require('./DeviceStatesAPI');
 
+/**
+ * Client for interacting with the Asterisk Rest Interface.
+ */
 class API {
   /**
    * Creates a new awry API instance, providing clients for all available
@@ -18,6 +22,7 @@ class API {
     this.applications = new ApplicationsAPI(params);
     this.asterisk = new AsteriskAPI(params);
     this.bridges = new BridgesAPI(params);
+    this.deviceStates = new DeviceStatesAPI(params);
   }
 }
 

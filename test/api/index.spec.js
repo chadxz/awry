@@ -4,6 +4,7 @@ const assert = require('power-assert');
 const ApplicationsAPI = require('../../src/api/ApplicationsAPI');
 const AsteriskAPI = require('../../src/api/AsteriskAPI');
 const BridgesAPI = require('../../src/api/BridgesAPI');
+const DeviceStatesAPI = require('../../src/api/DeviceStatesAPI');
 
 describe('API constructed instance', () => {
 
@@ -27,5 +28,9 @@ describe('API constructed instance', () => {
 
   it('exposes a bridges API instance', () => {
     assert(api.bridges instanceof BridgesAPI);
+  });
+
+  it('exposes a device states API instance', () => {
+    assert(api.deviceStates instanceof DeviceStatesAPI);
   });
 });
