@@ -5,6 +5,8 @@ const ApplicationsAPI = require('../../src/api/ApplicationsAPI');
 const AsteriskAPI = require('../../src/api/AsteriskAPI');
 const BridgesAPI = require('../../src/api/BridgesAPI');
 const DeviceStatesAPI = require('../../src/api/DeviceStatesAPI');
+const EndpointsAPI = require('../../src/api/EndpointsAPI');
+const EventsAPI = require('../../src/api/EventsAPI');
 
 describe('API constructed instance', () => {
 
@@ -32,5 +34,13 @@ describe('API constructed instance', () => {
 
   it('exposes a device states API instance', () => {
     assert(api.deviceStates instanceof DeviceStatesAPI);
+  });
+
+  it('exposes a endpoints API instance', () => {
+    assert(api.endpoints instanceof EndpointsAPI);
+  });
+
+  it('exposes a events API instance', () => {
+    assert(api.events instanceof EventsAPI);
   });
 });

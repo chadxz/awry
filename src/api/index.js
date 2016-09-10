@@ -3,6 +3,8 @@ const ApplicationsAPI = require('./ApplicationsAPI');
 const AsteriskAPI = require('./AsteriskAPI');
 const BridgesAPI = require('./BridgesAPI');
 const DeviceStatesAPI = require('./DeviceStatesAPI');
+const EndpointsAPI = require('./EndpointsAPI');
+const EventsAPI = require('./EventsAPI');
 
 /**
  * Client for interacting with the Asterisk Rest Interface.
@@ -23,6 +25,8 @@ class API {
     this.asterisk = new AsteriskAPI(params);
     this.bridges = new BridgesAPI(params);
     this.deviceStates = new DeviceStatesAPI(params);
+    this.endpoints = new EndpointsAPI(params);
+    this.events = new EventsAPI(params);
   }
 }
 

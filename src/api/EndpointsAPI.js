@@ -53,8 +53,8 @@ class EndpointsAPI {
    *  identity to send this message from. Valid resources are 'sip', 'pjsip',
    *  and 'xmpp'.
    * @param {string} params.body The body of the message.
-   * @param {object} params.variables An object of key/value pairs that should
-   *  be sent to set variables for the sendMessage request.
+   * @param {object} [params.variables] An object of key/value pairs that
+   *  should be sent to set variables for the sendMessage request.
    * @returns {Promise} Resolves if the message has been successfully sent.
    *  Rejects if invalid params are provided for sending the message (status
    *  400) or the specified destination could not be found (status 404).
@@ -130,8 +130,8 @@ class EndpointsAPI {
    *  identity to send this message from. Valid resources are 'sip', 'pjsip',
    *  and 'xmpp'.
    * @param {string} params.body The body of the message
-   * @param {object} params.variables An object of key/value pairs that should
-   *  be sent to set variables for the sendMessage request.
+   * @param {object} [params.variables] An object of key/value pairs that
+   *  should be sent to set variables for the sendMessage request.
    * @returns {Promise} Resolves when the message is successfully sent. Rejects
    *  when invalid parameters are provided for sending a message (status 400)
    *  or when the specified endpoint is not found (status 404).
