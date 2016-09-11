@@ -314,8 +314,13 @@ describe('Events create() returned observable', () => {
     });
 
     it('calls next on both observables', done => {
-      let observable;
       let received = false;
+      const observable = Events.create({
+        app: 'myApp',
+        url: 'ws://localhost:8088/',
+        username: 'foo',
+        password: 'bar',
+      });
 
       server.once('connection', conn => {
 
@@ -334,12 +339,6 @@ describe('Events create() returned observable', () => {
         conn.send('hidey ho');
       });
 
-      observable = Events.create({
-        app: 'myApp',
-        url: 'ws://localhost:8088/',
-        username: 'foo',
-        password: 'bar',
-      });
 
       subscriptions.push(observable.subscribe(message => {
         assert.equal(message, 'hidey ho');
