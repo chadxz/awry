@@ -7,7 +7,7 @@ const BridgesAPI = require('../../src/api/BridgesAPI');
 const DeviceStatesAPI = require('../../src/api/DeviceStatesAPI');
 const EndpointsAPI = require('../../src/api/EndpointsAPI');
 const EventsAPI = require('../../src/api/EventsAPI');
-
+const MailboxesAPI = require('../../src/api/MailboxesAPI');
 describe('API constructed instance', () => {
 
   let api;
@@ -42,5 +42,9 @@ describe('API constructed instance', () => {
 
   it('exposes a events API instance', () => {
     assert(api.events instanceof EventsAPI);
+  });
+
+  it('exposes a mailboxes API instance', () => {
+    assert(api.mailboxes instanceof MailboxesAPI);
   });
 });
