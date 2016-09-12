@@ -7,6 +7,7 @@ const EndpointsAPI = require('./EndpointsAPI');
 const EventsAPI = require('./EventsAPI');
 const MailboxesAPI = require('./MailboxesAPI');
 const PlaybacksAPI = require('./PlaybacksAPI');
+const RecordingsAPI = require('./RecordingsAPI');
 
 /**
  * Client for interacting with the Asterisk Rest Interface.
@@ -31,6 +32,7 @@ class API {
     this.events = new EventsAPI(params);
     this.mailboxes = new MailboxesAPI(params);
     this.playbacks = new PlaybacksAPI(params);
+    this.recordings = new RecordingsAPI(params);
   }
 }
 

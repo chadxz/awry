@@ -9,6 +9,7 @@ const EndpointsAPI = require('../../src/api/EndpointsAPI');
 const EventsAPI = require('../../src/api/EventsAPI');
 const MailboxesAPI = require('../../src/api/MailboxesAPI');
 const PlaybacksAPI = require('../../src/api/PlaybacksAPI');
+const RecordingsAPI = require('../../src/api/RecordingsAPI');
 
 describe('API constructed instance', () => {
 
@@ -52,5 +53,9 @@ describe('API constructed instance', () => {
 
   it('exposes a playbacks API instance', () => {
     assert(api.playbacks instanceof PlaybacksAPI);
+  });
+
+  it('exposes a recordings API instance', () => {
+    assert(api.recordings instanceof RecordingsAPI);
   });
 });
