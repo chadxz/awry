@@ -33,7 +33,6 @@ class ChannelsAPI {
    *
    * @returns {Promise.<Array.<Channel>>} Resolves with the list of all active
    *  channels in Asterisk.
-   * @returns {Promise}
    */
   list() {
     return this.request({
