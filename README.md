@@ -8,7 +8,11 @@
 An [Asterisk REST Interface][] websocket and API client library for node.js
 v6+.
 
-**UNDER CONSTRUCTION**
+#### installation
+
+`npm install awry`
+
+#### example
 
 ```js
 const awry = require('awry');
@@ -23,13 +27,15 @@ api.applications.list().then(apps => {
   console.log(apps);
 });
 
-awry.Events.create({
+const events = awry.Events.connect({
   app: 'someApp',
   url: 'http://asterisk.local:8088/ari/events',
   username: 'asterisk',
   password: 'asterisk'
-}).subscribe(event => {
-  console.log('event', event);
+});
+
+events.on('message', message => {
+  console.log(message);
 });
 ```
 
