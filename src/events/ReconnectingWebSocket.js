@@ -45,20 +45,25 @@ class ReconnectingWebSocket extends events.EventEmitter {
    * @param {string} params.url The url to connect to
    * @param {boolean} [params.reconnect=true] Whether to attempt a reconnect
    *  upon being disconnected either by an error or by having the socket close
-   * @param {number} [params.maxRetries=10] The maximum number of times to
-   *  retry a connection attempt before giving up and emitting an error
-   * @param {object} [params.wsOptions=undefined] Options to pass through
-   *  1:1 to the `ws` WebSocket constructor.
+   * @param {object} [params.retryOptions={ maxTimeout: 60000 }] Any
+   *  advanced options to pass to the 'node-retry' retry.operation() method.
+   * @param {object} [params.wsOptions={}] Any advanced options to pass
+   *  directly to the 'ws' library constructor.
    * @constructor
    */
   constructor(params = {}) {
     super();
-    const { url, wsOptions, reconnect = true, maxRetries = 10 } = params;
+    const {
+      url,
+      reconnect = true,
+      retryOptions = { maxTimeout: 60000 },
+      wsOptions = {}
+    } = params;
 
     this.url = url;
     this.wsOptions = wsOptions;
+    this.retryOptions = retryOptions;
     this.reconnect = reconnect;
-    this.maxRetries = maxRetries;
 
     debug('attempting initial connection', { url });
     this.connect(err => {
@@ -81,9 +86,7 @@ class ReconnectingWebSocket extends events.EventEmitter {
    *  been exceeded.
    */
   connect(callback) {
-    const operation = retry.operation({
-      retries: this.maxRetries
-    });
+    const operation = retry.operation(this.retryOptions);
 
     operation.attempt(attemptNumber => {
       const numRetries = attemptNumber - 1;

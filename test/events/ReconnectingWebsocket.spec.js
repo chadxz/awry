@@ -235,7 +235,7 @@ describe('ReconnectingWebSocket', () => {
           it('emits an "error" event', done => {
             ws = new ReconnectingWebSocket({
               url: 'ws://localhost:8088',
-              maxRetries: 0
+              retryOptions: { retries: 0 }
             });
 
             ws.on('open', () => {
@@ -252,7 +252,7 @@ describe('ReconnectingWebSocket', () => {
           it('emits a "close" event', done => {
             ws = new ReconnectingWebSocket({
               url: 'ws://localhost:8088',
-              maxRetries: 0
+              retryOptions: { retries: 0 }
             });
 
             ws.on('open', () => {
@@ -293,7 +293,7 @@ describe('ReconnectingWebSocket', () => {
           it('reconnects', done => {
             ws = new ReconnectingWebSocket({
               url: 'ws://localhost:8088',
-              maxRetries: 1
+              retryOptions: { retries: 1 }
             });
 
             ws.on('open', () => {
@@ -411,7 +411,7 @@ describe('ReconnectingWebSocket', () => {
         it('emits an "error" event', done => {
           ws = new ReconnectingWebSocket({
             url: 'ws://localhost:8088',
-            maxRetries: 0
+            retryOptions: { retries: 0 }
           });
 
           server.once('connection', conn => {
@@ -429,7 +429,7 @@ describe('ReconnectingWebSocket', () => {
         it('emits a "close" event', done => {
           ws = new ReconnectingWebSocket({
             url: 'ws://localhost:8088',
-            maxRetries: 0
+            retryOptions: { retries: 0 }
           });
 
           server.once('connection', conn => {
