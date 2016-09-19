@@ -2,7 +2,7 @@
 
 The change notes listed here are extracted from the `CHANGES` and `UPGRADE-#.txt` 
 files from the Asterisk source tree. A copy of the full files can be found 
-[in the asterisk github mirror](https://github.com/asterisk/asterisk).
+[in the Asterisk github mirror](https://github.com/asterisk/asterisk).
 This file is a lens into the ARI changes made to Asterisk since ARI was 
 introduced in Asterisk 12.
 
