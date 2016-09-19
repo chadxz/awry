@@ -3,7 +3,7 @@ const url = require('url');
 const ReconnectingWebSocket = require('./ReconnectingWebSocket');
 
 /**
- * Client for interacting with the Asterisk REST Interface server-sent Events.
+ * Client for interacting with the Asterisk REST Interface server-sent events.
  */
 module.exports = {
   /**
