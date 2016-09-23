@@ -42,7 +42,6 @@ class ApplicationsAPI {
   }
 
   /**
-   *
    * GET /applications/{applicationName}
    *
    * Retrieve a single ARI application's details.
@@ -65,8 +64,13 @@ class ApplicationsAPI {
   }
 
   /**
-   *
    * POST /applications/{applicationName}/subscription
+   *
+   * *Subscribing to all endpoints for a specific endpoint technology,
+   * i.e. `eventSource: 'endpoint:PJSIP'`, was introduced in Asterisk 12.5*
+   *
+   * *Subscribing to all resources in an event source, i.e.
+   * `eventSource: 'channels:'`, was introduced in Asterisk 13.6*
    *
    * @param {object} params
    * @param {string} params.applicationName The name of the application to
@@ -93,7 +97,6 @@ class ApplicationsAPI {
   }
 
   /**
-   *
    * DELETE /applications/{applicationName}/subscription
    *
    * @param {object} params

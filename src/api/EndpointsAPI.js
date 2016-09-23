@@ -45,6 +45,8 @@ class EndpointsAPI {
    *
    * Send a message to some technology URI or endpoint.
    *
+   * *API available since Asterisk 12.5*
+   *
    * @param {object} params
    * @param {string} params.to The endpoint resource or technology specific
    *  URI to send the message to. Valid resources are 'sip', 'pjsip', and
@@ -73,7 +75,7 @@ class EndpointsAPI {
   /**
    * GET /endpoints/{technology}
    *
-   * List available endpoitns for a given endpoint technology.
+   * List available endpoints for a given endpoint technology.
    *
    * @param {object} params
    * @param {string} params.technology The technology of the endpoints (sip,
@@ -120,6 +122,8 @@ class EndpointsAPI {
    * PUT /endpoints/{technology}/{resource}/sendMessage
    *
    * Send a message to a specific endpoint.
+   *
+   * *API available since Asterisk 12.5*
    *
    * @param {object} params
    * @param {string} params.technology The technology of the endpoints (sip,

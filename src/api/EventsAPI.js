@@ -31,6 +31,8 @@ class EventsAPI {
    *
    * Generate a user event.
    *
+   * *API available since Asterisk 12.3*
+   *
    * @param {object} params
    * @param {string} params.eventName The event name to generate.
    * @param {string} params.application The name of the application that will

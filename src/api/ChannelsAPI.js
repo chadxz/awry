@@ -59,7 +59,7 @@ class ChannelsAPI {
    *  answers. If omitted, uses 1. Mutually exclusive with `app`.
    * @param {string} [params.label] The label to dial after the endpoint
    *  answers. Will supersede `params.priority` if both are provided. Mutually
-   *  exclusive with `app`.
+   *  exclusive with `app`. *Param available since Asterisk 13.2*
    * @param {string} [params.app] The application that is subscribed to the
    *  originated channel. When the channel is answered, it will be passed to
    *  this stasis application. Mutually exclusive with `context`, `extension`,
@@ -72,17 +72,19 @@ class ChannelsAPI {
    * @param {number} [params.timeout=30] The timeout in seconds before giving
    *  up dialing, or -1 for no timeout.
    * @param {string} [params.channelId] The unique id to assign the channel
-   *  on creation.
+   *  on creation. *Param available since Asterisk 12.2*
    * @param {string} [params.otherChannelId] The unique id to assign the
    *  second channel when using local channels.
    * @param {string} [params.originator] The unique id of the channel which
-   *  is originating this one.
+   *  is originating this one. *Param available since Asterisk 13.2*
    * @param {string|Array.<string>} [params.formats] The format name
    *  capability list to use if originator is not specified. For example,
    *  ['ulaw', 'slin16']. Format names can be found by executing the
-   *  `core show codecs` command in the Asterisk console.
+   *  `core show codecs` command in the Asterisk console. *Param available
+   *  since Asterisk 13.10*
    * @param {object} [params.variables] An object of key/value pairs that
-   *  should be set on the channel on creation.
+   *  should be set on the channel on creation. *Param available since
+   *  Asterisk 12.1*
    * @returns {Promise.<Channel>} Resolves with the newly created channel.
    *  Rejects when invalid params are passed (status 400).
    */
@@ -156,6 +158,8 @@ class ChannelsAPI {
    * is provided, that application will be automatically subscribed to the
    * originated channel for further events and updates.
    *
+   * *API available since Asterisk 12.2*
+   *
    * @param {object} params
    * @param {string} params.channelId The unique id to assign the channel
    *  on creation.
@@ -168,7 +172,7 @@ class ChannelsAPI {
    *  answers. If omitted, uses 1. Mutually exclusive with `app`.
    * @param {string} [params.label] The label to dial after the endpoint
    *  answers. Will supersede `params.priority` if both are provided. Mutually
-   *  exclusive with `app`.
+   *  exclusive with `app`. *Param available since Asterisk 13.2*
    * @param {string} [params.app] The application that is subscribed to the
    *  originated channel. When the channel is answered, it will be passed to
    *  this stasis application. Mutually exclusive with `context`, `extension`,
@@ -183,11 +187,12 @@ class ChannelsAPI {
    * @param {string} [params.otherChannelId] The unique id to assign the
    *  second channel when using local channels.
    * @param {string} [params.originator] The unique id of the channel which
-   *  is originating this one.
+   *  is originating this one. *Param available since Asterisk 13.2*
    * @param {string|Array.<string>} [params.formats] The format name
    *  capability list to use if originator is not specified. For example,
    *  ['ulaw', 'slin16']. Format names can be found by executing the
-   *  `core show codecs` command in the Asterisk console.
+   *  `core show codecs` command in the Asterisk console. *Param available
+   *  since Asterisk 13.10*
    * @param {object} [params.variables] An object of key/value pairs that
    *  should be set on the channel on creation.
    * @returns {Promise.<Channel>} Resolves with the newly created channel.
@@ -270,7 +275,7 @@ class ChannelsAPI {
    * @param {string} params.extension The extension to continue to.
    * @param {number} params.priority The priority to continue to.
    * @param {string} params.label The label to continue to. Will supersede
-   *  `priority` if both are provided.
+   *  `priority` if both are provided. *Param available since Asterisk 13.2*
    * @returns {Promise} Resolves when the operation is successful. Rejects
    *  when the specified channel cannot be found (status 404) or the specified
    *  channel is not in a stasis application (status 409).
@@ -290,6 +295,8 @@ class ChannelsAPI {
    * POST /channels/{channelId}/redirect
    *
    * Redirect the channel to a different location.
+   *
+   * *API available since Asterisk 13.3*
    *
    * @param {object} params
    * @param {string} params.channelId The id of the channel to redirect.
@@ -606,6 +613,8 @@ class ChannelsAPI {
    * URIs are supported. This operation creates a playback resource that can
    * be used to control the playback of media (pause, rewind, fast forward, etc.)
    *
+   * *'tone:' playback URI added in Asterisk 12.3*
+   *
    * @param {object} params
    * @param {string} params.channelId the id of the channel to play the media
    *  to.
@@ -616,7 +625,7 @@ class ChannelsAPI {
    * @param {number} [params.skipms=3000] The number of milliseconds to
    *  skip for forward/reverse operations. Allowed range: 0+
    * @param {string} [params.playbackId] The identifier of the playback that
-   *  is started.
+   *  is started. *Param available since Asterisk 12.2*
    * @returns {Promise.<Playback>} Resolves with the details of the started
    *  playback.
    */
@@ -646,6 +655,9 @@ class ChannelsAPI {
    * `characters:`, and `tone:` URIs are supported. This operation creates
    * a playback resource that can be used to control the playback of media
    * (pause, rewind, fast forward, etc.)
+   *
+   * *API available since Asterisk 12.2*
+   * *'tone:' playback uri added in Asterisk 12.3*
    *
    * @param {object} params
    * @param {string} params.channelId the id of the channel to play the media
@@ -805,6 +817,7 @@ class ChannelsAPI {
    * @param {string} [params.appArgs] The application arguments to pass to
    *  the stasis application.
    * @param {string} [params.snoopId] The id to assign to the snooping channel.
+   *  *Param available since Asterisk 12.2*
    * @returns {Promise.<Channel>} Resolves with the newly created snoop channel.
    *  Rejects if invalid parameters are passed (status 400) or if the channel
    *  cannot be found (status 404).
@@ -831,6 +844,8 @@ class ChannelsAPI {
    * POST /channels/{channelId}/snoop/{snoopId}
    *
    * Snoop (spy/whisper) on the specified channel.
+   *
+   * *API available since Asterisk 12.2*
    *
    * @param {object} params
    * @param {string} params.channelId The id of the channel to snoop on.
@@ -885,7 +900,7 @@ module.exports = ChannelsAPI;
  * @property {string} dialplan.exten The extension in the dialplan.
  * @property {number} dialplan.priority The priority in the dialplan.
  * @property {string} id The unique identifier of the channel. This is the same as the Uniqueid field in AMI.
- * @property {string} language The default spoken language.
+ * @property {string} language The default spoken language. *Property available since Asterisk 13.2*
  * @property {string} name The name of the channel (i.e. SIP/foo-0000a7e3).
  * @property {string} state
  */

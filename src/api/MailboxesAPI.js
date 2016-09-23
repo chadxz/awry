@@ -3,6 +3,8 @@ const rp = require('request-promise-native');
 
 /**
  * REST API Resource for interacting with Asterisk mailboxes.
+ *
+ * *APIs available since Asterisk 12.1*
  */
 class MailboxesAPI {
 
@@ -31,6 +33,8 @@ class MailboxesAPI {
    *
    * List all mailboxes.
    *
+   * *API available since Asterisk 12.1*
+   *
    * @returns {Promise.<Array.<Mailbox>>} Resolves with all mailboxes in
    *  Asterisk.
    */
@@ -45,6 +49,8 @@ class MailboxesAPI {
    * GET /mailboxes/{mailboxName}
    *
    * Retrieve the current state of a mailbox.
+   *
+   * *API available since Asterisk 12.1*
    *
    * @param {object} params
    * @param {string} params.mailboxName The name of the mailbox to retrieve
@@ -68,6 +74,8 @@ class MailboxesAPI {
    * Change the state of a mailbox. This will implicitly create the mailbox
    * if it does not already exist.
    *
+   * *API available since Asterisk 12.1*
+   *
    * @param {object} params
    * @param {string} params.mailboxName The name of the mailbox to update.
    * @param {number} params.oldMessages The count of old messages in the mailbox.
@@ -89,6 +97,8 @@ class MailboxesAPI {
    * DELETE /mailboxes/{mailboxName}
    *
    * Destroy the specified mailbox.
+   *
+   * *API available since Asterisk 12.1*
    *
    * @param {object} params
    * @param {string} params.mailboxName The name of the mailbox to destroy.

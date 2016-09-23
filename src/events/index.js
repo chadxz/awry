@@ -19,7 +19,8 @@ module.exports = {
    * @param {boolean} [params.subscribeAll=true] Whether or not to subscribe
    *  to all system events. When set to false, explicit subscription
    *  requests must be made to the ARI events endpoint to receive events for
-   *  individual event sources on a given application.
+   *  individual event sources on a given application. *Param available since
+   *  Asterisk 13.6*
    * @param {boolean} [params.reconnect=true] Whether to reconnect to the
    *  ARI events endpoint upon unsolicited disconnect.
    * @param {object} [params.retryOptions={ maxTimeout: 60000 }] Any

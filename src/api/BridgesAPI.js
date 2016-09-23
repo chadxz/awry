@@ -54,9 +54,10 @@ class BridgesAPI {
    *  participants. Possible attributes are 'mixing', 'holding', 'dtmf_events',
    *  and 'proxy_media'. 'dtmf_events' and 'proxy_media' are only valid when
    *  also supplied with 'mixing'. 'holding' and 'mixing' are mutually
-   *  exclusive.
+   *  exclusive. *Allows multiple values since Asterisk 12.2*
    * @param {string} params.name A name to give to the bridge being created.
    * @param {string} params.bridgeId The unique identifier for the bridge.
+   *  *Param available since Asterisk 12.2*
    * @returns {Promise.<Bridge>} Resolves to the newly created bridge.
    */
   create(params = {}) {
@@ -78,6 +79,8 @@ class BridgesAPI {
    *
    * Create a new bridge or update an existing one. This bridge persists
    * until it has been shut down, or Asterisk has been shut down.
+   *
+   * *API available since Asterisk 12.2*
    *
    * @param {object} params
    * @param {string|Array.<string>} params.type The attributes to set on the
@@ -262,12 +265,14 @@ class BridgesAPI {
    * resource that can be used to control the playback of media (pause,
    * rewind, fast-forward, etc.)
    *
+   * *'tone:' playback uri added in Asterisk 12.3*
+   *
    * @param {object} params
    * @param {string} params.bridgeId The identifier of the bridge to play media
    *  into.
    * @param {string} params.media The media's URI to play.
    * @param {string} params.playbackId The playback identifier to attach to
-   *  the Playback instance.
+   *  the Playback instance. *Param available since Asterisk 12.2*
    * @param {string} [params.lang] For sounds, the language of the sound to play.
    * @param {number} [params.offsetms=0] The number of milliseconds to skip from
    *  the beginning of the media before starting playback. Allowed range: 0+
@@ -304,6 +309,9 @@ class BridgesAPI {
    * 'number:', 'digits:', 'characters:', and 'tone:'. This operation creates
    * a playback resource that can be used to control the playback of media
    * (pause, rewind, fast-forward, etc.)
+   *
+   * *API available since Asterisk 12.2*
+   * *'tone:' playback uri added in Asterisk 12.3*
    *
    * @param {object} params
    * @param {string} params.bridgeId The identifier of the bridge to play media
@@ -406,10 +414,10 @@ module.exports = BridgesAPI;
  * @property {string} bridge_class The bridging class.
  * @property {string} bridge_type The type of bridge technology.
  * @property {Array.<string>} channels The Ids of channels participating in this bridge.
- * @property {string} creator The entity that created the bridge.
  * @property {string} id The unique identifier for this bridge.
- * @property {string} name The name the creator gave to this bridge.
  * @property {string} technology The name of the current bridging technology.
+ * @property {string} name The name the creator gave to this bridge. *Property available since Asterisk 12.1*
+ * @property {string} creator The entity that created the bridge. *Property available since Asterisk 12.1*
  */
 
 /**
@@ -427,11 +435,11 @@ module.exports = BridgesAPI;
  * @typedef LiveRecording
  * @description A recording that is in progress.
  * @property {string} [cause] The cause for the recording failure if it failed.
- * @property {number} [duration] The duration in seconds of the recording.
  * @property {string} format The recording format (wav, gsm, etc.)
  * @property {string} name The base name for the recording.
- * @property {number} [silence_duration] The duration of silence, in seconds, detected in the recording. This is only available if the recording was initiated with a non-zero maxSilenceSeconds.
  * @property {string} state The state the recording is currently in.
- * @property {number} [talking_duration] The duration of talkin, in seconds, detected in the recording. This is only available if the recording was initiated with a non-zero maxSilenceSeconds.
- * @property {string} target_uri The uri for the channel or bridge being recorded.
+ * @property {string} target_uri The uri for the channel or bridge being recorded. *Property available since Asterisk 12.2*
+ * @property {number} [duration] The duration in seconds of the recording. *Property available since Asterisk 12.5*
+ * @property {number} [talking_duration] The duration of talkin, in seconds, detected in the recording. This is only available if the recording was initiated with a non-zero maxSilenceSeconds. *Property available since Asterisk 12.5*
+ * @property {number} [silence_duration] The duration of silence, in seconds, detected in the recording. This is only available if the recording was initiated with a non-zero maxSilenceSeconds. *Property available since Asterisk 12.5*
  */

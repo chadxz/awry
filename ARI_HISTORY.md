@@ -1,9 +1,9 @@
 # ARI History
 
-The change notes listed here are extracted from the `CHANGES` and `UPGRADE-#.txt` 
-files from the Asterisk source tree. A copy of the full files can be found 
+The change notes listed here are extracted from the `CHANGES` and `UPGRADE-#.txt`
+files from the Asterisk source tree. A copy of the full files can be found
 [in the Asterisk github mirror](https://github.com/asterisk/asterisk).
-This file is a lens into the ARI changes made to Asterisk since ARI was 
+This file is a lens into the ARI changes made to Asterisk since ARI was
 introduced in Asterisk 12.
 
 #### Asterisk 14.0.0
@@ -40,7 +40,7 @@ events were sent on the calling channel's topic. However, starting in Asterisk
 instead sent on the called channel's topic. Note that for the ARI channels
 resource's dial operation, this means that the "Dial" events will always be
 sent on the called channel's topic.
-   
+
 #### Asterisk 13.10.0
 
 * Added 'formats' to channel create/originate to allow setting the allowed
@@ -60,7 +60,7 @@ information beyond the addition/removal of channels from an endpoint.
 of whether the application 'controls' the resource. This is useful for
 scenarios where an ARI application merely wants to observe the system,
 as opposed to control it. There are two ways to accomplish this:
-    1. Via the WebSocket connection URI. A new query paramter, 'subscribeAll',
+    1. Via the WebSocket connection URI. A new query parameter, 'subscribeAll',
     has been added that, when present and True, will subscribe all
     specified applications to all ARI event sources in Asterisk.
     2. Via the applications resource. An ARI client can, at any time, subscribe
@@ -68,6 +68,9 @@ as opposed to control it. There are two ways to accomplish this:
     resource. For example, subscribing to an event source of 'channels:'
     as opposed to 'channels:12345' will subscribe the application to all
     channels.
+
+* A new feature has been added to the Asterisk resource that allows for
+log channels to be manipulated.
 
 #### Asterisk 13.5.0
 
@@ -81,9 +84,6 @@ This resource allows for push configuration of sorcery derived objects
 within Asterisk. The resource supports creation, retrieval, updating, and
 deletion. Sorcery derived objects that are manipulated by this resource
 must have a sorcery wizard that supports the desired operations.
-
-* A new feature has been added that allows for the rotation of log channels
-through HTTP requests.
 
 #### Asterisk 13.4.0
 

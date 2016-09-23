@@ -87,6 +87,8 @@ class RecordingsAPI {
    *
    * Create a copy of the specified stored recording.
    *
+   * *API available since Asterisk 12.5*
+   *
    * @param {object} params
    * @param {string} params.recordingName The case-sensitive name of the
    *  recording to create a copy of.

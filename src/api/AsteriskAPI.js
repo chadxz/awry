@@ -32,6 +32,8 @@ class AsteriskAPI {
    *
    * Retrieve a dynamic configuration object.
    *
+   * *API available since Asterisk 13.5*
+   *
    * @param {object} params
    * @param {string} params.configClass The configuration class containing
    *  dynamic configuration objects.
@@ -57,6 +59,8 @@ class AsteriskAPI {
    * PUT /asterisk/config/dynamic/{configClass}/{objectType}/{id}
    *
    * Create or update a dynamic configuration object.
+   *
+   * *API available since Asterisk 13.5*
    *
    * @param {object} params
    * @param {string} params.configClass The configuration class containing
@@ -89,6 +93,8 @@ class AsteriskAPI {
    * DELETE /asterisk/config/dynamic/{configClass}/{objectType}/{id}
    *
    * Delete a dynamic configuration object
+   *
+   * *API available since Asterisk 13.5*
    *
    * @param {object} params
    * @param {string} params.configClass The configuration class containing
@@ -139,6 +145,8 @@ class AsteriskAPI {
    *
    * List all loaded Asterisk modules.
    *
+   * *API available since Asterisk 13.5*
+   *
    * @returns {Promise.<Array.<Module>>} Resolves with an array of module
    *  details.
    */
@@ -153,6 +161,8 @@ class AsteriskAPI {
    * GET /asterisk/modules/{moduleName}
    *
    * Retrieve details about a specific Asterisk module.
+   *
+   * *API available since Asterisk 13.5*
    *
    * @param {object} params
    * @param {string} params.moduleName Case-sensitive module name.
@@ -175,6 +185,8 @@ class AsteriskAPI {
    *
    * Load an Asterisk module.
    *
+   * *API available since Asterisk 13.5*
+   *
    * @param {object} params
    * @param {string} params.moduleName Case-sensitive module name.
    * @returns {Promise} Resolves if the module was successfully loaded.
@@ -194,6 +206,8 @@ class AsteriskAPI {
    * DELETE /asterisk/modules/{moduleName}
    *
    * Unload an Asterisk module.
+   *
+   * *API available since Asterisk 13.5*
    *
    * @param {object} params
    * @param {string} params.moduleName Case-sensitive module name.
@@ -216,6 +230,8 @@ class AsteriskAPI {
    *
    * Reload an Asterisk module.
    *
+   * *API available since Asterisk 13.5*
+   *
    * @param {object} params
    * @param {string} params.moduleName Case-sensitive module name.
    * @returns {Promise} Resolves if the module was successfully reloaded.
@@ -237,6 +253,8 @@ class AsteriskAPI {
    *
    * Retrieve Asterisk log channel information.
    *
+   * *API available since Asterisk 13.6*
+   *
    * @returns {Promise.<Array.<LogChannel>>} Resolves with the list of all
    *  log channel details in Asterisk.
    */
@@ -251,6 +269,8 @@ class AsteriskAPI {
    * POST /asterisk/logging/{logChannelName}
    *
    * Add a log channel.
+   *
+   * *API available since Asterisk 13.6*
    *
    * @param {object} params
    * @param {string} params.logChannelName The log channel to add.
@@ -275,6 +295,8 @@ class AsteriskAPI {
    *
    * Remove a log channel.
    *
+   * *API available since Asterisk 13.6*
+   *
    * @param {object} params
    * @param {string} params.logChannelName The log channel to remove.
    * @returns {Promise} Resolves if the log channel was successfully removed.
@@ -294,6 +316,8 @@ class AsteriskAPI {
    * PUT /asterisk/logging/{logChannelName}/rotate
    *
    * Rotate a log channel.
+   *
+   * *API available since Asterisk 13.6*
    *
    * @param {object} params
    * @param {string} params.logChannelName The log channel to rotate.
