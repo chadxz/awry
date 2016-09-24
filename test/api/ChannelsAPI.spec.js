@@ -74,6 +74,42 @@ describe('the Channels API', () => {
     });
   });
 
+  describe('create method', () => {
+
+    it('makes the right request', () => {
+      const mock = nock('http://fake.local')
+        .post('/ari/channels/create')
+        .query({
+          endpoint: 'pjsip/foobar',
+          app: 'super cool app',
+          appArgs: 'somearg=excellent',
+          channelId: 'someChannelId',
+          otherChannelId: 'someOtherChannelId',
+          originator: 'someOriginator',
+          formats: 'ulaw,slin16',
+        })
+        .reply(200, { foo: 'bar' });
+
+      const api = new ChannelsAPI({
+        baseUrl: 'http://fake.local/ari',
+        username: 'user',
+        password: '1234'
+      });
+
+      return api.create({
+        endpoint: 'pjsip/foobar',
+        app: 'super cool app',
+        appArgs: 'somearg=excellent',
+        channelId: 'someChannelId',
+        otherChannelId: 'someOtherChannelId',
+        originator: 'someOriginator',
+        formats: ['ulaw', 'slin16'],
+      }).then(() => {
+        mock.done();
+      });
+    });
+  });
+
   describe('get method', () => {
 
     it('makes the right request', () => {
@@ -488,7 +524,7 @@ describe('the Channels API', () => {
       const mock = nock('http://fake.local')
         .post('/ari/channels/foo/play')
         .query({
-          media: 'sound:tt-monkeys',
+          media: 'sound:tt-monkeys,sound:helloworld',
           lang: 'en',
           offsetms: 150,
           skipms: 1500,
@@ -504,7 +540,7 @@ describe('the Channels API', () => {
 
       return api.play({
         channelId: 'foo',
-        media: 'sound:tt-monkeys',
+        media: ['sound:tt-monkeys', 'sound:helloworld'],
         lang: 'en',
         offsetms: 150,
         skipms: 1500,
@@ -521,7 +557,7 @@ describe('the Channels API', () => {
       const mock = nock('http://fake.local')
         .post('/ari/channels/foo/play/monkeyAttack')
         .query({
-          media: 'sound:tt-monkeys',
+          media: 'sound:tt-monkeys,sound:helloworld',
           lang: 'en',
           offsetms: 150,
           skipms: 1500
@@ -537,7 +573,7 @@ describe('the Channels API', () => {
       return api.playWithId({
         channelId: 'foo',
         playbackId: 'monkeyAttack',
-        media: 'sound:tt-monkeys',
+        media: ['sound:tt-monkeys', 'sound:helloworld'],
         lang: 'en',
         offsetms: 150,
         skipms: 1500
@@ -693,6 +729,30 @@ describe('the Channels API', () => {
         spy: 'both',
         whisper: 'both',
         appArgs: 'foo=bar'
+      }).then(() => {
+        mock.done();
+      });
+    });
+  });
+
+  describe('dial method', () => {
+
+    it('makes the right request', () => {
+      const mock = nock('http://fake.local')
+        .post('/ari/channels/foo/dial')
+        .query({ caller: 'scooby', timeout: 60 })
+        .reply(200, { foo: 'bar' });
+
+      const api = new ChannelsAPI({
+        baseUrl: 'http://fake.local/ari',
+        username: 'user',
+        password: '1234'
+      });
+
+      return api.dial({
+        channelId: 'foo',
+        caller: 'scooby',
+        timeout: 60
       }).then(() => {
         mock.done();
       });

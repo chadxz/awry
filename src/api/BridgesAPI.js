@@ -270,7 +270,8 @@ class BridgesAPI {
    * @param {object} params
    * @param {string} params.bridgeId The identifier of the bridge to play media
    *  into.
-   * @param {string} params.media The media's URI to play.
+   * @param {string|Array.<string>} params.media The media's URI to play. *Allows
+   *  multiple media to be passed since Asterisk 14.0*
    * @param {string} params.playbackId The playback identifier to attach to
    *  the Playback instance. *Param available since Asterisk 12.2*
    * @param {string} [params.lang] For sounds, the language of the sound to play.
@@ -292,12 +293,19 @@ class BridgesAPI {
       offsetms = 0,
       skipms = 3000
     } = params;
+
     const id = encodeURIComponent(bridgeId);
 
     return this.request({
       method: 'POST',
       uri: `${this.baseUrl}/bridges/${id}/play`,
-      qs: { media, lang, offsetms, skipms, playbackId }
+      qs: {
+        media: [].concat(media).join(','),
+        lang,
+        offsetms,
+        skipms,
+        playbackId
+      }
     });
   }
 
@@ -316,7 +324,8 @@ class BridgesAPI {
    * @param {object} params
    * @param {string} params.bridgeId The identifier of the bridge to play media
    *  into.
-   * @param {string} params.media The media's URI to play.
+   * @param {string|Array.<string>} params.media The media's URI to play.
+   *  *Allows multiple media to be passed since Asterisk 14.0*
    * @param {string} params.playbackId The playback identifier to attach to
    *  the Playback instance.
    * @param {string} [params.lang] For sounds, the language of the sound to play.
@@ -344,7 +353,12 @@ class BridgesAPI {
     return this.request({
       method: 'POST',
       uri: `${this.baseUrl}/bridges/${id}/play/${playId}`,
-      qs: { media, lang, offsetms, skipms }
+      qs: {
+        media: [].concat(media).join(','),
+        lang,
+        offsetms,
+        skipms
+      }
     });
   }
 
@@ -428,6 +442,7 @@ module.exports = BridgesAPI;
  * @property {string} media_uri The uri for the media to play back.
  * @property {string} state The current state of the playback operation.
  * @property {string} target_uri The uri for the channel or bridge to play the media on.
+ * @property {string} next_media_uri The next media URI in the list to be played back to the resource. *Property available since Asterisk 14.0*
  */
 
 /**

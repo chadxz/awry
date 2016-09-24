@@ -83,6 +83,29 @@ class RecordingsAPI {
   }
 
   /**
+   * GET /recordings/stored/{recordingName}/file
+   *
+   * Retrieve the file associated with the stored recording.
+   *
+   * *API available since Asterisk 14.0*
+   *
+   * @param {object} params
+   * @param {string} params.recordingName
+   * @returns {Promise.<Buffer>} Resolves with the content of the stored
+   *  recording. Rejects when the recording file could not be opened
+   *  (status 403) or when the recording cannot be found (status 404).
+   */
+  getStoredFile(params) {
+    const { recordingName } = params;
+    const name = encodeURIComponent(recordingName);
+
+    return this.request({
+      method: 'GET',
+      uri: `${this.baseUrl}/recordings/stored/${name}/file`
+    });
+  }
+
+  /**
    * POST /recordings/stored/{recordingName}/copy
    *
    * Create a copy of the specified stored recording.

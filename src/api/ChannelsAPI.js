@@ -106,7 +106,6 @@ class ChannelsAPI {
       variables
     } = params;
 
-
     return this.request({
       method: 'POST',
       uri: `${this.baseUrl}/channels`,
@@ -126,6 +125,59 @@ class ChannelsAPI {
         formats: [].concat(formats).join(',')
       },
       body: { variables }
+    });
+  }
+
+  /**
+   * POST /channels/create
+   *
+   * Create a channel and place it into a stasis application. This is similiar
+   * to originate except the created channel is not dialed. This allows for an
+   * application writer to create a channel and perform manipulations to it
+   * prior to performing dial on the channel.
+   *
+   * *API available since Asterisk 14.0*
+   *
+   * @param {object} params
+   * @param {string} params.endpoint The endpoint for channel communication.
+   * @param {string} params.app The stasis application to place the channel into.
+   * @param {string} [params.appArgs] The application arguments to pass to the
+   *  stasis application.
+   * @param {string} [params.channelId] The unique id to assign the channel on
+   *  creation.
+   * @param {string} [params.otherChannelId] The unique id to assign the second
+   *  channel when using local channels.
+   * @param {string} [params.originator] The unique ID of the calling channel.
+   * @param {string|Array.<string>} [params.formats] The format name
+   *  capability list to use if originator is not specified. For example,
+   *  ['ulaw', 'slin16']. Format names can be found by executing the
+   *  `core show codecs` command in the Asterisk console.
+   * @returns {Promise.<Channel>} Resolves with the newly created channel.
+   *  Rejects when invalid params are passed (status 400).
+   */
+  create(params) {
+    const {
+      endpoint,
+      app,
+      appArgs,
+      channelId,
+      otherChannelId,
+      originator,
+      formats
+    } = params;
+
+    return this.request({
+      method: 'POST',
+      uri: `${this.baseUrl}/channels/create`,
+      qs: {
+        endpoint,
+        app,
+        appArgs,
+        channelId,
+        otherChannelId,
+        originator,
+        formats: [].concat(formats).join(',')
+      }
     });
   }
 
@@ -618,7 +670,8 @@ class ChannelsAPI {
    * @param {object} params
    * @param {string} params.channelId the id of the channel to play the media
    *  to.
-   * @param {string} params.media The media's URI to play.
+   * @param {string|Array.<string>} params.media The media's URI to play.
+   *  *Allows multiple media to be passed since Asterisk 14.0*
    * @param {string} [params.lang] For sounds, the language for the sound.
    * @param {number} [params.offsetms=0] The number of milliseconds to skip
    *  before playing the media URI. Allowed range: 0+
@@ -643,7 +696,13 @@ class ChannelsAPI {
     return this.request({
       method: 'POST',
       uri: `${this.baseUrl}/channels/${id}/play`,
-      qs: { media, lang, offsetms, skipms, playbackId }
+      qs: {
+        media: [].concat(media).join(','),
+        lang,
+        offsetms,
+        skipms,
+        playbackId
+      }
     });
   }
 
@@ -664,7 +723,8 @@ class ChannelsAPI {
    *  to.
    * @param {string} params.playbackId The identifier of the playback that
    *  is started.
-   * @param {string} params.media The media's URI to play.
+   * @param {string|Array.<string>} params.media The media's URI to play.
+   *  *Allows multiple media to be passed since Asterisk 14.0*
    * @param {string} [params.lang] For sounds, the language for the sound.
    * @param {number} [params.offsetms] The number of milliseconds to skip
    *  before playing the media URI. Allowed range: 0+
@@ -688,7 +748,12 @@ class ChannelsAPI {
     return this.request({
       method: 'POST',
       uri: `${this.baseUrl}/channels/${id}/play/${playId}`,
-      qs: { media, lang, offsetms, skipms }
+      qs: {
+        media: [].concat(media).join(','),
+        lang,
+        offsetms,
+        skipms
+      }
     });
   }
 
@@ -878,6 +943,32 @@ class ChannelsAPI {
       method: 'POST',
       uri: `${this.baseUrl}/channels/${id}/snoop/${sid}`,
       qs: { app, spy, whisper, appArgs }
+    });
+  }
+
+  /**
+   * POST /channels/{channelId}/dial
+   *
+   * Dial a created channel.
+   *
+   * *API available since Asterisk 14.0*
+   *
+   * @param {object} params
+   * @param {string} params.channelId The channel's id.
+   * @param {string} [params.caller] The channelId of the caller.
+   * @param {number} [params.timeout] The dial timeout. Allowed range: 0+
+   * @returns {Promise} Resolves when the channel is successfully dialed.
+   *  Rejects when the channel cannot be found (status 404) or the channel
+   *  cannot be dialed (status 409).
+   */
+  dial(params) {
+    const { channelId, caller, timeout } = params;
+    const id = encodeURIComponent(channelId);
+
+    return this.request({
+      method: 'POST',
+      uri: `${this.baseUrl}/channels/${id}/dial`,
+      qs: { caller, timeout }
     });
   }
 }

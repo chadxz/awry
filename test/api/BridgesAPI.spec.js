@@ -228,7 +228,7 @@ describe('the Bridges API', () => {
       const mock = nock('http://fake.local')
         .post('/ari/bridges/foo%20bar/play')
         .query({
-          media: 'sound:foo/bar.wav',
+          media: 'sound:foo/bar.wav,sound:foo/baz.wav',
           playbackId: 'myPlaybackId',
           offsetms: 2000,
           skipms: 5000
@@ -243,7 +243,7 @@ describe('the Bridges API', () => {
 
       return api.play({
         bridgeId: 'foo bar',
-        media: 'sound:foo/bar.wav',
+        media: ['sound:foo/bar.wav', 'sound:foo/baz.wav'],
         playbackId: 'myPlaybackId',
         offsetms: 2000,
         skipms: 5000
@@ -259,7 +259,7 @@ describe('the Bridges API', () => {
       const mock = nock('http://fake.local')
         .post('/ari/bridges/foo%20bar/play/my%20playback')
         .query({
-          media: 'sound:foo/bar.wav',
+          media: 'sound:foo/bar.wav,sound:foo/baz.wav',
           offsetms: 2000,
           skipms: 5000
         })
@@ -273,7 +273,7 @@ describe('the Bridges API', () => {
 
       return api.playWithId({
         bridgeId: 'foo bar',
-        media: 'sound:foo/bar.wav',
+        media: ['sound:foo/bar.wav', 'sound:foo/baz.wav'],
         playbackId: 'my playback',
         offsetms: 2000,
         skipms: 5000

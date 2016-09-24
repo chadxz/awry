@@ -73,6 +73,27 @@ describe('the Recordings API', () => {
     });
   });
 
+  describe('getStoredFile method', () => {
+
+    it('makes the right request', () => {
+      const mock = nock('http://fake.local')
+        .get('/ari/recordings/stored/foo/file')
+        .reply(200, { foo: 'bar' });
+
+      const api = new RecordingsAPI({
+        baseUrl: 'http://fake.local/ari',
+        username: 'user',
+        password: '1234'
+      });
+
+      return api.getStoredFile({
+        recordingName: 'foo'
+      }).then(() => {
+        mock.done();
+      });
+    });
+  });
+
   describe('copyStored method', () => {
 
     it('makes the right request', () => {
