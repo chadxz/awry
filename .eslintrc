@@ -19,6 +19,7 @@
     "arrow-parens": [2, "as-needed"],
     "no-underscore-dangle": [0],
     "no-plusplus": [0],
+    "lines-around-directive": [0],
     "import/newline-after-import": [0],
     "import/no-extraneous-dependencies": [2, {
       "devDependencies": true, "optionalDependencies": false
