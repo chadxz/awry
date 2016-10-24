@@ -15,7 +15,6 @@ class ApplicationsAPI {
    * @param {string} params.password The password to send with the request.
    * @param {string} params.baseUrl The base url, without trailing slash,
    *  of the root Asterisk ARI endpoint. i.e. 'http://myserver.local:8088/ari'.
-   * @constructor
    */
   constructor(params = {}) {
     const { username, password } = params;

@@ -33,8 +33,6 @@ const debug = require('debug')('awry:reconnecting-websocket');
  * - 'close' - fired when the websocket disconnects and will not be
  *   reconnected, due to either having exhaused all reconnect attempts or
  *   reconnects being disabled. signature ()
- *
- * @extends events.EventEmitter
  */
 class ReconnectingWebSocket extends events.EventEmitter {
   /**
@@ -49,7 +47,6 @@ class ReconnectingWebSocket extends events.EventEmitter {
    *  advanced options to pass to the 'node-retry' retry.operation() method.
    * @param {object} [params.wsOptions={}] Any advanced options to pass
    *  directly to the 'ws' library constructor.
-   * @constructor
    */
   constructor(params = {}) {
     super();

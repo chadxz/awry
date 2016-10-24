@@ -15,7 +15,6 @@ class PlaybacksAPI {
    * @param {string} params.password The password to send with the request.
    * @param {string} params.baseUrl The base url, without trailing slash,
    *  of the root Asterisk ARI endpoint. i.e. 'http://myserver.local:8088/ari'.
-   * @constructor
    */
   constructor(params) {
     const { username, password } = params;
@@ -101,8 +100,9 @@ module.exports = PlaybacksAPI;
  * @name Playback
  * @typedef Playback
  * @property {string} id The unique identifier for this playback operation.
+ * @property {string} [language] The language requested for playback. Applicable for media types that support multiple languages.
  * @property {string} media_uri The URI for the media to play back.
  * @property {string} state The current state of the playback operation.
  * @property {string} target_uri The URI for the channel or bridge to play the media on.
- * @property {string} [language] The language requested for playback. Applicable for media types that support multiple languages.
+ * @property {string} next_media_uri The next media URI in the list to be played back to the resource. *Property available since Asterisk 14.0*
  */
