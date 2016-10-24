@@ -574,7 +574,7 @@ class ChannelsAPI {
    * @param {object} params
    * @param {string} params.channelId The id of the channel to play music on
    *  hold to.
-   * @param {string} params.mohClass The class of music on hold to play.
+   * @param {string} [params.mohClass] The class of music on hold to play.
    * @returns {Promise} Resolves when the music has successfully started
    *  playing. Rejects when the channel is not found (status 404) or the
    *  channel is not in a stasis application (status 409).
