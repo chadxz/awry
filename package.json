@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "debug": "^2.2.0",
+    "request": "^2.75.0",
     "request-promise-native": "^1.0.3",
     "retry": "^0.10.0",
     "ws": "^1.1.1"
@@ -32,7 +33,7 @@
     "codeclimate-test-reporter": "^0.4.0",
     "env-test": "^1.0.0",
     "eslint": "^3.5.0",
-    "eslint-config-airbnb-base": "^8.0.0",
+    "eslint-config-airbnb-base": "^9.0.0",
     "eslint-plugin-import": "^2.0.0",
     "intelli-espower-loader": "^1.0.1",
     "istanbul": "^0.4.5",
