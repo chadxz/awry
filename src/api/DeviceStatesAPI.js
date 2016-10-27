@@ -90,7 +90,7 @@ class DeviceStatesAPI {
   }
 
   /**
-   * PUT /deviceStates/{deviceName}
+   * DELETE /deviceStates/{deviceName}
    *
    * Delete the state of a device controlled by ARI.
    *

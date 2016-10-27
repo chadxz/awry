@@ -48,14 +48,14 @@ class BridgesAPI {
    * or Asterisk has been shut down.
    *
    * @param {object} params
-   * @param {string|Array.<string>} params.type The attributes to set on the
+   * @param {string|Array.<string>} [params.type] The attributes to set on the
    *  bridge that determine how the bridge mixes media between its
    *  participants. Possible attributes are 'mixing', 'holding', 'dtmf_events',
    *  and 'proxy_media'. 'dtmf_events' and 'proxy_media' are only valid when
    *  also supplied with 'mixing'. 'holding' and 'mixing' are mutually
    *  exclusive. *Allows multiple values since Asterisk 12.2*
-   * @param {string} params.name A name to give to the bridge being created.
-   * @param {string} params.bridgeId The unique identifier for the bridge.
+   * @param {string} [params.name] A name to give to the bridge being created.
+   * @param {string} [params.bridgeId] The unique identifier for the bridge.
    *  *Param available since Asterisk 12.2*
    * @returns {Promise.<Bridge>} Resolves to the newly created bridge.
    */
@@ -82,14 +82,14 @@ class BridgesAPI {
    * *API available since Asterisk 12.2*
    *
    * @param {object} params
-   * @param {string|Array.<string>} params.type The attributes to set on the
+   * @param {string} params.bridgeId The unique identifier for the bridge.
+   * @param {string|Array.<string>} [params.type] The attributes to set on the
    *  bridge that determine how the bridge mixes media between its
    *  participants. Possible attributes are 'mixing', 'holding', 'dtmf_events',
    *  and 'proxy_media'. 'dtmf_events' and 'proxy_media' are only valid when
    *  also supplied with 'mixing'. 'holding' and 'mixing' are mutually
    *  exclusive.
-   * @param {string} params.name A name to give to the bridge being created.
-   * @param {string} params.bridgeId The unique identifier for the bridge.
+   * @param {string} [params.name] A name to give to the bridge being created.
    * @returns {Promise.<Bridge>} Resolves to the newly created bridge.
    */
   createOrUpdate(params = {}) {
@@ -158,7 +158,7 @@ class BridgesAPI {
    *  channels to.
    * @param {string|Array.<string>} params.channel The channel or list of
    *  channels to add to the bridge.
-   * @param {string} params.role The channels' role in the bridge.
+   * @param {string} [params.role] The channels' role in the bridge.
    * @return {Promise} Resolves if the channels are successfully added to
    * the bridge. Rejected if one of the channels is not found (status 400),
    * the bridge could not be found (status 404), the bridge is not in the
@@ -216,7 +216,7 @@ class BridgesAPI {
    * @param {object} params
    * @param {string} params.bridgeId The identifier of the bridge to play
    *  music on hold into.
-   * @param {string} params.mohClass The class of music on hold to play.
+   * @param {string} [params.mohClass] The class of music on hold to play.
    * @returns {Promise} Resolves when the music has successfully started playing
    *  in the bridge. Rejects if the bridge could not be found (status 404)
    *  or the bridge is not in the Stasis application (status 409).
@@ -271,7 +271,7 @@ class BridgesAPI {
    *  into.
    * @param {string|Array.<string>} params.media The media's URI to play. *Allows
    *  multiple media to be passed since Asterisk 14.0*
-   * @param {string} params.playbackId The playback identifier to attach to
+   * @param {string} [params.playbackId] The playback identifier to attach to
    *  the Playback instance. *Param available since Asterisk 12.2*
    * @param {string} [params.lang] For sounds, the language of the sound to play.
    * @param {number} [params.offsetms=0] The number of milliseconds to skip from

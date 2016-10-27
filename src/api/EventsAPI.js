@@ -36,7 +36,7 @@ class EventsAPI {
    * @param {string} params.eventName The event name to generate.
    * @param {string} params.application The name of the application that will
    *  receive this event.
-   * @param {string|Array.<string>} params.source The URI(s) for the event
+   * @param {string|Array.<string>} [params.source] The URI(s) for the event
    *  source. Valid sources are: 'channel:{channelId}', 'bridge:{bridgeId}',
    *  'endpoint:{technology}/{resource}', 'deviceState:{deviceName}'. For example,
    *  'endpoint:pjsip/6001'.

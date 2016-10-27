@@ -297,7 +297,7 @@ class ChannelsAPI {
    *
    * @param {object} params
    * @param {string} params.channelId The id of the channel to hangup.
-   * @param {string} params.reason The reason for hanging up the channel.
+   * @param {string} [params.reason] The reason for hanging up the channel.
    *  Allowed values: 'normal', 'busy', 'congestion', or 'no_answer'.
    * @returns {Promise} Resolves when the hangup is successful. Rejects when
    *  an invalid reason for hangup is provided (status 400) or the specified
@@ -322,10 +322,10 @@ class ChannelsAPI {
    * @param {object} params
    * @param {string} params.channelId The id of the channel to continue in
    *  dialplan.
-   * @param {string} params.context The context to continue to.
-   * @param {string} params.extension The extension to continue to.
-   * @param {number} params.priority The priority to continue to.
-   * @param {string} params.label The label to continue to. Will supersede
+   * @param {string} [params.context] The context to continue to.
+   * @param {string} [params.extension] The extension to continue to.
+   * @param {number} [params.priority] The priority to continue to.
+   * @param {string} [params.label] The label to continue to. Will supersede
    *  `priority` if both are provided. *Param available since Asterisk 13.2*
    * @returns {Promise} Resolves when the operation is successful. Rejects
    *  when the specified channel cannot be found (status 404) or the specified
