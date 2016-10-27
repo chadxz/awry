@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.1.3 - 2016-10-26
+
+Fixed JSDoc to address instances of params being marked required when
+they were actually optional.
+
 ## 0.1.2 - 2016-10-23
 
 Added missing request dependency to package.json.
