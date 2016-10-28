@@ -4,15 +4,6 @@ const assert = require('power-assert');
 const ReconnectingWebSocket =
   require('../../src/events/ReconnectingWebSocket');
 
-/**
- * @#)$(@#)($@#$)   CAUTION!   @#)$(!@#%)(!@
- *
- * These tests are very brittle because there is a lot of timing
- * involved with coordinating events being fired. When modifying
- * or adding new tests, take extra care to ensure that all state
- * has been cleaned up properly. Typically these problems will not
- * manifest in the test you are changing, but in subsequent tests.
- */
 describe('ReconnectingWebSocket', () => {
 
   describe('by default', () => {

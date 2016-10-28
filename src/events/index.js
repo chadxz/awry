@@ -1,6 +1,6 @@
 'use strict';
 const url = require('url');
-const ReconnectingWebSocket = require('./ReconnectingWebSocket');
+const ARIWebSocket = require('./ARIWebSocket');
 
 /**
  * Client for interacting with the Asterisk REST Interface server-sent events.
@@ -51,7 +51,7 @@ module.exports = {
 
     const wsUrl = url.format(parsedUrl);
 
-    return new ReconnectingWebSocket({
+    return new ARIWebSocket({
       url: wsUrl, reconnect, retryOptions, wsOptions
     });
   }

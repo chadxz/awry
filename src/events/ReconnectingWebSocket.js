@@ -2,7 +2,7 @@
 const WebSocket = require('ws');
 const events = require('events');
 const retry = require('retry');
-const debug = require('debug')('awry:reconnecting-websocket');
+const debug = require('debug')('awry:ReconnectingWebSocket');
 
 /**
  * A wrapper over the normal WebSocket object exported from the `ws`
