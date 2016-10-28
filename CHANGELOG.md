@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.2.0 - 2016-10-27
+
+Websocket 'message' events emitted will now parse JSON message bodies
+automatically.
+
 ## 0.1.3 - 2016-10-26
 
 Fixed JSDoc to address instances of params being marked required when
