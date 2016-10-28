@@ -16,7 +16,7 @@ class ARIWebSocket extends ReconnectingWebSocket {
     try {
       args[1] = JSON.parse(args[1]);
     } catch (e) {
-      debug('error parsing data as JSON', args[1]);
+      debug('error parsing data as JSON', `'${args[1]}'`, e);
     }
 
     super.emit(...args);
