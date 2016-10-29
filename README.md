@@ -38,6 +38,19 @@ events.on('message', message => {
 });
 ```
 
+### debugging
+awry uses the [debug](https://github.com/visionmedia/debug) module to log
+debugging output. To enable this output to print to the console, set the
+environment variable `DEBUG` to one of the following when running your app:
+
+- `awry:*` - shows all debug output from this library.
+- `awry:ARIWebSocket` - shows only the debug output from the ARIWebSocket 
+sub-module.
+- `awry:ReconnectingWebSocket` - shows only the debug output from the
+ReconnectingWebSocket sub-module.
+
+For example: `DEBUG=awry:* node myapp.js`
+
 ### license
 [MIT](LICENSE-MIT)
 
