@@ -4,8 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ## 0.2.0 - 2016-10-27
 
-Websocket 'message' events emitted will now parse JSON message bodies
-automatically.
+The return value of `Events.connect()` is an EventEmitter that emits 
+'message' events. The first argument to a registered 'message'
+event handler used to be passed the raw JSON string from Asterisk.
+This argument is now a Javascript object representation of that JSON
+(the result of `JSON.parse()` on the raw data sent from Asterisk).
+Any messages that fail to parse as JSON will be passed along raw, but
+this should never happen.
 
 ## 0.1.3 - 2016-10-26
 
