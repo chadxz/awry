@@ -23,7 +23,7 @@
     "url": "https://github.com/chadxz/awry.git"
   },
   "dependencies": {
-    "debug": "^2.2.0",
+    "debug": "^2.4.0",
     "request": "^2.75.0",
     "request-promise-native": "^1.0.3",
     "retry": "^0.10.0",
