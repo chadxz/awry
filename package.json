@@ -27,7 +27,7 @@
     "request": "^2.75.0",
     "request-promise-native": "^1.0.3",
     "retry": "^0.10.0",
-    "ws": "^1.1.1"
+    "ws": "^3.0.0"
   },
   "devDependencies": {
     "codeclimate-test-reporter": "^0.4.0",
