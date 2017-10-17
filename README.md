@@ -12,11 +12,11 @@ v6+.
 [Codecov Link]: https://codecov.io/gh/chadxz/awry
 [Asterisk REST Interface]: https://wiki.asterisk.org/wiki/pages/viewpage.action?pageId=29395573
 
-#### installation
+### installation
 
 `npm install awry`
 
-#### example
+### example
 
 ```js
 const awry = require('awry');
@@ -56,5 +56,39 @@ ReconnectingWebSocket sub-module.
 
 For example: `DEBUG=awry:* node myapp.js`
 
+### running the tests
+
+```sh
+$ npm test
+```
+
+This will check that the files are formatted correctly with [prettier][], that 
+you have not broken any of the non-format-related ["standard" eslint][] rules, 
+and that all the tests in the `test/` directory pass.
+
+To fix code formatting issues:
+
+```sh
+$ npm run prettify
+``` 
+
+If you would like to format your code automatically when you save a file, there
+are many ways to set that up. See the ["Editor Integration"][] of the Prettier
+README for details.
+
+[prettier]: https://github.com/prettier/prettier
+["standard" eslint]: https://standardjs.com/rules.html#javascript-standard-style
+["Editor Integration"]: https://github.com/prettier/prettier#editor-integration
+
+### getting code coverage details
+
+```sh
+$ npm run cover
+```
+
+This will run the tests and generate a coverage report on the command line as 
+well as open a web browser with an HTML code coverage report.
+
 ### license
+
 [MIT](LICENSE-MIT)
