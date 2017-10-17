@@ -1,12 +1,11 @@
-'use strict';
-const rp = require('request-promise-native');
+"use strict";
+const rp = require("request-promise-native");
 
 /**
  * REST API Resource for interacting with Asterisk Bridges and the channels
  * within those bridges.
  */
 class BridgesAPI {
-
   /**
    * Create an instance of the Bridges API client, providing access to the
    * `/bridges` endpoint.
@@ -36,7 +35,7 @@ class BridgesAPI {
    */
   list() {
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/bridges`
     });
   }
@@ -63,12 +62,12 @@ class BridgesAPI {
     const { type, name, bridgeId } = params;
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/bridges`,
       qs: {
         name,
         bridgeId,
-        type: [].concat(type).join(',')
+        type: [].concat(type).join(",")
       }
     });
   }
@@ -97,11 +96,11 @@ class BridgesAPI {
     const id = encodeURIComponent(bridgeId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/bridges/${id}`,
       qs: {
         name,
-        type: [].concat(type).join(',')
+        type: [].concat(type).join(",")
       }
     });
   }
@@ -122,7 +121,7 @@ class BridgesAPI {
     const id = encodeURIComponent(bridgeId);
 
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/bridges/${id}`
     });
   }
@@ -143,7 +142,7 @@ class BridgesAPI {
     const id = encodeURIComponent(bridgeId);
 
     return this.request({
-      method: 'DELETE',
+      method: "DELETE",
       uri: `${this.baseUrl}/bridges/${id}`
     });
   }
@@ -171,10 +170,10 @@ class BridgesAPI {
     const id = encodeURIComponent(bridgeId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/bridges/${id}/addChannel`,
       qs: {
-        channel: [].concat(channel).join(','),
+        channel: [].concat(channel).join(","),
         role
       }
     });
@@ -201,9 +200,9 @@ class BridgesAPI {
     const id = encodeURIComponent(bridgeId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/bridges/${id}/removeChannel`,
-      qs: { channel: [].concat(channel).join(',') }
+      qs: { channel: [].concat(channel).join(",") }
     });
   }
 
@@ -226,7 +225,7 @@ class BridgesAPI {
     const id = encodeURIComponent(bridgeId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/bridges/${id}/moh`,
       qs: { mohClass }
     });
@@ -250,7 +249,7 @@ class BridgesAPI {
     const id = encodeURIComponent(bridgeId);
 
     return this.request({
-      method: 'DELETE',
+      method: "DELETE",
       uri: `${this.baseUrl}/bridges/${id}/moh`
     });
   }
@@ -296,10 +295,10 @@ class BridgesAPI {
     const id = encodeURIComponent(bridgeId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/bridges/${id}/play`,
       qs: {
-        media: [].concat(media).join(','),
+        media: [].concat(media).join(","),
         lang,
         offsetms,
         skipms,
@@ -350,10 +349,10 @@ class BridgesAPI {
     const playId = encodeURIComponent(playbackId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/bridges/${id}/play/${playId}`,
       qs: {
-        media: [].concat(media).join(','),
+        media: [].concat(media).join(","),
         lang,
         offsetms,
         skipms
@@ -393,17 +392,17 @@ class BridgesAPI {
     const {
       bridgeId,
       name,
-      format = 'wav',
+      format = "wav",
       maxDurationSeconds = 0,
       maxSilentSeconds = 0,
-      ifExists = 'fail',
+      ifExists = "fail",
       beep = true,
-      terminateOn = 'none'
+      terminateOn = "none"
     } = params;
     const id = encodeURIComponent(bridgeId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/bridges/${id}/record`,
       qs: {
         name,

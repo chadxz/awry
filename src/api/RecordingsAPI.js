@@ -1,11 +1,10 @@
-'use strict';
-const rp = require('request-promise-native');
+"use strict";
+const rp = require("request-promise-native");
 
 /**
  * REST API Resource for interacting with both live and stored recordings.
  */
 class RecordingsAPI {
-
   /**
    * Create an instance of the Recordings API client, providing access
    * to the `/recordings` endpoint.
@@ -34,7 +33,7 @@ class RecordingsAPI {
    */
   listStored() {
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/recordings/stored`
     });
   }
@@ -55,7 +54,7 @@ class RecordingsAPI {
     const name = encodeURIComponent(recordingName);
 
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/recordings/stored/${name}`
     });
   }
@@ -76,7 +75,7 @@ class RecordingsAPI {
     const name = encodeURIComponent(recordingName);
 
     return this.request({
-      method: 'DELETE',
+      method: "DELETE",
       uri: `${this.baseUrl}/recordings/stored/${name}`
     });
   }
@@ -99,7 +98,7 @@ class RecordingsAPI {
     const name = encodeURIComponent(recordingName);
 
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/recordings/stored/${name}/file`
     });
   }
@@ -126,7 +125,7 @@ class RecordingsAPI {
     const name = encodeURIComponent(recordingName);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/recordings/stored/${name}/copy`,
       qs: { destinationRecordingName }
     });
@@ -149,7 +148,7 @@ class RecordingsAPI {
     const name = encodeURIComponent(recordingName);
 
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/recordings/live/${name}`
     });
   }
@@ -170,7 +169,7 @@ class RecordingsAPI {
     const name = encodeURIComponent(recordingName);
 
     return this.request({
-      method: 'DELETE',
+      method: "DELETE",
       uri: `${this.baseUrl}/recordings/live/${name}`
     });
   }
@@ -191,7 +190,7 @@ class RecordingsAPI {
     const name = encodeURIComponent(recordingName);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/recordings/live/${name}/stop`
     });
   }
@@ -215,7 +214,7 @@ class RecordingsAPI {
     const name = encodeURIComponent(recordingName);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/recordings/live/${name}/pause`
     });
   }
@@ -237,7 +236,7 @@ class RecordingsAPI {
     const name = encodeURIComponent(recordingName);
 
     return this.request({
-      method: 'DELETE',
+      method: "DELETE",
       uri: `${this.baseUrl}/recordings/live/${name}/pause`
     });
   }
@@ -260,7 +259,7 @@ class RecordingsAPI {
     const name = encodeURIComponent(recordingName);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/recordings/live/${name}/mute`
     });
   }
@@ -282,7 +281,7 @@ class RecordingsAPI {
     const name = encodeURIComponent(recordingName);
 
     return this.request({
-      method: 'DELETE',
+      method: "DELETE",
       uri: `${this.baseUrl}/recordings/live/${name}/mute`
     });
   }

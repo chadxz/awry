@@ -1,5 +1,5 @@
-'use strict';
-const rp = require('request-promise-native');
+"use strict";
+const rp = require("request-promise-native");
 
 /**
  * REST API Resource for interacting with Asterisk mailboxes.
@@ -7,7 +7,6 @@ const rp = require('request-promise-native');
  * *APIs available since Asterisk 12.1*
  */
 class MailboxesAPI {
-
   /**
    * Create an instance of the Mailboxes API client, providing access
    * to the `/mailboxes` endpoint.
@@ -39,7 +38,7 @@ class MailboxesAPI {
    */
   list() {
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/mailboxes`
     });
   }
@@ -62,7 +61,7 @@ class MailboxesAPI {
     const name = encodeURIComponent(mailboxName);
 
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/mailboxes/${name}`
     });
   }
@@ -86,7 +85,7 @@ class MailboxesAPI {
     const name = encodeURIComponent(mailboxName);
 
     return this.request({
-      method: 'PUT',
+      method: "PUT",
       uri: `${this.baseUrl}/mailboxes/${name}`,
       qs: { oldMessages, newMessages }
     });
@@ -109,7 +108,7 @@ class MailboxesAPI {
     const name = encodeURIComponent(mailboxName);
 
     return this.request({
-      method: 'DELETE',
+      method: "DELETE",
       uri: `${this.baseUrl}/mailboxes/${name}`
     });
   }

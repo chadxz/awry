@@ -1,11 +1,10 @@
-'use strict';
-const rp = require('request-promise-native');
+"use strict";
+const rp = require("request-promise-native");
 
 /**
  * REST API Resource for interacting with device states controlled by ARI.
  */
 class DeviceStatesAPI {
-
   /**
    * Create an instance of the DeviceStates API client, providing access
    * to the `/deviceStates` endpoint.
@@ -35,7 +34,7 @@ class DeviceStatesAPI {
    */
   list() {
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/deviceStates`
     });
   }
@@ -56,7 +55,7 @@ class DeviceStatesAPI {
     const name = encodeURIComponent(deviceName);
 
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/deviceStates/${name}`
     });
   }
@@ -83,7 +82,7 @@ class DeviceStatesAPI {
     const name = encodeURIComponent(deviceName);
 
     return this.request({
-      method: 'PUT',
+      method: "PUT",
       uri: `${this.baseUrl}/deviceStates/${name}`,
       qs: { deviceState }
     });
@@ -107,7 +106,7 @@ class DeviceStatesAPI {
     const name = encodeURIComponent(deviceName);
 
     return this.request({
-      method: 'DELETE',
+      method: "DELETE",
       uri: `${this.baseUrl}/deviceStates/${name}`
     });
   }

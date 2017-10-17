@@ -1,11 +1,10 @@
-'use strict';
-const rp = require('request-promise-native');
+"use strict";
+const rp = require("request-promise-native");
 
 /**
  * REST API Resource for interacting with ARI Stasis Applications.
  */
 class ApplicationsAPI {
-
   /**
    * Create an instance of the Applications API client, providing access
    * to the `/applications` endpoint.
@@ -35,7 +34,7 @@ class ApplicationsAPI {
    */
   list() {
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/applications`
     });
   }
@@ -57,7 +56,7 @@ class ApplicationsAPI {
     const app = encodeURIComponent(applicationName);
 
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/applications/${app}`
     });
   }
@@ -89,9 +88,9 @@ class ApplicationsAPI {
     const app = encodeURIComponent(applicationName);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/applications/${app}/subscription`,
-      qs: { eventSource: [].concat(eventSource).join(',') }
+      qs: { eventSource: [].concat(eventSource).join(",") }
     });
   }
 
@@ -117,9 +116,9 @@ class ApplicationsAPI {
     const app = encodeURIComponent(applicationName);
 
     return this.request({
-      method: 'DELETE',
+      method: "DELETE",
       uri: `${this.baseUrl}/applications/${app}/subscription`,
-      qs: { eventSource: [].concat(eventSource).join(',') }
+      qs: { eventSource: [].concat(eventSource).join(",") }
     });
   }
 }
