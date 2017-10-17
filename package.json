@@ -4,7 +4,9 @@
   "description": "An ARI websocket and API client library",
   "main": "src/index.js",
   "scripts": {
-    "lint": "eslint .",
+    "prettify": "prettier --write \"**/*.js\" \"!coverage/**\"",
+    "find-ugly-files": "prettier --list-different \"**/*.js\" \"!coverage/**\" || { echo \"ERROR: Please 'npm run prettify' to format the files above.\"; exit 1; }",
+    "lint": "npm run find-ugly-files && eslint .",
     "test": "npm run lint && mocha",
     "cover": "nyc --reporter=html --reporter=text _mocha && open coverage/index.html",
     "ci-test": "npm run lint && npm run ci-mocha && npm run ci-upload-coverage",
@@ -17,11 +19,14 @@
   ],
   "license": "MIT",
   "engines": {
-    "node": "^6.4.0"
+    "node": ">=6.4.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/chadxz/awry.git"
+  },
+  "nyc": {
+    "temp-directory": "coverage/.nyc_output"
   },
   "dependencies": {
     "debug": "^2.2.0",
@@ -33,13 +38,18 @@
   "devDependencies": {
     "codecov": "^2.3.1",
     "env-test": "^1.0.0",
-    "eslint": "^3.5.0",
-    "eslint-config-airbnb-base": "^11.0.0",
-    "eslint-plugin-import": "^2.0.0",
+    "eslint": "^4.9.0",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
     "intelli-espower-loader": "^1.0.1",
     "mocha": "^3.0.2",
     "nock": "^9.0.0",
     "nyc": "^11.2.1",
-    "power-assert": "^1.4.1"
+    "power-assert": "^1.4.1",
+    "prettier": "^1.7.4"
   }
 }
