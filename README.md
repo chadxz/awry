@@ -1,9 +1,16 @@
 # awry
 
-[![Build Status][Build Status Image]][Build Link]
+[![Build Status][Build Status Image]][Build Status Link]
+[![Codecov][Codecov Image]][Codecov Link]
 
 An [Asterisk REST Interface][] websocket and API client library for node.js
 v6+.
+
+[Build Status Image]: https://travis-ci.org/chadxz/awry.svg?branch=master
+[Build Status Link]: https://travis-ci.org/chadxz/awry
+[Codecov Image]: https://img.shields.io/codecov/c/github/chadxz/awry.svg
+[Codecov Link]: https://codecov.io/gh/chadxz/awry
+[Asterisk REST Interface]: https://wiki.asterisk.org/wiki/pages/viewpage.action?pageId=29395573
 
 #### installation
 
@@ -51,9 +58,3 @@ For example: `DEBUG=awry:* node myapp.js`
 
 ### license
 [MIT](LICENSE-MIT)
-
-[Asterisk REST Interface]: https://wiki.asterisk.org/wiki/pages/viewpage.action?pageId=29395573
-[Build Status Image]: https://travis-ci.org/chadxz/awry.svg?branch=master
-[Build Link]: https://travis-ci.org/chadxz/awry
-[Dependencies Status Image]: https://david-dm.org/chadxz/awry.svg
-[Dependencies Status Link]: https://david-dm.org/chadxz/awry
