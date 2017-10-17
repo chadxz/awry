@@ -22,8 +22,8 @@ describe('ARIWebSocket', () => {
   it('passes non-"message" events along without parsing', done => {
     ws = new ARIWebSocket({ url: 'ws://localhost:8088' });
 
-    server.once('connection', () => {
-      ws.on('bugaboo', message => {
+    ws.once('open', () => {
+      ws.once('bugaboo', message => {
         assert.equal(message, 'bugaloo');
         done();
       });
@@ -37,7 +37,7 @@ describe('ARIWebSocket', () => {
 
     server.once('connection', conn => {
       ws.on('message', message => {
-        assert(!message);
+        assert.deepEqual(message, new Uint8Array(0));
         done();
       });
 

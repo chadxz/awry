@@ -25,8 +25,10 @@ describe('ReconnectingWebSocket', () => {
     it('connects upon creation', done => {
       ws = new ReconnectingWebSocket({ url: 'ws://localhost:8088' });
       server.on('connection', conn => {
-        assert(conn);
-        done();
+        ws.on('open', () => {
+          assert(conn);
+          done();
+        });
       });
     });
 

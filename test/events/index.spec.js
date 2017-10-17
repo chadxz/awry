@@ -17,23 +17,25 @@ describe('Events connect() returned emitter', () => {
     });
 
     afterEach(() => {
-      emitter.close();
+      if (emitter) emitter.close();
       server.close();
     });
 
     it('subscribes to a single app', done => {
-      server.once('connection', conn => {
-        const parts = url.parse(conn.upgradeReq.url);
-        const query = qs.parse(parts.query);
-        assert.equal(query.app, 'myApp');
-        done();
-      });
-
       emitter = Events.connect({
         app: 'myApp',
         url: 'ws://localhost:8088/',
         username: 'foo',
         password: 'bar'
+      });
+
+      server.once('connection', (conn, req) => {
+        emitter.once('open', () => {
+          const parts = url.parse(req.url);
+          const query = qs.parse(parts.query);
+          assert.equal(query.app, 'myApp');
+          done();
+        });
       });
     });
   });
@@ -53,18 +55,20 @@ describe('Events connect() returned emitter', () => {
     });
 
     it('subscribes to all of the apps', done => {
-      server.once('connection', conn => {
-        const parts = url.parse(conn.upgradeReq.url);
-        const query = qs.parse(parts.query);
-        assert.equal(query.app, 'app1,app2,app3');
-        done();
-      });
-
       emitter = Events.connect({
         app: ['app1', 'app2', 'app3'],
         url: 'ws://localhost:8088/',
         username: 'foo',
         password: 'bar'
+      });
+
+      server.once('connection', (conn, req) => {
+        emitter.once('open', () => {
+          const parts = url.parse(req.url);
+          const query = qs.parse(parts.query);
+          assert.equal(query.app, 'app1,app2,app3');
+          done();
+        });
       });
     });
   });
@@ -84,51 +88,57 @@ describe('Events connect() returned emitter', () => {
     });
 
     it('sets api_key with username and password', done => {
-      server.once('connection', conn => {
-        const parts = url.parse(conn.upgradeReq.url);
-        const query = qs.parse(parts.query);
-        assert.equal(query.api_key, 'foo:bar');
-        done();
-      });
-
       emitter = Events.connect({
         app: 'myApp',
         url: 'ws://localhost:8088/',
         username: 'foo',
         password: 'bar'
+      });
+
+      server.once('connection', (conn, req) => {
+        emitter.once('open', () => {
+          const parts = url.parse(req.url);
+          const query = qs.parse(parts.query);
+          assert.equal(query.api_key, 'foo:bar');
+          done();
+        });
       });
     });
 
     it('defaults to subscribeAll of true', done => {
-      server.once('connection', conn => {
-        const parts = url.parse(conn.upgradeReq.url);
-        const query = qs.parse(parts.query);
-        assert.equal(query.subscribeAll, 'true');
-        done();
-      });
-
       emitter = Events.connect({
         app: 'myApp',
         url: 'ws://localhost:8088/',
         username: 'foo',
         password: 'bar'
       });
+
+      server.once('connection', (conn, req) => {
+        emitter.once('open', () => {
+          const parts = url.parse(req.url);
+          const query = qs.parse(parts.query);
+          assert.equal(query.subscribeAll, 'true');
+          done();
+        });
+      });
     });
 
     it('passes along a subscribeAll of false', done => {
-      server.once('connection', conn => {
-        const parts = url.parse(conn.upgradeReq.url);
-        const query = qs.parse(parts.query);
-        assert.equal(query.subscribeAll, 'false');
-        done();
-      });
-
       emitter = Events.connect({
         app: 'myApp',
         url: 'ws://localhost:8088/',
         username: 'foo',
         password: 'bar',
         subscribeAll: false
+      });
+
+      server.once('connection', (conn, req) => {
+        emitter.once('open', () => {
+          const parts = url.parse(req.url);
+          const query = qs.parse(parts.query);
+          assert.equal(query.subscribeAll, 'false');
+          done();
+        });
       });
     });
   });
@@ -150,19 +160,26 @@ describe('Events connect() returned emitter', () => {
       });
 
       it('reconnects', done => {
-        server.once('connection', conn => {
-          server.once('connection', () => {
-            done();
-          });
-
-          conn.close();
-        });
-
         emitter = Events.connect({
           app: 'myApp',
           url: 'ws://localhost:8088/',
           username: 'foo',
           password: 'bar'
+        });
+
+        // the initial connection...
+        server.once('connection', conn => {
+
+          // the reconnect!
+          server.once('connection', () => {
+            emitter.once('reconnected', () => {
+              done();
+            });
+          });
+
+          emitter.once('open', () => {
+            conn.close();
+          });
         });
       });
     });
@@ -182,20 +199,27 @@ describe('Events connect() returned emitter', () => {
       });
 
       it('reconnects', done => {
-        server.once('connection', conn => {
-          server.once('connection', () => {
-            done();
-          });
-
-          conn.close();
-        });
-
         emitter = Events.connect({
           app: 'myApp',
           url: 'ws://localhost:8088/',
           username: 'foo',
           password: 'bar',
           reconnect: true
+        });
+
+        // the initial connection...
+        server.once('connection', conn => {
+
+          // the reconnect!
+          server.once('connection', () => {
+            emitter.once('reconnected', () => {
+              done();
+            });
+          });
+
+          emitter.once('open', () => {
+            conn.close();
+          });
         });
       });
     });
@@ -215,10 +239,6 @@ describe('Events connect() returned emitter', () => {
       });
 
       it("emits 'close' event", done => {
-        server.once('connection', conn => {
-          conn.close();
-        });
-
         emitter = Events.connect({
           app: 'myApp',
           url: 'ws://localhost:8088/',
@@ -227,7 +247,13 @@ describe('Events connect() returned emitter', () => {
           reconnect: false
         });
 
-        emitter.once('close', done);
+        server.once('connection', conn => {
+          emitter.once('close', done);
+
+          emitter.once('open', () => {
+            conn.close();
+          });
+        });
       });
     });
   });
