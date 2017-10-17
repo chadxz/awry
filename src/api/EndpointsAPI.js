@@ -1,11 +1,10 @@
-'use strict';
-const rp = require('request-promise-native');
+"use strict";
+const rp = require("request-promise-native");
 
 /**
  * REST API Resource for interacting with Asterisk endpoints.
  */
 class EndpointsAPI {
-
   /**
    * Create an instance of the Endpoints API client, providing access
    * to the `/endpoints` endpoint.
@@ -34,7 +33,7 @@ class EndpointsAPI {
    */
   list() {
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/endpoints`
     });
   }
@@ -64,7 +63,7 @@ class EndpointsAPI {
     const { to, from, body, variables } = params;
 
     return this.request({
-      method: 'PUT',
+      method: "PUT",
       uri: `${this.baseUrl}/endpoints/sendMessage`,
       qs: { to, from, body },
       body: { variables }
@@ -87,7 +86,7 @@ class EndpointsAPI {
     const tech = encodeURIComponent(technology);
 
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/endpoints/${tech}`
     });
   }
@@ -112,7 +111,7 @@ class EndpointsAPI {
     const res = encodeURIComponent(resource);
 
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/endpoints/${tech}/${res}`
     });
   }
@@ -145,7 +144,7 @@ class EndpointsAPI {
     const res = encodeURIComponent(resource);
 
     return this.request({
-      method: 'PUT',
+      method: "PUT",
       uri: `${this.baseUrl}/endpoints/${tech}/${res}/sendMessage`,
       qs: { from, body },
       body: { variables }

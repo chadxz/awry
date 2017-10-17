@@ -1,9 +1,8 @@
-'use strict';
-const DeviceStatesAPI = require('../../src/api/DeviceStatesAPI');
-const nock = require('nock');
+"use strict";
+const DeviceStatesAPI = require("../../src/api/DeviceStatesAPI");
+const nock = require("nock");
 
-describe('the DeviceStates API', () => {
-
+describe("the DeviceStates API", () => {
   beforeEach(() => {
     nock.disableNetConnect();
   });
@@ -12,17 +11,16 @@ describe('the DeviceStates API', () => {
     nock.enableNetConnect();
   });
 
-  describe('list method', () => {
-
-    it('makes the right request', () => {
-      const mock = nock('http://fake.local')
-        .get('/ari/deviceStates')
-        .reply(200, { foo: 'bar' });
+  describe("list method", () => {
+    it("makes the right request", () => {
+      const mock = nock("http://fake.local")
+        .get("/ari/deviceStates")
+        .reply(200, { foo: "bar" });
 
       const api = new DeviceStatesAPI({
-        baseUrl: 'http://fake.local/ari',
-        username: 'user',
-        password: '1234'
+        baseUrl: "http://fake.local/ari",
+        username: "user",
+        password: "1234"
       });
 
       return api.list().then(() => {
@@ -31,68 +29,71 @@ describe('the DeviceStates API', () => {
     });
   });
 
-  describe('get method', () => {
-
-    it('makes the right request', () => {
-      const mock = nock('http://fake.local')
-        .get('/ari/deviceStates/foo')
-        .reply(200, { foo: 'bar' });
+  describe("get method", () => {
+    it("makes the right request", () => {
+      const mock = nock("http://fake.local")
+        .get("/ari/deviceStates/foo")
+        .reply(200, { foo: "bar" });
 
       const api = new DeviceStatesAPI({
-        baseUrl: 'http://fake.local/ari',
-        username: 'user',
-        password: '1234'
+        baseUrl: "http://fake.local/ari",
+        username: "user",
+        password: "1234"
       });
 
-      return api.get({
-        deviceName: 'foo'
-      }).then(() => {
-        mock.done();
-      });
+      return api
+        .get({
+          deviceName: "foo"
+        })
+        .then(() => {
+          mock.done();
+        });
     });
   });
 
-  describe('update method', () => {
-
-    it('makes the right request', () => {
-      const mock = nock('http://fake.local')
-        .put('/ari/deviceStates/foo')
-        .query({ deviceState: 'INUSE' })
-        .reply(200, { foo: 'bar' });
+  describe("update method", () => {
+    it("makes the right request", () => {
+      const mock = nock("http://fake.local")
+        .put("/ari/deviceStates/foo")
+        .query({ deviceState: "INUSE" })
+        .reply(200, { foo: "bar" });
 
       const api = new DeviceStatesAPI({
-        baseUrl: 'http://fake.local/ari',
-        username: 'user',
-        password: '1234'
+        baseUrl: "http://fake.local/ari",
+        username: "user",
+        password: "1234"
       });
 
-      return api.update({
-        deviceName: 'foo',
-        deviceState: 'INUSE'
-      }).then(() => {
-        mock.done();
-      });
+      return api
+        .update({
+          deviceName: "foo",
+          deviceState: "INUSE"
+        })
+        .then(() => {
+          mock.done();
+        });
     });
   });
 
-  describe('destroy method', () => {
-
-    it('makes the right request', () => {
-      const mock = nock('http://fake.local')
-        .delete('/ari/deviceStates/foo')
-        .reply(200, { foo: 'bar' });
+  describe("destroy method", () => {
+    it("makes the right request", () => {
+      const mock = nock("http://fake.local")
+        .delete("/ari/deviceStates/foo")
+        .reply(200, { foo: "bar" });
 
       const api = new DeviceStatesAPI({
-        baseUrl: 'http://fake.local/ari',
-        username: 'user',
-        password: '1234'
+        baseUrl: "http://fake.local/ari",
+        username: "user",
+        password: "1234"
       });
 
-      return api.destroy({
-        deviceName: 'foo'
-      }).then(() => {
-        mock.done();
-      });
+      return api
+        .destroy({
+          deviceName: "foo"
+        })
+        .then(() => {
+          mock.done();
+        });
     });
   });
 });

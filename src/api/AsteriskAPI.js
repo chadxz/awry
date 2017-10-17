@@ -1,12 +1,11 @@
-'use strict';
-const rp = require('request-promise-native');
+"use strict";
+const rp = require("request-promise-native");
 
 /**
  * REST API Resource for interacting with Asterisk variables, modules,
  * logging, and configuration.
  */
 class AsteriskAPI {
-
   /**
    * Create an instance of the Asterisk API client, providing access to the
    * `/asterisk` endpoint.
@@ -48,6 +47,7 @@ class AsteriskAPI {
     const objectType = encodeURIComponent(params.objectType);
     const id = encodeURIComponent(params.id);
 
+    // prettier-ignore
     return this.request({
       method: 'GET',
       uri: `${this.baseUrl}/asterisk/config/dynamic/${configClass}/${objectType}/${id}`
@@ -81,6 +81,7 @@ class AsteriskAPI {
     const objectType = encodeURIComponent(params.objectType);
     const id = encodeURIComponent(params.id);
 
+    // prettier-ignore
     return this.request({
       method: 'PUT',
       uri: `${this.baseUrl}/asterisk/config/dynamic/${configClass}/${objectType}/${id}`,
@@ -111,8 +112,9 @@ class AsteriskAPI {
     const objectType = encodeURIComponent(params.objectType);
     const id = encodeURIComponent(params.id);
 
+    // prettier-ignore
     return this.request({
-      method: 'DELETE',
+      method: "DELETE",
       uri: `${this.baseUrl}/asterisk/config/dynamic/${configClass}/${objectType}/${id}`
     });
   }
@@ -133,9 +135,9 @@ class AsteriskAPI {
     const { only } = params;
 
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/asterisk/info`,
-      qs: { only: [].concat(only).join(',') }
+      qs: { only: [].concat(only).join(",") }
     });
   }
 
@@ -151,7 +153,7 @@ class AsteriskAPI {
    */
   listModules() {
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/asterisk/modules`
     });
   }
@@ -174,7 +176,7 @@ class AsteriskAPI {
     const name = encodeURIComponent(moduleName);
 
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/asterisk/modules/${name}`
     });
   }
@@ -196,7 +198,7 @@ class AsteriskAPI {
     const name = encodeURIComponent(moduleName);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/asterisk/modules/${name}`
     });
   }
@@ -219,7 +221,7 @@ class AsteriskAPI {
     const name = encodeURIComponent(moduleName);
 
     return this.request({
-      method: 'DELETE',
+      method: "DELETE",
       uri: `${this.baseUrl}/asterisk/modules/${name}`
     });
   }
@@ -242,7 +244,7 @@ class AsteriskAPI {
     const name = encodeURIComponent(moduleName);
 
     return this.request({
-      method: 'PUT',
+      method: "PUT",
       uri: `${this.baseUrl}/asterisk/modules/${name}`
     });
   }
@@ -259,7 +261,7 @@ class AsteriskAPI {
    */
   listLogChannels() {
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/asterisk/logging`
     });
   }
@@ -283,7 +285,7 @@ class AsteriskAPI {
     const name = encodeURIComponent(logChannelName);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/asterisk/logging/${name}`,
       qs: { configuration }
     });
@@ -306,7 +308,7 @@ class AsteriskAPI {
     const name = encodeURIComponent(logChannelName);
 
     return this.request({
-      method: 'DELETE',
+      method: "DELETE",
       uri: `${this.baseUrl}/asterisk/logging/${name}`
     });
   }
@@ -328,7 +330,7 @@ class AsteriskAPI {
     const name = encodeURIComponent(logChannelName);
 
     return this.request({
-      method: 'PUT',
+      method: "PUT",
       uri: `${this.baseUrl}/asterisk/logging/${name}/rotate`
     });
   }
@@ -349,7 +351,7 @@ class AsteriskAPI {
     const { variable } = params;
 
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/asterisk/variable`,
       qs: { variable }
     });
@@ -371,7 +373,7 @@ class AsteriskAPI {
     const { variable, value } = params;
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/asterisk/variable`,
       qs: { variable, value }
     });

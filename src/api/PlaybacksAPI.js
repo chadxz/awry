@@ -1,11 +1,10 @@
-'use strict';
-const rp = require('request-promise-native');
+"use strict";
+const rp = require("request-promise-native");
 
 /**
  * REST API Resource for interacting with Asterisk playbacks.
  */
 class PlaybacksAPI {
-
   /**
    * Create an instance of the Playbacks API client, providing access
    * to the `/playbacks` endpoint.
@@ -41,7 +40,7 @@ class PlaybacksAPI {
     const id = encodeURIComponent(playbackId);
 
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/playbacks/${id}`
     });
   }
@@ -62,7 +61,7 @@ class PlaybacksAPI {
     const id = encodeURIComponent(playbackId);
 
     return this.request({
-      method: 'DELETE',
+      method: "DELETE",
       uri: `${this.baseUrl}/playbacks/${id}`
     });
   }
@@ -87,7 +86,7 @@ class PlaybacksAPI {
     const id = encodeURIComponent(playbackId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/playbacks/${id}/control`,
       qs: { operation }
     });

@@ -1,11 +1,10 @@
-'use strict';
-const rp = require('request-promise-native');
+"use strict";
+const rp = require("request-promise-native");
 
 /**
  * REST API Resource for creating an Asterisk user event.
  */
 class EventsAPI {
-
   /**
    * Create an instance of the Events API client, providing access
    * to the `/events` endpoint.
@@ -52,11 +51,11 @@ class EventsAPI {
     const evt = encodeURIComponent(eventName);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/events/user/${evt}`,
       qs: {
         application,
-        source: [].concat(source).join(',')
+        source: [].concat(source).join(",")
       },
       body: { variables }
     });

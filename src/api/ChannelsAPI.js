@@ -1,11 +1,10 @@
-'use strict';
-const rp = require('request-promise-native');
+"use strict";
+const rp = require("request-promise-native");
 
 /**
  * REST API Resource for interacting with Asterisk Channels.
  */
 class ChannelsAPI {
-
   /**
    * Create an instance of the Bridges API client, providing access to the
    * `/channels` endpoint.
@@ -35,7 +34,7 @@ class ChannelsAPI {
    */
   list() {
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/channels`
     });
   }
@@ -106,7 +105,7 @@ class ChannelsAPI {
     } = params;
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/channels`,
       qs: {
         endpoint,
@@ -121,7 +120,7 @@ class ChannelsAPI {
         channelId,
         otherChannelId,
         originator,
-        formats: [].concat(formats).join(',')
+        formats: [].concat(formats).join(",")
       },
       body: { variables }
     });
@@ -166,7 +165,7 @@ class ChannelsAPI {
     } = params;
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/channels/create`,
       qs: {
         endpoint,
@@ -175,7 +174,7 @@ class ChannelsAPI {
         channelId,
         otherChannelId,
         originator,
-        formats: [].concat(formats).join(',')
+        formats: [].concat(formats).join(",")
       }
     });
   }
@@ -196,7 +195,7 @@ class ChannelsAPI {
     const id = encodeURIComponent(channelId);
 
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/channels/${id}`
     });
   }
@@ -270,7 +269,7 @@ class ChannelsAPI {
     const id = encodeURIComponent(channelId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/channels/${id}`,
       qs: {
         endpoint,
@@ -284,7 +283,7 @@ class ChannelsAPI {
         timeout,
         otherChannelId,
         originator,
-        formats: [].concat(formats).join(',')
+        formats: [].concat(formats).join(",")
       },
       body: { variables }
     });
@@ -308,7 +307,7 @@ class ChannelsAPI {
     const id = encodeURIComponent(channelId);
 
     return this.request({
-      method: 'DELETE',
+      method: "DELETE",
       uri: `${this.baseUrl}/channels/${id}`,
       qs: { reason }
     });
@@ -336,7 +335,7 @@ class ChannelsAPI {
     const id = encodeURIComponent(channelId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/channels/${id}/continue`,
       qs: { context, extension, priority, label }
     });
@@ -363,7 +362,7 @@ class ChannelsAPI {
     const id = encodeURIComponent(channelId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/channels/${id}/redirect`,
       qs: { endpoint }
     });
@@ -385,7 +384,7 @@ class ChannelsAPI {
     const id = encodeURIComponent(channelId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/channels/${id}/answer`
     });
   }
@@ -407,7 +406,7 @@ class ChannelsAPI {
     const id = encodeURIComponent(channelId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/channels/${id}/ring`
     });
   }
@@ -429,7 +428,7 @@ class ChannelsAPI {
     const id = encodeURIComponent(channelId);
 
     return this.request({
-      method: 'DELETE',
+      method: "DELETE",
       uri: `${this.baseUrl}/channels/${id}/ring`
     });
   }
@@ -467,7 +466,7 @@ class ChannelsAPI {
     const id = encodeURIComponent(channelId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/channels/${id}/dtmf`,
       qs: { dtmf, before, between, duration, after }
     });
@@ -487,11 +486,11 @@ class ChannelsAPI {
    *  is not in a stasis application (status 409).
    */
   mute(params) {
-    const { channelId, direction = 'both' } = params;
+    const { channelId, direction = "both" } = params;
     const id = encodeURIComponent(channelId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/channels/${id}/mute`,
       qs: { direction }
     });
@@ -511,11 +510,11 @@ class ChannelsAPI {
    *  is not in a stasis application (status 409).
    */
   unmute(params) {
-    const { channelId, direction = 'both' } = params;
+    const { channelId, direction = "both" } = params;
     const id = encodeURIComponent(channelId);
 
     return this.request({
-      method: 'DELETE',
+      method: "DELETE",
       uri: `${this.baseUrl}/channels/${id}/mute`,
       qs: { direction }
     });
@@ -537,7 +536,7 @@ class ChannelsAPI {
     const id = encodeURIComponent(channelId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/channels/${id}/hold`
     });
   }
@@ -558,7 +557,7 @@ class ChannelsAPI {
     const id = encodeURIComponent(channelId);
 
     return this.request({
-      method: 'DELETE',
+      method: "DELETE",
       uri: `${this.baseUrl}/channels/${id}/hold`
     });
   }
@@ -584,7 +583,7 @@ class ChannelsAPI {
     const id = encodeURIComponent(channelId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/channels/${id}/moh`,
       qs: { mohClass }
     });
@@ -606,7 +605,7 @@ class ChannelsAPI {
     const id = encodeURIComponent(channelId);
 
     return this.request({
-      method: 'DELETE',
+      method: "DELETE",
       uri: `${this.baseUrl}/channels/${id}/moh`
     });
   }
@@ -629,7 +628,7 @@ class ChannelsAPI {
     const id = encodeURIComponent(channelId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/channels/${id}/silence`
     });
   }
@@ -651,7 +650,7 @@ class ChannelsAPI {
     const id = encodeURIComponent(channelId);
 
     return this.request({
-      method: 'DELETE',
+      method: "DELETE",
       uri: `${this.baseUrl}/channels/${id}/silence`
     });
   }
@@ -693,10 +692,10 @@ class ChannelsAPI {
     const id = encodeURIComponent(channelId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/channels/${id}/play`,
       qs: {
-        media: [].concat(media).join(','),
+        media: [].concat(media).join(","),
         lang,
         offsetms,
         skipms,
@@ -745,10 +744,10 @@ class ChannelsAPI {
     const id = encodeURIComponent(channelId);
     const playId = encodeURIComponent(playbackId);
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/channels/${id}/play/${playId}`,
       qs: {
-        media: [].concat(media).join(','),
+        media: [].concat(media).join(","),
         lang,
         offsetms,
         skipms
@@ -793,14 +792,14 @@ class ChannelsAPI {
       format,
       maxDurationSeconds = 0,
       maxSilenceSeconds = 0,
-      ifExists = 'fail',
+      ifExists = "fail",
       beep = true,
-      terminateOn = 'none'
+      terminateOn = "none"
     } = params;
     const id = encodeURIComponent(channelId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/channels/${id}/record`,
       qs: {
         name,
@@ -833,7 +832,7 @@ class ChannelsAPI {
     const id = encodeURIComponent(channelId);
 
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/channels/${id}/variable`,
       qs: { variable }
     });
@@ -859,7 +858,7 @@ class ChannelsAPI {
     const id = encodeURIComponent(channelId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/channels/${id}/variable`,
       qs: { variable, value }
     });
@@ -890,15 +889,15 @@ class ChannelsAPI {
     const {
       channelId,
       app,
-      spy = 'none',
-      whisper = 'none',
+      spy = "none",
+      whisper = "none",
       appArgs,
       snoopId
     } = params;
     const id = encodeURIComponent(channelId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/channels/${id}/snoop`,
       qs: { app, spy, whisper, appArgs, snoopId }
     });
@@ -931,15 +930,15 @@ class ChannelsAPI {
       channelId,
       snoopId,
       app,
-      spy = 'none',
-      whisper = 'none',
+      spy = "none",
+      whisper = "none",
       appArgs
     } = params;
     const id = encodeURIComponent(channelId);
     const sid = encodeURIComponent(snoopId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/channels/${id}/snoop/${sid}`,
       qs: { app, spy, whisper, appArgs }
     });
@@ -965,7 +964,7 @@ class ChannelsAPI {
     const id = encodeURIComponent(channelId);
 
     return this.request({
-      method: 'POST',
+      method: "POST",
       uri: `${this.baseUrl}/channels/${id}/dial`,
       qs: { caller, timeout }
     });

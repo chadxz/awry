@@ -1,6 +1,6 @@
-'use strict';
-const url = require('url');
-const ARIWebSocket = require('./ARIWebSocket');
+"use strict";
+const url = require("url");
+const ARIWebSocket = require("./ARIWebSocket");
 
 /**
  * Client for interacting with the Asterisk REST Interface server-sent events.
@@ -45,14 +45,17 @@ module.exports = {
 
     parsedUrl.query = Object.assign({}, parsedUrl.query, {
       api_key: `${username}:${password}`,
-      app: [].concat(app).join(','),
+      app: [].concat(app).join(","),
       subscribeAll
     });
 
     const wsUrl = url.format(parsedUrl);
 
     return new ARIWebSocket({
-      url: wsUrl, reconnect, retryOptions, wsOptions
+      url: wsUrl,
+      reconnect,
+      retryOptions,
+      wsOptions
     });
   }
 };

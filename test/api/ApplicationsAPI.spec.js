@@ -1,9 +1,8 @@
-'use strict';
-const ApplicationsAPI = require('../../src/api/ApplicationsAPI');
-const nock = require('nock');
+"use strict";
+const ApplicationsAPI = require("../../src/api/ApplicationsAPI");
+const nock = require("nock");
 
-describe('the Applications API', () => {
-
+describe("the Applications API", () => {
   beforeEach(() => {
     nock.disableNetConnect();
   });
@@ -12,19 +11,17 @@ describe('the Applications API', () => {
     nock.enableNetConnect();
   });
 
-  describe('list method', () => {
-
-    describe('always', () => {
-
-      it('makes a GET request to /applications', () => {
-        const mock = nock('http://fake.local')
-          .get('/ari/applications')
-          .reply(200, { foo: 'bar' });
+  describe("list method", () => {
+    describe("always", () => {
+      it("makes a GET request to /applications", () => {
+        const mock = nock("http://fake.local")
+          .get("/ari/applications")
+          .reply(200, { foo: "bar" });
 
         const api = new ApplicationsAPI({
-          baseUrl: 'http://fake.local/ari',
-          username: 'foo',
-          password: 'bar'
+          baseUrl: "http://fake.local/ari",
+          username: "foo",
+          password: "bar"
         });
 
         return api.list().then(() => {
@@ -32,18 +29,19 @@ describe('the Applications API', () => {
         });
       });
 
-      it('sends the username and password', () => {
-        const mock = nock('http://fake.local', {
+      it("sends the username and password", () => {
+        const mock = nock("http://fake.local", {
           reqheaders: {
-            authorization: 'Basic Zm9vOmJhcg=='
+            authorization: "Basic Zm9vOmJhcg=="
           }
-        }).get('/ari/applications')
-          .reply(200, { foo: 'bar' });
+        })
+          .get("/ari/applications")
+          .reply(200, { foo: "bar" });
 
         const api = new ApplicationsAPI({
-          baseUrl: 'http://fake.local/ari',
-          username: 'foo',
-          password: 'bar'
+          baseUrl: "http://fake.local/ari",
+          username: "foo",
+          password: "bar"
         });
 
         return api.list().then(() => {
@@ -51,18 +49,19 @@ describe('the Applications API', () => {
         });
       });
 
-      it('sets the accept header as json', () => {
-        const mock = nock('http://fake.local', {
+      it("sets the accept header as json", () => {
+        const mock = nock("http://fake.local", {
           reqHeaders: {
-            accept: 'application/json'
+            accept: "application/json"
           }
-        }).get('/ari/applications')
-          .reply(200, { foo: 'bar' });
+        })
+          .get("/ari/applications")
+          .reply(200, { foo: "bar" });
 
         const api = new ApplicationsAPI({
-          baseUrl: 'http://fake.local/ari',
-          username: 'foo',
-          password: 'bar'
+          baseUrl: "http://fake.local/ari",
+          username: "foo",
+          password: "bar"
         });
 
         return api.list().then(() => {
@@ -72,68 +71,69 @@ describe('the Applications API', () => {
     });
   });
 
-  describe('get method', () => {
-
-    it('makes the right request', () => {
-      const mock = nock('http://fake.local')
-        .get('/ari/applications/foo')
-        .reply(200, { foo: 'bar' });
+  describe("get method", () => {
+    it("makes the right request", () => {
+      const mock = nock("http://fake.local")
+        .get("/ari/applications/foo")
+        .reply(200, { foo: "bar" });
 
       const api = new ApplicationsAPI({
-        baseUrl: 'http://fake.local/ari',
-        username: 'foo',
-        password: 'bar'
+        baseUrl: "http://fake.local/ari",
+        username: "foo",
+        password: "bar"
       });
 
-      return api.get({ applicationName: 'foo' }).then(() => {
+      return api.get({ applicationName: "foo" }).then(() => {
         mock.done();
       });
     });
   });
 
-  describe('subscribe method', () => {
-
-    it('makes the right request', () => {
-      const mock = nock('http://fake.local')
-        .post('/ari/applications/foo/subscription')
-        .query({ eventSource: 'device234' })
-        .reply(200, { foo: 'bar' });
+  describe("subscribe method", () => {
+    it("makes the right request", () => {
+      const mock = nock("http://fake.local")
+        .post("/ari/applications/foo/subscription")
+        .query({ eventSource: "device234" })
+        .reply(200, { foo: "bar" });
 
       const api = new ApplicationsAPI({
-        baseUrl: 'http://fake.local/ari',
-        username: 'foo',
-        password: 'bar'
+        baseUrl: "http://fake.local/ari",
+        username: "foo",
+        password: "bar"
       });
 
-      return api.subscribe({
-        applicationName: 'foo',
-        eventSource: 'device234'
-      }).then(() => {
-        mock.done();
-      });
+      return api
+        .subscribe({
+          applicationName: "foo",
+          eventSource: "device234"
+        })
+        .then(() => {
+          mock.done();
+        });
     });
   });
 
-  describe('unsubscribe method', () => {
-
-    it('makes the right request', () => {
-      const mock = nock('http://fake.local')
-        .delete('/ari/applications/foo/subscription')
-        .query({ eventSource: 'device234' })
-        .reply(200, { foo: 'bar' });
+  describe("unsubscribe method", () => {
+    it("makes the right request", () => {
+      const mock = nock("http://fake.local")
+        .delete("/ari/applications/foo/subscription")
+        .query({ eventSource: "device234" })
+        .reply(200, { foo: "bar" });
 
       const api = new ApplicationsAPI({
-        baseUrl: 'http://fake.local/ari',
-        username: 'foo',
-        password: 'bar'
+        baseUrl: "http://fake.local/ari",
+        username: "foo",
+        password: "bar"
       });
 
-      return api.unsubscribe({
-        applicationName: 'foo',
-        eventSource: 'device234'
-      }).then(() => {
-        mock.done();
-      });
+      return api
+        .unsubscribe({
+          applicationName: "foo",
+          eventSource: "device234"
+        })
+        .then(() => {
+          mock.done();
+        });
     });
   });
 });

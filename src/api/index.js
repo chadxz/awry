@@ -1,15 +1,15 @@
-'use strict';
-const ApplicationsAPI = require('./ApplicationsAPI');
-const AsteriskAPI = require('./AsteriskAPI');
-const BridgesAPI = require('./BridgesAPI');
-const DeviceStatesAPI = require('./DeviceStatesAPI');
-const EndpointsAPI = require('./EndpointsAPI');
-const EventsAPI = require('./EventsAPI');
-const MailboxesAPI = require('./MailboxesAPI');
-const PlaybacksAPI = require('./PlaybacksAPI');
-const RecordingsAPI = require('./RecordingsAPI');
-const SoundsAPI = require('./SoundsAPI');
-const ChannelsAPI = require('./ChannelsAPI');
+"use strict";
+const ApplicationsAPI = require("./ApplicationsAPI");
+const AsteriskAPI = require("./AsteriskAPI");
+const BridgesAPI = require("./BridgesAPI");
+const DeviceStatesAPI = require("./DeviceStatesAPI");
+const EndpointsAPI = require("./EndpointsAPI");
+const EventsAPI = require("./EventsAPI");
+const MailboxesAPI = require("./MailboxesAPI");
+const PlaybacksAPI = require("./PlaybacksAPI");
+const RecordingsAPI = require("./RecordingsAPI");
+const SoundsAPI = require("./SoundsAPI");
+const ChannelsAPI = require("./ChannelsAPI");
 
 /**
  * Client for interacting with the Asterisk Rest Interface.

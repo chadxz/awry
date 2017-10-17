@@ -1,14 +1,12 @@
-'use strict';
-const url = require('url');
-const qs = require('querystring');
-const assert = require('power-assert');
-const WebSocketServer = require('ws').Server;
-const Events = require('../../src/events');
+"use strict";
+const url = require("url");
+const qs = require("querystring");
+const assert = require("power-assert");
+const WebSocketServer = require("ws").Server;
+const Events = require("../../src/events");
 
-describe('Events connect() returned emitter', () => {
-
-  describe('when passed a single app', () => {
-
+describe("Events connect() returned emitter", () => {
+  describe("when passed a single app", () => {
     let server;
     let emitter;
 
@@ -21,27 +19,26 @@ describe('Events connect() returned emitter', () => {
       server.close();
     });
 
-    it('subscribes to a single app', done => {
+    it("subscribes to a single app", done => {
       emitter = Events.connect({
-        app: 'myApp',
-        url: 'ws://localhost:8088/',
-        username: 'foo',
-        password: 'bar'
+        app: "myApp",
+        url: "ws://localhost:8088/",
+        username: "foo",
+        password: "bar"
       });
 
-      server.once('connection', (conn, req) => {
-        emitter.once('open', () => {
+      server.once("connection", (conn, req) => {
+        emitter.once("open", () => {
           const parts = url.parse(req.url);
           const query = qs.parse(parts.query);
-          assert.equal(query.app, 'myApp');
+          assert.equal(query.app, "myApp");
           done();
         });
       });
     });
   });
 
-  describe('when passed multiple apps', () => {
-
+  describe("when passed multiple apps", () => {
     let server;
     let emitter;
 
@@ -54,27 +51,26 @@ describe('Events connect() returned emitter', () => {
       server.close();
     });
 
-    it('subscribes to all of the apps', done => {
+    it("subscribes to all of the apps", done => {
       emitter = Events.connect({
-        app: ['app1', 'app2', 'app3'],
-        url: 'ws://localhost:8088/',
-        username: 'foo',
-        password: 'bar'
+        app: ["app1", "app2", "app3"],
+        url: "ws://localhost:8088/",
+        username: "foo",
+        password: "bar"
       });
 
-      server.once('connection', (conn, req) => {
-        emitter.once('open', () => {
+      server.once("connection", (conn, req) => {
+        emitter.once("open", () => {
           const parts = url.parse(req.url);
           const query = qs.parse(parts.query);
-          assert.equal(query.app, 'app1,app2,app3');
+          assert.equal(query.app, "app1,app2,app3");
           done();
         });
       });
     });
   });
 
-  describe('when connecting', () => {
-
+  describe("when connecting", () => {
     let server;
     let emitter;
 
@@ -87,66 +83,64 @@ describe('Events connect() returned emitter', () => {
       server.close();
     });
 
-    it('sets api_key with username and password', done => {
+    it("sets api_key with username and password", done => {
       emitter = Events.connect({
-        app: 'myApp',
-        url: 'ws://localhost:8088/',
-        username: 'foo',
-        password: 'bar'
+        app: "myApp",
+        url: "ws://localhost:8088/",
+        username: "foo",
+        password: "bar"
       });
 
-      server.once('connection', (conn, req) => {
-        emitter.once('open', () => {
+      server.once("connection", (conn, req) => {
+        emitter.once("open", () => {
           const parts = url.parse(req.url);
           const query = qs.parse(parts.query);
-          assert.equal(query.api_key, 'foo:bar');
+          assert.equal(query.api_key, "foo:bar");
           done();
         });
       });
     });
 
-    it('defaults to subscribeAll of true', done => {
+    it("defaults to subscribeAll of true", done => {
       emitter = Events.connect({
-        app: 'myApp',
-        url: 'ws://localhost:8088/',
-        username: 'foo',
-        password: 'bar'
+        app: "myApp",
+        url: "ws://localhost:8088/",
+        username: "foo",
+        password: "bar"
       });
 
-      server.once('connection', (conn, req) => {
-        emitter.once('open', () => {
+      server.once("connection", (conn, req) => {
+        emitter.once("open", () => {
           const parts = url.parse(req.url);
           const query = qs.parse(parts.query);
-          assert.equal(query.subscribeAll, 'true');
+          assert.equal(query.subscribeAll, "true");
           done();
         });
       });
     });
 
-    it('passes along a subscribeAll of false', done => {
+    it("passes along a subscribeAll of false", done => {
       emitter = Events.connect({
-        app: 'myApp',
-        url: 'ws://localhost:8088/',
-        username: 'foo',
-        password: 'bar',
+        app: "myApp",
+        url: "ws://localhost:8088/",
+        username: "foo",
+        password: "bar",
         subscribeAll: false
       });
 
-      server.once('connection', (conn, req) => {
-        emitter.once('open', () => {
+      server.once("connection", (conn, req) => {
+        emitter.once("open", () => {
           const parts = url.parse(req.url);
           const query = qs.parse(parts.query);
-          assert.equal(query.subscribeAll, 'false');
+          assert.equal(query.subscribeAll, "false");
           done();
         });
       });
     });
   });
 
-  describe('when disconnected', () => {
-
-    describe('and reconnect not explicitly set', () => {
-
+  describe("when disconnected", () => {
+    describe("and reconnect not explicitly set", () => {
       let server;
       let emitter;
 
@@ -159,33 +153,31 @@ describe('Events connect() returned emitter', () => {
         server.close();
       });
 
-      it('reconnects', done => {
+      it("reconnects", done => {
         emitter = Events.connect({
-          app: 'myApp',
-          url: 'ws://localhost:8088/',
-          username: 'foo',
-          password: 'bar'
+          app: "myApp",
+          url: "ws://localhost:8088/",
+          username: "foo",
+          password: "bar"
         });
 
         // the initial connection...
-        server.once('connection', conn => {
-
+        server.once("connection", conn => {
           // the reconnect!
-          server.once('connection', () => {
-            emitter.once('reconnected', () => {
+          server.once("connection", () => {
+            emitter.once("reconnected", () => {
               done();
             });
           });
 
-          emitter.once('open', () => {
+          emitter.once("open", () => {
             conn.close();
           });
         });
       });
     });
 
-    describe('and reconnect explicitly set', () => {
-
+    describe("and reconnect explicitly set", () => {
       let server;
       let emitter;
 
@@ -198,34 +190,32 @@ describe('Events connect() returned emitter', () => {
         server.close();
       });
 
-      it('reconnects', done => {
+      it("reconnects", done => {
         emitter = Events.connect({
-          app: 'myApp',
-          url: 'ws://localhost:8088/',
-          username: 'foo',
-          password: 'bar',
+          app: "myApp",
+          url: "ws://localhost:8088/",
+          username: "foo",
+          password: "bar",
           reconnect: true
         });
 
         // the initial connection...
-        server.once('connection', conn => {
-
+        server.once("connection", conn => {
           // the reconnect!
-          server.once('connection', () => {
-            emitter.once('reconnected', () => {
+          server.once("connection", () => {
+            emitter.once("reconnected", () => {
               done();
             });
           });
 
-          emitter.once('open', () => {
+          emitter.once("open", () => {
             conn.close();
           });
         });
       });
     });
 
-    describe('and reconnect set to false', () => {
-
+    describe("and reconnect set to false", () => {
       let server;
       let emitter;
 
@@ -240,17 +230,17 @@ describe('Events connect() returned emitter', () => {
 
       it("emits 'close' event", done => {
         emitter = Events.connect({
-          app: 'myApp',
-          url: 'ws://localhost:8088/',
-          username: 'foo',
-          password: 'bar',
+          app: "myApp",
+          url: "ws://localhost:8088/",
+          username: "foo",
+          password: "bar",
           reconnect: false
         });
 
-        server.once('connection', conn => {
-          emitter.once('close', done);
+        server.once("connection", conn => {
+          emitter.once("close", done);
 
-          emitter.once('open', () => {
+          emitter.once("open", () => {
             conn.close();
           });
         });
@@ -258,8 +248,7 @@ describe('Events connect() returned emitter', () => {
     });
   });
 
-  describe('when a message is emitted on the socket', () => {
-
+  describe("when a message is emitted on the socket", () => {
     let server;
     let emitter;
 
@@ -273,26 +262,25 @@ describe('Events connect() returned emitter', () => {
     });
 
     it("emits a 'message' event", done => {
-      server.once('connection', conn => {
-        conn.send('hidey ho');
+      server.once("connection", conn => {
+        conn.send("hidey ho");
       });
 
       emitter = Events.connect({
-        app: 'myApp',
-        url: 'ws://localhost:8088/',
-        username: 'foo',
-        password: 'bar',
+        app: "myApp",
+        url: "ws://localhost:8088/",
+        username: "foo",
+        password: "bar"
       });
 
-      emitter.on('message', message => {
-        assert.equal(message, 'hidey ho');
+      emitter.on("message", message => {
+        assert.equal(message, "hidey ho");
         done();
       });
     });
   });
 
-  describe('when an error is emitted on the socket', () => {
-
+  describe("when an error is emitted on the socket", () => {
     let server;
     let emitter;
 
@@ -304,20 +292,20 @@ describe('Events connect() returned emitter', () => {
     it("emits an 'error' event", done => {
       server = new WebSocketServer({
         port: 8088,
-        verifyClient(info, callback) {
-          callback(false, 666, 'die die die');
+        verifyClient(info, verify) {
+          verify(false, 666, "die die die");
         }
       });
 
       emitter = Events.connect({
-        app: 'myApp',
-        url: 'ws://localhost:8088/',
-        username: 'foo',
-        password: 'bar',
+        app: "myApp",
+        url: "ws://localhost:8088/",
+        username: "foo",
+        password: "bar",
         reconnect: false
       });
 
-      emitter.on('error', err => {
+      emitter.on("error", err => {
         assert(err);
         done();
       });

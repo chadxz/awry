@@ -1,8 +1,8 @@
-'use strict';
-const WebSocket = require('ws');
-const events = require('events');
-const retry = require('retry');
-const debug = require('debug')('awry:ReconnectingWebSocket');
+"use strict";
+const WebSocket = require("ws");
+const events = require("events");
+const retry = require("retry");
+const debug = require("debug")("awry:ReconnectingWebSocket");
 
 /**
  * A wrapper over the normal WebSocket object exported from the `ws`
@@ -62,15 +62,15 @@ class ReconnectingWebSocket extends events.EventEmitter {
     this.retryOptions = retryOptions;
     this.reconnect = reconnect;
 
-    debug('attempting initial connection', { url });
+    debug("attempting initial connection", { url });
     this.connect(err => {
       if (err) {
-        this.emit('error', err);
+        this.emit("error", err);
         this.close();
         return;
       }
 
-      this.emit('open');
+      this.emit("open");
     });
   }
 
@@ -97,7 +97,7 @@ class ReconnectingWebSocket extends events.EventEmitter {
       this.ws = new WebSocket(this.url, this.wsOptions);
 
       const handleConnectError = err => {
-        debug('connection attempt failed', err);
+        debug("connection attempt failed", err);
 
         if (!this.reconnect) {
           callback(err);
@@ -108,19 +108,20 @@ class ReconnectingWebSocket extends events.EventEmitter {
           return;
         }
 
+        // prettier-ignore
         debug('connection attempts exhaused',
           { err, reconnect: this.reconnect, numRetries });
 
         callback(operation.mainError());
       };
 
-      this.ws.once('error', handleConnectError);
-      this.ws.once('open', () => {
-        debug('connected', { numRetries });
-        this.ws.removeListener('error', handleConnectError);
-        this.ws.on('message', this.emit.bind(this, 'message'));
-        this.ws.once('error', this.handleError.bind(this));
-        this.ws.once('close', this.handleClose.bind(this));
+      this.ws.once("error", handleConnectError);
+      this.ws.once("open", () => {
+        debug("connected", { numRetries });
+        this.ws.removeListener("error", handleConnectError);
+        this.ws.on("message", this.emit.bind(this, "message"));
+        this.ws.once("error", this.handleError.bind(this));
+        this.ws.once("close", this.handleClose.bind(this));
         callback();
       });
     });
@@ -134,25 +135,25 @@ class ReconnectingWebSocket extends events.EventEmitter {
    * @private
    */
   handleError(err) {
-    debug('an error occurred.', err);
+    debug("an error occurred.", err);
 
     if (!this.reconnect) {
-      this.emit('error', err);
+      this.emit("error", err);
       this.close();
       return;
     }
 
-    this.emit('disconnected', { reason: 'error', err });
-    debug('attempting to reconnect');
+    this.emit("disconnected", { reason: "error", err });
+    debug("attempting to reconnect");
 
     this.connect(err => {
       if (err) {
-        this.emit('error', err);
+        this.emit("error", err);
         this.close();
         return;
       }
 
-      this.emit('reconnected');
+      this.emit("reconnected");
     });
   }
 
@@ -163,24 +164,24 @@ class ReconnectingWebSocket extends events.EventEmitter {
    * @private
    */
   handleClose(code, message) {
-    debug('connection closed', code, message);
+    debug("connection closed", code, message);
 
     if (!this.reconnect) {
       this.close();
       return;
     }
 
-    this.emit('disconnected', { reason: 'close', code, message });
-    debug('attempting to reconnect');
+    this.emit("disconnected", { reason: "close", code, message });
+    debug("attempting to reconnect");
 
     this.connect(err => {
       if (err) {
-        this.emit('error', err);
+        this.emit("error", err);
         this.close();
         return;
       }
 
-      this.emit('reconnected');
+      this.emit("reconnected");
     });
   }
 
@@ -193,7 +194,7 @@ class ReconnectingWebSocket extends events.EventEmitter {
       this.ws.removeAllListeners();
       this.ws.close();
       this.ws = null;
-      this.emit('close');
+      this.emit("close");
     }
 
     this.removeAllListeners();
@@ -205,7 +206,7 @@ class ReconnectingWebSocket extends events.EventEmitter {
    * when debugging is enabled.
    */
   emit(...args) {
-    debug('emitting event', ...args);
+    debug("emitting event", ...args);
     super.emit(...args);
   }
 }

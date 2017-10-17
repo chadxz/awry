@@ -1,11 +1,10 @@
-'use strict';
-const rp = require('request-promise-native');
+"use strict";
+const rp = require("request-promise-native");
 
 /**
  * REST API Resource for interacting with Asterisk sounds.
  */
 class SoundsAPI {
-
   /**
    * Create an instance of the Sounds API client, providing access
    * to the `/sounds` endpoint.
@@ -40,7 +39,7 @@ class SoundsAPI {
     const { lang, format } = params;
 
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/sounds`,
       qs: { lang, format }
     });
@@ -61,7 +60,7 @@ class SoundsAPI {
     const id = encodeURIComponent(soundId);
 
     return this.request({
-      method: 'GET',
+      method: "GET",
       uri: `${this.baseUrl}/sounds/${id}`
     });
   }
