@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.0 - 2017-10-17
+
+`ws` library upgraded to 3.2.0, which included some backwards-incompatible 
+changes. See the [ws library releases page](https://github.com/websockets/ws/releases) 
+for details.
+
+Marking this library 1.0 at this time. It will now follow traditional semver
+rules moving forward.
+
 ## 0.2.0 - 2016-10-27
 
 The return value of `Events.connect()` is an EventEmitter that emits 
