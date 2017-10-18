@@ -6,6 +6,9 @@ extends:
   - prettier/standard
 plugins:
   - standard
+  - prettier
+rules:
+  prettier/prettier: error
 env:
   es6: true
   node: true

@@ -5,8 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "prettify": "prettier --write \"**/*.js\" \"!coverage/**\"",
-    "find-ugly-files": "prettier --list-different \"**/*.js\" \"!coverage/**\" || { echo \"ERROR: Please 'npm run prettify' to format the files above.\"; exit 1; }",
-    "lint": "npm run find-ugly-files && eslint .",
+    "lint": "eslint .",
     "test": "npm run lint && mocha",
     "cover": "nyc --reporter=html --reporter=text _mocha && open coverage/index.html",
     "ci-test": "npm run lint && npm run ci-mocha && npm run ci-upload-coverage",
@@ -43,6 +42,7 @@
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "intelli-espower-loader": "^1.0.1",

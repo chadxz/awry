@@ -69,7 +69,7 @@ and that all the tests in the `test/` directory pass.
 To fix code formatting issues:
 
 ```sh
-$ npm run prettify
+$ eslint --fix
 ``` 
 
 If you would like to format your code automatically when you save a file, there
