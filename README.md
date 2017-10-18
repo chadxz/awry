@@ -1,5 +1,7 @@
 # awry
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/chadxz/awry.svg)](https://greenkeeper.io/)
+
 [![Build Status][Build Status Image]][Build Status Link]
 [![Codecov][Codecov Image]][Codecov Link]
 
