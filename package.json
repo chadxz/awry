@@ -18,7 +18,8 @@
   ],
   "license": "MIT",
   "engines": {
-    "node": ">=6.4.0"
+    "node": ">=6.4.0",
+    "npm": ">=5"
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,7 @@
     "temp-directory": "coverage/.nyc_output"
   },
   "dependencies": {
-    "debug": "^2.2.0",
+    "debug": "^3.1.0",
     "request": "^2.75.0",
     "request-promise-native": "^1.0.3",
     "retry": "^0.10.0",
@@ -46,7 +47,7 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "intelli-espower-loader": "^1.0.1",
-    "mocha": "^3.0.2",
+    "mocha": "^4.0.1",
     "nock": "^9.0.0",
     "nyc": "^11.2.1",
     "power-assert": "^1.4.1",
