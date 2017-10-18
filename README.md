@@ -1,9 +1,8 @@
 # awry
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/chadxz/awry.svg)](https://greenkeeper.io/)
-
 [![Build Status][Build Status Image]][Build Status Link]
 [![Codecov][Codecov Image]][Codecov Link]
+[![Greenkeeper Badge][Greenkeeper Image]][Greenkeeper Link]
 
 An [Asterisk REST Interface][] websocket and API client library for node.js
 v6+.
@@ -12,6 +11,8 @@ v6+.
 [Build Status Link]: https://travis-ci.org/chadxz/awry
 [Codecov Image]: https://img.shields.io/codecov/c/github/chadxz/awry.svg
 [Codecov Link]: https://codecov.io/gh/chadxz/awry
+[Greenkeeper Image]: https://badges.greenkeeper.io/chadxz/awry.svg
+[Greenkeeper Link]: https://greenkeeper.io/
 [Asterisk REST Interface]: https://wiki.asterisk.org/wiki/pages/viewpage.action?pageId=29395573
 
 ### installation
@@ -51,7 +52,7 @@ debugging output. To enable this output to print to the console, set the
 environment variable `DEBUG` to one of the following when running your app:
 
 - `awry:*` - shows all debug output from this library.
-- `awry:ARIWebSocket` - shows only the debug output from the ARIWebSocket 
+- `awry:ARIWebSocket` - shows only the debug output from the ARIWebSocket
 sub-module.
 - `awry:ReconnectingWebSocket` - shows only the debug output from the
 ReconnectingWebSocket sub-module.
@@ -64,15 +65,15 @@ For example: `DEBUG=awry:* node myapp.js`
 $ npm test
 ```
 
-This will check that the files are formatted correctly with [prettier][], that 
-you have not broken any of the non-format-related ["standard" eslint][] rules, 
+This will check that the files are formatted correctly with [prettier][], that
+you have not broken any of the non-format-related ["standard" eslint][] rules,
 and that all the tests in the `test/` directory pass.
 
 To fix code formatting issues:
 
 ```sh
 $ eslint --fix
-``` 
+```
 
 If you would like to format your code automatically when you save a file, there
 are many ways to set that up. See the ["Editor Integration"][] of the Prettier
@@ -88,7 +89,7 @@ README for details.
 $ npm run cover
 ```
 
-This will run the tests and generate a coverage report on the command line as 
+This will run the tests and generate a coverage report on the command line as
 well as open a web browser with an HTML code coverage report.
 
 ### license
