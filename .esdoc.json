@@ -1,0 +1,19 @@
+{
+  "source": "./src",
+  "destination": "./docs",
+  "plugins": [
+    {
+      "name": "esdoc-standard-plugin",
+      "option": {
+        "test": {
+          "source": "./test",
+          "includes": ["\\.spec\\.mjs"]
+        },
+        "accessor": {
+          "access": ["public"]
+        }
+      }
+    }
+  ],
+  "includes": ["\\.mjs$"]
+}

@@ -10,7 +10,8 @@
     "cover": "nyc --reporter=html --reporter=text _mocha && open coverage/index.html",
     "ci-test": "npm run lint && npm run ci-mocha && npm run ci-upload-coverage",
     "ci-mocha": "nyc mocha",
-    "ci-upload-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+    "ci-upload-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "docs": "esdoc"
   },
   "keywords": [
     "asterisk",
@@ -29,6 +30,7 @@
     "temp-directory": "coverage/.nyc_output"
   },
   "dependencies": {
+    "@std/esm": "^0.14.0",
     "debug": "^3.1.0",
     "request": "^2.75.0",
     "request-promise-native": "^1.0.3",
@@ -38,6 +40,8 @@
   "devDependencies": {
     "codecov": "^3.0.0",
     "env-test": "^1.0.0",
+    "esdoc": "^1.0.4",
+    "esdoc-standard-plugin": "^1.0.0",
     "eslint": "^4.9.0",
     "eslint-config-prettier": "^2.6.0",
     "eslint-config-standard": "^10.2.1",

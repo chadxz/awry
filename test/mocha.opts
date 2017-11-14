@@ -4,3 +4,5 @@
 --full-trace
 --require env-test
 --require intelli-espower-loader
+--require @std/esm
+**/*.spec.mjs
