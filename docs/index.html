@@ -75,7 +75,7 @@
 <p>An <a href="https://wiki.asterisk.org/wiki/pages/viewpage.action?pageId=29395573">Asterisk REST Interface</a> websocket and API client library for node.js
 v6+.</p>
 <h3 id="installation">installation</h3><p><code>npm install awry</code></p>
-<h3 id="example">example</h3><pre><code class="lang-js"><code class="source-code prettyprint">const awry = require(&apos;awry&apos;);
+<h3 id="usage">usage</h3><pre><code class="lang-js"><code class="source-code prettyprint">const awry = require(&apos;awry&apos;);
 
 const api = new awry.API({
   baseUrl: &apos;http://asterisk.local:8088/ari&apos;,
@@ -98,6 +98,7 @@ events.on(&apos;message&apos;, message =&gt; {
   console.log(message);
 });</code>
 </code></pre>
+<p>For more details see the <a href="http://chadmcelligott.com/awry">full API documentation</a>. </p>
 <h3 id="debugging">debugging</h3><p>awry uses the <a href="https://github.com/visionmedia/debug">debug</a> module to log
 debugging output. To enable this output to print to the console, set the
 environment variable <code>DEBUG</code> to one of the following when running your app:</p>
@@ -109,22 +110,8 @@ sub-module.</li>
 ReconnectingWebSocket sub-module.</li>
 </ul>
 <p>For example: <code>DEBUG=awry:* node myapp.js</code></p>
-<h3 id="running-the-tests">running the tests</h3><pre><code class="lang-sh"><code class="source-code prettyprint">$ npm test</code>
-</code></pre>
-<p>This will check that the files are formatted correctly with <a href="https://github.com/prettier/prettier">prettier</a>, that
-you have not broken any of the non-format-related <a href="https://standardjs.com/rules.html#javascript-standard-style">&quot;standard&quot; eslint</a> rules,
-and that all the tests in the <code>test/</code> directory pass.</p>
-<p>To fix code formatting issues:</p>
-<pre><code class="lang-sh"><code class="source-code prettyprint">$ eslint --fix</code>
-</code></pre>
-<p>If you would like to format your code automatically when you save a file, there
-are many ways to set that up. See the <a href="https://github.com/prettier/prettier#editor-integration">&quot;Editor Integration&quot;</a> of the Prettier
-README for details.</p>
-<h3 id="getting-code-coverage-details">getting code coverage details</h3><pre><code class="lang-sh"><code class="source-code prettyprint">$ npm run cover</code>
-</code></pre>
-<p>This will run the tests and generate a coverage report on the command line as
-well as open a web browser with an HTML code coverage report.</p>
-<h3 id="license">license</h3><p><a href="LICENSE-MIT">MIT</a></p>
+<h3 id="contributing">contributing</h3><p>See <a href="https://github.com/chadxz/awry/CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
+<h3 id="license">license</h3><p><a href="https://github.com/chadxz/awry/LICENSE-MIT">MIT</a></p>
 </div>
 </div>
 
