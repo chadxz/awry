@@ -64,8 +64,8 @@ For example: `DEBUG=awry:* node myapp.js`
 
 ### contributing
 
-See [CONTRIBUTING.md](https://github.com/chadxz/awry/CONTRIBUTING.md).
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ### license
 
-[MIT](https://github.com/chadxz/awry/LICENSE-MIT)
+[MIT](LICENSE-MIT)
