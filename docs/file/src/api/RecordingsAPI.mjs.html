@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/api/RecordingsAPI.mjs | awry</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="An ARI websocket and API client library"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="awry"><meta property="twitter:description" content="An ARI websocket and API client library"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/chadxz/awry.git"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Awry">Awry</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#api">api</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/ApplicationsAPI.mjs~ApplicationsAPI.html">ApplicationsAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/AsteriskAPI.mjs~AsteriskAPI.html">AsteriskAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/BridgesAPI.mjs~BridgesAPI.html">BridgesAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/ChannelsAPI.mjs~ChannelsAPI.html">ChannelsAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/DeviceStatesAPI.mjs~DeviceStatesAPI.html">DeviceStatesAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/EndpointsAPI.mjs~EndpointsAPI.html">EndpointsAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/EventsAPI.mjs~EventsAPI.html">EventsAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/MailboxesAPI.mjs~MailboxesAPI.html">MailboxesAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/PlaybacksAPI.mjs~PlaybacksAPI.html">PlaybacksAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/RecordingsAPI.mjs~RecordingsAPI.html">RecordingsAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/SoundsAPI.mjs~SoundsAPI.html">SoundsAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/index.mjs~API.html">API</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Application">Application</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-AsteriskInfo">AsteriskInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-BuildInfo">BuildInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ConfigInfo">ConfigInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ConfigTuple">ConfigTuple</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-LogChannel">LogChannel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Module">Module</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-StatusInfo">StatusInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SystemInfo">SystemInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Variable">Variable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Bridge">Bridge</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-LiveRecording">LiveRecording</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Channel">Channel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-DeviceState">DeviceState</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Endpoint">Endpoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Mailbox">Mailbox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Playback">Playback</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-StoredRecording">StoredRecording</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-FormatLangPair">FormatLangPair</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Sound">Sound</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#events">events</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/ARIWebSocket.mjs~ARIWebSocket.html">ARIWebSocket</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/ReconnectingWebSocket.mjs~ReconnectingWebSocket.html">ReconnectingWebSocket</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/index.mjs~Events.html">Events</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/api/RecordingsAPI.mjs</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import rp from &quot;request-promise-native&quot;;
+
+/**
+ * REST API Resource for interacting with both live and stored recordings.
+ */
+export default class RecordingsAPI {
+  /**
+   * Create an instance of the Recordings API client, providing access
+   * to the `/recordings` endpoint.
+   *
+   * @param {object} params
+   * @param {string} params.username The username to send with the request.
+   * @param {string} params.password The password to send with the request.
+   * @param {string} params.baseUrl The base url, without trailing slash,
+   *  of the root Asterisk ARI endpoint. i.e. &apos;http://myserver.local:8088/ari&apos;.
+   */
+  constructor(params) {
+    const { username, password } = params;
+
+    /** @private */
+    this._baseUrl = params.baseUrl;
+
+    /** @private */
+    this._request = rp.defaults({
+      auth: { username, password },
+      json: true
+    });
+  }
+
+  /**
+   * GET /recordings/stored
+   *
+   * List all completed recordings.
+   *
+   * @returns {Promise.&lt;Array.&lt;StoredRecording&gt;&gt;}
+   */
+  listStored() {
+    return this._request({
+      method: &quot;GET&quot;,
+      uri: `${this._baseUrl}/recordings/stored`
+    });
+  }
+
+  /**
+   * GET /recordings/stored/{recordingName}
+   *
+   * Retrieve the details of a specific stored recording.
+   *
+   * @param {object} params
+   * @param {string} params.recordingName The case-sensitive name of the
+   *  recording to retrieve details about.
+   * @returns {Promise.&lt;StoredRecording&gt;} Resolves if the recording is sucessfully
+   *  retrieved. Rejects if the specified  recording cannot be found (status 404).
+   */
+  getStored(params) {
+    const { recordingName } = params;
+    const name = encodeURIComponent(recordingName);
+
+    return this._request({
+      method: &quot;GET&quot;,
+      uri: `${this._baseUrl}/recordings/stored/${name}`
+    });
+  }
+
+  /**
+   * DELETE /recordings/stored/{recordingName}
+   *
+   * Destroy the specified stored recording.
+   *
+   * @param {object} params
+   * @param {string} params.recordingName The case-sensitive name of the
+   *  recording to destroy.
+   * @returns {Promise} Resolves when the specified recording is destroyed.
+   *  Rejects if the specified recording cannot be found (status 404).
+   */
+  destroyStored(params) {
+    const { recordingName } = params;
+    const name = encodeURIComponent(recordingName);
+
+    return this._request({
+      method: &quot;DELETE&quot;,
+      uri: `${this._baseUrl}/recordings/stored/${name}`
+    });
+  }
+
+  /**
+   * GET /recordings/stored/{recordingName}/file
+   *
+   * Retrieve the file associated with the stored recording.
+   *
+   * *API available since Asterisk 14.0*
+   *
+   * @param {object} params
+   * @param {string} params.recordingName
+   * @returns {Promise.&lt;Buffer&gt;} Resolves with the content of the stored
+   *  recording. Rejects when the recording file could not be opened
+   *  (status 403) or when the recording cannot be found (status 404).
+   */
+  getStoredFile(params) {
+    const { recordingName } = params;
+    const name = encodeURIComponent(recordingName);
+
+    return this._request({
+      method: &quot;GET&quot;,
+      uri: `${this._baseUrl}/recordings/stored/${name}/file`
+    });
+  }
+
+  /**
+   * POST /recordings/stored/{recordingName}/copy
+   *
+   * Create a copy of the specified stored recording.
+   *
+   * *API available since Asterisk 12.5*
+   *
+   * @param {object} params
+   * @param {string} params.recordingName The case-sensitive name of the
+   *  recording to create a copy of.
+   * @param {string} params.destinationRecordingName The name for the new copy
+   *  of the recording.
+   * @returns {Promise.&lt;StoredRecording&gt;} Resolves with the newly copied
+   *  recording when successful. Rejects if the specified recording cannot
+   *  be found (status 404) or if a recording of the same name already exists
+   *  on the system (status 409).
+   */
+  copyStored(params) {
+    const { recordingName, destinationRecordingName } = params;
+    const name = encodeURIComponent(recordingName);
+
+    return this._request({
+      method: &quot;POST&quot;,
+      uri: `${this._baseUrl}/recordings/stored/${name}/copy`,
+      qs: { destinationRecordingName }
+    });
+  }
+
+  /**
+   * GET /recordings/live/{recordingName}
+   *
+   * Retrieve the details of the specified live recording.
+   *
+   * @param {object} params
+   * @param {string} params.recordingName The case-sensitive name of the
+   *  live recording to retrieve details about.
+   * @returns {Promise.&lt;LiveRecording&gt;} Resolves with the specified live
+   *  recording details. Rejects if the live recording cannot be found
+   *  (status 404).
+   */
+  getLive(params) {
+    const { recordingName } = params;
+    const name = encodeURIComponent(recordingName);
+
+    return this._request({
+      method: &quot;GET&quot;,
+      uri: `${this._baseUrl}/recordings/live/${name}`
+    });
+  }
+
+  /**
+   * DELETE /recordings/live/{recordingName}
+   *
+   * Stop the specified live recording and discard it.
+   *
+   * @param {object} params
+   * @param {string} params.recordingName The case-sensitive name of the
+   *  live recording to act upon.
+   * @returns {Promise} Resolves if the recording is successfully cancelled.
+   *  Rejects if the recording cannot be found (status 404).
+   */
+  cancel(params) {
+    const { recordingName } = params;
+    const name = encodeURIComponent(recordingName);
+
+    return this._request({
+      method: &quot;DELETE&quot;,
+      uri: `${this._baseUrl}/recordings/live/${name}`
+    });
+  }
+
+  /**
+   * POST /recordings/live/{recordingName}/stop
+   *
+   * Stop the specified live recording and store it.
+   *
+   * @param {object} params
+   * @param {string} params.recordingName The case-sensitive name of the
+   *  live recording to act upon.
+   * @returns {Promise} Resolves if the recording is successfully stopped.
+   *  Rejects if the recording cannot be found (status 404).
+   */
+  stop(params) {
+    const { recordingName } = params;
+    const name = encodeURIComponent(recordingName);
+
+    return this._request({
+      method: &quot;POST&quot;,
+      uri: `${this._baseUrl}/recordings/live/${name}/stop`
+    });
+  }
+
+  /**
+   * POST /recordings/live/{recordingName}/pause
+   *
+   * Pause the specified live recording. Pausing a recording suspends silence
+   * detection, which will be restarted when the recording is unpaused. Paused
+   * time is not included in the accounting for maxDurationSeconds.
+   *
+   * @param {object} params
+   * @param {string} params.recordingName The case-sensitive name of the
+   *  live recording to act upon.
+   * @returns {Promise} Resolves if the recording is successfully paused.
+   *  Rejects if the recording cannot be found (status 404) or if the specified
+   *  recording is not in session. TODO: what does &quot;not in session&quot; mean?
+   */
+  pause(params) {
+    const { recordingName } = params;
+    const name = encodeURIComponent(recordingName);
+
+    return this._request({
+      method: &quot;POST&quot;,
+      uri: `${this._baseUrl}/recordings/live/${name}/pause`
+    });
+  }
+
+  /**
+   * DELETE /recordings/live/{recordingName}/pause
+   *
+   * Unpause the specified live recording.
+   *
+   * @param {object} params
+   * @param {string} params.recordingName The case-sensitive name of the
+   *  live recording to act upon.
+   * @returns {Promise} Resolves if the recording is successfully unpaused.
+   *  Rejects if the recording cannot be found (status 404) or if the specified
+   *  recording is not in session. TODO: what does &quot;not in session&quot; mean?
+   */
+  unpause(params) {
+    const { recordingName } = params;
+    const name = encodeURIComponent(recordingName);
+
+    return this._request({
+      method: &quot;DELETE&quot;,
+      uri: `${this._baseUrl}/recordings/live/${name}/pause`
+    });
+  }
+
+  /**
+   * POST /recordings/live/{recordingName}/mute
+   *
+   * Mute the specified live recording. Muting a recording suspends silence
+   * detection, which will be restarted when the recording is unmuted.
+   *
+   * @param {object} params
+   * @param {string} params.recordingName The case-sensitive name of the
+   *  live recording to act upon.
+   * @returns {Promise} Resolves if the recording is successfully muted.
+   *  Rejects if the recording cannot be found (status 404) or if the specified
+   *  recording is not in session. TODO: what does &quot;not in session&quot; mean?
+   */
+  mute(params) {
+    const { recordingName } = params;
+    const name = encodeURIComponent(recordingName);
+
+    return this._request({
+      method: &quot;POST&quot;,
+      uri: `${this._baseUrl}/recordings/live/${name}/mute`
+    });
+  }
+
+  /**
+   * DELETE /recordings/live/{recordingName}/mute
+   *
+   * Unmute the specified live recording.
+   *
+   * @param {object} params
+   * @param {string} params.recordingName The case-sensitive name of the
+   *  live recording to act upon.
+   * @returns {Promise} Resolves if the recording is successfully unmuted.
+   *  Rejects if the recording cannot be found (status 404) or if the specified
+   *  recording is not in session. TODO: what does &quot;not in session&quot; mean?
+   */
+  unmute(params) {
+    const { recordingName } = params;
+    const name = encodeURIComponent(recordingName);
+
+    return this._request({
+      method: &quot;DELETE&quot;,
+      uri: `${this._baseUrl}/recordings/live/${name}/mute`
+    });
+  }
+}
+
+/**
+ * A past recording that may be played back.
+ *
+ * @typedef {object} StoredRecording
+ * @property {string} format The format of the stored recording.
+ * @property {string} name The name of the stored recording.
+ */
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

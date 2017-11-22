@@ -1,0 +1,86 @@
+{
+  "coverage": "98.78%",
+  "expectCount": 165,
+  "actualCount": 163,
+  "files": {
+    "src/api/ApplicationsAPI.mjs": {
+      "expectCount": 8,
+      "actualCount": 8,
+      "undocumentLines": []
+    },
+    "src/api/AsteriskAPI.mjs": {
+      "expectCount": 19,
+      "actualCount": 19,
+      "undocumentLines": []
+    },
+    "src/api/BridgesAPI.mjs": {
+      "expectCount": 16,
+      "actualCount": 16,
+      "undocumentLines": []
+    },
+    "src/api/ChannelsAPI.mjs": {
+      "expectCount": 32,
+      "actualCount": 32,
+      "undocumentLines": []
+    },
+    "src/api/DeviceStatesAPI.mjs": {
+      "expectCount": 8,
+      "actualCount": 8,
+      "undocumentLines": []
+    },
+    "src/api/EndpointsAPI.mjs": {
+      "expectCount": 9,
+      "actualCount": 9,
+      "undocumentLines": []
+    },
+    "src/api/EventsAPI.mjs": {
+      "expectCount": 5,
+      "actualCount": 5,
+      "undocumentLines": []
+    },
+    "src/api/MailboxesAPI.mjs": {
+      "expectCount": 8,
+      "actualCount": 8,
+      "undocumentLines": []
+    },
+    "src/api/PlaybacksAPI.mjs": {
+      "expectCount": 7,
+      "actualCount": 7,
+      "undocumentLines": []
+    },
+    "src/api/RecordingsAPI.mjs": {
+      "expectCount": 16,
+      "actualCount": 16,
+      "undocumentLines": []
+    },
+    "src/api/SoundsAPI.mjs": {
+      "expectCount": 6,
+      "actualCount": 6,
+      "undocumentLines": []
+    },
+    "src/api/index.mjs": {
+      "expectCount": 13,
+      "actualCount": 13,
+      "undocumentLines": []
+    },
+    "src/events/ARIWebSocket.mjs": {
+      "expectCount": 3,
+      "actualCount": 2,
+      "undocumentLines": [
+        3
+      ]
+    },
+    "src/events/ReconnectingWebSocket.mjs": {
+      "expectCount": 13,
+      "actualCount": 12,
+      "undocumentLines": [
+        5
+      ]
+    },
+    "src/events/index.mjs": {
+      "expectCount": 2,
+      "actualCount": 2,
+      "undocumentLines": []
+    }
+  }
+}
