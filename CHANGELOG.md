@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2.0.0 - 2017-11-21
+
+Many public properties have now been made private via the `_` naming convention.
+These properties were not previously advertised as being public, but since they
+were not explicitly marked private, I'm bumping the major version. The properties
+that are now private are:
+
+- `request` and `baseUrl` properties on all API clients
+- `ws`, `wsOptions`, `retryOptions`, `url`, `reconnect` properties on the 
+ARIWebSocket class returned by `Events.connect()`.
+
+Internally, the entire library was rewritten to use the ecmascript modules syntax.
+This syntax is still backwards-compatible as far back as Node v4 thanks to the 
+[@std/esm][] module, so compatibility for this library was not altered at all.
+
+Converting the internals to ecmascript modules opened up a happy path for 
+generating comprehensive API documentation for the library with the [esdoc][] 
+tool. This documentation now lives in the /docs folder and can be accessed at 
+[https://chadmcelligott.com/awry][docs].
+
+[@std/esm]: https://github.com/standard-things/esm
+[esdoc]: https://github.com/esdoc/esdoc
+[docs]: https://chadmcelligott.com/awry
+
 ## 1.0.0 - 2017-10-17
 
 `ws` library upgraded to 3.2.0, which included some backwards-incompatible 
