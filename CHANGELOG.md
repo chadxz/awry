@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2.0.1 - 2018-01-02
+
+Small fix to account for a change in error handling behavior in the upstream `ws`
+project. See [\#55](https://github.com/chadxz/awry/pull/55).
+
 ## 2.0.0 - 2017-11-21
 
 Many public properties have now been made private via the `_` naming convention.
