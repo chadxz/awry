@@ -2,11 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## 4.0.0 - 2018-01-19
+
+The `@std/esm` library has been updated to 0.19.x, which includes some changes
+that may be considered breaking. See the 
+[0.19.0 release notes](https://github.com/standard-things/esm/releases/tag/0.19.0) 
+for full details.
+
+In hindsight, I should have lumped this update in with the `ws@4` update. Will
+try to do better with major version revs in the future.
+
 ## 3.0.0 - 2018-01-19
 
 The `ws` library has been updated to 4.0.0, which includes many breaking changes.
 See the [4.0.0 release notes](https://github.com/websockets/ws/releases/tag/4.0.0)
-For full details.
+for full details.
 
 ## 2.0.1 - 2018-01-02
 
