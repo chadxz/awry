@@ -2,15 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## 4.0.0 - 2018-01-19
+## 4.0.1 - 2018-01-19
 
 The `@std/esm` library has been updated to 0.19.x, which includes some changes
-that may be considered breaking. See the 
-[0.19.0 release notes](https://github.com/standard-things/esm/releases/tag/0.19.0) 
+that may be considered breaking. See the
+[0.19.0 release notes](https://github.com/standard-things/esm/releases/tag/0.19.0)
 for full details.
 
 In hindsight, I should have lumped this update in with the `ws@4` update. Will
 try to do better with major version revs in the future.
+
+Version 4.0.0 had to be skipped due to an issue with the npm registry.
 
 ## 3.0.0 - 2018-01-19
 
@@ -31,16 +33,16 @@ were not explicitly marked private, I'm bumping the major version. The propertie
 that are now private are:
 
 - `request` and `baseUrl` properties on all API clients
-- `ws`, `wsOptions`, `retryOptions`, `url`, `reconnect` properties on the 
+- `ws`, `wsOptions`, `retryOptions`, `url`, `reconnect` properties on the
 ARIWebSocket class returned by `Events.connect()`.
 
 Internally, the entire library was rewritten to use the ecmascript modules syntax.
-This syntax is still backwards-compatible as far back as Node v4 thanks to the 
+This syntax is still backwards-compatible as far back as Node v4 thanks to the
 [@std/esm][] module, so compatibility for this library was not altered at all.
 
-Converting the internals to ecmascript modules opened up a happy path for 
-generating comprehensive API documentation for the library with the [esdoc][] 
-tool. This documentation now lives in the /docs folder and can be accessed at 
+Converting the internals to ecmascript modules opened up a happy path for
+generating comprehensive API documentation for the library with the [esdoc][]
+tool. This documentation now lives in the /docs folder and can be accessed at
 [https://chadmcelligott.com/awry][docs].
 
 [@std/esm]: https://github.com/standard-things/esm
@@ -49,8 +51,8 @@ tool. This documentation now lives in the /docs folder and can be accessed at
 
 ## 1.0.0 - 2017-10-17
 
-`ws` library upgraded to 3.2.0, which included some backwards-incompatible 
-changes. See the [ws library releases page](https://github.com/websockets/ws/releases) 
+`ws` library upgraded to 3.2.0, which included some backwards-incompatible
+changes. See the [ws library releases page](https://github.com/websockets/ws/releases)
 for details.
 
 Marking this library 1.0 at this time. It will now follow traditional semver
@@ -58,7 +60,7 @@ rules moving forward.
 
 ## 0.2.0 - 2016-10-27
 
-The return value of `Events.connect()` is an EventEmitter that emits 
+The return value of `Events.connect()` is an EventEmitter that emits
 'message' events. The first argument to a registered 'message'
 event handler used to be passed the raw JSON string from Asterisk.
 This argument is now a Javascript object representation of that JSON
