@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.0.0 - 2018-01-19
+
+The `ws` library has been updated to 4.0.0, which includes many breaking changes.
+See the [4.0.0 release notes](https://github.com/websockets/ws/releases/tag/4.0.0)
+For full details.
+
 ## 2.0.1 - 2018-01-02
 
 Small fix to account for a change in error handling behavior in the upstream `ws`
