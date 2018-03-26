@@ -200,11 +200,6 @@ export default class ReconnectingWebSocket extends events.EventEmitter {
   close() {
     if (this._ws) {
       this._ws.removeAllListeners();
-
-      // ignore ECONNRESET errors
-      // https://github.com/websockets/ws/issues/1256
-      this._ws.on("error", () => {});
-
       this._ws.close();
       this._ws = null;
       this.emit("close");
