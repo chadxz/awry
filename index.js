@@ -1,3 +1,3 @@
 "use strict";
-const esrequire = require("@std/esm")(module);
+const esrequire = require("esm")(module);
 module.exports = esrequire("./src").default;
