@@ -4,7 +4,7 @@
   "description": "An ARI websocket and API client library",
   "main": "src/index.js",
   "scripts": {
-    "prettify": "prettier --write \"**/*.js\" \"!coverage/**\"",
+    "prettify": "prettier --write \"**/*.js\" \"!coverage/**\" \"!docs/**\"",
     "lint": "eslint .",
     "test": "npm run lint && mocha",
     "cover": "nyc --reporter=html --reporter=text _mocha && open coverage/index.html",
