@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## 5.0.0 - 2018-03-26
+
+`ws` has been updated to v5, improving the error handling in disconnect situations
+among some other minor changes. This update contains breaking changes. [See the ws@5
+release notes for more details](https://github.com/websockets/ws/releases/tag/5.0.0).
+
+This release also includes some development tool updates that do not affect the
+consumption of the library. 
+
 ## 4.0.1 - 2018-01-19
 
 The `@std/esm` library has been updated to 0.19.x, which includes some changes
