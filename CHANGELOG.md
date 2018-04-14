@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 6.0.0 - 2018-04-14
+
+Fixed package.json entrypoint. Previously this was set to src/index.js, which
+was the correct entrypoint prior to the library being migrated to esm. The
+entrypoint is now correctly set to index.js, the main entrypoint that handles
+parsing esm as normal javascript.
+
 ## 5.0.0 - 2018-03-26
 
 `ws` has been updated to v5, improving the error handling in disconnect situations
@@ -9,7 +16,7 @@ among some other minor changes. This update contains breaking changes. [See the 
 release notes for more details](https://github.com/websockets/ws/releases/tag/5.0.0).
 
 This release also includes some development tool updates that do not affect the
-consumption of the library. 
+consumption of the library.
 
 ## 4.0.1 - 2018-01-19
 
