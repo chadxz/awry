@@ -27,6 +27,7 @@
     "url": "https://github.com/chadxz/awry.git"
   },
   "nyc": {
+    "extension": ".mjs",
     "temp-directory": "coverage/.nyc_output"
   },
   "dependencies": {
