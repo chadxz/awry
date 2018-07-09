@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl">
-  <title data-ice="title">Home | awry</title>
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">Events | awry</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -69,50 +69,238 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="awry">awry</h1><p><a href="https://travis-ci.org/chadxz/awry"><img src="https://travis-ci.org/chadxz/awry.svg?branch=master" alt="Build Status"></a>
-<a href="https://codecov.io/gh/chadxz/awry"><img src="https://img.shields.io/codecov/c/github/chadxz/awry.svg" alt="Codecov"></a>
-<a href="https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/chadxz/awry.svg" alt="Greenkeeper Badge"></a></p>
-<p>An <a href="https://wiki.asterisk.org/wiki/pages/viewpage.action?pageId=29395573">Asterisk REST Interface</a> websocket and API client library for node.js
-v6+.</p>
-<h3 id="installation">installation</h3><p><code>npm install awry</code></p>
-<h3 id="usage">usage</h3><pre><code class="lang-js"><code class="source-code prettyprint">const awry = require(&apos;awry&apos;);
-
-const api = new awry.API({
-  baseUrl: &apos;http://asterisk.local:8088/ari&apos;,
-  username: &apos;asterisk&apos;,
-  password: &apos;asterisk&apos;
-});
-
-api.applications.list().then(apps =&gt; {
-  console.log(apps);
-});
-
-const events = awry.Events.connect({
-  app: &apos;someApp&apos;,
-  url: &apos;http://asterisk.local:8088/ari/events&apos;,
-  username: &apos;asterisk&apos;,
-  password: &apos;asterisk&apos;
-});
-
-events.on(&apos;message&apos;, message =&gt; {
-  console.log(message);
-});</code>
-</code></pre>
-<p>For more details see the <a href="http://chadmcelligott.com/awry">full API documentation</a>. </p>
-<h3 id="debugging">debugging</h3><p>awry uses the <a href="https://github.com/visionmedia/debug">debug</a> module to log
-debugging output. To enable this output to print to the console, set the
-environment variable <code>DEBUG</code> to one of the following when running your app:</p>
-<ul>
-<li><code>awry:*</code> - shows all debug output from this library.</li>
-<li><code>awry:ARIWebSocket</code> - shows only the debug output from the ARIWebSocket
-sub-module.</li>
-<li><code>awry:ReconnectingWebSocket</code> - shows only the debug output from the
-ReconnectingWebSocket sub-module.</li>
-</ul>
-<p>For example: <code>DEBUG=awry:* node myapp.js</code></p>
-<h3 id="contributing">contributing</h3><p>See <a href="CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
-<h3 id="license">license</h3><p><a href="LICENSE-MIT">MIT</a></p>
+<div class="content" data-ice="content"><div class="header-notice">
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Events from &apos;<span><a href="file/src/events/index.js.html#lineNumber7">awry/src/events/index.js</a></span>&apos;</code></pre></div>
+  <span data-ice="access">public</span>
+  <span data-ice="kind">class</span>
+  
+  
+  
+  <span data-ice="source">| <span><a href="file/src/events/index.js.html#lineNumber7">source</a></span></span>
 </div>
+
+<div class="self-detail detail">
+  <h1 data-ice="name">Events</h1>
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <div class="description" data-ice="description"><p>Client for interacting with the Asterisk REST Interface server-sent events.</p>
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+</div>
+
+
+<div data-ice="staticMethodSummary"><h2>Static Method Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3">Static Public Methods</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      <span data-ice="static">static</span>
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/events/index.js~Events.html#static-method-connect">connect</a></span></span><span class="code" data-ice="signature">(params: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span>): <span><a href="class/src/events/ARIWebSocket.js~ARIWebSocket.html">ARIWebSocket</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Connect to Asterisk&apos;s event endpoint via websocket, and return an
+EventEmitter that can be used to listen for events coming from Asterisk.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+<div data-ice="staticMethodDetails"><h2 data-ice="title">Static Public Methods</h2>
+
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-method-connect">
+    <span class="access" data-ice="access">public</span>
+    <span data-ice="static">static</span>
+    
+    
+    
+    
+    <span class="code" data-ice="name">connect</span><span class="code" data-ice="signature">(params: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span>): <span><a href="class/src/events/ARIWebSocket.js~ARIWebSocket.html">ARIWebSocket</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/events/index.js.html#lineNumber31">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Connect to Asterisk&apos;s event endpoint via websocket, and return an
+EventEmitter that can be used to listen for events coming from Asterisk.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">params</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"></td>
+    </tr>
+<tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">params.app</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt;</td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The app[s] to receive events for.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">params.url</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The ARI events url with &apos;ws&apos; or &apos;wss&apos; protocol,
+ i.e. &apos;ws://asterisk.local:8088/ari/events&apos;</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">params.username</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The username to use for the connection</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">params.password</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The password to use for the connection</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">params.subscribeAll</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></td>
+      <td data-ice="appendix"><ul><li>optional</li>
+<li>default: true</li></ul></td>
+      <td data-ice="description"><p>Whether or not to subscribe
+ to all system events. When set to false, explicit subscription
+ requests must be made to the ARI events endpoint to receive events for
+ individual event sources on a given application. <em>Param available since
+ Asterisk 13.6</em></p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">params.reconnect</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></td>
+      <td data-ice="appendix"><ul><li>optional</li>
+<li>default: true</li></ul></td>
+      <td data-ice="description"><p>Whether to reconnect to the
+ ARI events endpoint upon unsolicited disconnect.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">params.retryOptions</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span></td>
+      <td data-ice="appendix"><ul><li>optional</li>
+<li>default: { maxTimeout: 60000 }</li></ul></td>
+      <td data-ice="description"><p>Any
+ advanced options to pass to the &apos;node-retry&apos; retry.operation() method.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">params.wsOptions</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></span></td>
+      <td data-ice="appendix"><ul><li>optional</li>
+<li>default: {}</li></ul></td>
+      <td data-ice="description"><p>Any advanced options to pass
+ directly to the &apos;ws&apos; library constructor.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/src/events/ARIWebSocket.js~ARIWebSocket.html">ARIWebSocket</a></span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+</div>
+
+
+
 </div>
 
 <footer class="footer">
