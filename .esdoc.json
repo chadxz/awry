@@ -7,7 +7,7 @@
       "option": {
         "test": {
           "source": "./test",
-          "includes": ["\\.spec\\.mjs"]
+          "includes": ["\\.spec\\.js"]
         },
         "accessor": {
           "access": ["public"]
@@ -15,5 +15,5 @@
       }
     }
   ],
-  "includes": ["\\.mjs$"]
+  "includes": ["\\.js$"]
 }

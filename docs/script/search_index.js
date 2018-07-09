@@ -1,2719 +1,3001 @@
 window.esdocSearchIndex = [
   [
-    "awry/src/api/index.mjs~api",
-    "class/src/api/index.mjs~API.html",
-    "<span>API</span> <span class=\"search-result-import-path\">awry/src/api/index.mjs</span>",
+    "awry/src/api/index.js~api",
+    "class/src/api/index.js~API.html",
+    "<span>API</span> <span class=\"search-result-import-path\">awry/src/api/index.js</span>",
     "class"
   ],
   [
-    "awry/src/events/ariwebsocket.mjs~ariwebsocket",
-    "class/src/events/ARIWebSocket.mjs~ARIWebSocket.html",
-    "<span>ARIWebSocket</span> <span class=\"search-result-import-path\">awry/src/events/ARIWebSocket.mjs</span>",
+    "awry/src/events/ariwebsocket.js~ariwebsocket",
+    "class/src/events/ARIWebSocket.js~ARIWebSocket.html",
+    "<span>ARIWebSocket</span> <span class=\"search-result-import-path\">awry/src/events/ARIWebSocket.js</span>",
     "class"
   ],
   [
-    "awry/src/api/applicationsapi.mjs~applicationsapi",
-    "class/src/api/ApplicationsAPI.mjs~ApplicationsAPI.html",
-    "<span>ApplicationsAPI</span> <span class=\"search-result-import-path\">awry/src/api/ApplicationsAPI.mjs</span>",
+    "awry/src/api/applicationsapi.js~applicationsapi",
+    "class/src/api/ApplicationsAPI.js~ApplicationsAPI.html",
+    "<span>ApplicationsAPI</span> <span class=\"search-result-import-path\">awry/src/api/ApplicationsAPI.js</span>",
     "class"
   ],
   [
-    "awry/src/api/asteriskapi.mjs~asteriskapi",
-    "class/src/api/AsteriskAPI.mjs~AsteriskAPI.html",
-    "<span>AsteriskAPI</span> <span class=\"search-result-import-path\">awry/src/api/AsteriskAPI.mjs</span>",
+    "awry/src/api/asteriskapi.js~asteriskapi",
+    "class/src/api/AsteriskAPI.js~AsteriskAPI.html",
+    "<span>AsteriskAPI</span> <span class=\"search-result-import-path\">awry/src/api/AsteriskAPI.js</span>",
     "class"
   ],
   [
-    "awry/src/api/bridgesapi.mjs~bridgesapi",
-    "class/src/api/BridgesAPI.mjs~BridgesAPI.html",
-    "<span>BridgesAPI</span> <span class=\"search-result-import-path\">awry/src/api/BridgesAPI.mjs</span>",
+    "awry/src/api/bridgesapi.js~bridgesapi",
+    "class/src/api/BridgesAPI.js~BridgesAPI.html",
+    "<span>BridgesAPI</span> <span class=\"search-result-import-path\">awry/src/api/BridgesAPI.js</span>",
     "class"
   ],
   [
-    "awry/src/api/channelsapi.mjs~channelsapi",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html",
-    "<span>ChannelsAPI</span> <span class=\"search-result-import-path\">awry/src/api/ChannelsAPI.mjs</span>",
+    "awry/src/api/channelsapi.js~channelsapi",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html",
+    "<span>ChannelsAPI</span> <span class=\"search-result-import-path\">awry/src/api/ChannelsAPI.js</span>",
     "class"
   ],
   [
-    "awry/src/api/devicestatesapi.mjs~devicestatesapi",
-    "class/src/api/DeviceStatesAPI.mjs~DeviceStatesAPI.html",
-    "<span>DeviceStatesAPI</span> <span class=\"search-result-import-path\">awry/src/api/DeviceStatesAPI.mjs</span>",
+    "awry/src/api/devicestatesapi.js~devicestatesapi",
+    "class/src/api/DeviceStatesAPI.js~DeviceStatesAPI.html",
+    "<span>DeviceStatesAPI</span> <span class=\"search-result-import-path\">awry/src/api/DeviceStatesAPI.js</span>",
     "class"
   ],
   [
-    "awry/src/api/endpointsapi.mjs~endpointsapi",
-    "class/src/api/EndpointsAPI.mjs~EndpointsAPI.html",
-    "<span>EndpointsAPI</span> <span class=\"search-result-import-path\">awry/src/api/EndpointsAPI.mjs</span>",
+    "awry/src/api/endpointsapi.js~endpointsapi",
+    "class/src/api/EndpointsAPI.js~EndpointsAPI.html",
+    "<span>EndpointsAPI</span> <span class=\"search-result-import-path\">awry/src/api/EndpointsAPI.js</span>",
     "class"
   ],
   [
-    "awry/src/events/index.mjs~events",
-    "class/src/events/index.mjs~Events.html",
-    "<span>Events</span> <span class=\"search-result-import-path\">awry/src/events/index.mjs</span>",
+    "awry/src/events/index.js~events",
+    "class/src/events/index.js~Events.html",
+    "<span>Events</span> <span class=\"search-result-import-path\">awry/src/events/index.js</span>",
     "class"
   ],
   [
-    "awry/src/api/eventsapi.mjs~eventsapi",
-    "class/src/api/EventsAPI.mjs~EventsAPI.html",
-    "<span>EventsAPI</span> <span class=\"search-result-import-path\">awry/src/api/EventsAPI.mjs</span>",
+    "awry/src/api/eventsapi.js~eventsapi",
+    "class/src/api/EventsAPI.js~EventsAPI.html",
+    "<span>EventsAPI</span> <span class=\"search-result-import-path\">awry/src/api/EventsAPI.js</span>",
     "class"
   ],
   [
-    "awry/src/api/mailboxesapi.mjs~mailboxesapi",
-    "class/src/api/MailboxesAPI.mjs~MailboxesAPI.html",
-    "<span>MailboxesAPI</span> <span class=\"search-result-import-path\">awry/src/api/MailboxesAPI.mjs</span>",
+    "awry/src/api/mailboxesapi.js~mailboxesapi",
+    "class/src/api/MailboxesAPI.js~MailboxesAPI.html",
+    "<span>MailboxesAPI</span> <span class=\"search-result-import-path\">awry/src/api/MailboxesAPI.js</span>",
     "class"
   ],
   [
-    "awry/src/api/playbacksapi.mjs~playbacksapi",
-    "class/src/api/PlaybacksAPI.mjs~PlaybacksAPI.html",
-    "<span>PlaybacksAPI</span> <span class=\"search-result-import-path\">awry/src/api/PlaybacksAPI.mjs</span>",
+    "awry/src/api/playbacksapi.js~playbacksapi",
+    "class/src/api/PlaybacksAPI.js~PlaybacksAPI.html",
+    "<span>PlaybacksAPI</span> <span class=\"search-result-import-path\">awry/src/api/PlaybacksAPI.js</span>",
     "class"
   ],
   [
-    "awry/src/events/reconnectingwebsocket.mjs~reconnectingwebsocket",
-    "class/src/events/ReconnectingWebSocket.mjs~ReconnectingWebSocket.html",
-    "<span>ReconnectingWebSocket</span> <span class=\"search-result-import-path\">awry/src/events/ReconnectingWebSocket.mjs</span>",
+    "awry/src/events/reconnectingwebsocket.js~reconnectingwebsocket",
+    "class/src/events/ReconnectingWebSocket.js~ReconnectingWebSocket.html",
+    "<span>ReconnectingWebSocket</span> <span class=\"search-result-import-path\">awry/src/events/ReconnectingWebSocket.js</span>",
     "class"
   ],
   [
-    "awry/src/api/recordingsapi.mjs~recordingsapi",
-    "class/src/api/RecordingsAPI.mjs~RecordingsAPI.html",
-    "<span>RecordingsAPI</span> <span class=\"search-result-import-path\">awry/src/api/RecordingsAPI.mjs</span>",
+    "awry/src/api/recordingsapi.js~recordingsapi",
+    "class/src/api/RecordingsAPI.js~RecordingsAPI.html",
+    "<span>RecordingsAPI</span> <span class=\"search-result-import-path\">awry/src/api/RecordingsAPI.js</span>",
     "class"
   ],
   [
-    "awry/src/api/soundsapi.mjs~soundsapi",
-    "class/src/api/SoundsAPI.mjs~SoundsAPI.html",
-    "<span>SoundsAPI</span> <span class=\"search-result-import-path\">awry/src/api/SoundsAPI.mjs</span>",
+    "awry/src/api/soundsapi.js~soundsapi",
+    "class/src/api/SoundsAPI.js~SoundsAPI.html",
+    "<span>SoundsAPI</span> <span class=\"search-result-import-path\">awry/src/api/SoundsAPI.js</span>",
     "class"
   ],
   [
     "",
-    "test-file/test/api/index.spec.mjs.html#lineNumber16",
+    "test-file/test/api/index.spec.js.html#lineNumber15",
     "API constructed instance",
     "test"
   ],
   [
     "",
-    "test-file/test/api/index.spec.mjs.html#lineNumber35",
+    "test-file/test/api/index.spec.js.html#lineNumber34",
     "API constructed instance exposes a bridges API instance",
     "test"
   ],
   [
     "",
-    "test-file/test/api/index.spec.mjs.html#lineNumber67",
+    "test-file/test/api/index.spec.js.html#lineNumber66",
     "API constructed instance exposes a channels API instance",
     "test"
   ],
   [
     "",
-    "test-file/test/api/index.spec.mjs.html#lineNumber39",
+    "test-file/test/api/index.spec.js.html#lineNumber38",
     "API constructed instance exposes a device states API instance",
     "test"
   ],
   [
     "",
-    "test-file/test/api/index.spec.mjs.html#lineNumber43",
+    "test-file/test/api/index.spec.js.html#lineNumber42",
     "API constructed instance exposes a endpoints API instance",
     "test"
   ],
   [
     "",
-    "test-file/test/api/index.spec.mjs.html#lineNumber47",
+    "test-file/test/api/index.spec.js.html#lineNumber46",
     "API constructed instance exposes a events API instance",
     "test"
   ],
   [
     "",
-    "test-file/test/api/index.spec.mjs.html#lineNumber51",
+    "test-file/test/api/index.spec.js.html#lineNumber50",
     "API constructed instance exposes a mailboxes API instance",
     "test"
   ],
   [
     "",
-    "test-file/test/api/index.spec.mjs.html#lineNumber55",
+    "test-file/test/api/index.spec.js.html#lineNumber54",
     "API constructed instance exposes a playbacks API instance",
     "test"
   ],
   [
     "",
-    "test-file/test/api/index.spec.mjs.html#lineNumber59",
+    "test-file/test/api/index.spec.js.html#lineNumber58",
     "API constructed instance exposes a recordings API instance",
     "test"
   ],
   [
     "",
-    "test-file/test/api/index.spec.mjs.html#lineNumber63",
+    "test-file/test/api/index.spec.js.html#lineNumber62",
     "API constructed instance exposes a sounds API instance",
     "test"
   ],
   [
     "",
-    "test-file/test/api/index.spec.mjs.html#lineNumber27",
+    "test-file/test/api/index.spec.js.html#lineNumber26",
     "API constructed instance exposes an applications API instance",
     "test"
   ],
   [
     "",
-    "test-file/test/api/index.spec.mjs.html#lineNumber31",
+    "test-file/test/api/index.spec.js.html#lineNumber30",
     "API constructed instance exposes an asterisk API instance",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ARIWebSocket.spec.mjs.html#lineNumber7",
+    "test-file/test/events/ARIWebSocket.spec.js.html#lineNumber6",
     "ARIWebSocket",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ARIWebSocket.spec.mjs.html#lineNumber75",
+    "test-file/test/events/ARIWebSocket.spec.js.html#lineNumber74",
     "ARIWebSocket parses JSON \"message\" payloads before triggering the event",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ARIWebSocket.spec.mjs.html#lineNumber48",
+    "test-file/test/events/ARIWebSocket.spec.js.html#lineNumber47",
     "ARIWebSocket passes \"message\" events that are not string along without parsing",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ARIWebSocket.spec.mjs.html#lineNumber35",
+    "test-file/test/events/ARIWebSocket.spec.js.html#lineNumber34",
     "ARIWebSocket passes \"message\" events without a payload along without parsing",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ARIWebSocket.spec.mjs.html#lineNumber22",
+    "test-file/test/events/ARIWebSocket.spec.js.html#lineNumber21",
     "ARIWebSocket passes non-\"message\" events along without parsing",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ARIWebSocket.spec.mjs.html#lineNumber62",
+    "test-file/test/events/ARIWebSocket.spec.js.html#lineNumber61",
     "ARIWebSocket passes string \"message\" events that cannot be parsed as JSON along as-is",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.mjs.html#lineNumber9",
+    "test-file/test/events/index.spec.js.html#lineNumber8",
     "Events connect() returned emitter",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.mjs.html#lineNumber252",
+    "test-file/test/events/index.spec.js.html#lineNumber251",
     "Events connect() returned emitter when a message is emitted on the socket",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.mjs.html#lineNumber265",
+    "test-file/test/events/index.spec.js.html#lineNumber264",
     "Events connect() returned emitter when a message is emitted on the socket emits a 'message' event",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.mjs.html#lineNumber284",
+    "test-file/test/events/index.spec.js.html#lineNumber283",
     "Events connect() returned emitter when an error is emitted on the socket",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.mjs.html#lineNumber293",
+    "test-file/test/events/index.spec.js.html#lineNumber292",
     "Events connect() returned emitter when an error is emitted on the socket emits an 'error' event",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.mjs.html#lineNumber74",
+    "test-file/test/events/index.spec.js.html#lineNumber73",
     "Events connect() returned emitter when connecting",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.mjs.html#lineNumber105",
+    "test-file/test/events/index.spec.js.html#lineNumber104",
     "Events connect() returned emitter when connecting defaults to subscribeAll of true",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.mjs.html#lineNumber123",
+    "test-file/test/events/index.spec.js.html#lineNumber122",
     "Events connect() returned emitter when connecting passes along a subscribeAll of false",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.mjs.html#lineNumber87",
+    "test-file/test/events/index.spec.js.html#lineNumber86",
     "Events connect() returned emitter when connecting sets api_key with username and password",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.mjs.html#lineNumber143",
+    "test-file/test/events/index.spec.js.html#lineNumber142",
     "Events connect() returned emitter when disconnected",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.mjs.html#lineNumber181",
+    "test-file/test/events/index.spec.js.html#lineNumber180",
     "Events connect() returned emitter when disconnected and reconnect explicitly set",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.mjs.html#lineNumber194",
+    "test-file/test/events/index.spec.js.html#lineNumber193",
     "Events connect() returned emitter when disconnected and reconnect explicitly set reconnects",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.mjs.html#lineNumber144",
+    "test-file/test/events/index.spec.js.html#lineNumber143",
     "Events connect() returned emitter when disconnected and reconnect not explicitly set",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.mjs.html#lineNumber157",
+    "test-file/test/events/index.spec.js.html#lineNumber156",
     "Events connect() returned emitter when disconnected and reconnect not explicitly set reconnects",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.mjs.html#lineNumber219",
+    "test-file/test/events/index.spec.js.html#lineNumber218",
     "Events connect() returned emitter when disconnected and reconnect set to false",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.mjs.html#lineNumber232",
+    "test-file/test/events/index.spec.js.html#lineNumber231",
     "Events connect() returned emitter when disconnected and reconnect set to false emits 'close' event",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.mjs.html#lineNumber10",
+    "test-file/test/events/index.spec.js.html#lineNumber9",
     "Events connect() returned emitter when passed a single app",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.mjs.html#lineNumber23",
+    "test-file/test/events/index.spec.js.html#lineNumber22",
     "Events connect() returned emitter when passed a single app subscribes to a single app",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.mjs.html#lineNumber42",
+    "test-file/test/events/index.spec.js.html#lineNumber41",
     "Events connect() returned emitter when passed multiple apps",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.mjs.html#lineNumber55",
+    "test-file/test/events/index.spec.js.html#lineNumber54",
     "Events connect() returned emitter when passed multiple apps subscribes to all of the apps",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber7",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber6",
     "ReconnectingWebSocket",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber8",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber7",
     "ReconnectingWebSocket by default",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber23",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber22",
     "ReconnectingWebSocket by default connects upon creation",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber38",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber37",
     "ReconnectingWebSocket by default disconnects when close is called",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber53",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber52",
     "ReconnectingWebSocket by default emits a \"message\" event when a message is received",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber33",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber32",
     "ReconnectingWebSocket by default emits an \"open\" event on connection",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber110",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber109",
     "ReconnectingWebSocket when an error occurs after being connected",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber111",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber110",
     "ReconnectingWebSocket when an error occurs after being connected and reconnect is disabled",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber143",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber142",
     "ReconnectingWebSocket when an error occurs after being connected and reconnect is disabled emits a \"close\" event",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber126",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber125",
     "ReconnectingWebSocket when an error occurs after being connected and reconnect is disabled emits an \"error\" event",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber159",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber158",
     "ReconnectingWebSocket when an error occurs after being connected and reconnect is enabled",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber160",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber159",
     "ReconnectingWebSocket when an error occurs after being connected and reconnect is enabled and the server allows the reconnect",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber175",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber174",
     "ReconnectingWebSocket when an error occurs after being connected and reconnect is enabled and the server allows the reconnect reconnects",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber198",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber197",
     "ReconnectingWebSocket when an error occurs after being connected and reconnect is enabled but the reconnect fails",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber199",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber198",
     "ReconnectingWebSocket when an error occurs after being connected and reconnect is enabled but the reconnect fails and retries are disabled",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber238",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber237",
     "ReconnectingWebSocket when an error occurs after being connected and reconnect is enabled but the reconnect fails and retries are disabled emits a \"close\" event",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber221",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber220",
     "ReconnectingWebSocket when an error occurs after being connected and reconnect is enabled but the reconnect fails and retries are disabled emits an \"error\" event",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber256",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber255",
     "ReconnectingWebSocket when an error occurs after being connected and reconnect is enabled but the reconnect fails but retries are enabled and the retry succeeds",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber278",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber277",
     "ReconnectingWebSocket when an error occurs after being connected and reconnect is enabled but the reconnect fails but retries are enabled and the retry succeeds reconnects",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber67",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber66",
     "ReconnectingWebSocket when no connection can be established on create",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber99",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber98",
     "ReconnectingWebSocket when no connection can be established on create emits \"close\" event",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber87",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber86",
     "ReconnectingWebSocket when no connection can be established on create emits \"error\" event",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber298",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber297",
     "ReconnectingWebSocket when the server closes the connection",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber299",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber298",
     "ReconnectingWebSocket when the server closes the connection and reconnect is disabled",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber314",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber313",
     "ReconnectingWebSocket when the server closes the connection and reconnect is disabled emits a \"close\" event",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber330",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber329",
     "ReconnectingWebSocket when the server closes the connection and reconnect is enabled",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber331",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber330",
     "ReconnectingWebSocket when the server closes the connection and reconnect is enabled and the server allows the reconnect",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber346",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber345",
     "ReconnectingWebSocket when the server closes the connection and reconnect is enabled and the server allows the reconnect reconnects",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber369",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber368",
     "ReconnectingWebSocket when the server closes the connection and reconnect is enabled but the reconnect fails",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber409",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber408",
     "ReconnectingWebSocket when the server closes the connection and reconnect is enabled but the reconnect fails emits a \"close\" event",
     "test"
   ],
   [
     "",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html#lineNumber391",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html#lineNumber390",
     "ReconnectingWebSocket when the server closes the connection and reconnect is enabled but the reconnect fails emits an \"error\" event",
     "test"
   ],
   [
     "",
-    "test-file/test/index.spec.mjs.html#lineNumber5",
+    "test-file/test/index.spec.js.html#lineNumber5",
     "awry",
     "test"
   ],
   [
     "",
-    "test-file/test/index.spec.mjs.html#lineNumber10",
+    "test-file/test/index.spec.js.html#lineNumber10",
     "awry exposes an API constructor",
     "test"
   ],
   [
     "",
-    "test-file/test/index.spec.mjs.html#lineNumber6",
+    "test-file/test/index.spec.js.html#lineNumber6",
     "awry exposes the Events module",
     "test"
   ],
   [
-    "src/api/applicationsapi.mjs",
-    "file/src/api/ApplicationsAPI.mjs.html",
-    "src/api/ApplicationsAPI.mjs",
+    "src/.external-ecmascript.js~array",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "src/.external-ecmascript.js~Array",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~arraybuffer",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "src/.external-ecmascript.js~ArrayBuffer",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~boolean",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "src/.external-ecmascript.js~Boolean",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~dataview",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "src/.external-ecmascript.js~DataView",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~date",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "src/.external-ecmascript.js~Date",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~error",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "src/.external-ecmascript.js~Error",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~evalerror",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "src/.external-ecmascript.js~EvalError",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~float32array",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "src/.external-ecmascript.js~Float32Array",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~float64array",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "src/.external-ecmascript.js~Float64Array",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~function",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "src/.external-ecmascript.js~Function",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~generator",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "src/.external-ecmascript.js~Generator",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~generatorfunction",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "src/.external-ecmascript.js~GeneratorFunction",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~infinity",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "src/.external-ecmascript.js~Infinity",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~int16array",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "src/.external-ecmascript.js~Int16Array",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~int32array",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "src/.external-ecmascript.js~Int32Array",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~int8array",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "src/.external-ecmascript.js~Int8Array",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~internalerror",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "src/.external-ecmascript.js~InternalError",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~json",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "src/.external-ecmascript.js~JSON",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~map",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "src/.external-ecmascript.js~Map",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~nan",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "src/.external-ecmascript.js~NaN",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~number",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "src/.external-ecmascript.js~Number",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~object",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "src/.external-ecmascript.js~Object",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~promise",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "src/.external-ecmascript.js~Promise",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~proxy",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "src/.external-ecmascript.js~Proxy",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~rangeerror",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "src/.external-ecmascript.js~RangeError",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~referenceerror",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "src/.external-ecmascript.js~ReferenceError",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~reflect",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "src/.external-ecmascript.js~Reflect",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~regexp",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "src/.external-ecmascript.js~RegExp",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~set",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "src/.external-ecmascript.js~Set",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~string",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "src/.external-ecmascript.js~String",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~symbol",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "src/.external-ecmascript.js~Symbol",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~syntaxerror",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "src/.external-ecmascript.js~SyntaxError",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~typeerror",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "src/.external-ecmascript.js~TypeError",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~urierror",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "src/.external-ecmascript.js~URIError",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~uint16array",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "src/.external-ecmascript.js~Uint16Array",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~uint32array",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "src/.external-ecmascript.js~Uint32Array",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~uint8array",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "src/.external-ecmascript.js~Uint8Array",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~uint8clampedarray",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "src/.external-ecmascript.js~Uint8ClampedArray",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~weakmap",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "src/.external-ecmascript.js~WeakMap",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~weakset",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "src/.external-ecmascript.js~WeakSet",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~boolean",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "src/.external-ecmascript.js~boolean",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~function",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "src/.external-ecmascript.js~function",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~null",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "src/.external-ecmascript.js~null",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~number",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "src/.external-ecmascript.js~number",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~object",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "src/.external-ecmascript.js~object",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~string",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "src/.external-ecmascript.js~string",
+    "external"
+  ],
+  [
+    "src/.external-ecmascript.js~undefined",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "src/.external-ecmascript.js~undefined",
+    "external"
+  ],
+  [
+    "src/api/applicationsapi.js",
+    "file/src/api/ApplicationsAPI.js.html",
+    "src/api/ApplicationsAPI.js",
     "file"
   ],
   [
-    "src/api/applicationsapi.mjs~application",
+    "src/api/applicationsapi.js~application",
     "typedef/index.html#static-typedef-Application",
-    "src/api/ApplicationsAPI.mjs~Application",
+    "src/api/ApplicationsAPI.js~Application",
     "typedef"
   ],
   [
-    "src/api/applicationsapi.mjs~applicationsapi#constructor",
-    "class/src/api/ApplicationsAPI.mjs~ApplicationsAPI.html#instance-constructor-constructor",
-    "src/api/ApplicationsAPI.mjs~ApplicationsAPI#constructor",
+    "src/api/applicationsapi.js~applicationsapi#constructor",
+    "class/src/api/ApplicationsAPI.js~ApplicationsAPI.html#instance-constructor-constructor",
+    "src/api/ApplicationsAPI.js~ApplicationsAPI#constructor",
     "method"
   ],
   [
-    "src/api/applicationsapi.mjs~applicationsapi#get",
-    "class/src/api/ApplicationsAPI.mjs~ApplicationsAPI.html#instance-method-get",
-    "src/api/ApplicationsAPI.mjs~ApplicationsAPI#get",
+    "src/api/applicationsapi.js~applicationsapi#get",
+    "class/src/api/ApplicationsAPI.js~ApplicationsAPI.html#instance-method-get",
+    "src/api/ApplicationsAPI.js~ApplicationsAPI#get",
     "method"
   ],
   [
-    "src/api/applicationsapi.mjs~applicationsapi#list",
-    "class/src/api/ApplicationsAPI.mjs~ApplicationsAPI.html#instance-method-list",
-    "src/api/ApplicationsAPI.mjs~ApplicationsAPI#list",
+    "src/api/applicationsapi.js~applicationsapi#list",
+    "class/src/api/ApplicationsAPI.js~ApplicationsAPI.html#instance-method-list",
+    "src/api/ApplicationsAPI.js~ApplicationsAPI#list",
     "method"
   ],
   [
-    "src/api/applicationsapi.mjs~applicationsapi#subscribe",
-    "class/src/api/ApplicationsAPI.mjs~ApplicationsAPI.html#instance-method-subscribe",
-    "src/api/ApplicationsAPI.mjs~ApplicationsAPI#subscribe",
+    "src/api/applicationsapi.js~applicationsapi#subscribe",
+    "class/src/api/ApplicationsAPI.js~ApplicationsAPI.html#instance-method-subscribe",
+    "src/api/ApplicationsAPI.js~ApplicationsAPI#subscribe",
     "method"
   ],
   [
-    "src/api/applicationsapi.mjs~applicationsapi#unsubscribe",
-    "class/src/api/ApplicationsAPI.mjs~ApplicationsAPI.html#instance-method-unsubscribe",
-    "src/api/ApplicationsAPI.mjs~ApplicationsAPI#unsubscribe",
+    "src/api/applicationsapi.js~applicationsapi#unsubscribe",
+    "class/src/api/ApplicationsAPI.js~ApplicationsAPI.html#instance-method-unsubscribe",
+    "src/api/ApplicationsAPI.js~ApplicationsAPI#unsubscribe",
     "method"
   ],
   [
-    "src/api/asteriskapi.mjs",
-    "file/src/api/AsteriskAPI.mjs.html",
-    "src/api/AsteriskAPI.mjs",
+    "src/api/asteriskapi.js",
+    "file/src/api/AsteriskAPI.js.html",
+    "src/api/AsteriskAPI.js",
     "file"
   ],
   [
-    "src/api/asteriskapi.mjs~asteriskapi#addlog",
-    "class/src/api/AsteriskAPI.mjs~AsteriskAPI.html#instance-method-addLog",
-    "src/api/AsteriskAPI.mjs~AsteriskAPI#addLog",
+    "src/api/asteriskapi.js~asteriskapi#addlog",
+    "class/src/api/AsteriskAPI.js~AsteriskAPI.html#instance-method-addLog",
+    "src/api/AsteriskAPI.js~AsteriskAPI#addLog",
     "method"
   ],
   [
-    "src/api/asteriskapi.mjs~asteriskapi#constructor",
-    "class/src/api/AsteriskAPI.mjs~AsteriskAPI.html#instance-constructor-constructor",
-    "src/api/AsteriskAPI.mjs~AsteriskAPI#constructor",
+    "src/api/asteriskapi.js~asteriskapi#constructor",
+    "class/src/api/AsteriskAPI.js~AsteriskAPI.html#instance-constructor-constructor",
+    "src/api/AsteriskAPI.js~AsteriskAPI#constructor",
     "method"
   ],
   [
-    "src/api/asteriskapi.mjs~asteriskapi#deletelog",
-    "class/src/api/AsteriskAPI.mjs~AsteriskAPI.html#instance-method-deleteLog",
-    "src/api/AsteriskAPI.mjs~AsteriskAPI#deleteLog",
+    "src/api/asteriskapi.js~asteriskapi#deletelog",
+    "class/src/api/AsteriskAPI.js~AsteriskAPI.html#instance-method-deleteLog",
+    "src/api/AsteriskAPI.js~AsteriskAPI#deleteLog",
     "method"
   ],
   [
-    "src/api/asteriskapi.mjs~asteriskapi#deleteobject",
-    "class/src/api/AsteriskAPI.mjs~AsteriskAPI.html#instance-method-deleteObject",
-    "src/api/AsteriskAPI.mjs~AsteriskAPI#deleteObject",
+    "src/api/asteriskapi.js~asteriskapi#deleteobject",
+    "class/src/api/AsteriskAPI.js~AsteriskAPI.html#instance-method-deleteObject",
+    "src/api/AsteriskAPI.js~AsteriskAPI#deleteObject",
     "method"
   ],
   [
-    "src/api/asteriskapi.mjs~asteriskapi#getglobalvariable",
-    "class/src/api/AsteriskAPI.mjs~AsteriskAPI.html#instance-method-getGlobalVariable",
-    "src/api/AsteriskAPI.mjs~AsteriskAPI#getGlobalVariable",
+    "src/api/asteriskapi.js~asteriskapi#getglobalvariable",
+    "class/src/api/AsteriskAPI.js~AsteriskAPI.html#instance-method-getGlobalVariable",
+    "src/api/AsteriskAPI.js~AsteriskAPI#getGlobalVariable",
     "method"
   ],
   [
-    "src/api/asteriskapi.mjs~asteriskapi#getinfo",
-    "class/src/api/AsteriskAPI.mjs~AsteriskAPI.html#instance-method-getInfo",
-    "src/api/AsteriskAPI.mjs~AsteriskAPI#getInfo",
+    "src/api/asteriskapi.js~asteriskapi#getinfo",
+    "class/src/api/AsteriskAPI.js~AsteriskAPI.html#instance-method-getInfo",
+    "src/api/AsteriskAPI.js~AsteriskAPI#getInfo",
     "method"
   ],
   [
-    "src/api/asteriskapi.mjs~asteriskapi#getmodule",
-    "class/src/api/AsteriskAPI.mjs~AsteriskAPI.html#instance-method-getModule",
-    "src/api/AsteriskAPI.mjs~AsteriskAPI#getModule",
+    "src/api/asteriskapi.js~asteriskapi#getmodule",
+    "class/src/api/AsteriskAPI.js~AsteriskAPI.html#instance-method-getModule",
+    "src/api/AsteriskAPI.js~AsteriskAPI#getModule",
     "method"
   ],
   [
-    "src/api/asteriskapi.mjs~asteriskapi#getobject",
-    "class/src/api/AsteriskAPI.mjs~AsteriskAPI.html#instance-method-getObject",
-    "src/api/AsteriskAPI.mjs~AsteriskAPI#getObject",
+    "src/api/asteriskapi.js~asteriskapi#getobject",
+    "class/src/api/AsteriskAPI.js~AsteriskAPI.html#instance-method-getObject",
+    "src/api/AsteriskAPI.js~AsteriskAPI#getObject",
     "method"
   ],
   [
-    "src/api/asteriskapi.mjs~asteriskapi#listlogchannels",
-    "class/src/api/AsteriskAPI.mjs~AsteriskAPI.html#instance-method-listLogChannels",
-    "src/api/AsteriskAPI.mjs~AsteriskAPI#listLogChannels",
+    "src/api/asteriskapi.js~asteriskapi#listlogchannels",
+    "class/src/api/AsteriskAPI.js~AsteriskAPI.html#instance-method-listLogChannels",
+    "src/api/AsteriskAPI.js~AsteriskAPI#listLogChannels",
     "method"
   ],
   [
-    "src/api/asteriskapi.mjs~asteriskapi#listmodules",
-    "class/src/api/AsteriskAPI.mjs~AsteriskAPI.html#instance-method-listModules",
-    "src/api/AsteriskAPI.mjs~AsteriskAPI#listModules",
+    "src/api/asteriskapi.js~asteriskapi#listmodules",
+    "class/src/api/AsteriskAPI.js~AsteriskAPI.html#instance-method-listModules",
+    "src/api/AsteriskAPI.js~AsteriskAPI#listModules",
     "method"
   ],
   [
-    "src/api/asteriskapi.mjs~asteriskapi#loadmodule",
-    "class/src/api/AsteriskAPI.mjs~AsteriskAPI.html#instance-method-loadModule",
-    "src/api/AsteriskAPI.mjs~AsteriskAPI#loadModule",
+    "src/api/asteriskapi.js~asteriskapi#loadmodule",
+    "class/src/api/AsteriskAPI.js~AsteriskAPI.html#instance-method-loadModule",
+    "src/api/AsteriskAPI.js~AsteriskAPI#loadModule",
     "method"
   ],
   [
-    "src/api/asteriskapi.mjs~asteriskapi#reloadmodule",
-    "class/src/api/AsteriskAPI.mjs~AsteriskAPI.html#instance-method-reloadModule",
-    "src/api/AsteriskAPI.mjs~AsteriskAPI#reloadModule",
+    "src/api/asteriskapi.js~asteriskapi#reloadmodule",
+    "class/src/api/AsteriskAPI.js~AsteriskAPI.html#instance-method-reloadModule",
+    "src/api/AsteriskAPI.js~AsteriskAPI#reloadModule",
     "method"
   ],
   [
-    "src/api/asteriskapi.mjs~asteriskapi#rotatelog",
-    "class/src/api/AsteriskAPI.mjs~AsteriskAPI.html#instance-method-rotateLog",
-    "src/api/AsteriskAPI.mjs~AsteriskAPI#rotateLog",
+    "src/api/asteriskapi.js~asteriskapi#rotatelog",
+    "class/src/api/AsteriskAPI.js~AsteriskAPI.html#instance-method-rotateLog",
+    "src/api/AsteriskAPI.js~AsteriskAPI#rotateLog",
     "method"
   ],
   [
-    "src/api/asteriskapi.mjs~asteriskapi#setglobalvariable",
-    "class/src/api/AsteriskAPI.mjs~AsteriskAPI.html#instance-method-setGlobalVariable",
-    "src/api/AsteriskAPI.mjs~AsteriskAPI#setGlobalVariable",
+    "src/api/asteriskapi.js~asteriskapi#setglobalvariable",
+    "class/src/api/AsteriskAPI.js~AsteriskAPI.html#instance-method-setGlobalVariable",
+    "src/api/AsteriskAPI.js~AsteriskAPI#setGlobalVariable",
     "method"
   ],
   [
-    "src/api/asteriskapi.mjs~asteriskapi#unloadmodule",
-    "class/src/api/AsteriskAPI.mjs~AsteriskAPI.html#instance-method-unloadModule",
-    "src/api/AsteriskAPI.mjs~AsteriskAPI#unloadModule",
+    "src/api/asteriskapi.js~asteriskapi#unloadmodule",
+    "class/src/api/AsteriskAPI.js~AsteriskAPI.html#instance-method-unloadModule",
+    "src/api/AsteriskAPI.js~AsteriskAPI#unloadModule",
     "method"
   ],
   [
-    "src/api/asteriskapi.mjs~asteriskapi#updateobject",
-    "class/src/api/AsteriskAPI.mjs~AsteriskAPI.html#instance-method-updateObject",
-    "src/api/AsteriskAPI.mjs~AsteriskAPI#updateObject",
+    "src/api/asteriskapi.js~asteriskapi#updateobject",
+    "class/src/api/AsteriskAPI.js~AsteriskAPI.html#instance-method-updateObject",
+    "src/api/AsteriskAPI.js~AsteriskAPI#updateObject",
     "method"
   ],
   [
-    "src/api/asteriskapi.mjs~asteriskinfo",
+    "src/api/asteriskapi.js~asteriskinfo",
     "typedef/index.html#static-typedef-AsteriskInfo",
-    "src/api/AsteriskAPI.mjs~AsteriskInfo",
+    "src/api/AsteriskAPI.js~AsteriskInfo",
     "typedef"
   ],
   [
-    "src/api/asteriskapi.mjs~buildinfo",
+    "src/api/asteriskapi.js~buildinfo",
     "typedef/index.html#static-typedef-BuildInfo",
-    "src/api/AsteriskAPI.mjs~BuildInfo",
+    "src/api/AsteriskAPI.js~BuildInfo",
     "typedef"
   ],
   [
-    "src/api/asteriskapi.mjs~configinfo",
+    "src/api/asteriskapi.js~configinfo",
     "typedef/index.html#static-typedef-ConfigInfo",
-    "src/api/AsteriskAPI.mjs~ConfigInfo",
+    "src/api/AsteriskAPI.js~ConfigInfo",
     "typedef"
   ],
   [
-    "src/api/asteriskapi.mjs~configtuple",
+    "src/api/asteriskapi.js~configtuple",
     "typedef/index.html#static-typedef-ConfigTuple",
-    "src/api/AsteriskAPI.mjs~ConfigTuple",
+    "src/api/AsteriskAPI.js~ConfigTuple",
     "typedef"
   ],
   [
-    "src/api/asteriskapi.mjs~logchannel",
+    "src/api/asteriskapi.js~logchannel",
     "typedef/index.html#static-typedef-LogChannel",
-    "src/api/AsteriskAPI.mjs~LogChannel",
+    "src/api/AsteriskAPI.js~LogChannel",
     "typedef"
   ],
   [
-    "src/api/asteriskapi.mjs~module",
+    "src/api/asteriskapi.js~module",
     "typedef/index.html#static-typedef-Module",
-    "src/api/AsteriskAPI.mjs~Module",
+    "src/api/AsteriskAPI.js~Module",
     "typedef"
   ],
   [
-    "src/api/asteriskapi.mjs~statusinfo",
+    "src/api/asteriskapi.js~statusinfo",
     "typedef/index.html#static-typedef-StatusInfo",
-    "src/api/AsteriskAPI.mjs~StatusInfo",
+    "src/api/AsteriskAPI.js~StatusInfo",
     "typedef"
   ],
   [
-    "src/api/asteriskapi.mjs~systeminfo",
+    "src/api/asteriskapi.js~systeminfo",
     "typedef/index.html#static-typedef-SystemInfo",
-    "src/api/AsteriskAPI.mjs~SystemInfo",
+    "src/api/AsteriskAPI.js~SystemInfo",
     "typedef"
   ],
   [
-    "src/api/asteriskapi.mjs~variable",
+    "src/api/asteriskapi.js~variable",
     "typedef/index.html#static-typedef-Variable",
-    "src/api/AsteriskAPI.mjs~Variable",
+    "src/api/AsteriskAPI.js~Variable",
     "typedef"
   ],
   [
-    "src/api/bridgesapi.mjs",
-    "file/src/api/BridgesAPI.mjs.html",
-    "src/api/BridgesAPI.mjs",
+    "src/api/bridgesapi.js",
+    "file/src/api/BridgesAPI.js.html",
+    "src/api/BridgesAPI.js",
     "file"
   ],
   [
-    "src/api/bridgesapi.mjs~bridge",
+    "src/api/bridgesapi.js~bridge",
     "typedef/index.html#static-typedef-Bridge",
-    "src/api/BridgesAPI.mjs~Bridge",
+    "src/api/BridgesAPI.js~Bridge",
     "typedef"
   ],
   [
-    "src/api/bridgesapi.mjs~bridgesapi#addchannel",
-    "class/src/api/BridgesAPI.mjs~BridgesAPI.html#instance-method-addChannel",
-    "src/api/BridgesAPI.mjs~BridgesAPI#addChannel",
+    "src/api/bridgesapi.js~bridgesapi#addchannel",
+    "class/src/api/BridgesAPI.js~BridgesAPI.html#instance-method-addChannel",
+    "src/api/BridgesAPI.js~BridgesAPI#addChannel",
     "method"
   ],
   [
-    "src/api/bridgesapi.mjs~bridgesapi#constructor",
-    "class/src/api/BridgesAPI.mjs~BridgesAPI.html#instance-constructor-constructor",
-    "src/api/BridgesAPI.mjs~BridgesAPI#constructor",
+    "src/api/bridgesapi.js~bridgesapi#constructor",
+    "class/src/api/BridgesAPI.js~BridgesAPI.html#instance-constructor-constructor",
+    "src/api/BridgesAPI.js~BridgesAPI#constructor",
     "method"
   ],
   [
-    "src/api/bridgesapi.mjs~bridgesapi#create",
-    "class/src/api/BridgesAPI.mjs~BridgesAPI.html#instance-method-create",
-    "src/api/BridgesAPI.mjs~BridgesAPI#create",
+    "src/api/bridgesapi.js~bridgesapi#create",
+    "class/src/api/BridgesAPI.js~BridgesAPI.html#instance-method-create",
+    "src/api/BridgesAPI.js~BridgesAPI#create",
     "method"
   ],
   [
-    "src/api/bridgesapi.mjs~bridgesapi#createorupdate",
-    "class/src/api/BridgesAPI.mjs~BridgesAPI.html#instance-method-createOrUpdate",
-    "src/api/BridgesAPI.mjs~BridgesAPI#createOrUpdate",
+    "src/api/bridgesapi.js~bridgesapi#createorupdate",
+    "class/src/api/BridgesAPI.js~BridgesAPI.html#instance-method-createOrUpdate",
+    "src/api/BridgesAPI.js~BridgesAPI#createOrUpdate",
     "method"
   ],
   [
-    "src/api/bridgesapi.mjs~bridgesapi#destroy",
-    "class/src/api/BridgesAPI.mjs~BridgesAPI.html#instance-method-destroy",
-    "src/api/BridgesAPI.mjs~BridgesAPI#destroy",
+    "src/api/bridgesapi.js~bridgesapi#destroy",
+    "class/src/api/BridgesAPI.js~BridgesAPI.html#instance-method-destroy",
+    "src/api/BridgesAPI.js~BridgesAPI#destroy",
     "method"
   ],
   [
-    "src/api/bridgesapi.mjs~bridgesapi#get",
-    "class/src/api/BridgesAPI.mjs~BridgesAPI.html#instance-method-get",
-    "src/api/BridgesAPI.mjs~BridgesAPI#get",
+    "src/api/bridgesapi.js~bridgesapi#get",
+    "class/src/api/BridgesAPI.js~BridgesAPI.html#instance-method-get",
+    "src/api/BridgesAPI.js~BridgesAPI#get",
     "method"
   ],
   [
-    "src/api/bridgesapi.mjs~bridgesapi#list",
-    "class/src/api/BridgesAPI.mjs~BridgesAPI.html#instance-method-list",
-    "src/api/BridgesAPI.mjs~BridgesAPI#list",
+    "src/api/bridgesapi.js~bridgesapi#list",
+    "class/src/api/BridgesAPI.js~BridgesAPI.html#instance-method-list",
+    "src/api/BridgesAPI.js~BridgesAPI#list",
     "method"
   ],
   [
-    "src/api/bridgesapi.mjs~bridgesapi#play",
-    "class/src/api/BridgesAPI.mjs~BridgesAPI.html#instance-method-play",
-    "src/api/BridgesAPI.mjs~BridgesAPI#play",
+    "src/api/bridgesapi.js~bridgesapi#play",
+    "class/src/api/BridgesAPI.js~BridgesAPI.html#instance-method-play",
+    "src/api/BridgesAPI.js~BridgesAPI#play",
     "method"
   ],
   [
-    "src/api/bridgesapi.mjs~bridgesapi#playwithid",
-    "class/src/api/BridgesAPI.mjs~BridgesAPI.html#instance-method-playWithId",
-    "src/api/BridgesAPI.mjs~BridgesAPI#playWithId",
+    "src/api/bridgesapi.js~bridgesapi#playwithid",
+    "class/src/api/BridgesAPI.js~BridgesAPI.html#instance-method-playWithId",
+    "src/api/BridgesAPI.js~BridgesAPI#playWithId",
     "method"
   ],
   [
-    "src/api/bridgesapi.mjs~bridgesapi#record",
-    "class/src/api/BridgesAPI.mjs~BridgesAPI.html#instance-method-record",
-    "src/api/BridgesAPI.mjs~BridgesAPI#record",
+    "src/api/bridgesapi.js~bridgesapi#record",
+    "class/src/api/BridgesAPI.js~BridgesAPI.html#instance-method-record",
+    "src/api/BridgesAPI.js~BridgesAPI#record",
     "method"
   ],
   [
-    "src/api/bridgesapi.mjs~bridgesapi#removechannel",
-    "class/src/api/BridgesAPI.mjs~BridgesAPI.html#instance-method-removeChannel",
-    "src/api/BridgesAPI.mjs~BridgesAPI#removeChannel",
+    "src/api/bridgesapi.js~bridgesapi#removechannel",
+    "class/src/api/BridgesAPI.js~BridgesAPI.html#instance-method-removeChannel",
+    "src/api/BridgesAPI.js~BridgesAPI#removeChannel",
     "method"
   ],
   [
-    "src/api/bridgesapi.mjs~bridgesapi#startmusiconhold",
-    "class/src/api/BridgesAPI.mjs~BridgesAPI.html#instance-method-startMusicOnHold",
-    "src/api/BridgesAPI.mjs~BridgesAPI#startMusicOnHold",
+    "src/api/bridgesapi.js~bridgesapi#startmusiconhold",
+    "class/src/api/BridgesAPI.js~BridgesAPI.html#instance-method-startMusicOnHold",
+    "src/api/BridgesAPI.js~BridgesAPI#startMusicOnHold",
     "method"
   ],
   [
-    "src/api/bridgesapi.mjs~bridgesapi#stopmusiconhold",
-    "class/src/api/BridgesAPI.mjs~BridgesAPI.html#instance-method-stopMusicOnHold",
-    "src/api/BridgesAPI.mjs~BridgesAPI#stopMusicOnHold",
+    "src/api/bridgesapi.js~bridgesapi#stopmusiconhold",
+    "class/src/api/BridgesAPI.js~BridgesAPI.html#instance-method-stopMusicOnHold",
+    "src/api/BridgesAPI.js~BridgesAPI#stopMusicOnHold",
     "method"
   ],
   [
-    "src/api/bridgesapi.mjs~liverecording",
+    "src/api/bridgesapi.js~liverecording",
     "typedef/index.html#static-typedef-LiveRecording",
-    "src/api/BridgesAPI.mjs~LiveRecording",
+    "src/api/BridgesAPI.js~LiveRecording",
     "typedef"
   ],
   [
-    "src/api/channelsapi.mjs",
-    "file/src/api/ChannelsAPI.mjs.html",
-    "src/api/ChannelsAPI.mjs",
+    "src/api/channelsapi.js",
+    "file/src/api/ChannelsAPI.js.html",
+    "src/api/ChannelsAPI.js",
     "file"
   ],
   [
-    "src/api/channelsapi.mjs~channel",
+    "src/api/channelsapi.js~channel",
     "typedef/index.html#static-typedef-Channel",
-    "src/api/ChannelsAPI.mjs~Channel",
+    "src/api/ChannelsAPI.js~Channel",
     "typedef"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#answer",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-answer",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#answer",
+    "src/api/channelsapi.js~channelsapi#answer",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-answer",
+    "src/api/ChannelsAPI.js~ChannelsAPI#answer",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#constructor",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-constructor-constructor",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#constructor",
+    "src/api/channelsapi.js~channelsapi#constructor",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-constructor-constructor",
+    "src/api/ChannelsAPI.js~ChannelsAPI#constructor",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#continueindialplan",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-continueInDialplan",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#continueInDialplan",
+    "src/api/channelsapi.js~channelsapi#continueindialplan",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-continueInDialplan",
+    "src/api/ChannelsAPI.js~ChannelsAPI#continueInDialplan",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#create",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-create",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#create",
+    "src/api/channelsapi.js~channelsapi#create",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-create",
+    "src/api/ChannelsAPI.js~ChannelsAPI#create",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#dial",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-dial",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#dial",
+    "src/api/channelsapi.js~channelsapi#dial",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-dial",
+    "src/api/ChannelsAPI.js~ChannelsAPI#dial",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#get",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-get",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#get",
+    "src/api/channelsapi.js~channelsapi#get",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-get",
+    "src/api/ChannelsAPI.js~ChannelsAPI#get",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#getchannelvariable",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-getChannelVariable",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#getChannelVariable",
+    "src/api/channelsapi.js~channelsapi#getchannelvariable",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-getChannelVariable",
+    "src/api/ChannelsAPI.js~ChannelsAPI#getChannelVariable",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#hangup",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-hangup",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#hangup",
+    "src/api/channelsapi.js~channelsapi#hangup",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-hangup",
+    "src/api/ChannelsAPI.js~ChannelsAPI#hangup",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#hold",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-hold",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#hold",
+    "src/api/channelsapi.js~channelsapi#hold",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-hold",
+    "src/api/ChannelsAPI.js~ChannelsAPI#hold",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#list",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-list",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#list",
+    "src/api/channelsapi.js~channelsapi#list",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-list",
+    "src/api/ChannelsAPI.js~ChannelsAPI#list",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#mute",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-mute",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#mute",
+    "src/api/channelsapi.js~channelsapi#mute",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-mute",
+    "src/api/ChannelsAPI.js~ChannelsAPI#mute",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#originate",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-originate",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#originate",
+    "src/api/channelsapi.js~channelsapi#originate",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-originate",
+    "src/api/ChannelsAPI.js~ChannelsAPI#originate",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#originatewithid",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-originateWithId",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#originateWithId",
+    "src/api/channelsapi.js~channelsapi#originatewithid",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-originateWithId",
+    "src/api/ChannelsAPI.js~ChannelsAPI#originateWithId",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#play",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-play",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#play",
+    "src/api/channelsapi.js~channelsapi#play",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-play",
+    "src/api/ChannelsAPI.js~ChannelsAPI#play",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#playwithid",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-playWithId",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#playWithId",
+    "src/api/channelsapi.js~channelsapi#playwithid",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-playWithId",
+    "src/api/ChannelsAPI.js~ChannelsAPI#playWithId",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#record",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-record",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#record",
+    "src/api/channelsapi.js~channelsapi#record",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-record",
+    "src/api/ChannelsAPI.js~ChannelsAPI#record",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#redirect",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-redirect",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#redirect",
+    "src/api/channelsapi.js~channelsapi#redirect",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-redirect",
+    "src/api/ChannelsAPI.js~ChannelsAPI#redirect",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#ring",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-ring",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#ring",
+    "src/api/channelsapi.js~channelsapi#ring",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-ring",
+    "src/api/ChannelsAPI.js~ChannelsAPI#ring",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#ringstop",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-ringStop",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#ringStop",
+    "src/api/channelsapi.js~channelsapi#ringstop",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-ringStop",
+    "src/api/ChannelsAPI.js~ChannelsAPI#ringStop",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#senddtmf",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-sendDTMF",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#sendDTMF",
+    "src/api/channelsapi.js~channelsapi#senddtmf",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-sendDTMF",
+    "src/api/ChannelsAPI.js~ChannelsAPI#sendDTMF",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#setchannelvariable",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-setChannelVariable",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#setChannelVariable",
+    "src/api/channelsapi.js~channelsapi#setchannelvariable",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-setChannelVariable",
+    "src/api/ChannelsAPI.js~ChannelsAPI#setChannelVariable",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#snoopchannel",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-snoopChannel",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#snoopChannel",
+    "src/api/channelsapi.js~channelsapi#snoopchannel",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-snoopChannel",
+    "src/api/ChannelsAPI.js~ChannelsAPI#snoopChannel",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#snoopchannelwithid",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-snoopChannelWithId",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#snoopChannelWithId",
+    "src/api/channelsapi.js~channelsapi#snoopchannelwithid",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-snoopChannelWithId",
+    "src/api/ChannelsAPI.js~ChannelsAPI#snoopChannelWithId",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#startmusiconhold",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-startMusicOnHold",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#startMusicOnHold",
+    "src/api/channelsapi.js~channelsapi#startmusiconhold",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-startMusicOnHold",
+    "src/api/ChannelsAPI.js~ChannelsAPI#startMusicOnHold",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#startsilence",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-startSilence",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#startSilence",
+    "src/api/channelsapi.js~channelsapi#startsilence",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-startSilence",
+    "src/api/ChannelsAPI.js~ChannelsAPI#startSilence",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#stopmusiconhold",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-stopMusicOnHold",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#stopMusicOnHold",
+    "src/api/channelsapi.js~channelsapi#stopmusiconhold",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-stopMusicOnHold",
+    "src/api/ChannelsAPI.js~ChannelsAPI#stopMusicOnHold",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#stopsilence",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-stopSilence",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#stopSilence",
+    "src/api/channelsapi.js~channelsapi#stopsilence",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-stopSilence",
+    "src/api/ChannelsAPI.js~ChannelsAPI#stopSilence",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#unhold",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-unhold",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#unhold",
+    "src/api/channelsapi.js~channelsapi#unhold",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-unhold",
+    "src/api/ChannelsAPI.js~ChannelsAPI#unhold",
     "method"
   ],
   [
-    "src/api/channelsapi.mjs~channelsapi#unmute",
-    "class/src/api/ChannelsAPI.mjs~ChannelsAPI.html#instance-method-unmute",
-    "src/api/ChannelsAPI.mjs~ChannelsAPI#unmute",
+    "src/api/channelsapi.js~channelsapi#unmute",
+    "class/src/api/ChannelsAPI.js~ChannelsAPI.html#instance-method-unmute",
+    "src/api/ChannelsAPI.js~ChannelsAPI#unmute",
     "method"
   ],
   [
-    "src/api/devicestatesapi.mjs",
-    "file/src/api/DeviceStatesAPI.mjs.html",
-    "src/api/DeviceStatesAPI.mjs",
+    "src/api/devicestatesapi.js",
+    "file/src/api/DeviceStatesAPI.js.html",
+    "src/api/DeviceStatesAPI.js",
     "file"
   ],
   [
-    "src/api/devicestatesapi.mjs~devicestate",
+    "src/api/devicestatesapi.js~devicestate",
     "typedef/index.html#static-typedef-DeviceState",
-    "src/api/DeviceStatesAPI.mjs~DeviceState",
+    "src/api/DeviceStatesAPI.js~DeviceState",
     "typedef"
   ],
   [
-    "src/api/devicestatesapi.mjs~devicestatesapi#constructor",
-    "class/src/api/DeviceStatesAPI.mjs~DeviceStatesAPI.html#instance-constructor-constructor",
-    "src/api/DeviceStatesAPI.mjs~DeviceStatesAPI#constructor",
+    "src/api/devicestatesapi.js~devicestatesapi#constructor",
+    "class/src/api/DeviceStatesAPI.js~DeviceStatesAPI.html#instance-constructor-constructor",
+    "src/api/DeviceStatesAPI.js~DeviceStatesAPI#constructor",
     "method"
   ],
   [
-    "src/api/devicestatesapi.mjs~devicestatesapi#destroy",
-    "class/src/api/DeviceStatesAPI.mjs~DeviceStatesAPI.html#instance-method-destroy",
-    "src/api/DeviceStatesAPI.mjs~DeviceStatesAPI#destroy",
+    "src/api/devicestatesapi.js~devicestatesapi#destroy",
+    "class/src/api/DeviceStatesAPI.js~DeviceStatesAPI.html#instance-method-destroy",
+    "src/api/DeviceStatesAPI.js~DeviceStatesAPI#destroy",
     "method"
   ],
   [
-    "src/api/devicestatesapi.mjs~devicestatesapi#get",
-    "class/src/api/DeviceStatesAPI.mjs~DeviceStatesAPI.html#instance-method-get",
-    "src/api/DeviceStatesAPI.mjs~DeviceStatesAPI#get",
+    "src/api/devicestatesapi.js~devicestatesapi#get",
+    "class/src/api/DeviceStatesAPI.js~DeviceStatesAPI.html#instance-method-get",
+    "src/api/DeviceStatesAPI.js~DeviceStatesAPI#get",
     "method"
   ],
   [
-    "src/api/devicestatesapi.mjs~devicestatesapi#list",
-    "class/src/api/DeviceStatesAPI.mjs~DeviceStatesAPI.html#instance-method-list",
-    "src/api/DeviceStatesAPI.mjs~DeviceStatesAPI#list",
+    "src/api/devicestatesapi.js~devicestatesapi#list",
+    "class/src/api/DeviceStatesAPI.js~DeviceStatesAPI.html#instance-method-list",
+    "src/api/DeviceStatesAPI.js~DeviceStatesAPI#list",
     "method"
   ],
   [
-    "src/api/devicestatesapi.mjs~devicestatesapi#update",
-    "class/src/api/DeviceStatesAPI.mjs~DeviceStatesAPI.html#instance-method-update",
-    "src/api/DeviceStatesAPI.mjs~DeviceStatesAPI#update",
+    "src/api/devicestatesapi.js~devicestatesapi#update",
+    "class/src/api/DeviceStatesAPI.js~DeviceStatesAPI.html#instance-method-update",
+    "src/api/DeviceStatesAPI.js~DeviceStatesAPI#update",
     "method"
   ],
   [
-    "src/api/endpointsapi.mjs",
-    "file/src/api/EndpointsAPI.mjs.html",
-    "src/api/EndpointsAPI.mjs",
+    "src/api/endpointsapi.js",
+    "file/src/api/EndpointsAPI.js.html",
+    "src/api/EndpointsAPI.js",
     "file"
   ],
   [
-    "src/api/endpointsapi.mjs~endpoint",
+    "src/api/endpointsapi.js~endpoint",
     "typedef/index.html#static-typedef-Endpoint",
-    "src/api/EndpointsAPI.mjs~Endpoint",
+    "src/api/EndpointsAPI.js~Endpoint",
     "typedef"
   ],
   [
-    "src/api/endpointsapi.mjs~endpointsapi#constructor",
-    "class/src/api/EndpointsAPI.mjs~EndpointsAPI.html#instance-constructor-constructor",
-    "src/api/EndpointsAPI.mjs~EndpointsAPI#constructor",
+    "src/api/endpointsapi.js~endpointsapi#constructor",
+    "class/src/api/EndpointsAPI.js~EndpointsAPI.html#instance-constructor-constructor",
+    "src/api/EndpointsAPI.js~EndpointsAPI#constructor",
     "method"
   ],
   [
-    "src/api/endpointsapi.mjs~endpointsapi#get",
-    "class/src/api/EndpointsAPI.mjs~EndpointsAPI.html#instance-method-get",
-    "src/api/EndpointsAPI.mjs~EndpointsAPI#get",
+    "src/api/endpointsapi.js~endpointsapi#get",
+    "class/src/api/EndpointsAPI.js~EndpointsAPI.html#instance-method-get",
+    "src/api/EndpointsAPI.js~EndpointsAPI#get",
     "method"
   ],
   [
-    "src/api/endpointsapi.mjs~endpointsapi#list",
-    "class/src/api/EndpointsAPI.mjs~EndpointsAPI.html#instance-method-list",
-    "src/api/EndpointsAPI.mjs~EndpointsAPI#list",
+    "src/api/endpointsapi.js~endpointsapi#list",
+    "class/src/api/EndpointsAPI.js~EndpointsAPI.html#instance-method-list",
+    "src/api/EndpointsAPI.js~EndpointsAPI#list",
     "method"
   ],
   [
-    "src/api/endpointsapi.mjs~endpointsapi#listbytechnology",
-    "class/src/api/EndpointsAPI.mjs~EndpointsAPI.html#instance-method-listByTechnology",
-    "src/api/EndpointsAPI.mjs~EndpointsAPI#listByTechnology",
+    "src/api/endpointsapi.js~endpointsapi#listbytechnology",
+    "class/src/api/EndpointsAPI.js~EndpointsAPI.html#instance-method-listByTechnology",
+    "src/api/EndpointsAPI.js~EndpointsAPI#listByTechnology",
     "method"
   ],
   [
-    "src/api/endpointsapi.mjs~endpointsapi#sendmessage",
-    "class/src/api/EndpointsAPI.mjs~EndpointsAPI.html#instance-method-sendMessage",
-    "src/api/EndpointsAPI.mjs~EndpointsAPI#sendMessage",
+    "src/api/endpointsapi.js~endpointsapi#sendmessage",
+    "class/src/api/EndpointsAPI.js~EndpointsAPI.html#instance-method-sendMessage",
+    "src/api/EndpointsAPI.js~EndpointsAPI#sendMessage",
     "method"
   ],
   [
-    "src/api/endpointsapi.mjs~endpointsapi#sendmessagetoendpoint",
-    "class/src/api/EndpointsAPI.mjs~EndpointsAPI.html#instance-method-sendMessageToEndpoint",
-    "src/api/EndpointsAPI.mjs~EndpointsAPI#sendMessageToEndpoint",
+    "src/api/endpointsapi.js~endpointsapi#sendmessagetoendpoint",
+    "class/src/api/EndpointsAPI.js~EndpointsAPI.html#instance-method-sendMessageToEndpoint",
+    "src/api/EndpointsAPI.js~EndpointsAPI#sendMessageToEndpoint",
     "method"
   ],
   [
-    "src/api/eventsapi.mjs",
-    "file/src/api/EventsAPI.mjs.html",
-    "src/api/EventsAPI.mjs",
+    "src/api/eventsapi.js",
+    "file/src/api/EventsAPI.js.html",
+    "src/api/EventsAPI.js",
     "file"
   ],
   [
-    "src/api/eventsapi.mjs~eventsapi#constructor",
-    "class/src/api/EventsAPI.mjs~EventsAPI.html#instance-constructor-constructor",
-    "src/api/EventsAPI.mjs~EventsAPI#constructor",
+    "src/api/eventsapi.js~eventsapi#constructor",
+    "class/src/api/EventsAPI.js~EventsAPI.html#instance-constructor-constructor",
+    "src/api/EventsAPI.js~EventsAPI#constructor",
     "method"
   ],
   [
-    "src/api/eventsapi.mjs~eventsapi#generateuserevent",
-    "class/src/api/EventsAPI.mjs~EventsAPI.html#instance-method-generateUserEvent",
-    "src/api/EventsAPI.mjs~EventsAPI#generateUserEvent",
+    "src/api/eventsapi.js~eventsapi#generateuserevent",
+    "class/src/api/EventsAPI.js~EventsAPI.html#instance-method-generateUserEvent",
+    "src/api/EventsAPI.js~EventsAPI#generateUserEvent",
     "method"
   ],
   [
-    "src/api/mailboxesapi.mjs",
-    "file/src/api/MailboxesAPI.mjs.html",
-    "src/api/MailboxesAPI.mjs",
+    "src/api/mailboxesapi.js",
+    "file/src/api/MailboxesAPI.js.html",
+    "src/api/MailboxesAPI.js",
     "file"
   ],
   [
-    "src/api/mailboxesapi.mjs~mailbox",
+    "src/api/mailboxesapi.js~mailbox",
     "typedef/index.html#static-typedef-Mailbox",
-    "src/api/MailboxesAPI.mjs~Mailbox",
+    "src/api/MailboxesAPI.js~Mailbox",
     "typedef"
   ],
   [
-    "src/api/mailboxesapi.mjs~mailboxesapi#constructor",
-    "class/src/api/MailboxesAPI.mjs~MailboxesAPI.html#instance-constructor-constructor",
-    "src/api/MailboxesAPI.mjs~MailboxesAPI#constructor",
+    "src/api/mailboxesapi.js~mailboxesapi#constructor",
+    "class/src/api/MailboxesAPI.js~MailboxesAPI.html#instance-constructor-constructor",
+    "src/api/MailboxesAPI.js~MailboxesAPI#constructor",
     "method"
   ],
   [
-    "src/api/mailboxesapi.mjs~mailboxesapi#destroy",
-    "class/src/api/MailboxesAPI.mjs~MailboxesAPI.html#instance-method-destroy",
-    "src/api/MailboxesAPI.mjs~MailboxesAPI#destroy",
+    "src/api/mailboxesapi.js~mailboxesapi#destroy",
+    "class/src/api/MailboxesAPI.js~MailboxesAPI.html#instance-method-destroy",
+    "src/api/MailboxesAPI.js~MailboxesAPI#destroy",
     "method"
   ],
   [
-    "src/api/mailboxesapi.mjs~mailboxesapi#get",
-    "class/src/api/MailboxesAPI.mjs~MailboxesAPI.html#instance-method-get",
-    "src/api/MailboxesAPI.mjs~MailboxesAPI#get",
+    "src/api/mailboxesapi.js~mailboxesapi#get",
+    "class/src/api/MailboxesAPI.js~MailboxesAPI.html#instance-method-get",
+    "src/api/MailboxesAPI.js~MailboxesAPI#get",
     "method"
   ],
   [
-    "src/api/mailboxesapi.mjs~mailboxesapi#list",
-    "class/src/api/MailboxesAPI.mjs~MailboxesAPI.html#instance-method-list",
-    "src/api/MailboxesAPI.mjs~MailboxesAPI#list",
+    "src/api/mailboxesapi.js~mailboxesapi#list",
+    "class/src/api/MailboxesAPI.js~MailboxesAPI.html#instance-method-list",
+    "src/api/MailboxesAPI.js~MailboxesAPI#list",
     "method"
   ],
   [
-    "src/api/mailboxesapi.mjs~mailboxesapi#update",
-    "class/src/api/MailboxesAPI.mjs~MailboxesAPI.html#instance-method-update",
-    "src/api/MailboxesAPI.mjs~MailboxesAPI#update",
+    "src/api/mailboxesapi.js~mailboxesapi#update",
+    "class/src/api/MailboxesAPI.js~MailboxesAPI.html#instance-method-update",
+    "src/api/MailboxesAPI.js~MailboxesAPI#update",
     "method"
   ],
   [
-    "src/api/playbacksapi.mjs",
-    "file/src/api/PlaybacksAPI.mjs.html",
-    "src/api/PlaybacksAPI.mjs",
+    "src/api/playbacksapi.js",
+    "file/src/api/PlaybacksAPI.js.html",
+    "src/api/PlaybacksAPI.js",
     "file"
   ],
   [
-    "src/api/playbacksapi.mjs~playback",
+    "src/api/playbacksapi.js~playback",
     "typedef/index.html#static-typedef-Playback",
-    "src/api/PlaybacksAPI.mjs~Playback",
+    "src/api/PlaybacksAPI.js~Playback",
     "typedef"
   ],
   [
-    "src/api/playbacksapi.mjs~playbacksapi#constructor",
-    "class/src/api/PlaybacksAPI.mjs~PlaybacksAPI.html#instance-constructor-constructor",
-    "src/api/PlaybacksAPI.mjs~PlaybacksAPI#constructor",
+    "src/api/playbacksapi.js~playbacksapi#constructor",
+    "class/src/api/PlaybacksAPI.js~PlaybacksAPI.html#instance-constructor-constructor",
+    "src/api/PlaybacksAPI.js~PlaybacksAPI#constructor",
     "method"
   ],
   [
-    "src/api/playbacksapi.mjs~playbacksapi#control",
-    "class/src/api/PlaybacksAPI.mjs~PlaybacksAPI.html#instance-method-control",
-    "src/api/PlaybacksAPI.mjs~PlaybacksAPI#control",
+    "src/api/playbacksapi.js~playbacksapi#control",
+    "class/src/api/PlaybacksAPI.js~PlaybacksAPI.html#instance-method-control",
+    "src/api/PlaybacksAPI.js~PlaybacksAPI#control",
     "method"
   ],
   [
-    "src/api/playbacksapi.mjs~playbacksapi#get",
-    "class/src/api/PlaybacksAPI.mjs~PlaybacksAPI.html#instance-method-get",
-    "src/api/PlaybacksAPI.mjs~PlaybacksAPI#get",
+    "src/api/playbacksapi.js~playbacksapi#get",
+    "class/src/api/PlaybacksAPI.js~PlaybacksAPI.html#instance-method-get",
+    "src/api/PlaybacksAPI.js~PlaybacksAPI#get",
     "method"
   ],
   [
-    "src/api/playbacksapi.mjs~playbacksapi#stop",
-    "class/src/api/PlaybacksAPI.mjs~PlaybacksAPI.html#instance-method-stop",
-    "src/api/PlaybacksAPI.mjs~PlaybacksAPI#stop",
+    "src/api/playbacksapi.js~playbacksapi#stop",
+    "class/src/api/PlaybacksAPI.js~PlaybacksAPI.html#instance-method-stop",
+    "src/api/PlaybacksAPI.js~PlaybacksAPI#stop",
     "method"
   ],
   [
-    "src/api/recordingsapi.mjs",
-    "file/src/api/RecordingsAPI.mjs.html",
-    "src/api/RecordingsAPI.mjs",
+    "src/api/recordingsapi.js",
+    "file/src/api/RecordingsAPI.js.html",
+    "src/api/RecordingsAPI.js",
     "file"
   ],
   [
-    "src/api/recordingsapi.mjs~recordingsapi#cancel",
-    "class/src/api/RecordingsAPI.mjs~RecordingsAPI.html#instance-method-cancel",
-    "src/api/RecordingsAPI.mjs~RecordingsAPI#cancel",
+    "src/api/recordingsapi.js~recordingsapi#cancel",
+    "class/src/api/RecordingsAPI.js~RecordingsAPI.html#instance-method-cancel",
+    "src/api/RecordingsAPI.js~RecordingsAPI#cancel",
     "method"
   ],
   [
-    "src/api/recordingsapi.mjs~recordingsapi#constructor",
-    "class/src/api/RecordingsAPI.mjs~RecordingsAPI.html#instance-constructor-constructor",
-    "src/api/RecordingsAPI.mjs~RecordingsAPI#constructor",
+    "src/api/recordingsapi.js~recordingsapi#constructor",
+    "class/src/api/RecordingsAPI.js~RecordingsAPI.html#instance-constructor-constructor",
+    "src/api/RecordingsAPI.js~RecordingsAPI#constructor",
     "method"
   ],
   [
-    "src/api/recordingsapi.mjs~recordingsapi#copystored",
-    "class/src/api/RecordingsAPI.mjs~RecordingsAPI.html#instance-method-copyStored",
-    "src/api/RecordingsAPI.mjs~RecordingsAPI#copyStored",
+    "src/api/recordingsapi.js~recordingsapi#copystored",
+    "class/src/api/RecordingsAPI.js~RecordingsAPI.html#instance-method-copyStored",
+    "src/api/RecordingsAPI.js~RecordingsAPI#copyStored",
     "method"
   ],
   [
-    "src/api/recordingsapi.mjs~recordingsapi#destroystored",
-    "class/src/api/RecordingsAPI.mjs~RecordingsAPI.html#instance-method-destroyStored",
-    "src/api/RecordingsAPI.mjs~RecordingsAPI#destroyStored",
+    "src/api/recordingsapi.js~recordingsapi#destroystored",
+    "class/src/api/RecordingsAPI.js~RecordingsAPI.html#instance-method-destroyStored",
+    "src/api/RecordingsAPI.js~RecordingsAPI#destroyStored",
     "method"
   ],
   [
-    "src/api/recordingsapi.mjs~recordingsapi#getlive",
-    "class/src/api/RecordingsAPI.mjs~RecordingsAPI.html#instance-method-getLive",
-    "src/api/RecordingsAPI.mjs~RecordingsAPI#getLive",
+    "src/api/recordingsapi.js~recordingsapi#getlive",
+    "class/src/api/RecordingsAPI.js~RecordingsAPI.html#instance-method-getLive",
+    "src/api/RecordingsAPI.js~RecordingsAPI#getLive",
     "method"
   ],
   [
-    "src/api/recordingsapi.mjs~recordingsapi#getstored",
-    "class/src/api/RecordingsAPI.mjs~RecordingsAPI.html#instance-method-getStored",
-    "src/api/RecordingsAPI.mjs~RecordingsAPI#getStored",
+    "src/api/recordingsapi.js~recordingsapi#getstored",
+    "class/src/api/RecordingsAPI.js~RecordingsAPI.html#instance-method-getStored",
+    "src/api/RecordingsAPI.js~RecordingsAPI#getStored",
     "method"
   ],
   [
-    "src/api/recordingsapi.mjs~recordingsapi#getstoredfile",
-    "class/src/api/RecordingsAPI.mjs~RecordingsAPI.html#instance-method-getStoredFile",
-    "src/api/RecordingsAPI.mjs~RecordingsAPI#getStoredFile",
+    "src/api/recordingsapi.js~recordingsapi#getstoredfile",
+    "class/src/api/RecordingsAPI.js~RecordingsAPI.html#instance-method-getStoredFile",
+    "src/api/RecordingsAPI.js~RecordingsAPI#getStoredFile",
     "method"
   ],
   [
-    "src/api/recordingsapi.mjs~recordingsapi#liststored",
-    "class/src/api/RecordingsAPI.mjs~RecordingsAPI.html#instance-method-listStored",
-    "src/api/RecordingsAPI.mjs~RecordingsAPI#listStored",
+    "src/api/recordingsapi.js~recordingsapi#liststored",
+    "class/src/api/RecordingsAPI.js~RecordingsAPI.html#instance-method-listStored",
+    "src/api/RecordingsAPI.js~RecordingsAPI#listStored",
     "method"
   ],
   [
-    "src/api/recordingsapi.mjs~recordingsapi#mute",
-    "class/src/api/RecordingsAPI.mjs~RecordingsAPI.html#instance-method-mute",
-    "src/api/RecordingsAPI.mjs~RecordingsAPI#mute",
+    "src/api/recordingsapi.js~recordingsapi#mute",
+    "class/src/api/RecordingsAPI.js~RecordingsAPI.html#instance-method-mute",
+    "src/api/RecordingsAPI.js~RecordingsAPI#mute",
     "method"
   ],
   [
-    "src/api/recordingsapi.mjs~recordingsapi#pause",
-    "class/src/api/RecordingsAPI.mjs~RecordingsAPI.html#instance-method-pause",
-    "src/api/RecordingsAPI.mjs~RecordingsAPI#pause",
+    "src/api/recordingsapi.js~recordingsapi#pause",
+    "class/src/api/RecordingsAPI.js~RecordingsAPI.html#instance-method-pause",
+    "src/api/RecordingsAPI.js~RecordingsAPI#pause",
     "method"
   ],
   [
-    "src/api/recordingsapi.mjs~recordingsapi#stop",
-    "class/src/api/RecordingsAPI.mjs~RecordingsAPI.html#instance-method-stop",
-    "src/api/RecordingsAPI.mjs~RecordingsAPI#stop",
+    "src/api/recordingsapi.js~recordingsapi#stop",
+    "class/src/api/RecordingsAPI.js~RecordingsAPI.html#instance-method-stop",
+    "src/api/RecordingsAPI.js~RecordingsAPI#stop",
     "method"
   ],
   [
-    "src/api/recordingsapi.mjs~recordingsapi#unmute",
-    "class/src/api/RecordingsAPI.mjs~RecordingsAPI.html#instance-method-unmute",
-    "src/api/RecordingsAPI.mjs~RecordingsAPI#unmute",
+    "src/api/recordingsapi.js~recordingsapi#unmute",
+    "class/src/api/RecordingsAPI.js~RecordingsAPI.html#instance-method-unmute",
+    "src/api/RecordingsAPI.js~RecordingsAPI#unmute",
     "method"
   ],
   [
-    "src/api/recordingsapi.mjs~recordingsapi#unpause",
-    "class/src/api/RecordingsAPI.mjs~RecordingsAPI.html#instance-method-unpause",
-    "src/api/RecordingsAPI.mjs~RecordingsAPI#unpause",
+    "src/api/recordingsapi.js~recordingsapi#unpause",
+    "class/src/api/RecordingsAPI.js~RecordingsAPI.html#instance-method-unpause",
+    "src/api/RecordingsAPI.js~RecordingsAPI#unpause",
     "method"
   ],
   [
-    "src/api/recordingsapi.mjs~storedrecording",
+    "src/api/recordingsapi.js~storedrecording",
     "typedef/index.html#static-typedef-StoredRecording",
-    "src/api/RecordingsAPI.mjs~StoredRecording",
+    "src/api/RecordingsAPI.js~StoredRecording",
     "typedef"
   ],
   [
-    "src/api/soundsapi.mjs",
-    "file/src/api/SoundsAPI.mjs.html",
-    "src/api/SoundsAPI.mjs",
+    "src/api/soundsapi.js",
+    "file/src/api/SoundsAPI.js.html",
+    "src/api/SoundsAPI.js",
     "file"
   ],
   [
-    "src/api/soundsapi.mjs~formatlangpair",
+    "src/api/soundsapi.js~formatlangpair",
     "typedef/index.html#static-typedef-FormatLangPair",
-    "src/api/SoundsAPI.mjs~FormatLangPair",
+    "src/api/SoundsAPI.js~FormatLangPair",
     "typedef"
   ],
   [
-    "src/api/soundsapi.mjs~sound",
+    "src/api/soundsapi.js~sound",
     "typedef/index.html#static-typedef-Sound",
-    "src/api/SoundsAPI.mjs~Sound",
+    "src/api/SoundsAPI.js~Sound",
     "typedef"
   ],
   [
-    "src/api/soundsapi.mjs~soundsapi#constructor",
-    "class/src/api/SoundsAPI.mjs~SoundsAPI.html#instance-constructor-constructor",
-    "src/api/SoundsAPI.mjs~SoundsAPI#constructor",
+    "src/api/soundsapi.js~soundsapi#constructor",
+    "class/src/api/SoundsAPI.js~SoundsAPI.html#instance-constructor-constructor",
+    "src/api/SoundsAPI.js~SoundsAPI#constructor",
     "method"
   ],
   [
-    "src/api/soundsapi.mjs~soundsapi#get",
-    "class/src/api/SoundsAPI.mjs~SoundsAPI.html#instance-method-get",
-    "src/api/SoundsAPI.mjs~SoundsAPI#get",
+    "src/api/soundsapi.js~soundsapi#get",
+    "class/src/api/SoundsAPI.js~SoundsAPI.html#instance-method-get",
+    "src/api/SoundsAPI.js~SoundsAPI#get",
     "method"
   ],
   [
-    "src/api/soundsapi.mjs~soundsapi#list",
-    "class/src/api/SoundsAPI.mjs~SoundsAPI.html#instance-method-list",
-    "src/api/SoundsAPI.mjs~SoundsAPI#list",
+    "src/api/soundsapi.js~soundsapi#list",
+    "class/src/api/SoundsAPI.js~SoundsAPI.html#instance-method-list",
+    "src/api/SoundsAPI.js~SoundsAPI#list",
     "method"
   ],
   [
-    "src/api/index.mjs",
-    "file/src/api/index.mjs.html",
-    "src/api/index.mjs",
+    "src/api/index.js",
+    "file/src/api/index.js.html",
+    "src/api/index.js",
     "file"
   ],
   [
-    "src/api/index.mjs~api#applications",
-    "class/src/api/index.mjs~API.html#instance-member-applications",
-    "src/api/index.mjs~API#applications",
+    "src/api/index.js~api#applications",
+    "class/src/api/index.js~API.html#instance-member-applications",
+    "src/api/index.js~API#applications",
     "member"
   ],
   [
-    "src/api/index.mjs~api#asterisk",
-    "class/src/api/index.mjs~API.html#instance-member-asterisk",
-    "src/api/index.mjs~API#asterisk",
+    "src/api/index.js~api#asterisk",
+    "class/src/api/index.js~API.html#instance-member-asterisk",
+    "src/api/index.js~API#asterisk",
     "member"
   ],
   [
-    "src/api/index.mjs~api#bridges",
-    "class/src/api/index.mjs~API.html#instance-member-bridges",
-    "src/api/index.mjs~API#bridges",
+    "src/api/index.js~api#bridges",
+    "class/src/api/index.js~API.html#instance-member-bridges",
+    "src/api/index.js~API#bridges",
     "member"
   ],
   [
-    "src/api/index.mjs~api#channels",
-    "class/src/api/index.mjs~API.html#instance-member-channels",
-    "src/api/index.mjs~API#channels",
+    "src/api/index.js~api#channels",
+    "class/src/api/index.js~API.html#instance-member-channels",
+    "src/api/index.js~API#channels",
     "member"
   ],
   [
-    "src/api/index.mjs~api#constructor",
-    "class/src/api/index.mjs~API.html#instance-constructor-constructor",
-    "src/api/index.mjs~API#constructor",
+    "src/api/index.js~api#constructor",
+    "class/src/api/index.js~API.html#instance-constructor-constructor",
+    "src/api/index.js~API#constructor",
     "method"
   ],
   [
-    "src/api/index.mjs~api#devicestates",
-    "class/src/api/index.mjs~API.html#instance-member-deviceStates",
-    "src/api/index.mjs~API#deviceStates",
+    "src/api/index.js~api#devicestates",
+    "class/src/api/index.js~API.html#instance-member-deviceStates",
+    "src/api/index.js~API#deviceStates",
     "member"
   ],
   [
-    "src/api/index.mjs~api#endpoints",
-    "class/src/api/index.mjs~API.html#instance-member-endpoints",
-    "src/api/index.mjs~API#endpoints",
+    "src/api/index.js~api#endpoints",
+    "class/src/api/index.js~API.html#instance-member-endpoints",
+    "src/api/index.js~API#endpoints",
     "member"
   ],
   [
-    "src/api/index.mjs~api#events",
-    "class/src/api/index.mjs~API.html#instance-member-events",
-    "src/api/index.mjs~API#events",
+    "src/api/index.js~api#events",
+    "class/src/api/index.js~API.html#instance-member-events",
+    "src/api/index.js~API#events",
     "member"
   ],
   [
-    "src/api/index.mjs~api#mailboxes",
-    "class/src/api/index.mjs~API.html#instance-member-mailboxes",
-    "src/api/index.mjs~API#mailboxes",
+    "src/api/index.js~api#mailboxes",
+    "class/src/api/index.js~API.html#instance-member-mailboxes",
+    "src/api/index.js~API#mailboxes",
     "member"
   ],
   [
-    "src/api/index.mjs~api#playbacks",
-    "class/src/api/index.mjs~API.html#instance-member-playbacks",
-    "src/api/index.mjs~API#playbacks",
+    "src/api/index.js~api#playbacks",
+    "class/src/api/index.js~API.html#instance-member-playbacks",
+    "src/api/index.js~API#playbacks",
     "member"
   ],
   [
-    "src/api/index.mjs~api#recordings",
-    "class/src/api/index.mjs~API.html#instance-member-recordings",
-    "src/api/index.mjs~API#recordings",
+    "src/api/index.js~api#recordings",
+    "class/src/api/index.js~API.html#instance-member-recordings",
+    "src/api/index.js~API#recordings",
     "member"
   ],
   [
-    "src/api/index.mjs~api#sounds",
-    "class/src/api/index.mjs~API.html#instance-member-sounds",
-    "src/api/index.mjs~API#sounds",
+    "src/api/index.js~api#sounds",
+    "class/src/api/index.js~API.html#instance-member-sounds",
+    "src/api/index.js~API#sounds",
     "member"
   ],
   [
-    "src/events/ariwebsocket.mjs",
-    "file/src/events/ARIWebSocket.mjs.html",
-    "src/events/ARIWebSocket.mjs",
+    "src/events/ariwebsocket.js",
+    "file/src/events/ARIWebSocket.js.html",
+    "src/events/ARIWebSocket.js",
     "file"
   ],
   [
-    "src/events/ariwebsocket.mjs~ariwebsocket#emit",
-    "class/src/events/ARIWebSocket.mjs~ARIWebSocket.html#instance-method-emit",
-    "src/events/ARIWebSocket.mjs~ARIWebSocket#emit",
+    "src/events/ariwebsocket.js~ariwebsocket#emit",
+    "class/src/events/ARIWebSocket.js~ARIWebSocket.html#instance-method-emit",
+    "src/events/ARIWebSocket.js~ARIWebSocket#emit",
     "method"
   ],
   [
-    "src/events/reconnectingwebsocket.mjs",
-    "file/src/events/ReconnectingWebSocket.mjs.html",
-    "src/events/ReconnectingWebSocket.mjs",
+    "src/events/reconnectingwebsocket.js",
+    "file/src/events/ReconnectingWebSocket.js.html",
+    "src/events/ReconnectingWebSocket.js",
     "file"
   ],
   [
-    "src/events/reconnectingwebsocket.mjs~reconnectingwebsocket#close",
-    "class/src/events/ReconnectingWebSocket.mjs~ReconnectingWebSocket.html#instance-method-close",
-    "src/events/ReconnectingWebSocket.mjs~ReconnectingWebSocket#close",
+    "src/events/reconnectingwebsocket.js~reconnectingwebsocket#close",
+    "class/src/events/ReconnectingWebSocket.js~ReconnectingWebSocket.html#instance-method-close",
+    "src/events/ReconnectingWebSocket.js~ReconnectingWebSocket#close",
     "method"
   ],
   [
-    "src/events/reconnectingwebsocket.mjs~reconnectingwebsocket#connect",
-    "class/src/events/ReconnectingWebSocket.mjs~ReconnectingWebSocket.html#instance-method-connect",
-    "src/events/ReconnectingWebSocket.mjs~ReconnectingWebSocket#connect",
+    "src/events/reconnectingwebsocket.js~reconnectingwebsocket#connect",
+    "class/src/events/ReconnectingWebSocket.js~ReconnectingWebSocket.html#instance-method-connect",
+    "src/events/ReconnectingWebSocket.js~ReconnectingWebSocket#connect",
     "method"
   ],
   [
-    "src/events/reconnectingwebsocket.mjs~reconnectingwebsocket#constructor",
-    "class/src/events/ReconnectingWebSocket.mjs~ReconnectingWebSocket.html#instance-constructor-constructor",
-    "src/events/ReconnectingWebSocket.mjs~ReconnectingWebSocket#constructor",
+    "src/events/reconnectingwebsocket.js~reconnectingwebsocket#constructor",
+    "class/src/events/ReconnectingWebSocket.js~ReconnectingWebSocket.html#instance-constructor-constructor",
+    "src/events/ReconnectingWebSocket.js~ReconnectingWebSocket#constructor",
     "method"
   ],
   [
-    "src/events/reconnectingwebsocket.mjs~reconnectingwebsocket#emit",
-    "class/src/events/ReconnectingWebSocket.mjs~ReconnectingWebSocket.html#instance-method-emit",
-    "src/events/ReconnectingWebSocket.mjs~ReconnectingWebSocket#emit",
+    "src/events/reconnectingwebsocket.js~reconnectingwebsocket#emit",
+    "class/src/events/ReconnectingWebSocket.js~ReconnectingWebSocket.html#instance-method-emit",
+    "src/events/ReconnectingWebSocket.js~ReconnectingWebSocket#emit",
     "method"
   ],
   [
-    "src/events/index.mjs",
-    "file/src/events/index.mjs.html",
-    "src/events/index.mjs",
+    "src/events/index.js",
+    "file/src/events/index.js.html",
+    "src/events/index.js",
     "file"
   ],
   [
-    "src/events/index.mjs~events.connect",
-    "class/src/events/index.mjs~Events.html#static-method-connect",
-    "src/events/index.mjs~Events.connect",
+    "src/events/index.js~events.connect",
+    "class/src/events/index.js~Events.html#static-method-connect",
+    "src/events/index.js~Events.connect",
     "method"
   ],
   [
-    "src/index.mjs",
-    "file/src/index.mjs.html",
-    "src/index.mjs",
+    "src/index.js",
+    "file/src/index.js.html",
+    "src/index.js",
     "file"
   ],
   [
-    "src/index.mjs~awry",
+    "src/index.js~awry",
     "typedef/index.html#static-typedef-Awry",
-    "src/index.mjs~Awry",
+    "src/index.js~Awry",
     "typedef"
   ],
   [
-    "test/api/applicationsapi.spec.mjs",
-    "test-file/test/api/ApplicationsAPI.spec.mjs.html",
-    "test/api/ApplicationsAPI.spec.mjs",
+    "test/api/applicationsapi.spec.js",
+    "test-file/test/api/ApplicationsAPI.spec.js.html",
+    "test/api/ApplicationsAPI.spec.js",
     "testFile"
   ],
   [
-    "test/api/asteriskapi.spec.mjs",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html",
-    "test/api/AsteriskAPI.spec.mjs",
+    "test/api/asteriskapi.spec.js",
+    "test-file/test/api/AsteriskAPI.spec.js.html",
+    "test/api/AsteriskAPI.spec.js",
     "testFile"
   ],
   [
-    "test/api/bridgesapi.spec.mjs",
-    "test-file/test/api/BridgesAPI.spec.mjs.html",
-    "test/api/BridgesAPI.spec.mjs",
+    "test/api/bridgesapi.spec.js",
+    "test-file/test/api/BridgesAPI.spec.js.html",
+    "test/api/BridgesAPI.spec.js",
     "testFile"
   ],
   [
-    "test/api/channelsapi.spec.mjs",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html",
-    "test/api/ChannelsAPI.spec.mjs",
+    "test/api/channelsapi.spec.js",
+    "test-file/test/api/ChannelsAPI.spec.js.html",
+    "test/api/ChannelsAPI.spec.js",
     "testFile"
   ],
   [
-    "test/api/devicestatesapi.spec.mjs",
-    "test-file/test/api/DeviceStatesAPI.spec.mjs.html",
-    "test/api/DeviceStatesAPI.spec.mjs",
+    "test/api/devicestatesapi.spec.js",
+    "test-file/test/api/DeviceStatesAPI.spec.js.html",
+    "test/api/DeviceStatesAPI.spec.js",
     "testFile"
   ],
   [
-    "test/api/endpointsapi.spec.mjs",
-    "test-file/test/api/EndpointsAPI.spec.mjs.html",
-    "test/api/EndpointsAPI.spec.mjs",
+    "test/api/endpointsapi.spec.js",
+    "test-file/test/api/EndpointsAPI.spec.js.html",
+    "test/api/EndpointsAPI.spec.js",
     "testFile"
   ],
   [
-    "test/api/eventsapi.spec.mjs",
-    "test-file/test/api/EventsAPI.spec.mjs.html",
-    "test/api/EventsAPI.spec.mjs",
+    "test/api/eventsapi.spec.js",
+    "test-file/test/api/EventsAPI.spec.js.html",
+    "test/api/EventsAPI.spec.js",
     "testFile"
   ],
   [
-    "test/api/mailboxesapi.spec.mjs",
-    "test-file/test/api/MailboxesAPI.spec.mjs.html",
-    "test/api/MailboxesAPI.spec.mjs",
+    "test/api/mailboxesapi.spec.js",
+    "test-file/test/api/MailboxesAPI.spec.js.html",
+    "test/api/MailboxesAPI.spec.js",
     "testFile"
   ],
   [
-    "test/api/playbacksapi.spec.mjs",
-    "test-file/test/api/PlaybacksAPI.spec.mjs.html",
-    "test/api/PlaybacksAPI.spec.mjs",
+    "test/api/playbacksapi.spec.js",
+    "test-file/test/api/PlaybacksAPI.spec.js.html",
+    "test/api/PlaybacksAPI.spec.js",
     "testFile"
   ],
   [
-    "test/api/recordingsapi.spec.mjs",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html",
-    "test/api/RecordingsAPI.spec.mjs",
+    "test/api/recordingsapi.spec.js",
+    "test-file/test/api/RecordingsAPI.spec.js.html",
+    "test/api/RecordingsAPI.spec.js",
     "testFile"
   ],
   [
-    "test/api/soundsapi.spec.mjs",
-    "test-file/test/api/SoundsAPI.spec.mjs.html",
-    "test/api/SoundsAPI.spec.mjs",
+    "test/api/soundsapi.spec.js",
+    "test-file/test/api/SoundsAPI.spec.js.html",
+    "test/api/SoundsAPI.spec.js",
     "testFile"
   ],
   [
-    "test/api/index.spec.mjs",
-    "test-file/test/api/index.spec.mjs.html",
-    "test/api/index.spec.mjs",
+    "test/api/index.spec.js",
+    "test-file/test/api/index.spec.js.html",
+    "test/api/index.spec.js",
     "testFile"
   ],
   [
-    "test/events/ariwebsocket.spec.mjs",
-    "test-file/test/events/ARIWebSocket.spec.mjs.html",
-    "test/events/ARIWebSocket.spec.mjs",
+    "test/events/ariwebsocket.spec.js",
+    "test-file/test/events/ARIWebSocket.spec.js.html",
+    "test/events/ARIWebSocket.spec.js",
     "testFile"
   ],
   [
-    "test/events/reconnectingwebsocket.spec.mjs",
-    "test-file/test/events/ReconnectingWebsocket.spec.mjs.html",
-    "test/events/ReconnectingWebsocket.spec.mjs",
+    "test/events/reconnectingwebsocket.spec.js",
+    "test-file/test/events/ReconnectingWebsocket.spec.js.html",
+    "test/events/ReconnectingWebsocket.spec.js",
     "testFile"
   ],
   [
-    "test/events/index.spec.mjs",
-    "test-file/test/events/index.spec.mjs.html",
-    "test/events/index.spec.mjs",
+    "test/events/index.spec.js",
+    "test-file/test/events/index.spec.js.html",
+    "test/events/index.spec.js",
     "testFile"
   ],
   [
-    "test/index.spec.mjs",
-    "test-file/test/index.spec.mjs.html",
-    "test/index.spec.mjs",
+    "test/index.spec.js",
+    "test-file/test/index.spec.js.html",
+    "test/index.spec.js",
     "testFile"
   ],
   [
     "",
-    "test-file/test/api/ApplicationsAPI.spec.mjs.html#lineNumber5",
+    "test-file/test/api/ApplicationsAPI.spec.js.html#lineNumber4",
     "the Applications API",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ApplicationsAPI.spec.mjs.html#lineNumber74",
+    "test-file/test/api/ApplicationsAPI.spec.js.html#lineNumber73",
     "the Applications API get method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ApplicationsAPI.spec.mjs.html#lineNumber75",
+    "test-file/test/api/ApplicationsAPI.spec.js.html#lineNumber74",
     "the Applications API get method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ApplicationsAPI.spec.mjs.html#lineNumber14",
+    "test-file/test/api/ApplicationsAPI.spec.js.html#lineNumber13",
     "the Applications API list method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ApplicationsAPI.spec.mjs.html#lineNumber15",
+    "test-file/test/api/ApplicationsAPI.spec.js.html#lineNumber14",
     "the Applications API list method always",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ApplicationsAPI.spec.mjs.html#lineNumber16",
+    "test-file/test/api/ApplicationsAPI.spec.js.html#lineNumber15",
     "the Applications API list method always makes a GET request to /applications",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ApplicationsAPI.spec.mjs.html#lineNumber32",
+    "test-file/test/api/ApplicationsAPI.spec.js.html#lineNumber31",
     "the Applications API list method always sends the username and password",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ApplicationsAPI.spec.mjs.html#lineNumber52",
+    "test-file/test/api/ApplicationsAPI.spec.js.html#lineNumber51",
     "the Applications API list method always sets the accept header as json",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ApplicationsAPI.spec.mjs.html#lineNumber92",
+    "test-file/test/api/ApplicationsAPI.spec.js.html#lineNumber91",
     "the Applications API subscribe method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ApplicationsAPI.spec.mjs.html#lineNumber93",
+    "test-file/test/api/ApplicationsAPI.spec.js.html#lineNumber92",
     "the Applications API subscribe method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ApplicationsAPI.spec.mjs.html#lineNumber116",
+    "test-file/test/api/ApplicationsAPI.spec.js.html#lineNumber115",
     "the Applications API unsubscribe method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ApplicationsAPI.spec.mjs.html#lineNumber117",
+    "test-file/test/api/ApplicationsAPI.spec.js.html#lineNumber116",
     "the Applications API unsubscribe method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber5",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber4",
     "the Asterisk API",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber236",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber235",
     "the Asterisk API addLog method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber237",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber236",
     "the Asterisk API addLog method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber260",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber259",
     "the Asterisk API deleteLog method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber261",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber260",
     "the Asterisk API deleteLog method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber65",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber64",
     "the Asterisk API deleteObject method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber66",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber65",
     "the Asterisk API deleteObject method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber304",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber303",
     "the Asterisk API getGlobalVariable method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber305",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber304",
     "the Asterisk API getGlobalVariable method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber89",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber88",
     "the Asterisk API getInfo method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber90",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber89",
     "the Asterisk API getInfo method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber130",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber129",
     "the Asterisk API getModule method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber131",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber130",
     "the Asterisk API getModule method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber14",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber13",
     "the Asterisk API getObject method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber15",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber14",
     "the Asterisk API getObject method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber218",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber217",
     "the Asterisk API listLogChannels method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber219",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber218",
     "the Asterisk API listLogChannels method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber112",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber111",
     "the Asterisk API listModules method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber113",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber112",
     "the Asterisk API listModules method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber152",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber151",
     "the Asterisk API loadModule method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber153",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber152",
     "the Asterisk API loadModule method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber196",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber195",
     "the Asterisk API reloadModule method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber197",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber196",
     "the Asterisk API reloadModule method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber282",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber281",
     "the Asterisk API rotateLog method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber283",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber282",
     "the Asterisk API rotateLog method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber327",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber326",
     "the Asterisk API setGlobalVariable method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber328",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber327",
     "the Asterisk API setGlobalVariable method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber174",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber173",
     "the Asterisk API unloadModule method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber175",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber174",
     "the Asterisk API unloadModule method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber38",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber37",
     "the Asterisk API updateObject method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/AsteriskAPI.spec.mjs.html#lineNumber39",
+    "test-file/test/api/AsteriskAPI.spec.js.html#lineNumber38",
     "the Asterisk API updateObject method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber5",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber4",
     "the Bridges API",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber133",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber132",
     "the Bridges API addChannel method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber134",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber133",
     "the Bridges API addChannel method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber32",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber31",
     "the Bridges API create method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber33",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber32",
     "the Bridges API create method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber61",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber60",
     "the Bridges API createOrUpdate method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber62",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber61",
     "the Bridges API createOrUpdate method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber111",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber110",
     "the Bridges API destroy method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber112",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber111",
     "the Bridges API destroy method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber89",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber88",
     "the Bridges API get method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber90",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber89",
     "the Bridges API get method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber14",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber13",
     "the Bridges API list method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber15",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber14",
     "the Bridges API list method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber231",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber230",
     "the Bridges API play method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber232",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber231",
     "the Bridges API play method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber263",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber262",
     "the Bridges API playWithId method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber264",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber263",
     "the Bridges API playWithId method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber294",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber293",
     "the Bridges API record method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber295",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber294",
     "the Bridges API record method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber161",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber160",
     "the Bridges API removeChannel method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber162",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber161",
     "the Bridges API removeChannel method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber185",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber184",
     "the Bridges API startMusicOnHold method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber186",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber185",
     "the Bridges API startMusicOnHold method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber209",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber208",
     "the Bridges API stopMusicOnHold method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/BridgesAPI.spec.mjs.html#lineNumber210",
+    "test-file/test/api/BridgesAPI.spec.js.html#lineNumber209",
     "the Bridges API stopMusicOnHold method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber5",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber4",
     "the Channels API",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber256",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber255",
     "the Channels API answer method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber257",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber256",
     "the Channels API answer method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber200",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber199",
     "the Channels API continueInDialplan method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber201",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber200",
     "the Channels API continueInDialplan method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber76",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber75",
     "the Channels API create method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber77",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber76",
     "the Channels API create method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber762",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber761",
     "the Channels API dial method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber763",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber762",
     "the Channels API dial method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber113",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber112",
     "the Channels API get method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber114",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber113",
     "the Channels API get method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber643",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber642",
     "the Channels API getChannelVariable method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber644",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber643",
     "the Channels API getChannelVariable method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber178",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber177",
     "the Channels API hangup method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber179",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber178",
     "the Channels API hangup method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber404",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber403",
     "the Channels API hold method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber405",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber404",
     "the Channels API hold method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber14",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber13",
     "the Channels API list method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber15",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber14",
     "the Channels API list method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber356",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber355",
     "the Channels API mute method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber357",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber356",
     "the Channels API mute method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber32",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber31",
     "the Channels API originate method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber33",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber32",
     "the Channels API originate method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber135",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber134",
     "the Channels API originateWithId method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber136",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber135",
     "the Channels API originateWithId method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber538",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber537",
     "the Channels API play method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber539",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber538",
     "the Channels API play method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber572",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber571",
     "the Channels API playWithId method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber573",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber572",
     "the Channels API playWithId method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber605",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber604",
     "the Channels API record method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber606",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber605",
     "the Channels API record method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber232",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber231",
     "the Channels API redirect method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber233",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber232",
     "the Channels API redirect method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber278",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber277",
     "the Channels API ring method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber279",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber278",
     "the Channels API ring method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber300",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber299",
     "the Channels API ringStop method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber301",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber300",
     "the Channels API ringStop method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber322",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber321",
     "the Channels API sendDTMF method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber323",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber322",
     "the Channels API sendDTMF method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber667",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber666",
     "the Channels API setChannelVariable method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber668",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber667",
     "the Channels API setChannelVariable method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber695",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber694",
     "the Channels API snoopChannel method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber696",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber695",
     "the Channels API snoopChannel method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber729",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber728",
     "the Channels API snoopChannelWithId method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber730",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber729",
     "the Channels API snoopChannelWithId method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber448",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber447",
     "the Channels API startMusicOnHold method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber449",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber448",
     "the Channels API startMusicOnHold method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber494",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber493",
     "the Channels API startSilence method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber495",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber494",
     "the Channels API startSilence method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber472",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber471",
     "the Channels API stopMusicOnHold method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber473",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber472",
     "the Channels API stopMusicOnHold method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber516",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber515",
     "the Channels API stopSilence method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber517",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber516",
     "the Channels API stopSilence method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber426",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber425",
     "the Channels API unhold method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber427",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber426",
     "the Channels API unhold method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber380",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber379",
     "the Channels API unmute method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/ChannelsAPI.spec.mjs.html#lineNumber381",
+    "test-file/test/api/ChannelsAPI.spec.js.html#lineNumber380",
     "the Channels API unmute method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/DeviceStatesAPI.spec.mjs.html#lineNumber5",
+    "test-file/test/api/DeviceStatesAPI.spec.js.html#lineNumber4",
     "the DeviceStates API",
     "test"
   ],
   [
     "",
-    "test-file/test/api/DeviceStatesAPI.spec.mjs.html#lineNumber78",
+    "test-file/test/api/DeviceStatesAPI.spec.js.html#lineNumber77",
     "the DeviceStates API destroy method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/DeviceStatesAPI.spec.mjs.html#lineNumber79",
+    "test-file/test/api/DeviceStatesAPI.spec.js.html#lineNumber78",
     "the DeviceStates API destroy method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/DeviceStatesAPI.spec.mjs.html#lineNumber32",
+    "test-file/test/api/DeviceStatesAPI.spec.js.html#lineNumber31",
     "the DeviceStates API get method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/DeviceStatesAPI.spec.mjs.html#lineNumber33",
+    "test-file/test/api/DeviceStatesAPI.spec.js.html#lineNumber32",
     "the DeviceStates API get method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/DeviceStatesAPI.spec.mjs.html#lineNumber14",
+    "test-file/test/api/DeviceStatesAPI.spec.js.html#lineNumber13",
     "the DeviceStates API list method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/DeviceStatesAPI.spec.mjs.html#lineNumber15",
+    "test-file/test/api/DeviceStatesAPI.spec.js.html#lineNumber14",
     "the DeviceStates API list method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/DeviceStatesAPI.spec.mjs.html#lineNumber54",
+    "test-file/test/api/DeviceStatesAPI.spec.js.html#lineNumber53",
     "the DeviceStates API update method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/DeviceStatesAPI.spec.mjs.html#lineNumber55",
+    "test-file/test/api/DeviceStatesAPI.spec.js.html#lineNumber54",
     "the DeviceStates API update method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/EndpointsAPI.spec.mjs.html#lineNumber5",
+    "test-file/test/api/EndpointsAPI.spec.js.html#lineNumber4",
     "the Endpoints API",
     "test"
   ],
   [
     "",
-    "test-file/test/api/EndpointsAPI.spec.mjs.html#lineNumber86",
+    "test-file/test/api/EndpointsAPI.spec.js.html#lineNumber85",
     "the Endpoints API get method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/EndpointsAPI.spec.mjs.html#lineNumber87",
+    "test-file/test/api/EndpointsAPI.spec.js.html#lineNumber86",
     "the Endpoints API get method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/EndpointsAPI.spec.mjs.html#lineNumber14",
+    "test-file/test/api/EndpointsAPI.spec.js.html#lineNumber13",
     "the Endpoints API list method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/EndpointsAPI.spec.mjs.html#lineNumber15",
+    "test-file/test/api/EndpointsAPI.spec.js.html#lineNumber14",
     "the Endpoints API list method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/EndpointsAPI.spec.mjs.html#lineNumber64",
+    "test-file/test/api/EndpointsAPI.spec.js.html#lineNumber63",
     "the Endpoints API listByTechnology method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/EndpointsAPI.spec.mjs.html#lineNumber65",
+    "test-file/test/api/EndpointsAPI.spec.js.html#lineNumber64",
     "the Endpoints API listByTechnology method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/EndpointsAPI.spec.mjs.html#lineNumber32",
+    "test-file/test/api/EndpointsAPI.spec.js.html#lineNumber31",
     "the Endpoints API sendMessage method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/EndpointsAPI.spec.mjs.html#lineNumber33",
+    "test-file/test/api/EndpointsAPI.spec.js.html#lineNumber32",
     "the Endpoints API sendMessage method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/EndpointsAPI.spec.mjs.html#lineNumber109",
+    "test-file/test/api/EndpointsAPI.spec.js.html#lineNumber108",
     "the Endpoints API sendMessageToEndpoint method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/EndpointsAPI.spec.mjs.html#lineNumber110",
+    "test-file/test/api/EndpointsAPI.spec.js.html#lineNumber109",
     "the Endpoints API sendMessageToEndpoint method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/EventsAPI.spec.mjs.html#lineNumber5",
+    "test-file/test/api/EventsAPI.spec.js.html#lineNumber4",
     "the Events API",
     "test"
   ],
   [
     "",
-    "test-file/test/api/EventsAPI.spec.mjs.html#lineNumber14",
+    "test-file/test/api/EventsAPI.spec.js.html#lineNumber13",
     "the Events API generateUserEvent method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/EventsAPI.spec.mjs.html#lineNumber15",
+    "test-file/test/api/EventsAPI.spec.js.html#lineNumber14",
     "the Events API generateUserEvent method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/MailboxesAPI.spec.mjs.html#lineNumber5",
+    "test-file/test/api/MailboxesAPI.spec.js.html#lineNumber4",
     "the Mailboxes API",
     "test"
   ],
   [
     "",
-    "test-file/test/api/MailboxesAPI.spec.mjs.html#lineNumber79",
+    "test-file/test/api/MailboxesAPI.spec.js.html#lineNumber78",
     "the Mailboxes API destroy method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/MailboxesAPI.spec.mjs.html#lineNumber80",
+    "test-file/test/api/MailboxesAPI.spec.js.html#lineNumber79",
     "the Mailboxes API destroy method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/MailboxesAPI.spec.mjs.html#lineNumber32",
+    "test-file/test/api/MailboxesAPI.spec.js.html#lineNumber31",
     "the Mailboxes API get method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/MailboxesAPI.spec.mjs.html#lineNumber33",
+    "test-file/test/api/MailboxesAPI.spec.js.html#lineNumber32",
     "the Mailboxes API get method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/MailboxesAPI.spec.mjs.html#lineNumber14",
+    "test-file/test/api/MailboxesAPI.spec.js.html#lineNumber13",
     "the Mailboxes API list method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/MailboxesAPI.spec.mjs.html#lineNumber15",
+    "test-file/test/api/MailboxesAPI.spec.js.html#lineNumber14",
     "the Mailboxes API list method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/MailboxesAPI.spec.mjs.html#lineNumber54",
+    "test-file/test/api/MailboxesAPI.spec.js.html#lineNumber53",
     "the Mailboxes API update method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/MailboxesAPI.spec.mjs.html#lineNumber55",
+    "test-file/test/api/MailboxesAPI.spec.js.html#lineNumber54",
     "the Mailboxes API update method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/PlaybacksAPI.spec.mjs.html#lineNumber5",
+    "test-file/test/api/PlaybacksAPI.spec.js.html#lineNumber4",
     "the Playbacks API",
     "test"
   ],
   [
     "",
-    "test-file/test/api/PlaybacksAPI.spec.mjs.html#lineNumber58",
+    "test-file/test/api/PlaybacksAPI.spec.js.html#lineNumber57",
     "the Playbacks API control method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/PlaybacksAPI.spec.mjs.html#lineNumber59",
+    "test-file/test/api/PlaybacksAPI.spec.js.html#lineNumber58",
     "the Playbacks API control method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/PlaybacksAPI.spec.mjs.html#lineNumber14",
+    "test-file/test/api/PlaybacksAPI.spec.js.html#lineNumber13",
     "the Playbacks API get method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/PlaybacksAPI.spec.mjs.html#lineNumber15",
+    "test-file/test/api/PlaybacksAPI.spec.js.html#lineNumber14",
     "the Playbacks API get method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/PlaybacksAPI.spec.mjs.html#lineNumber36",
+    "test-file/test/api/PlaybacksAPI.spec.js.html#lineNumber35",
     "the Playbacks API stop method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/PlaybacksAPI.spec.mjs.html#lineNumber37",
+    "test-file/test/api/PlaybacksAPI.spec.js.html#lineNumber36",
     "the Playbacks API stop method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber5",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber4",
     "the Recordings API",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber144",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber143",
     "the Recordings API cancel method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber145",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber144",
     "the Recordings API cancel method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber98",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber97",
     "the Recordings API copyStored method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber99",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber98",
     "the Recordings API copyStored method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber54",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber53",
     "the Recordings API destroyStored method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber55",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber54",
     "the Recordings API destroyStored method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber122",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber121",
     "the Recordings API getLive method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber123",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber122",
     "the Recordings API getLive method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber32",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber31",
     "the Recordings API getStored method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber33",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber32",
     "the Recordings API getStored method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber76",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber75",
     "the Recordings API getStoredFile method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber77",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber76",
     "the Recordings API getStoredFile method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber14",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber13",
     "the Recordings API listStored method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber15",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber14",
     "the Recordings API listStored method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber232",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber231",
     "the Recordings API mute method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber233",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber232",
     "the Recordings API mute method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber188",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber187",
     "the Recordings API pause method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber189",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber188",
     "the Recordings API pause method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber166",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber165",
     "the Recordings API stop method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber167",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber166",
     "the Recordings API stop method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber254",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber253",
     "the Recordings API unmute method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber255",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber254",
     "the Recordings API unmute method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber210",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber209",
     "the Recordings API unpause method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/RecordingsAPI.spec.mjs.html#lineNumber211",
+    "test-file/test/api/RecordingsAPI.spec.js.html#lineNumber210",
     "the Recordings API unpause method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/SoundsAPI.spec.mjs.html#lineNumber5",
+    "test-file/test/api/SoundsAPI.spec.js.html#lineNumber4",
     "the Sounds API",
     "test"
   ],
   [
     "",
-    "test-file/test/api/SoundsAPI.spec.mjs.html#lineNumber38",
+    "test-file/test/api/SoundsAPI.spec.js.html#lineNumber37",
     "the Sounds API get method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/SoundsAPI.spec.mjs.html#lineNumber39",
+    "test-file/test/api/SoundsAPI.spec.js.html#lineNumber38",
     "the Sounds API get method makes the right request",
     "test"
   ],
   [
     "",
-    "test-file/test/api/SoundsAPI.spec.mjs.html#lineNumber14",
+    "test-file/test/api/SoundsAPI.spec.js.html#lineNumber13",
     "the Sounds API list method",
     "test"
   ],
   [
     "",
-    "test-file/test/api/SoundsAPI.spec.mjs.html#lineNumber15",
+    "test-file/test/api/SoundsAPI.spec.js.html#lineNumber14",
     "the Sounds API list method makes the right request",
     "test"
   ]

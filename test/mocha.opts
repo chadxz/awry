@@ -5,4 +5,3 @@
 --require env-test
 --require intelli-espower-loader
 --require esm
-**/*.spec.mjs

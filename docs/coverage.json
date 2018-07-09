@@ -3,81 +3,81 @@
   "expectCount": 165,
   "actualCount": 163,
   "files": {
-    "src/api/ApplicationsAPI.mjs": {
+    "src/api/ApplicationsAPI.js": {
       "expectCount": 8,
       "actualCount": 8,
       "undocumentLines": []
     },
-    "src/api/AsteriskAPI.mjs": {
+    "src/api/AsteriskAPI.js": {
       "expectCount": 19,
       "actualCount": 19,
       "undocumentLines": []
     },
-    "src/api/BridgesAPI.mjs": {
+    "src/api/BridgesAPI.js": {
       "expectCount": 16,
       "actualCount": 16,
       "undocumentLines": []
     },
-    "src/api/ChannelsAPI.mjs": {
+    "src/api/ChannelsAPI.js": {
       "expectCount": 32,
       "actualCount": 32,
       "undocumentLines": []
     },
-    "src/api/DeviceStatesAPI.mjs": {
+    "src/api/DeviceStatesAPI.js": {
       "expectCount": 8,
       "actualCount": 8,
       "undocumentLines": []
     },
-    "src/api/EndpointsAPI.mjs": {
+    "src/api/EndpointsAPI.js": {
       "expectCount": 9,
       "actualCount": 9,
       "undocumentLines": []
     },
-    "src/api/EventsAPI.mjs": {
+    "src/api/EventsAPI.js": {
       "expectCount": 5,
       "actualCount": 5,
       "undocumentLines": []
     },
-    "src/api/MailboxesAPI.mjs": {
+    "src/api/MailboxesAPI.js": {
       "expectCount": 8,
       "actualCount": 8,
       "undocumentLines": []
     },
-    "src/api/PlaybacksAPI.mjs": {
+    "src/api/PlaybacksAPI.js": {
       "expectCount": 7,
       "actualCount": 7,
       "undocumentLines": []
     },
-    "src/api/RecordingsAPI.mjs": {
+    "src/api/RecordingsAPI.js": {
       "expectCount": 16,
       "actualCount": 16,
       "undocumentLines": []
     },
-    "src/api/SoundsAPI.mjs": {
+    "src/api/SoundsAPI.js": {
       "expectCount": 6,
       "actualCount": 6,
       "undocumentLines": []
     },
-    "src/api/index.mjs": {
+    "src/api/index.js": {
       "expectCount": 13,
       "actualCount": 13,
       "undocumentLines": []
     },
-    "src/events/ARIWebSocket.mjs": {
+    "src/events/ARIWebSocket.js": {
       "expectCount": 3,
       "actualCount": 2,
       "undocumentLines": [
         3
       ]
     },
-    "src/events/ReconnectingWebSocket.mjs": {
+    "src/events/ReconnectingWebSocket.js": {
       "expectCount": 13,
       "actualCount": 12,
       "undocumentLines": [
         5
       ]
     },
-    "src/events/index.mjs": {
+    "src/events/index.js": {
       "expectCount": 2,
       "actualCount": 2,
       "undocumentLines": []

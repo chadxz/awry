@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">test/events/ReconnectingWebsocket.spec.js | awry</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="An ARI websocket and API client library"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="awry"><meta property="twitter:description" content="An ARI websocket and API client library"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/chadxz/awry.git"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Awry">Awry</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#api">api</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/ApplicationsAPI.js~ApplicationsAPI.html">ApplicationsAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/AsteriskAPI.js~AsteriskAPI.html">AsteriskAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/BridgesAPI.js~BridgesAPI.html">BridgesAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/ChannelsAPI.js~ChannelsAPI.html">ChannelsAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/DeviceStatesAPI.js~DeviceStatesAPI.html">DeviceStatesAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/EndpointsAPI.js~EndpointsAPI.html">EndpointsAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/EventsAPI.js~EventsAPI.html">EventsAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/MailboxesAPI.js~MailboxesAPI.html">MailboxesAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/PlaybacksAPI.js~PlaybacksAPI.html">PlaybacksAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/RecordingsAPI.js~RecordingsAPI.html">RecordingsAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/SoundsAPI.js~SoundsAPI.html">SoundsAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/index.js~API.html">API</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Application">Application</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-AsteriskInfo">AsteriskInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-BuildInfo">BuildInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ConfigInfo">ConfigInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ConfigTuple">ConfigTuple</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-LogChannel">LogChannel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Module">Module</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-StatusInfo">StatusInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SystemInfo">SystemInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Variable">Variable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Bridge">Bridge</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-LiveRecording">LiveRecording</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Channel">Channel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-DeviceState">DeviceState</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Endpoint">Endpoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Mailbox">Mailbox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Playback">Playback</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-StoredRecording">StoredRecording</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-FormatLangPair">FormatLangPair</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Sound">Sound</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#events">events</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/ARIWebSocket.js~ARIWebSocket.html">ARIWebSocket</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/ReconnectingWebSocket.js~ReconnectingWebSocket.html">ReconnectingWebSocket</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/events/index.js~Events.html">Events</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">test/events/ReconnectingWebsocket.spec.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import ws from &quot;ws&quot;;
+import assert from &quot;power-assert&quot;;
+import ReconnectingWebSocket from &quot;../../src/events/ReconnectingWebSocket&quot;;
+const WebSocketServer = ws.Server;
+
+describe(&quot;ReconnectingWebSocket&quot;, () =&gt; {
+  describe(&quot;by default&quot;, () =&gt; {
+    let ws;
+    let server;
+
+    beforeEach(() =&gt; {
+      server = new WebSocketServer({ port: 8088 });
+    });
+
+    afterEach(() =&gt; {
+      // important to close client first so it does not try
+      // to reconnect and cause issues in subsequent tests
+      ws.close();
+      server.close();
+    });
+
+    it(&quot;connects upon creation&quot;, done =&gt; {
+      ws = new ReconnectingWebSocket({ url: &quot;ws://localhost:8088&quot; });
+      server.on(&quot;connection&quot;, conn =&gt; {
+        ws.on(&quot;open&quot;, () =&gt; {
+          assert(conn);
+          done();
+        });
+      });
+    });
+
+    it(&apos;emits an &quot;open&quot; event on connection&apos;, done =&gt; {
+      ws = new ReconnectingWebSocket({ url: &quot;ws://localhost:8088&quot; });
+      ws.once(&quot;open&quot;, done);
+    });
+
+    it(&quot;disconnects when close is called&quot;, done =&gt; {
+      ws = new ReconnectingWebSocket({
+        url: &quot;ws://localhost:8088&quot;,
+        reconnect: false
+      });
+
+      server.once(&quot;connection&quot;, conn =&gt; {
+        conn.once(&quot;close&quot;, () =&gt; {
+          done();
+        });
+      });
+
+      ws.once(&quot;open&quot;, () =&gt; ws.close());
+    });
+
+    it(&apos;emits a &quot;message&quot; event when a message is received&apos;, done =&gt; {
+      ws = new ReconnectingWebSocket({ url: &quot;ws://localhost:8088&quot; });
+
+      server.once(&quot;connection&quot;, conn =&gt; {
+        ws.once(&quot;message&quot;, message =&gt; {
+          assert.equal(message, &quot;hidey ho&quot;);
+          done();
+        });
+
+        conn.send(&quot;hidey ho&quot;);
+      });
+    });
+  });
+
+  describe(&quot;when no connection can be established on create&quot;, () =&gt; {
+    let ws;
+    let server;
+
+    beforeEach(() =&gt; {
+      server = new WebSocketServer({
+        port: 8088,
+        verifyClient: (info, verify) =&gt; {
+          verify(false, 666, &quot;fail&quot;);
+        }
+      });
+    });
+
+    afterEach(() =&gt; {
+      // important to close client first so it does not try
+      // to reconnect and cause issues in subsequent tests
+      ws.close();
+      server.close();
+    });
+
+    it(&apos;emits &quot;error&quot; event&apos;, done =&gt; {
+      ws = new ReconnectingWebSocket({
+        url: &quot;ws://localhost:8088&quot;,
+        reconnect: false
+      });
+
+      ws.on(&quot;error&quot;, err =&gt; {
+        assert(err);
+        done();
+      });
+    });
+
+    it(&apos;emits &quot;close&quot; event&apos;, done =&gt; {
+      ws = new ReconnectingWebSocket({
+        url: &quot;ws://localhost:8088&quot;,
+        reconnect: false
+      });
+
+      ws.on(&quot;error&quot;, () =&gt; {});
+      ws.on(&quot;close&quot;, done);
+    });
+  });
+
+  describe(&quot;when an error occurs after being connected&quot;, () =&gt; {
+    describe(&quot;and reconnect is disabled&quot;, () =&gt; {
+      let ws;
+      let server;
+
+      beforeEach(() =&gt; {
+        server = new WebSocketServer({ port: 8088 });
+      });
+
+      afterEach(() =&gt; {
+        // important to close client first so it does not try
+        // to reconnect and cause issues in subsequent tests
+        ws.close();
+        server.close();
+      });
+
+      it(&apos;emits an &quot;error&quot; event&apos;, done =&gt; {
+        ws = new ReconnectingWebSocket({
+          url: &quot;ws://localhost:8088&quot;,
+          reconnect: false
+        });
+
+        ws.on(&quot;open&quot;, () =&gt; {
+          // TODO: come up with a better way to emulate this
+          ws._ws.emit(&quot;error&quot;, new Error(&quot;dangit&quot;));
+        });
+
+        ws.once(&quot;error&quot;, err =&gt; {
+          assert(err);
+          done();
+        });
+      });
+
+      it(&apos;emits a &quot;close&quot; event&apos;, done =&gt; {
+        ws = new ReconnectingWebSocket({
+          url: &quot;ws://localhost:8088&quot;,
+          reconnect: false
+        });
+
+        ws.on(&quot;open&quot;, () =&gt; {
+          // TODO: come up with a better way to emulate this
+          ws._ws.emit(&quot;error&quot;, new Error(&quot;dangit&quot;));
+        });
+
+        ws.on(&quot;error&quot;, () =&gt; {});
+        ws.once(&quot;close&quot;, done);
+      });
+    });
+
+    describe(&quot;and reconnect is enabled&quot;, () =&gt; {
+      describe(&quot;and the server allows the reconnect&quot;, () =&gt; {
+        let ws;
+        let server;
+
+        beforeEach(() =&gt; {
+          server = new WebSocketServer({ port: 8088 });
+        });
+
+        afterEach(() =&gt; {
+          // important to close client first so it does not try
+          // to reconnect and cause issues in subsequent tests
+          ws.close();
+          server.close();
+        });
+
+        it(&quot;reconnects&quot;, done =&gt; {
+          let connectCount = 0;
+          let reconnected = false;
+
+          ws = new ReconnectingWebSocket({ url: &quot;ws://localhost:8088&quot; });
+
+          server.on(&quot;connection&quot;, () =&gt; {
+            connectCount++;
+            reconnected = connectCount === 2;
+          });
+
+          ws.on(&quot;open&quot;, () =&gt; {
+            // TODO: come up with a better way to emulate this
+            ws._ws.emit(&quot;error&quot;, new Error(&quot;dangit&quot;));
+          });
+
+          ws.on(&quot;reconnected&quot;, () =&gt; {
+            assert(reconnected);
+            done();
+          });
+        });
+      });
+
+      describe(&quot;but the reconnect fails&quot;, () =&gt; {
+        describe(&quot;and retries are disabled&quot;, () =&gt; {
+          let ws;
+          let server;
+
+          beforeEach(() =&gt; {
+            let numConnectionAttempts = 0;
+            server = new WebSocketServer({
+              port: 8088,
+              verifyClient: (info, verify) =&gt; {
+                numConnectionAttempts++;
+                verify(numConnectionAttempts === 1, 666, &quot;fail&quot;);
+              }
+            });
+          });
+
+          afterEach(() =&gt; {
+            // important to close client first so it does not try
+            // to reconnect and cause issues in subsequent tests
+            ws.close();
+            server.close();
+          });
+
+          it(&apos;emits an &quot;error&quot; event&apos;, done =&gt; {
+            ws = new ReconnectingWebSocket({
+              url: &quot;ws://localhost:8088&quot;,
+              retryOptions: { retries: 0 }
+            });
+
+            ws.on(&quot;open&quot;, () =&gt; {
+              // TODO: come up with a better way to emulate this
+              ws._ws.emit(&quot;error&quot;, new Error(&quot;dangit&quot;));
+            });
+
+            ws.once(&quot;error&quot;, err =&gt; {
+              assert(err);
+              done();
+            });
+          });
+
+          it(&apos;emits a &quot;close&quot; event&apos;, done =&gt; {
+            ws = new ReconnectingWebSocket({
+              url: &quot;ws://localhost:8088&quot;,
+              retryOptions: { retries: 0 }
+            });
+
+            ws.on(&quot;open&quot;, () =&gt; {
+              // TODO: come up with a better way to emulate this
+              ws._ws.emit(&quot;error&quot;, new Error(&quot;dangit&quot;));
+            });
+
+            ws.on(&quot;error&quot;, () =&gt; {});
+            ws.once(&quot;close&quot;, () =&gt; {
+              done();
+            });
+          });
+        });
+
+        describe(&quot;but retries are enabled and the retry succeeds&quot;, () =&gt; {
+          let ws;
+          let server;
+
+          beforeEach(() =&gt; {
+            let numConnectionAttempts = 0;
+            server = new WebSocketServer({
+              port: 8088,
+              verifyClient: (info, verify) =&gt; {
+                numConnectionAttempts++;
+                verify(numConnectionAttempts % 2 === 0, 666, &quot;fail&quot;);
+              }
+            });
+          });
+
+          afterEach(() =&gt; {
+            // important to close client first so it does not try
+            // to reconnect and cause issues in subsequent tests
+            ws.close();
+            server.close();
+          });
+
+          it(&quot;reconnects&quot;, done =&gt; {
+            ws = new ReconnectingWebSocket({
+              url: &quot;ws://localhost:8088&quot;,
+              retryOptions: { retries: 1 }
+            });
+
+            ws.on(&quot;open&quot;, () =&gt; {
+              // TODO: come up with a better way to emulate this
+              ws._ws.emit(&quot;error&quot;, new Error(&quot;dangit&quot;));
+            });
+
+            ws.once(&quot;reconnected&quot;, () =&gt; {
+              done();
+            });
+          });
+        });
+      });
+    });
+  });
+
+  describe(&quot;when the server closes the connection&quot;, () =&gt; {
+    describe(&quot;and reconnect is disabled&quot;, () =&gt; {
+      let ws;
+      let server;
+
+      beforeEach(() =&gt; {
+        server = new WebSocketServer({ port: 8088 });
+      });
+
+      afterEach(() =&gt; {
+        // important to close client first so it does not try
+        // to reconnect and cause issues in subsequent tests
+        ws.close();
+        server.close();
+      });
+
+      it(&apos;emits a &quot;close&quot; event&apos;, done =&gt; {
+        ws = new ReconnectingWebSocket({
+          url: &quot;ws://localhost:8088&quot;,
+          reconnect: false
+        });
+
+        server.once(&quot;connection&quot;, conn =&gt; {
+          ws.once(&quot;open&quot;, () =&gt; {
+            conn.close();
+          });
+        });
+
+        ws.once(&quot;close&quot;, done);
+      });
+    });
+
+    describe(&quot;and reconnect is enabled&quot;, () =&gt; {
+      describe(&quot;and the server allows the reconnect&quot;, () =&gt; {
+        let ws;
+        let server;
+
+        beforeEach(() =&gt; {
+          server = new WebSocketServer({ port: 8088 });
+        });
+
+        afterEach(() =&gt; {
+          // important to close client first so it does not try
+          // to reconnect and cause issues in subsequent tests
+          ws.close();
+          server.close();
+        });
+
+        it(&quot;reconnects&quot;, done =&gt; {
+          let connectCount = 0;
+          let reconnected = false;
+
+          ws = new ReconnectingWebSocket({ url: &quot;ws://localhost:8088&quot; });
+          server.on(&quot;connection&quot;, conn =&gt; {
+            connectCount++;
+            reconnected = connectCount === 2;
+
+            if (connectCount === 1) {
+              ws.once(&quot;open&quot;, () =&gt; {
+                conn.close();
+              });
+            }
+          });
+
+          ws.once(&quot;reconnected&quot;, () =&gt; {
+            assert(reconnected);
+            done();
+          });
+        });
+      });
+
+      describe(&quot;but the reconnect fails&quot;, () =&gt; {
+        let ws;
+        let server;
+
+        beforeEach(() =&gt; {
+          let numConnectionAttempts = 0;
+          server = new WebSocketServer({
+            port: 8088,
+            verifyClient: (info, verify) =&gt; {
+              numConnectionAttempts++;
+              verify(numConnectionAttempts === 1, 666, &quot;fail&quot;);
+            }
+          });
+        });
+
+        afterEach(() =&gt; {
+          // important to close client first so it does not try
+          // to reconnect and cause issues in subsequent tests
+          ws.close();
+          server.close();
+        });
+
+        it(&apos;emits an &quot;error&quot; event&apos;, done =&gt; {
+          ws = new ReconnectingWebSocket({
+            url: &quot;ws://localhost:8088&quot;,
+            retryOptions: { retries: 0 }
+          });
+
+          server.once(&quot;connection&quot;, conn =&gt; {
+            ws.once(&quot;open&quot;, () =&gt; {
+              conn.close();
+            });
+          });
+
+          ws.once(&quot;error&quot;, err =&gt; {
+            assert(err);
+            done();
+          });
+        });
+
+        it(&apos;emits a &quot;close&quot; event&apos;, done =&gt; {
+          ws = new ReconnectingWebSocket({
+            url: &quot;ws://localhost:8088&quot;,
+            retryOptions: { retries: 0 }
+          });
+
+          server.once(&quot;connection&quot;, conn =&gt; {
+            ws.once(&quot;open&quot;, () =&gt; {
+              conn.close();
+            });
+          });
+
+          ws.on(&quot;error&quot;, () =&gt; {});
+          ws.once(&quot;close&quot;, () =&gt; {
+            done();
+          });
+        });
+      });
+    });
+  });
+});
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
