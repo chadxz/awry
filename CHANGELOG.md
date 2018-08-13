@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## 7.0.0 - 2018-08-13
+
+`ws` has been updated to v6, bringing along it's breaking changes. [See the ws@6
+release notes for more details](https://github.com/websockets/ws/releases/tag/6.0.0).
+
 ## 6.0.0 - 2018-04-14
 
 Fixed package.json entrypoint. Previously this was set to src/index.js, which
