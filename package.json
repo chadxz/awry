@@ -30,7 +30,7 @@
     "temp-directory": "coverage/.nyc_output"
   },
   "dependencies": {
-    "debug": "^3.1.0",
+    "debug": "^4.0.0",
     "esm": "^3.0.9",
     "request": "^2.75.0",
     "request-promise-native": "^1.0.3",
