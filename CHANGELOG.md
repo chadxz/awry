@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 7.1.0 - 2018-09-28
+
+`debug` has been updated to v4. The breaking changes in this `debug` release
+are not breaking to this library, so this is being released as a minor version
+bump. [See the debug@4 release notes for more
+details](https://github.com/visionmedia/debug/releases/tag/4.0.0).
+
 ## 7.0.0 - 2018-08-13
 
 `ws` has been updated to v6, bringing along it's breaking changes. [See the ws@6
