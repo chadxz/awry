@@ -1,4 +1,4 @@
-import url from "url";
+import { URL, URLSearchParams } from "url";
 import ARIWebSocket from "./ARIWebSocket";
 
 /**
@@ -40,15 +40,15 @@ export default class Events {
       wsOptions = {}
     } = params;
 
-    const parsedUrl = url.parse(userProvidedUrl);
+    const parsedUrl = new URL(userProvidedUrl);
 
-    parsedUrl.query = Object.assign({}, parsedUrl.query, {
-      api_key: `${username}:${password}`,
-      app: [].concat(app).join(","),
-      subscribeAll
-    });
+    const newSearchParams = new URLSearchParams(parsedUrl.searchParams);
+    newSearchParams.set("api_key", `${username}:${password}`);
+    newSearchParams.set("app", [].concat(app).join(","));
+    newSearchParams.set("subscribeAll", subscribeAll ? "true" : "false");
+    parsedUrl.search = newSearchParams.toString();
 
-    const wsUrl = url.format(parsedUrl);
+    const wsUrl = parsedUrl.href;
 
     return new ARIWebSocket({
       url: wsUrl,

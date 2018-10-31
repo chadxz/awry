@@ -1,5 +1,4 @@
-import url from "url";
-import qs from "querystring";
+import { URL } from "url";
 import assert from "power-assert";
 import ws from "ws";
 import Events from "../../src/events";
@@ -29,9 +28,8 @@ describe("Events connect() returned emitter", () => {
 
       server.once("connection", (conn, req) => {
         emitter.once("open", () => {
-          const parts = url.parse(req.url);
-          const query = qs.parse(parts.query);
-          assert.equal(query.app, "myApp");
+          const parts = new URL(req.url, "ws://localhost:8088/");
+          assert.equal(parts.searchParams.get("app"), "myApp");
           done();
         });
       });
@@ -61,9 +59,8 @@ describe("Events connect() returned emitter", () => {
 
       server.once("connection", (conn, req) => {
         emitter.once("open", () => {
-          const parts = url.parse(req.url);
-          const query = qs.parse(parts.query);
-          assert.equal(query.app, "app1,app2,app3");
+          const parts = new URL(req.url, "ws://localhost:8088/");
+          assert.equal(parts.searchParams.get("app"), "app1,app2,app3");
           done();
         });
       });
@@ -93,9 +90,8 @@ describe("Events connect() returned emitter", () => {
 
       server.once("connection", (conn, req) => {
         emitter.once("open", () => {
-          const parts = url.parse(req.url);
-          const query = qs.parse(parts.query);
-          assert.equal(query.api_key, "foo:bar");
+          const parts = new URL(req.url, "ws://localhost:8088/");
+          assert.equal(parts.searchParams.get("api_key"), "foo:bar");
           done();
         });
       });
@@ -111,9 +107,8 @@ describe("Events connect() returned emitter", () => {
 
       server.once("connection", (conn, req) => {
         emitter.once("open", () => {
-          const parts = url.parse(req.url);
-          const query = qs.parse(parts.query);
-          assert.equal(query.subscribeAll, "true");
+          const parts = new URL(req.url, "ws://localhost:8088/");
+          assert.equal(parts.searchParams.get("subscribeAll"), "true");
           done();
         });
       });
@@ -130,9 +125,8 @@ describe("Events connect() returned emitter", () => {
 
       server.once("connection", (conn, req) => {
         emitter.once("open", () => {
-          const parts = url.parse(req.url);
-          const query = qs.parse(parts.query);
-          assert.equal(query.subscribeAll, "false");
+          const parts = new URL(req.url, "ws://localhost:8088/");
+          assert.equal(parts.searchParams.get("subscribeAll"), "false");
           done();
         });
       });
