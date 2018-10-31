@@ -219,4 +219,29 @@ export default class ReconnectingWebSocket extends events.EventEmitter {
     debug("emitting event", ...args);
     super.emit(...args);
   }
+
+  /**
+   * Send a health check down the websocket. If the connection
+   * is healthy, you will receive a 'pong' message event.
+   *
+   * @param {*} [data] The data to send
+   * @param {boolean} [mask] Indicates whether or not to mask `data`
+   * @see https://github.com/websockets/ws/blob/master/doc/ws.md#websocketpingdata-mask-callback
+   */
+  ping(data, mask) {
+    if (!this._ws) {
+      this.emit(
+        "error",
+        new Error("Websocket unavailable for ping. Connect first.")
+      );
+      return;
+    }
+
+    debug("sending ping", { data, mask });
+    this._ws.ping(data, mask, err => {
+      if (err) {
+        this.emit("error", err);
+      }
+    });
+  }
 }
