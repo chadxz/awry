@@ -1,11 +1,11 @@
 {
-  "coverage": "98.78%",
-  "expectCount": 165,
-  "actualCount": 163,
+  "coverage": "98.79%",
+  "expectCount": 166,
+  "actualCount": 164,
   "files": {
     "src/api/ApplicationsAPI.js": {
-      "expectCount": 8,
-      "actualCount": 8,
+      "expectCount": 9,
+      "actualCount": 9,
       "undocumentLines": []
     },
     "src/api/AsteriskAPI.js": {

@@ -199,121 +199,121 @@ window.esdocSearchIndex = [
   ],
   [
     "",
-    "test-file/test/events/index.spec.js.html#lineNumber8",
+    "test-file/test/events/index.spec.js.html#lineNumber7",
     "Events connect() returned emitter",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.js.html#lineNumber251",
+    "test-file/test/events/index.spec.js.html#lineNumber245",
     "Events connect() returned emitter when a message is emitted on the socket",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.js.html#lineNumber264",
+    "test-file/test/events/index.spec.js.html#lineNumber258",
     "Events connect() returned emitter when a message is emitted on the socket emits a 'message' event",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.js.html#lineNumber283",
+    "test-file/test/events/index.spec.js.html#lineNumber277",
     "Events connect() returned emitter when an error is emitted on the socket",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.js.html#lineNumber292",
+    "test-file/test/events/index.spec.js.html#lineNumber286",
     "Events connect() returned emitter when an error is emitted on the socket emits an 'error' event",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.js.html#lineNumber73",
+    "test-file/test/events/index.spec.js.html#lineNumber70",
     "Events connect() returned emitter when connecting",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.js.html#lineNumber104",
+    "test-file/test/events/index.spec.js.html#lineNumber100",
     "Events connect() returned emitter when connecting defaults to subscribeAll of true",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.js.html#lineNumber122",
+    "test-file/test/events/index.spec.js.html#lineNumber117",
     "Events connect() returned emitter when connecting passes along a subscribeAll of false",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.js.html#lineNumber86",
+    "test-file/test/events/index.spec.js.html#lineNumber83",
     "Events connect() returned emitter when connecting sets api_key with username and password",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.js.html#lineNumber142",
+    "test-file/test/events/index.spec.js.html#lineNumber136",
     "Events connect() returned emitter when disconnected",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.js.html#lineNumber180",
+    "test-file/test/events/index.spec.js.html#lineNumber174",
     "Events connect() returned emitter when disconnected and reconnect explicitly set",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.js.html#lineNumber193",
+    "test-file/test/events/index.spec.js.html#lineNumber187",
     "Events connect() returned emitter when disconnected and reconnect explicitly set reconnects",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.js.html#lineNumber143",
+    "test-file/test/events/index.spec.js.html#lineNumber137",
     "Events connect() returned emitter when disconnected and reconnect not explicitly set",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.js.html#lineNumber156",
+    "test-file/test/events/index.spec.js.html#lineNumber150",
     "Events connect() returned emitter when disconnected and reconnect not explicitly set reconnects",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.js.html#lineNumber218",
+    "test-file/test/events/index.spec.js.html#lineNumber212",
     "Events connect() returned emitter when disconnected and reconnect set to false",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.js.html#lineNumber231",
+    "test-file/test/events/index.spec.js.html#lineNumber225",
     "Events connect() returned emitter when disconnected and reconnect set to false emits 'close' event",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.js.html#lineNumber9",
+    "test-file/test/events/index.spec.js.html#lineNumber8",
     "Events connect() returned emitter when passed a single app",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.js.html#lineNumber22",
+    "test-file/test/events/index.spec.js.html#lineNumber21",
     "Events connect() returned emitter when passed a single app subscribes to a single app",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.js.html#lineNumber41",
+    "test-file/test/events/index.spec.js.html#lineNumber39",
     "Events connect() returned emitter when passed multiple apps",
     "test"
   ],
   [
     "",
-    "test-file/test/events/index.spec.js.html#lineNumber54",
+    "test-file/test/events/index.spec.js.html#lineNumber52",
     "Events connect() returned emitter when passed multiple apps subscribes to all of the apps",
     "test"
   ],
@@ -822,6 +822,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "src/api/applicationsapi.js~applicationsapi#filterevents",
+    "class/src/api/ApplicationsAPI.js~ApplicationsAPI.html#instance-method-filterEvents",
+    "src/api/ApplicationsAPI.js~ApplicationsAPI#filterEvents",
+    "method"
+  ],
+  [
     "src/api/applicationsapi.js~applicationsapi#get",
     "class/src/api/ApplicationsAPI.js~ApplicationsAPI.html#instance-method-get",
     "src/api/ApplicationsAPI.js~ApplicationsAPI#get",
@@ -844,6 +850,18 @@ window.esdocSearchIndex = [
     "class/src/api/ApplicationsAPI.js~ApplicationsAPI.html#instance-method-unsubscribe",
     "src/api/ApplicationsAPI.js~ApplicationsAPI#unsubscribe",
     "method"
+  ],
+  [
+    "src/api/applicationsapi.js~filteroptions",
+    "typedef/index.html#static-typedef-FilterOptions",
+    "src/api/ApplicationsAPI.js~FilterOptions",
+    "typedef"
+  ],
+  [
+    "src/api/applicationsapi.js~filtervalue",
+    "typedef/index.html#static-typedef-FilterValue",
+    "src/api/ApplicationsAPI.js~FilterValue",
+    "typedef"
   ],
   [
     "src/api/asteriskapi.js",
@@ -1839,6 +1857,18 @@ window.esdocSearchIndex = [
     "",
     "test-file/test/api/ApplicationsAPI.spec.js.html#lineNumber4",
     "the Applications API",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/api/ApplicationsAPI.spec.js.html#lineNumber139",
+    "the Applications API filterEvents method",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/api/ApplicationsAPI.spec.js.html#lineNumber140",
+    "the Applications API filterEvents method makes the right request",
     "test"
   ],
   [
