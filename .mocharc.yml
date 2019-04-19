@@ -1,0 +1,9 @@
+---
+timeout: 10000
+reporter: spec
+recursive: true
+full-trace: true
+require:
+  - env-test
+  - intelli-espower-loader
+  - esm
