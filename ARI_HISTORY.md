@@ -6,6 +6,92 @@ files from the Asterisk source tree. A copy of the full files can be found
 This file is a lens into the ARI changes made to Asterisk since ARI was
 introduced in Asterisk 12.
 
+#### Asterisk 16.3.0
+* Application event filtering is now supported. An application can now specify
+an "allowed" and/or "disallowed" list(s) of event types. Only those types
+indicated in the "allowed" list are sent to the application. Conversely, any
+types defined in the "disallowed" list are not sent to the application. Note
+that if a type is specified in both lists "disallowed" takes precedence.
+
+* A new REST API call has been added: 'move'. It follows the format
+'channels/{channelId}/move' and can be used to move channels from one application
+to another without needing to exit back into the dialplan. An application must be
+specified, but the passing a list of arguments to the new application is optional.
+An example call would look like this:
+
+    ```
+    client.channels.move(channelId=chan.id, app='ari-example', appArgs='a,b,c')
+    ```
+    
+    If the channel was inside of a bridge when switching applications, it will
+    remain there. If the application specified cannot be moved to, then the channel
+    will remain in the current application and an event will be triggered named
+    "ApplicationMoveFailed", which will provide the destination application's name
+    and the channel information.
+
+
+#### Asterisk 16.2.0
+* Whenever an ARI application is started, a context will be created for it
+automatically as long as one does not already exist, following the format
+'stasis-<app_name>'. Two extensions are also added to this context: a match-all
+extension, and the 'h' extension. Any phone that registers under this context
+will place all calls to the corresponding Stasis application.
+
+#### Asterisk 16
+* The ContactInfo event's contact_status field is now set to "NonQualified"
+when a contact exists but has not been qualified.
+
+#### Asterisk 14.3.0
+* The `ari set debug` command has been enhanced to accept 'all' as an
+application name.  This allows dumping of all apps even if an app
+hasn't registered yet.
+
+* `ari set debug` now displays requests and responses as well as events.
+
+#### Asterisk 14.2.0
+* The bridges resource now exposes two new operations:
+   - `POST /bridges/{bridgeId}/videoSource/{channelId}`: Set a video source in a
+     multi-party mixing bridge
+   - `DELETE /bridges/{bridgeId}/videoSource`: Remove the set video source,
+     reverting to talk detection for the video source
+
+* The bridge model in any returned response or event now contains the following
+optional fields:
+    - `video_mode`: the video source mode for the bridge. Can be one of 'none',
+    'talker', or 'single'.
+    - `video_source_id`: the unique ID of the channel that is the video source
+    in this bridge, if one exists.
+
+* A new event, BridgeVideoSourceChanged, has been added for bridges.
+Applications subscribed to a bridge will receive this event when the source
+of video changes in a mixing bridge.
+
+* The ARI major version has been bumped. There are not any known breaking changes
+in ARI. The major version has been bumped because otherwise we can end up with
+overlapping version numbers between different Asterisk versions. Now each major
+version of Asterisk will bring with it a change in the major version of ARI.
+The ARI version in Asterisk 14 is now 2.0.0.
+
+* Three new CLI commands have been added for ARI:
+   - `ari show apps`: Displays a listing of all registered ARI applications.
+   - `ari show app <name>`: Display detailed information about a registered ARI 
+   application.
+   - `ari set debug <name> <on|off>`: Enable/disable debugging of an ARI
+   application. When debugged, verbose information will be sent to the Asterisk
+   CLI.
+      
+* The configuration file ari.conf now supports a channelvars option, which
+specifies a list of channel variables to include in each channel-oriented
+ARI event.
+
+#### Asterisk 14.1.0
+
+* ARI events will all now include a new field in the root of the JSON message,
+'asterisk_id'.  This will be the unique ID for the Asterisk system
+transmitting the event.  The value can be overridden using the 'entityid'
+setting in asterisk.conf.
+
+
 #### Asterisk 14.0.0
 
 * A new ARI method has been added to the channels resource. "create" allows for
