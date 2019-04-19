@@ -7,7 +7,7 @@
     "prettify": "prettier --write \"**/*.js\" \"!coverage/**\" \"!docs/**\"",
     "lint": "eslint .",
     "test": "npm run lint && mocha",
-    "cover": "nyc --reporter=html --reporter=text _mocha && open coverage/index.html",
+    "cover": "nyc --reporter=html --reporter=text mocha && open coverage/index.html",
     "ci-test": "npm run lint && npm run ci-mocha && npm run ci-upload-coverage",
     "ci-mocha": "nyc mocha",
     "ci-upload-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
@@ -31,13 +31,17 @@
   },
   "dependencies": {
     "debug": "^4.0.1",
-    "esm": "^3.0.9",
+    "esm": "^3.2.22",
     "request": "^2.75.0",
     "request-promise-native": "^1.0.3",
     "retry": "^0.12.0",
     "ws": "^6.0.0"
   },
   "devDependencies": {
+    "@types/mocha": "^5.2.6",
+    "@types/nock": "^9.3.1",
+    "@types/request-promise-native": "^1.0.15",
+    "@types/ws": "^6.0.1",
     "codecov": "^3.0.0",
     "env-test": "^1.0.0",
     "esdoc": "^1.0.4",
