@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## 7.2.0 - 2019-04-19
+
+Updated some dev dependencies and addressed a deprecation of an old url method
+(See 706ace9). Added ApplicationsApi#filterEvents.
+
 ## 7.1.0 - 2018-09-28
 
 `debug` has been updated to v4. The breaking changes in this `debug` release
