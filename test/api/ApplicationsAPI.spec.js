@@ -135,4 +135,35 @@ describe("the Applications API", () => {
         });
     });
   });
+
+  describe("filterEvents method", () => {
+    it("makes the right request", () => {
+      const mock = nock("http://fake.local")
+        .put("/ari/applications/foo/eventFilter", {
+          filter: {
+            allowed: [{ type: "StasisStart" }],
+            disallowed: [{ type: "StasisEnd" }]
+          }
+        })
+        .reply(200, { foo: "bar" });
+
+      const api = new ApplicationsAPI({
+        baseUrl: "http://fake.local/ari",
+        username: "foo",
+        password: "bar"
+      });
+
+      return api
+        .filterEvents({
+          applicationName: "foo",
+          filter: {
+            allowed: [{ type: "StasisStart" }],
+            disallowed: [{ type: "StasisEnd" }]
+          }
+        })
+        .then(() => {
+          mock.done();
+        });
+    });
+  });
 });

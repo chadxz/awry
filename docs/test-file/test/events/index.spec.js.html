@@ -43,6 +43,8 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/SoundsAPI.js~SoundsAPI.html">SoundsAPI</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/index.js~API.html">API</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Application">Application</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-FilterOptions">FilterOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-FilterValue">FilterValue</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-AsteriskInfo">AsteriskInfo</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-BuildInfo">BuildInfo</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ConfigInfo">ConfigInfo</a></span></span></li>
@@ -70,8 +72,7 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">test/events/index.spec.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import url from &quot;url&quot;;
-import qs from &quot;querystring&quot;;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { URL } from &quot;url&quot;;
 import assert from &quot;power-assert&quot;;
 import ws from &quot;ws&quot;;
 import Events from &quot;../../src/events&quot;;
@@ -101,9 +102,8 @@ describe(&quot;Events connect() returned emitter&quot;, () =&gt; {
 
       server.once(&quot;connection&quot;, (conn, req) =&gt; {
         emitter.once(&quot;open&quot;, () =&gt; {
-          const parts = url.parse(req.url);
-          const query = qs.parse(parts.query);
-          assert.equal(query.app, &quot;myApp&quot;);
+          const parts = new URL(req.url, &quot;ws://localhost:8088/&quot;);
+          assert.equal(parts.searchParams.get(&quot;app&quot;), &quot;myApp&quot;);
           done();
         });
       });
@@ -133,9 +133,8 @@ describe(&quot;Events connect() returned emitter&quot;, () =&gt; {
 
       server.once(&quot;connection&quot;, (conn, req) =&gt; {
         emitter.once(&quot;open&quot;, () =&gt; {
-          const parts = url.parse(req.url);
-          const query = qs.parse(parts.query);
-          assert.equal(query.app, &quot;app1,app2,app3&quot;);
+          const parts = new URL(req.url, &quot;ws://localhost:8088/&quot;);
+          assert.equal(parts.searchParams.get(&quot;app&quot;), &quot;app1,app2,app3&quot;);
           done();
         });
       });
@@ -165,9 +164,8 @@ describe(&quot;Events connect() returned emitter&quot;, () =&gt; {
 
       server.once(&quot;connection&quot;, (conn, req) =&gt; {
         emitter.once(&quot;open&quot;, () =&gt; {
-          const parts = url.parse(req.url);
-          const query = qs.parse(parts.query);
-          assert.equal(query.api_key, &quot;foo:bar&quot;);
+          const parts = new URL(req.url, &quot;ws://localhost:8088/&quot;);
+          assert.equal(parts.searchParams.get(&quot;api_key&quot;), &quot;foo:bar&quot;);
           done();
         });
       });
@@ -183,9 +181,8 @@ describe(&quot;Events connect() returned emitter&quot;, () =&gt; {
 
       server.once(&quot;connection&quot;, (conn, req) =&gt; {
         emitter.once(&quot;open&quot;, () =&gt; {
-          const parts = url.parse(req.url);
-          const query = qs.parse(parts.query);
-          assert.equal(query.subscribeAll, &quot;true&quot;);
+          const parts = new URL(req.url, &quot;ws://localhost:8088/&quot;);
+          assert.equal(parts.searchParams.get(&quot;subscribeAll&quot;), &quot;true&quot;);
           done();
         });
       });
@@ -202,9 +199,8 @@ describe(&quot;Events connect() returned emitter&quot;, () =&gt; {
 
       server.once(&quot;connection&quot;, (conn, req) =&gt; {
         emitter.once(&quot;open&quot;, () =&gt; {
-          const parts = url.parse(req.url);
-          const query = qs.parse(parts.query);
-          assert.equal(query.subscribeAll, &quot;false&quot;);
+          const parts = new URL(req.url, &quot;ws://localhost:8088/&quot;);
+          assert.equal(parts.searchParams.get(&quot;subscribeAll&quot;), &quot;false&quot;);
           done();
         });
       });

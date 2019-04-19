@@ -124,10 +124,39 @@ export default class ApplicationsAPI {
       qs: { eventSource: [].concat(eventSource).join(",") }
     });
   }
+
+  /**
+   * PUT /applications/{applicationName}/eventFilter
+   *
+   * Filter application events types.
+   *
+   * @param {object} params
+   * @param {string} params.applicationName The name of the application to
+   *  filter events on.
+   * @param {FilterOptions} [params.filter={}] Specify which event types to
+   *  allow and/or disallow. If not provided, this method will remove all
+   *  "allowed" and "disallowed" filters. See {@link FilterOptions} for more details.
+   * @returns {Promise.<Application>} Resolves to the application details
+   *  matching the provided application name. Rejects if the application
+   *  does not exist (404 status) or the request body is incorrect (400 status).
+   */
+  filterEvents(params) {
+    const { filter = {}, applicationName } = params;
+
+    const app = encodeURIComponent(applicationName);
+
+    return this._request({
+      method: "PUT",
+      uri: `${this._baseUrl}/applications/${app}/eventFilter`,
+      body: { filter }
+    });
+  }
 }
 
 /**
  * The Application model returned by Asterisk.
+ *
+ * See {@link ApplicationsAPI}
  *
  * @typedef {object} Application
  * @property {Array.<string>} bridge_ids The ids of bridges that this application is subscribed to.
@@ -135,4 +164,33 @@ export default class ApplicationsAPI {
  * @property {Array.<string>} device_names The names of devices that this application is subscribed to.
  * @property {Array.<string>} endpoint_ids The endpoints that this application is subscribed to, in the format `{tech}/{resource}` i.e. 'PJSIP/6001'.
  * @property {string} name The name of this application.
+ */
+
+/**
+ * The object to specify which application events to allow or disallow.
+ * An empty "allowed" list means all events are allowed. An empty "disallowed"
+ * list means no events are disallowed. Disallowed events take precedence over
+ * allowed events if the event type is specified in both lists. If both list
+ * types are given then both are set to their respective values
+ * (note, specifying an empty array for a given type sets that type to empty).
+ * If only one list type is given then only that type is set. The other type is
+ * not updated. If neither is specified, both the allowed and disallowed filters
+ * are set empty.
+ *
+ * See {@link ApplicationsAPI#filterEvents}.
+ *
+ * @typedef {object} FilterOptions
+ * @property {Array.<FilterValue>} [allowed] The events you want to allow.
+ * @property {Array.<FilterValue>} [disallowed] The events you want to disallow.
+ */
+
+/**
+ * The object to specify a filter.
+ *
+ * For example, `{ type: 'StasisStart' }`
+ *
+ * See {@link ApplicationsAPI#filterEvents}.
+ *
+ * @typedef {object} FilterValue
+ * @property {string} type The event type that needs filtering.
  */

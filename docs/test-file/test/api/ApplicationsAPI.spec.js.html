@@ -43,6 +43,8 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/SoundsAPI.js~SoundsAPI.html">SoundsAPI</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/api/index.js~API.html">API</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Application">Application</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-FilterOptions">FilterOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-FilterValue">FilterValue</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-AsteriskInfo">AsteriskInfo</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-BuildInfo">BuildInfo</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ConfigInfo">ConfigInfo</a></span></span></li>
@@ -201,6 +203,37 @@ describe(&quot;the Applications API&quot;, () =&gt; {
         .unsubscribe({
           applicationName: &quot;foo&quot;,
           eventSource: &quot;device234&quot;
+        })
+        .then(() =&gt; {
+          mock.done();
+        });
+    });
+  });
+
+  describe(&quot;filterEvents method&quot;, () =&gt; {
+    it(&quot;makes the right request&quot;, () =&gt; {
+      const mock = nock(&quot;http://fake.local&quot;)
+        .put(&quot;/ari/applications/foo/eventFilter&quot;, {
+          filter: {
+            allowed: [{ type: &quot;StasisStart&quot; }],
+            disallowed: [{ type: &quot;StasisEnd&quot; }]
+          }
+        })
+        .reply(200, { foo: &quot;bar&quot; });
+
+      const api = new ApplicationsAPI({
+        baseUrl: &quot;http://fake.local/ari&quot;,
+        username: &quot;foo&quot;,
+        password: &quot;bar&quot;
+      });
+
+      return api
+        .filterEvents({
+          applicationName: &quot;foo&quot;,
+          filter: {
+            allowed: [{ type: &quot;StasisStart&quot; }],
+            disallowed: [{ type: &quot;StasisEnd&quot; }]
+          }
         })
         .then(() =&gt; {
           mock.done();
