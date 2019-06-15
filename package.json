@@ -47,7 +47,7 @@
     "esdoc": "^1.0.4",
     "esdoc-standard-plugin": "^1.0.0",
     "eslint": "^5.0.0",
-    "eslint-config-prettier": "^4.1.0",
+    "eslint-config-prettier": "^5.0.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-node": "^8.0.0",
