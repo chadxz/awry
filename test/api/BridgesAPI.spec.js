@@ -19,7 +19,7 @@ describe("the Bridges API", () => {
       const api = new BridgesAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api.list().then(() => {
@@ -35,21 +35,21 @@ describe("the Bridges API", () => {
         .query({
           type: "mixing,dtmf_events",
           bridgeId: "foo",
-          name: "fooBridge"
+          name: "fooBridge",
         })
         .reply(200, { foo: "bar" });
 
       const api = new BridgesAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .create({
           bridgeId: "foo",
           name: "fooBridge",
-          type: ["mixing", "dtmf_events"]
+          type: ["mixing", "dtmf_events"],
         })
         .then(() => {
           mock.done();
@@ -63,21 +63,21 @@ describe("the Bridges API", () => {
         .post("/ari/bridges/foo")
         .query({
           type: "mixing,dtmf_events",
-          name: "fooBridge"
+          name: "fooBridge",
         })
         .reply(200, { foo: "bar" });
 
       const api = new BridgesAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .createOrUpdate({
           bridgeId: "foo",
           name: "fooBridge",
-          type: ["mixing", "dtmf_events"]
+          type: ["mixing", "dtmf_events"],
         })
         .then(() => {
           mock.done();
@@ -94,12 +94,12 @@ describe("the Bridges API", () => {
       const api = new BridgesAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .get({
-          bridgeId: "foo"
+          bridgeId: "foo",
         })
         .then(() => {
           mock.done();
@@ -116,12 +116,12 @@ describe("the Bridges API", () => {
       const api = new BridgesAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .destroy({
-          bridgeId: "foo"
+          bridgeId: "foo",
         })
         .then(() => {
           mock.done();
@@ -135,21 +135,21 @@ describe("the Bridges API", () => {
         .post("/ari/bridges/foo%20bar/addChannel")
         .query({
           role: "announcer",
-          channel: "chan1,chan2"
+          channel: "chan1,chan2",
         })
         .reply(200, { foo: "bar" });
 
       const api = new BridgesAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .addChannel({
           bridgeId: "foo bar",
           channel: ["chan1", "chan2"],
-          role: "announcer"
+          role: "announcer",
         })
         .then(() => {
           mock.done();
@@ -167,13 +167,13 @@ describe("the Bridges API", () => {
       const api = new BridgesAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .removeChannel({
           bridgeId: "foo bar",
-          channel: ["chan1", "chan2"]
+          channel: ["chan1", "chan2"],
         })
         .then(() => {
           mock.done();
@@ -191,13 +191,13 @@ describe("the Bridges API", () => {
       const api = new BridgesAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .startMusicOnHold({
           bridgeId: "foo bar",
-          mohClass: "rock_and_roll"
+          mohClass: "rock_and_roll",
         })
         .then(() => {
           mock.done();
@@ -214,12 +214,12 @@ describe("the Bridges API", () => {
       const api = new BridgesAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .stopMusicOnHold({
-          bridgeId: "foo bar"
+          bridgeId: "foo bar",
         })
         .then(() => {
           mock.done();
@@ -235,14 +235,14 @@ describe("the Bridges API", () => {
           media: "sound:foo/bar.wav,sound:foo/baz.wav",
           playbackId: "myPlaybackId",
           offsetms: 2000,
-          skipms: 5000
+          skipms: 5000,
         })
         .reply(200, { foo: "bar" });
 
       const api = new BridgesAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
@@ -251,7 +251,7 @@ describe("the Bridges API", () => {
           media: ["sound:foo/bar.wav", "sound:foo/baz.wav"],
           playbackId: "myPlaybackId",
           offsetms: 2000,
-          skipms: 5000
+          skipms: 5000,
         })
         .then(() => {
           mock.done();
@@ -266,14 +266,14 @@ describe("the Bridges API", () => {
         .query({
           media: "sound:foo/bar.wav,sound:foo/baz.wav",
           offsetms: 2000,
-          skipms: 5000
+          skipms: 5000,
         })
         .reply(200, { foo: "bar" });
 
       const api = new BridgesAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
@@ -282,7 +282,7 @@ describe("the Bridges API", () => {
           media: ["sound:foo/bar.wav", "sound:foo/baz.wav"],
           playbackId: "my playback",
           offsetms: 2000,
-          skipms: 5000
+          skipms: 5000,
         })
         .then(() => {
           mock.done();
@@ -301,14 +301,14 @@ describe("the Bridges API", () => {
           maxSilentSeconds: 0,
           ifExists: "overwrite",
           beep: true,
-          terminateOn: "none"
+          terminateOn: "none",
         })
         .reply(200, { foo: "bar" });
 
       const api = new BridgesAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
@@ -316,7 +316,7 @@ describe("the Bridges API", () => {
           bridgeId: "foo bar",
           name: "myRecording",
           maxDurationSeconds: 60,
-          ifExists: "overwrite"
+          ifExists: "overwrite",
         })
         .then(() => {
           mock.done();

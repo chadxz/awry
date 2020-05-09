@@ -23,7 +23,7 @@ export default class EventsAPI {
     /** @private */
     this._request = rp.defaults({
       auth: { username, password },
-      json: true
+      json: true,
     });
   }
 
@@ -58,9 +58,9 @@ export default class EventsAPI {
       uri: `${this._baseUrl}/events/user/${evt}`,
       qs: {
         application,
-        source: [].concat(source).join(",")
+        source: [].concat(source).join(","),
       },
-      body: { variables }
+      body: { variables },
     });
   }
 }

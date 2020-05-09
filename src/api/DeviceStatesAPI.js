@@ -23,7 +23,7 @@ export default class DeviceStatesAPI {
     /** @private */
     this._request = rp.defaults({
       auth: { username, password },
-      json: true
+      json: true,
     });
   }
 
@@ -38,7 +38,7 @@ export default class DeviceStatesAPI {
   list() {
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/deviceStates`
+      uri: `${this._baseUrl}/deviceStates`,
     });
   }
 
@@ -59,7 +59,7 @@ export default class DeviceStatesAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/deviceStates/${name}`
+      uri: `${this._baseUrl}/deviceStates/${name}`,
     });
   }
 
@@ -87,7 +87,7 @@ export default class DeviceStatesAPI {
     return this._request({
       method: "PUT",
       uri: `${this._baseUrl}/deviceStates/${name}`,
-      qs: { deviceState }
+      qs: { deviceState },
     });
   }
 
@@ -110,7 +110,7 @@ export default class DeviceStatesAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/deviceStates/${name}`
+      uri: `${this._baseUrl}/deviceStates/${name}`,
     });
   }
 }

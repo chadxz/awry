@@ -19,12 +19,12 @@ describe("the Playbacks API", () => {
       const api = new PlaybacksAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .get({
-          playbackId: "foo"
+          playbackId: "foo",
         })
         .then(() => {
           mock.done();
@@ -41,12 +41,12 @@ describe("the Playbacks API", () => {
       const api = new PlaybacksAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .stop({
-          playbackId: "foo"
+          playbackId: "foo",
         })
         .then(() => {
           mock.done();
@@ -64,13 +64,13 @@ describe("the Playbacks API", () => {
       const api = new PlaybacksAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .control({
           playbackId: "foo",
-          operation: "restart"
+          operation: "restart",
         })
         .then(() => {
           mock.done();

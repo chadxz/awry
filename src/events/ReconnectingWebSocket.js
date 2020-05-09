@@ -54,7 +54,7 @@ export default class ReconnectingWebSocket extends events.EventEmitter {
       url,
       reconnect = true,
       retryOptions = { maxTimeout: 60000 },
-      wsOptions = {}
+      wsOptions = {},
     } = params;
 
     /** @private */
@@ -70,7 +70,7 @@ export default class ReconnectingWebSocket extends events.EventEmitter {
     this._reconnect = reconnect;
 
     debug("attempting initial connection", { url });
-    this.connect(err => {
+    this.connect((err) => {
       if (err) {
         this.emit("error", err);
         this.close();
@@ -92,7 +92,7 @@ export default class ReconnectingWebSocket extends events.EventEmitter {
   connect(callback) {
     const operation = retry.operation(this._retryOptions);
 
-    operation.attempt(attemptNumber => {
+    operation.attempt((attemptNumber) => {
       const numRetries = attemptNumber - 1;
 
       // cleanup any existing instance
@@ -104,7 +104,7 @@ export default class ReconnectingWebSocket extends events.EventEmitter {
       /** @private */
       this._ws = new WebSocket(this._url, this._wsOptions);
 
-      const handleConnectError = err => {
+      const handleConnectError = (err) => {
         debug("connection attempt failed", err);
 
         if (!this._reconnect) {
@@ -154,7 +154,7 @@ export default class ReconnectingWebSocket extends events.EventEmitter {
     this.emit("disconnected", { reason: "error", err });
     debug("attempting to reconnect");
 
-    this.connect(err => {
+    this.connect((err) => {
       if (err) {
         this.emit("error", err);
         this.close();
@@ -182,7 +182,7 @@ export default class ReconnectingWebSocket extends events.EventEmitter {
     this.emit("disconnected", { reason: "close", code, message });
     debug("attempting to reconnect");
 
-    this.connect(err => {
+    this.connect((err) => {
       if (err) {
         this.emit("error", err);
         this.close();

@@ -19,7 +19,7 @@ describe("the Endpoints API", () => {
       const api = new EndpointsAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api.list().then(() => {
@@ -32,19 +32,19 @@ describe("the Endpoints API", () => {
     it("makes the right request", () => {
       const mock = nock("http://fake.local")
         .put("/ari/endpoints/sendMessage", {
-          variables: { var1: "cool", var2: "rad" }
+          variables: { var1: "cool", var2: "rad" },
         })
         .query({
           to: "pjsip/foo",
           from: "pjsip/baz",
-          body: "hidey ho"
+          body: "hidey ho",
         })
         .reply(200, { foo: "bar" });
 
       const api = new EndpointsAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
@@ -52,7 +52,7 @@ describe("the Endpoints API", () => {
           to: "pjsip/foo",
           from: "pjsip/baz",
           body: "hidey ho",
-          variables: { var1: "cool", var2: "rad" }
+          variables: { var1: "cool", var2: "rad" },
         })
         .then(() => {
           mock.done();
@@ -69,12 +69,12 @@ describe("the Endpoints API", () => {
       const api = new EndpointsAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .listByTechnology({
-          technology: "pjsip"
+          technology: "pjsip",
         })
         .then(() => {
           mock.done();
@@ -91,13 +91,13 @@ describe("the Endpoints API", () => {
       const api = new EndpointsAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .get({
           technology: "pj sip",
-          resource: "foo bar"
+          resource: "foo bar",
         })
         .then(() => {
           mock.done();
@@ -109,18 +109,18 @@ describe("the Endpoints API", () => {
     it("makes the right request", () => {
       const mock = nock("http://fake.local")
         .put("/ari/endpoints/pjsip/foo/sendMessage", {
-          variables: { var1: "cool", var2: "nice" }
+          variables: { var1: "cool", var2: "nice" },
         })
         .query({
           from: "pjsip/jenkins",
-          body: "hidey ho"
+          body: "hidey ho",
         })
         .reply(200, { foo: "bar" });
 
       const api = new EndpointsAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
@@ -129,7 +129,7 @@ describe("the Endpoints API", () => {
           resource: "foo",
           from: "pjsip/jenkins",
           body: "hidey ho",
-          variables: { var1: "cool", var2: "nice" }
+          variables: { var1: "cool", var2: "nice" },
         })
         .then(() => {
           mock.done();

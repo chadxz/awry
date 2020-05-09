@@ -19,7 +19,7 @@ describe("the Mailboxes API", () => {
       const api = new MailboxesAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api.list().then(() => {
@@ -37,12 +37,12 @@ describe("the Mailboxes API", () => {
       const api = new MailboxesAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .get({
-          mailboxName: "foo"
+          mailboxName: "foo",
         })
         .then(() => {
           mock.done();
@@ -60,14 +60,14 @@ describe("the Mailboxes API", () => {
       const api = new MailboxesAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .update({
           mailboxName: "foo",
           oldMessages: 5,
-          newMessages: 0
+          newMessages: 0,
         })
         .then(() => {
           mock.done();
@@ -84,12 +84,12 @@ describe("the Mailboxes API", () => {
       const api = new MailboxesAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .destroy({
-          mailboxName: "foo"
+          mailboxName: "foo",
         })
         .then(() => {
           mock.done();

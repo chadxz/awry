@@ -19,7 +19,7 @@ describe("API constructed instance", () => {
     api = new API({
       username: "username",
       password: "password",
-      baseUrl: "http://127.0.0.1/ari"
+      baseUrl: "http://127.0.0.1/ari",
     });
   });
 

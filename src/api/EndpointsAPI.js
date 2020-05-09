@@ -23,7 +23,7 @@ export default class EndpointsAPI {
     /** @private */
     this._request = rp.defaults({
       auth: { username, password },
-      json: true
+      json: true,
     });
   }
 
@@ -37,7 +37,7 @@ export default class EndpointsAPI {
   list() {
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/endpoints`
+      uri: `${this._baseUrl}/endpoints`,
     });
   }
 
@@ -69,7 +69,7 @@ export default class EndpointsAPI {
       method: "PUT",
       uri: `${this._baseUrl}/endpoints/sendMessage`,
       qs: { to, from, body },
-      body: { variables }
+      body: { variables },
     });
   }
 
@@ -90,7 +90,7 @@ export default class EndpointsAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/endpoints/${tech}`
+      uri: `${this._baseUrl}/endpoints/${tech}`,
     });
   }
 
@@ -115,7 +115,7 @@ export default class EndpointsAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/endpoints/${tech}/${res}`
+      uri: `${this._baseUrl}/endpoints/${tech}/${res}`,
     });
   }
 
@@ -150,7 +150,7 @@ export default class EndpointsAPI {
       method: "PUT",
       uri: `${this._baseUrl}/endpoints/${tech}/${res}/sendMessage`,
       qs: { from, body },
-      body: { variables }
+      body: { variables },
     });
   }
 }

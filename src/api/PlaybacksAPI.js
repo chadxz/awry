@@ -23,7 +23,7 @@ export default class PlaybacksAPI {
     /** @private */
     this._request = rp.defaults({
       auth: { username, password },
-      json: true
+      json: true,
     });
   }
 
@@ -44,7 +44,7 @@ export default class PlaybacksAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/playbacks/${id}`
+      uri: `${this._baseUrl}/playbacks/${id}`,
     });
   }
 
@@ -65,7 +65,7 @@ export default class PlaybacksAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/playbacks/${id}`
+      uri: `${this._baseUrl}/playbacks/${id}`,
     });
   }
 
@@ -91,7 +91,7 @@ export default class PlaybacksAPI {
     return this._request({
       method: "POST",
       uri: `${this._baseUrl}/playbacks/${id}/control`,
-      qs: { operation }
+      qs: { operation },
     });
   }
 }

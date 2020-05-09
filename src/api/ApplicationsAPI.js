@@ -23,7 +23,7 @@ export default class ApplicationsAPI {
     /** @private */
     this._request = rp.defaults({
       auth: { username, password },
-      json: true
+      json: true,
     });
   }
 
@@ -38,7 +38,7 @@ export default class ApplicationsAPI {
   list() {
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/applications`
+      uri: `${this._baseUrl}/applications`,
     });
   }
 
@@ -60,7 +60,7 @@ export default class ApplicationsAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/applications/${app}`
+      uri: `${this._baseUrl}/applications/${app}`,
     });
   }
 
@@ -93,7 +93,7 @@ export default class ApplicationsAPI {
     return this._request({
       method: "POST",
       uri: `${this._baseUrl}/applications/${app}/subscription`,
-      qs: { eventSource: [].concat(eventSource).join(",") }
+      qs: { eventSource: [].concat(eventSource).join(",") },
     });
   }
 
@@ -121,7 +121,7 @@ export default class ApplicationsAPI {
     return this._request({
       method: "DELETE",
       uri: `${this._baseUrl}/applications/${app}/subscription`,
-      qs: { eventSource: [].concat(eventSource).join(",") }
+      qs: { eventSource: [].concat(eventSource).join(",") },
     });
   }
 
@@ -148,7 +148,7 @@ export default class ApplicationsAPI {
     return this._request({
       method: "PUT",
       uri: `${this._baseUrl}/applications/${app}/eventFilter`,
-      body: { filter }
+      body: { filter },
     });
   }
 }

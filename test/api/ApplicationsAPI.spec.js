@@ -20,7 +20,7 @@ describe("the Applications API", () => {
         const api = new ApplicationsAPI({
           baseUrl: "http://fake.local/ari",
           username: "foo",
-          password: "bar"
+          password: "bar",
         });
 
         return api.list().then(() => {
@@ -31,8 +31,8 @@ describe("the Applications API", () => {
       it("sends the username and password", () => {
         const mock = nock("http://fake.local", {
           reqheaders: {
-            authorization: "Basic Zm9vOmJhcg=="
-          }
+            authorization: "Basic Zm9vOmJhcg==",
+          },
         })
           .get("/ari/applications")
           .reply(200, { foo: "bar" });
@@ -40,7 +40,7 @@ describe("the Applications API", () => {
         const api = new ApplicationsAPI({
           baseUrl: "http://fake.local/ari",
           username: "foo",
-          password: "bar"
+          password: "bar",
         });
 
         return api.list().then(() => {
@@ -51,8 +51,8 @@ describe("the Applications API", () => {
       it("sets the accept header as json", () => {
         const mock = nock("http://fake.local", {
           reqHeaders: {
-            accept: "application/json"
-          }
+            accept: "application/json",
+          },
         })
           .get("/ari/applications")
           .reply(200, { foo: "bar" });
@@ -60,7 +60,7 @@ describe("the Applications API", () => {
         const api = new ApplicationsAPI({
           baseUrl: "http://fake.local/ari",
           username: "foo",
-          password: "bar"
+          password: "bar",
         });
 
         return api.list().then(() => {
@@ -79,7 +79,7 @@ describe("the Applications API", () => {
       const api = new ApplicationsAPI({
         baseUrl: "http://fake.local/ari",
         username: "foo",
-        password: "bar"
+        password: "bar",
       });
 
       return api.get({ applicationName: "foo" }).then(() => {
@@ -98,13 +98,13 @@ describe("the Applications API", () => {
       const api = new ApplicationsAPI({
         baseUrl: "http://fake.local/ari",
         username: "foo",
-        password: "bar"
+        password: "bar",
       });
 
       return api
         .subscribe({
           applicationName: "foo",
-          eventSource: "device234"
+          eventSource: "device234",
         })
         .then(() => {
           mock.done();
@@ -122,13 +122,13 @@ describe("the Applications API", () => {
       const api = new ApplicationsAPI({
         baseUrl: "http://fake.local/ari",
         username: "foo",
-        password: "bar"
+        password: "bar",
       });
 
       return api
         .unsubscribe({
           applicationName: "foo",
-          eventSource: "device234"
+          eventSource: "device234",
         })
         .then(() => {
           mock.done();
@@ -142,15 +142,15 @@ describe("the Applications API", () => {
         .put("/ari/applications/foo/eventFilter", {
           filter: {
             allowed: [{ type: "StasisStart" }],
-            disallowed: [{ type: "StasisEnd" }]
-          }
+            disallowed: [{ type: "StasisEnd" }],
+          },
         })
         .reply(200, { foo: "bar" });
 
       const api = new ApplicationsAPI({
         baseUrl: "http://fake.local/ari",
         username: "foo",
-        password: "bar"
+        password: "bar",
       });
 
       return api
@@ -158,8 +158,8 @@ describe("the Applications API", () => {
           applicationName: "foo",
           filter: {
             allowed: [{ type: "StasisStart" }],
-            disallowed: [{ type: "StasisEnd" }]
-          }
+            disallowed: [{ type: "StasisEnd" }],
+          },
         })
         .then(() => {
           mock.done();

@@ -19,14 +19,14 @@ describe("the Asterisk API", () => {
       const api = new AsteriskAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .getObject({
           configClass: "fooClass",
           objectType: "barType",
-          id: "baz"
+          id: "baz",
         })
         .then(() => {
           mock.done();
@@ -38,14 +38,14 @@ describe("the Asterisk API", () => {
     it("makes the right request", () => {
       const mock = nock("http://fake.local")
         .put("/ari/asterisk/config/dynamic/fooClass/barType/baz", {
-          fields: [{ field1: "field1val" }, { field2: "field2val" }]
+          fields: [{ field1: "field1val" }, { field2: "field2val" }],
         })
         .reply(200, { foo: "bar" });
 
       const api = new AsteriskAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
@@ -53,7 +53,7 @@ describe("the Asterisk API", () => {
           configClass: "fooClass",
           objectType: "barType",
           id: "baz",
-          fields: [{ field1: "field1val" }, { field2: "field2val" }]
+          fields: [{ field1: "field1val" }, { field2: "field2val" }],
         })
         .then(() => {
           mock.done();
@@ -70,14 +70,14 @@ describe("the Asterisk API", () => {
       const api = new AsteriskAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .deleteObject({
           configClass: "fooClass",
           objectType: "barType",
-          id: "baz"
+          id: "baz",
         })
         .then(() => {
           mock.done();
@@ -95,12 +95,12 @@ describe("the Asterisk API", () => {
       const api = new AsteriskAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .getInfo({
-          only: ["system", "build"]
+          only: ["system", "build"],
         })
         .then(() => {
           mock.done();
@@ -117,7 +117,7 @@ describe("the Asterisk API", () => {
       const api = new AsteriskAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api.listModules().then(() => {
@@ -135,12 +135,12 @@ describe("the Asterisk API", () => {
       const api = new AsteriskAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .getModule({
-          moduleName: "myModule"
+          moduleName: "myModule",
         })
         .then(() => {
           mock.done();
@@ -157,12 +157,12 @@ describe("the Asterisk API", () => {
       const api = new AsteriskAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .loadModule({
-          moduleName: "my Module"
+          moduleName: "my Module",
         })
         .then(() => {
           mock.done();
@@ -179,12 +179,12 @@ describe("the Asterisk API", () => {
       const api = new AsteriskAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .unloadModule({
-          moduleName: "my Module"
+          moduleName: "my Module",
         })
         .then(() => {
           mock.done();
@@ -201,12 +201,12 @@ describe("the Asterisk API", () => {
       const api = new AsteriskAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .reloadModule({
-          moduleName: "my Module"
+          moduleName: "my Module",
         })
         .then(() => {
           mock.done();
@@ -223,7 +223,7 @@ describe("the Asterisk API", () => {
       const api = new AsteriskAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api.listLogChannels().then(() => {
@@ -242,13 +242,13 @@ describe("the Asterisk API", () => {
       const api = new AsteriskAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .addLog({
           logChannelName: "my log channel",
-          configuration: "i have no idea what i'm doing"
+          configuration: "i have no idea what i'm doing",
         })
         .then(() => {
           mock.done();
@@ -265,12 +265,12 @@ describe("the Asterisk API", () => {
       const api = new AsteriskAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .deleteLog({
-          logChannelName: "my log channel"
+          logChannelName: "my log channel",
         })
         .then(() => {
           mock.done();
@@ -287,12 +287,12 @@ describe("the Asterisk API", () => {
       const api = new AsteriskAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .rotateLog({
-          logChannelName: "my log channel"
+          logChannelName: "my log channel",
         })
         .then(() => {
           mock.done();
@@ -310,12 +310,12 @@ describe("the Asterisk API", () => {
       const api = new AsteriskAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .getGlobalVariable({
-          variable: "something cool"
+          variable: "something cool",
         })
         .then(() => {
           mock.done();
@@ -329,20 +329,20 @@ describe("the Asterisk API", () => {
         .post("/ari/asterisk/variable")
         .query({
           variable: "something cool",
-          value: "do what now"
+          value: "do what now",
         })
         .reply(200, { foo: "bar" });
 
       const api = new AsteriskAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .setGlobalVariable({
           variable: "something cool",
-          value: "do what now"
+          value: "do what now",
         })
         .then(() => {
           mock.done();

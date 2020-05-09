@@ -23,7 +23,7 @@ export default class SoundsAPI {
     /** @private */
     this._request = rp.defaults({
       auth: { username, password },
-      json: true
+      json: true,
     });
   }
 
@@ -44,7 +44,7 @@ export default class SoundsAPI {
     return this._request({
       method: "GET",
       uri: `${this._baseUrl}/sounds`,
-      qs: { lang, format }
+      qs: { lang, format },
     });
   }
 
@@ -64,7 +64,7 @@ export default class SoundsAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/sounds/${id}`
+      uri: `${this._baseUrl}/sounds/${id}`,
     });
   }
 }

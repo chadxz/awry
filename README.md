@@ -2,7 +2,7 @@
 
 [![Build Status][Build Status Image]][Build Status Link]
 [![Codecov][Codecov Image]][Codecov Link]
-[![Greenkeeper Badge][Greenkeeper Image]][Greenkeeper Link]
+[![Known Vulnerabilities][Snyk Image]][Snyk Link]
 
 An [Asterisk REST Interface][] websocket and API client library for node.js
 v6+.
@@ -11,8 +11,8 @@ v6+.
 [Build Status Link]: https://travis-ci.org/chadxz/awry
 [Codecov Image]: https://img.shields.io/codecov/c/github/chadxz/awry.svg
 [Codecov Link]: https://codecov.io/gh/chadxz/awry
-[Greenkeeper Image]: https://badges.greenkeeper.io/chadxz/awry.svg
-[Greenkeeper Link]: https://greenkeeper.io/
+[Snyk Image]: https://snyk.io/test/github/chadxz/awry/badge.svg
+[Snyk Link]: https://snyk.io/test/github/chadxz/awry
 [Asterisk REST Interface]: https://wiki.asterisk.org/wiki/pages/viewpage.action?pageId=29395573
 
 ### installation
@@ -46,7 +46,7 @@ events.on('message', message => {
 });
 ```
 
-For more details see the [full API documentation](http://chadmcelligott.com/awry). 
+For more details see the [full API documentation](http://chadmcelligott.com/awry).
 
 ### debugging
 

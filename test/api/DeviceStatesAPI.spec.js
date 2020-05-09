@@ -19,7 +19,7 @@ describe("the DeviceStates API", () => {
       const api = new DeviceStatesAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api.list().then(() => {
@@ -37,12 +37,12 @@ describe("the DeviceStates API", () => {
       const api = new DeviceStatesAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .get({
-          deviceName: "foo"
+          deviceName: "foo",
         })
         .then(() => {
           mock.done();
@@ -60,13 +60,13 @@ describe("the DeviceStates API", () => {
       const api = new DeviceStatesAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .update({
           deviceName: "foo",
-          deviceState: "INUSE"
+          deviceState: "INUSE",
         })
         .then(() => {
           mock.done();
@@ -83,12 +83,12 @@ describe("the DeviceStates API", () => {
       const api = new DeviceStatesAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .destroy({
-          deviceName: "foo"
+          deviceName: "foo",
         })
         .then(() => {
           mock.done();

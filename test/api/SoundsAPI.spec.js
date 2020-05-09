@@ -20,13 +20,13 @@ describe("the Sounds API", () => {
       const api = new SoundsAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .list({
           lang: "en",
-          format: "ogg"
+          format: "ogg",
         })
         .then(() => {
           mock.done();
@@ -43,12 +43,12 @@ describe("the Sounds API", () => {
       const api = new SoundsAPI({
         baseUrl: "http://fake.local/ari",
         username: "user",
-        password: "1234"
+        password: "1234",
       });
 
       return api
         .get({
-          soundId: "foo"
+          soundId: "foo",
         })
         .then(() => {
           mock.done();

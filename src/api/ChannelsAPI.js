@@ -23,7 +23,7 @@ export default class ChannelsAPI {
     /** @private */
     this._request = rp.defaults({
       auth: { username, password },
-      json: true
+      json: true,
     });
   }
 
@@ -38,7 +38,7 @@ export default class ChannelsAPI {
   list() {
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/channels`
+      uri: `${this._baseUrl}/channels`,
     });
   }
 
@@ -104,7 +104,7 @@ export default class ChannelsAPI {
       otherChannelId,
       originator,
       formats,
-      variables
+      variables,
     } = params;
 
     return this._request({
@@ -123,9 +123,9 @@ export default class ChannelsAPI {
         channelId,
         otherChannelId,
         originator,
-        formats: [].concat(formats).join(",")
+        formats: [].concat(formats).join(","),
       },
-      body: { variables }
+      body: { variables },
     });
   }
 
@@ -164,7 +164,7 @@ export default class ChannelsAPI {
       channelId,
       otherChannelId,
       originator,
-      formats
+      formats,
     } = params;
 
     return this._request({
@@ -177,8 +177,8 @@ export default class ChannelsAPI {
         channelId,
         otherChannelId,
         originator,
-        formats: [].concat(formats).join(",")
-      }
+        formats: [].concat(formats).join(","),
+      },
     });
   }
 
@@ -199,7 +199,7 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/channels/${id}`
+      uri: `${this._baseUrl}/channels/${id}`,
     });
   }
 
@@ -266,7 +266,7 @@ export default class ChannelsAPI {
       otherChannelId,
       originator,
       formats,
-      variables
+      variables,
     } = params;
 
     const id = encodeURIComponent(channelId);
@@ -286,9 +286,9 @@ export default class ChannelsAPI {
         timeout,
         otherChannelId,
         originator,
-        formats: [].concat(formats).join(",")
+        formats: [].concat(formats).join(","),
       },
-      body: { variables }
+      body: { variables },
     });
   }
 
@@ -312,7 +312,7 @@ export default class ChannelsAPI {
     return this._request({
       method: "DELETE",
       uri: `${this._baseUrl}/channels/${id}`,
-      qs: { reason }
+      qs: { reason },
     });
   }
 
@@ -340,7 +340,7 @@ export default class ChannelsAPI {
     return this._request({
       method: "POST",
       uri: `${this._baseUrl}/channels/${id}/continue`,
-      qs: { context, extension, priority, label }
+      qs: { context, extension, priority, label },
     });
   }
 
@@ -367,7 +367,7 @@ export default class ChannelsAPI {
     return this._request({
       method: "POST",
       uri: `${this._baseUrl}/channels/${id}/redirect`,
-      qs: { endpoint }
+      qs: { endpoint },
     });
   }
 
@@ -388,7 +388,7 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/channels/${id}/answer`
+      uri: `${this._baseUrl}/channels/${id}/answer`,
     });
   }
 
@@ -410,7 +410,7 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/channels/${id}/ring`
+      uri: `${this._baseUrl}/channels/${id}/ring`,
     });
   }
 
@@ -432,7 +432,7 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/channels/${id}/ring`
+      uri: `${this._baseUrl}/channels/${id}/ring`,
     });
   }
 
@@ -464,14 +464,14 @@ export default class ChannelsAPI {
       before = 0,
       between = 100,
       duration = 100,
-      after = 0
+      after = 0,
     } = params;
     const id = encodeURIComponent(channelId);
 
     return this._request({
       method: "POST",
       uri: `${this._baseUrl}/channels/${id}/dtmf`,
-      qs: { dtmf, before, between, duration, after }
+      qs: { dtmf, before, between, duration, after },
     });
   }
 
@@ -495,7 +495,7 @@ export default class ChannelsAPI {
     return this._request({
       method: "POST",
       uri: `${this._baseUrl}/channels/${id}/mute`,
-      qs: { direction }
+      qs: { direction },
     });
   }
 
@@ -519,7 +519,7 @@ export default class ChannelsAPI {
     return this._request({
       method: "DELETE",
       uri: `${this._baseUrl}/channels/${id}/mute`,
-      qs: { direction }
+      qs: { direction },
     });
   }
 
@@ -540,7 +540,7 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/channels/${id}/hold`
+      uri: `${this._baseUrl}/channels/${id}/hold`,
     });
   }
 
@@ -561,7 +561,7 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/channels/${id}/hold`
+      uri: `${this._baseUrl}/channels/${id}/hold`,
     });
   }
 
@@ -588,7 +588,7 @@ export default class ChannelsAPI {
     return this._request({
       method: "POST",
       uri: `${this._baseUrl}/channels/${id}/moh`,
-      qs: { mohClass }
+      qs: { mohClass },
     });
   }
 
@@ -609,7 +609,7 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/channels/${id}/moh`
+      uri: `${this._baseUrl}/channels/${id}/moh`,
     });
   }
 
@@ -632,7 +632,7 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/channels/${id}/silence`
+      uri: `${this._baseUrl}/channels/${id}/silence`,
     });
   }
 
@@ -654,7 +654,7 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/channels/${id}/silence`
+      uri: `${this._baseUrl}/channels/${id}/silence`,
     });
   }
 
@@ -690,7 +690,7 @@ export default class ChannelsAPI {
       lang,
       offsetms = 0,
       skipms = 3000,
-      playbackId
+      playbackId,
     } = params;
     const id = encodeURIComponent(channelId);
 
@@ -702,8 +702,8 @@ export default class ChannelsAPI {
         lang,
         offsetms,
         skipms,
-        playbackId
-      }
+        playbackId,
+      },
     });
   }
 
@@ -742,7 +742,7 @@ export default class ChannelsAPI {
       media,
       lang,
       offsetms = 0,
-      skipms = 3000
+      skipms = 3000,
     } = params;
     const id = encodeURIComponent(channelId);
     const playId = encodeURIComponent(playbackId);
@@ -753,8 +753,8 @@ export default class ChannelsAPI {
         media: [].concat(media).join(","),
         lang,
         offsetms,
-        skipms
-      }
+        skipms,
+      },
     });
   }
 
@@ -797,7 +797,7 @@ export default class ChannelsAPI {
       maxSilenceSeconds = 0,
       ifExists = "fail",
       beep = true,
-      terminateOn = "none"
+      terminateOn = "none",
     } = params;
     const id = encodeURIComponent(channelId);
 
@@ -811,8 +811,8 @@ export default class ChannelsAPI {
         maxSilenceSeconds,
         ifExists,
         beep,
-        terminateOn
-      }
+        terminateOn,
+      },
     });
   }
 
@@ -837,7 +837,7 @@ export default class ChannelsAPI {
     return this._request({
       method: "GET",
       uri: `${this._baseUrl}/channels/${id}/variable`,
-      qs: { variable }
+      qs: { variable },
     });
   }
 
@@ -863,7 +863,7 @@ export default class ChannelsAPI {
     return this._request({
       method: "POST",
       uri: `${this._baseUrl}/channels/${id}/variable`,
-      qs: { variable, value }
+      qs: { variable, value },
     });
   }
 
@@ -895,14 +895,14 @@ export default class ChannelsAPI {
       spy = "none",
       whisper = "none",
       appArgs,
-      snoopId
+      snoopId,
     } = params;
     const id = encodeURIComponent(channelId);
 
     return this._request({
       method: "POST",
       uri: `${this._baseUrl}/channels/${id}/snoop`,
-      qs: { app, spy, whisper, appArgs, snoopId }
+      qs: { app, spy, whisper, appArgs, snoopId },
     });
   }
 
@@ -935,7 +935,7 @@ export default class ChannelsAPI {
       app,
       spy = "none",
       whisper = "none",
-      appArgs
+      appArgs,
     } = params;
     const id = encodeURIComponent(channelId);
     const sid = encodeURIComponent(snoopId);
@@ -943,7 +943,7 @@ export default class ChannelsAPI {
     return this._request({
       method: "POST",
       uri: `${this._baseUrl}/channels/${id}/snoop/${sid}`,
-      qs: { app, spy, whisper, appArgs }
+      qs: { app, spy, whisper, appArgs },
     });
   }
 
@@ -969,7 +969,7 @@ export default class ChannelsAPI {
     return this._request({
       method: "POST",
       uri: `${this._baseUrl}/channels/${id}/dial`,
-      qs: { caller, timeout }
+      qs: { caller, timeout },
     });
   }
 }

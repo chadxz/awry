@@ -24,7 +24,7 @@ export default class AsteriskAPI {
     /** @private */
     this._request = rp.defaults({
       auth: { username, password },
-      json: true
+      json: true,
     });
   }
 
@@ -140,7 +140,7 @@ export default class AsteriskAPI {
     return this._request({
       method: "GET",
       uri: `${this._baseUrl}/asterisk/info`,
-      qs: { only: [].concat(only).join(",") }
+      qs: { only: [].concat(only).join(",") },
     });
   }
 
@@ -157,7 +157,7 @@ export default class AsteriskAPI {
   listModules() {
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/asterisk/modules`
+      uri: `${this._baseUrl}/asterisk/modules`,
     });
   }
 
@@ -180,7 +180,7 @@ export default class AsteriskAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/asterisk/modules/${name}`
+      uri: `${this._baseUrl}/asterisk/modules/${name}`,
     });
   }
 
@@ -202,7 +202,7 @@ export default class AsteriskAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/asterisk/modules/${name}`
+      uri: `${this._baseUrl}/asterisk/modules/${name}`,
     });
   }
 
@@ -225,7 +225,7 @@ export default class AsteriskAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/asterisk/modules/${name}`
+      uri: `${this._baseUrl}/asterisk/modules/${name}`,
     });
   }
 
@@ -248,7 +248,7 @@ export default class AsteriskAPI {
 
     return this._request({
       method: "PUT",
-      uri: `${this._baseUrl}/asterisk/modules/${name}`
+      uri: `${this._baseUrl}/asterisk/modules/${name}`,
     });
   }
 
@@ -265,7 +265,7 @@ export default class AsteriskAPI {
   listLogChannels() {
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/asterisk/logging`
+      uri: `${this._baseUrl}/asterisk/logging`,
     });
   }
 
@@ -290,7 +290,7 @@ export default class AsteriskAPI {
     return this._request({
       method: "POST",
       uri: `${this._baseUrl}/asterisk/logging/${name}`,
-      qs: { configuration }
+      qs: { configuration },
     });
   }
 
@@ -312,7 +312,7 @@ export default class AsteriskAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/asterisk/logging/${name}`
+      uri: `${this._baseUrl}/asterisk/logging/${name}`,
     });
   }
 
@@ -334,7 +334,7 @@ export default class AsteriskAPI {
 
     return this._request({
       method: "PUT",
-      uri: `${this._baseUrl}/asterisk/logging/${name}/rotate`
+      uri: `${this._baseUrl}/asterisk/logging/${name}/rotate`,
     });
   }
 
@@ -356,7 +356,7 @@ export default class AsteriskAPI {
     return this._request({
       method: "GET",
       uri: `${this._baseUrl}/asterisk/variable`,
-      qs: { variable }
+      qs: { variable },
     });
   }
 
@@ -378,7 +378,7 @@ export default class AsteriskAPI {
     return this._request({
       method: "POST",
       uri: `${this._baseUrl}/asterisk/variable`,
-      qs: { variable, value }
+      qs: { variable, value },
     });
   }
 }

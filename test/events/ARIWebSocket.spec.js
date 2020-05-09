@@ -18,11 +18,11 @@ describe("ARIWebSocket", () => {
     server.close();
   });
 
-  it('passes non-"message" events along without parsing', done => {
+  it('passes non-"message" events along without parsing', (done) => {
     ws = new ARIWebSocket({ url: "ws://localhost:8088" });
 
     ws.once("open", () => {
-      ws.once("bugaboo", message => {
+      ws.once("bugaboo", (message) => {
         assert.equal(message, "bugaloo");
         done();
       });
@@ -31,11 +31,11 @@ describe("ARIWebSocket", () => {
     });
   });
 
-  it('passes "message" events without a payload along without parsing', done => {
+  it('passes "message" events without a payload along without parsing', (done) => {
     ws = new ARIWebSocket({ url: "ws://localhost:8088" });
 
-    server.once("connection", conn => {
-      ws.on("message", message => {
+    server.once("connection", (conn) => {
+      ws.on("message", (message) => {
         assert.deepEqual(message, new Uint8Array(0));
         done();
       });
@@ -44,12 +44,12 @@ describe("ARIWebSocket", () => {
     });
   });
 
-  it('passes "message" events that are not string along without parsing', done => {
+  it('passes "message" events that are not string along without parsing', (done) => {
     ws = new ARIWebSocket({ url: "ws://localhost:8088" });
     const buf = Buffer.from("string");
 
-    server.once("connection", conn => {
-      ws.once("message", message => {
+    server.once("connection", (conn) => {
+      ws.once("message", (message) => {
         assert.equal(message.toString("utf-8"), buf.toString("utf-8"));
         done();
       });
@@ -58,11 +58,11 @@ describe("ARIWebSocket", () => {
     });
   });
 
-  it('passes string "message" events that cannot be parsed as JSON along as-is', done => {
+  it('passes string "message" events that cannot be parsed as JSON along as-is', (done) => {
     ws = new ARIWebSocket({ url: "ws://localhost:8088" });
 
-    server.once("connection", conn => {
-      ws.once("message", message => {
+    server.once("connection", (conn) => {
+      ws.once("message", (message) => {
         assert.equal(message, "hidey ho");
         done();
       });
@@ -71,11 +71,11 @@ describe("ARIWebSocket", () => {
     });
   });
 
-  it('parses JSON "message" payloads before triggering the event', done => {
+  it('parses JSON "message" payloads before triggering the event', (done) => {
     ws = new ARIWebSocket({ url: "ws://localhost:8088" });
 
-    server.once("connection", conn => {
-      ws.once("message", message => {
+    server.once("connection", (conn) => {
+      ws.once("message", (message) => {
         assert.deepEqual(message, { foo: "bar" });
         done();
       });

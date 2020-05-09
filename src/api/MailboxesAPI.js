@@ -25,7 +25,7 @@ export default class MailboxesAPI {
     /** @private */
     this._request = rp.defaults({
       auth: { username, password },
-      json: true
+      json: true,
     });
   }
 
@@ -42,7 +42,7 @@ export default class MailboxesAPI {
   list() {
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/mailboxes`
+      uri: `${this._baseUrl}/mailboxes`,
     });
   }
 
@@ -65,7 +65,7 @@ export default class MailboxesAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/mailboxes/${name}`
+      uri: `${this._baseUrl}/mailboxes/${name}`,
     });
   }
 
@@ -90,7 +90,7 @@ export default class MailboxesAPI {
     return this._request({
       method: "PUT",
       uri: `${this._baseUrl}/mailboxes/${name}`,
-      qs: { oldMessages, newMessages }
+      qs: { oldMessages, newMessages },
     });
   }
 
@@ -112,7 +112,7 @@ export default class MailboxesAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/mailboxes/${name}`
+      uri: `${this._baseUrl}/mailboxes/${name}`,
     });
   }
 }

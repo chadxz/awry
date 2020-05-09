@@ -24,7 +24,7 @@ export default class BridgesAPI {
     /** @private */
     this._request = rp.defaults({
       auth: { username, password },
-      json: true
+      json: true,
     });
   }
 
@@ -39,7 +39,7 @@ export default class BridgesAPI {
   list() {
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/bridges`
+      uri: `${this._baseUrl}/bridges`,
     });
   }
 
@@ -70,8 +70,8 @@ export default class BridgesAPI {
       qs: {
         name,
         bridgeId,
-        type: [].concat(type).join(",")
-      }
+        type: [].concat(type).join(","),
+      },
     });
   }
 
@@ -103,8 +103,8 @@ export default class BridgesAPI {
       uri: `${this._baseUrl}/bridges/${id}`,
       qs: {
         name,
-        type: [].concat(type).join(",")
-      }
+        type: [].concat(type).join(","),
+      },
     });
   }
 
@@ -125,7 +125,7 @@ export default class BridgesAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/bridges/${id}`
+      uri: `${this._baseUrl}/bridges/${id}`,
     });
   }
 
@@ -146,7 +146,7 @@ export default class BridgesAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/bridges/${id}`
+      uri: `${this._baseUrl}/bridges/${id}`,
     });
   }
 
@@ -177,8 +177,8 @@ export default class BridgesAPI {
       uri: `${this._baseUrl}/bridges/${id}/addChannel`,
       qs: {
         channel: [].concat(channel).join(","),
-        role
-      }
+        role,
+      },
     });
   }
 
@@ -205,7 +205,7 @@ export default class BridgesAPI {
     return this._request({
       method: "POST",
       uri: `${this._baseUrl}/bridges/${id}/removeChannel`,
-      qs: { channel: [].concat(channel).join(",") }
+      qs: { channel: [].concat(channel).join(",") },
     });
   }
 
@@ -230,7 +230,7 @@ export default class BridgesAPI {
     return this._request({
       method: "POST",
       uri: `${this._baseUrl}/bridges/${id}/moh`,
-      qs: { mohClass }
+      qs: { mohClass },
     });
   }
 
@@ -253,7 +253,7 @@ export default class BridgesAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/bridges/${id}/moh`
+      uri: `${this._baseUrl}/bridges/${id}/moh`,
     });
   }
 
@@ -292,7 +292,7 @@ export default class BridgesAPI {
       playbackId,
       lang,
       offsetms = 0,
-      skipms = 3000
+      skipms = 3000,
     } = params;
 
     const id = encodeURIComponent(bridgeId);
@@ -305,8 +305,8 @@ export default class BridgesAPI {
         lang,
         offsetms,
         skipms,
-        playbackId
-      }
+        playbackId,
+      },
     });
   }
 
@@ -346,7 +346,7 @@ export default class BridgesAPI {
       playbackId,
       lang,
       offsetms = 0,
-      skipms = 3000
+      skipms = 3000,
     } = params;
     const id = encodeURIComponent(bridgeId);
     const playId = encodeURIComponent(playbackId);
@@ -358,8 +358,8 @@ export default class BridgesAPI {
         media: [].concat(media).join(","),
         lang,
         offsetms,
-        skipms
-      }
+        skipms,
+      },
     });
   }
 
@@ -400,7 +400,7 @@ export default class BridgesAPI {
       maxSilentSeconds = 0,
       ifExists = "fail",
       beep = true,
-      terminateOn = "none"
+      terminateOn = "none",
     } = params;
     const id = encodeURIComponent(bridgeId);
 
@@ -414,8 +414,8 @@ export default class BridgesAPI {
         maxSilentSeconds,
         ifExists,
         beep,
-        terminateOn
-      }
+        terminateOn,
+      },
     });
   }
 }

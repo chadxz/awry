@@ -37,7 +37,7 @@ export default class Events {
       subscribeAll = true,
       reconnect = true,
       retryOptions = { maxTimeout: 60000 },
-      wsOptions = {}
+      wsOptions = {},
     } = params;
 
     const parsedUrl = new URL(userProvidedUrl);
@@ -54,7 +54,7 @@ export default class Events {
       url: wsUrl,
       reconnect,
       retryOptions,
-      wsOptions
+      wsOptions,
     });
   }
 }

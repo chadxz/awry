@@ -18,12 +18,12 @@ describe("Events connect() returned emitter", () => {
       server.close();
     });
 
-    it("subscribes to a single app", done => {
+    it("subscribes to a single app", (done) => {
       emitter = Events.connect({
         app: "myApp",
         url: "ws://localhost:8088/",
         username: "foo",
-        password: "bar"
+        password: "bar",
       });
 
       server.once("connection", (conn, req) => {
@@ -49,12 +49,12 @@ describe("Events connect() returned emitter", () => {
       server.close();
     });
 
-    it("subscribes to all of the apps", done => {
+    it("subscribes to all of the apps", (done) => {
       emitter = Events.connect({
         app: ["app1", "app2", "app3"],
         url: "ws://localhost:8088/",
         username: "foo",
-        password: "bar"
+        password: "bar",
       });
 
       server.once("connection", (conn, req) => {
@@ -80,12 +80,12 @@ describe("Events connect() returned emitter", () => {
       server.close();
     });
 
-    it("sets api_key with username and password", done => {
+    it("sets api_key with username and password", (done) => {
       emitter = Events.connect({
         app: "myApp",
         url: "ws://localhost:8088/",
         username: "foo",
-        password: "bar"
+        password: "bar",
       });
 
       server.once("connection", (conn, req) => {
@@ -97,12 +97,12 @@ describe("Events connect() returned emitter", () => {
       });
     });
 
-    it("defaults to subscribeAll of true", done => {
+    it("defaults to subscribeAll of true", (done) => {
       emitter = Events.connect({
         app: "myApp",
         url: "ws://localhost:8088/",
         username: "foo",
-        password: "bar"
+        password: "bar",
       });
 
       server.once("connection", (conn, req) => {
@@ -114,13 +114,13 @@ describe("Events connect() returned emitter", () => {
       });
     });
 
-    it("passes along a subscribeAll of false", done => {
+    it("passes along a subscribeAll of false", (done) => {
       emitter = Events.connect({
         app: "myApp",
         url: "ws://localhost:8088/",
         username: "foo",
         password: "bar",
-        subscribeAll: false
+        subscribeAll: false,
       });
 
       server.once("connection", (conn, req) => {
@@ -147,16 +147,16 @@ describe("Events connect() returned emitter", () => {
         server.close();
       });
 
-      it("reconnects", done => {
+      it("reconnects", (done) => {
         emitter = Events.connect({
           app: "myApp",
           url: "ws://localhost:8088/",
           username: "foo",
-          password: "bar"
+          password: "bar",
         });
 
         // the initial connection...
-        server.once("connection", conn => {
+        server.once("connection", (conn) => {
           // the reconnect!
           server.once("connection", () => {
             emitter.once("reconnected", () => {
@@ -184,17 +184,17 @@ describe("Events connect() returned emitter", () => {
         server.close();
       });
 
-      it("reconnects", done => {
+      it("reconnects", (done) => {
         emitter = Events.connect({
           app: "myApp",
           url: "ws://localhost:8088/",
           username: "foo",
           password: "bar",
-          reconnect: true
+          reconnect: true,
         });
 
         // the initial connection...
-        server.once("connection", conn => {
+        server.once("connection", (conn) => {
           // the reconnect!
           server.once("connection", () => {
             emitter.once("reconnected", () => {
@@ -222,16 +222,16 @@ describe("Events connect() returned emitter", () => {
         server.close();
       });
 
-      it("emits 'close' event", done => {
+      it("emits 'close' event", (done) => {
         emitter = Events.connect({
           app: "myApp",
           url: "ws://localhost:8088/",
           username: "foo",
           password: "bar",
-          reconnect: false
+          reconnect: false,
         });
 
-        server.once("connection", conn => {
+        server.once("connection", (conn) => {
           emitter.once("close", done);
 
           emitter.once("open", () => {
@@ -255,8 +255,8 @@ describe("Events connect() returned emitter", () => {
       server.close();
     });
 
-    it("emits a 'message' event", done => {
-      server.once("connection", conn => {
+    it("emits a 'message' event", (done) => {
+      server.once("connection", (conn) => {
         conn.send("hidey ho");
       });
 
@@ -264,10 +264,10 @@ describe("Events connect() returned emitter", () => {
         app: "myApp",
         url: "ws://localhost:8088/",
         username: "foo",
-        password: "bar"
+        password: "bar",
       });
 
-      emitter.on("message", message => {
+      emitter.on("message", (message) => {
         assert.equal(message, "hidey ho");
         done();
       });
@@ -283,12 +283,12 @@ describe("Events connect() returned emitter", () => {
       server.close();
     });
 
-    it("emits an 'error' event", done => {
+    it("emits an 'error' event", (done) => {
       server = new WebSocketServer({
         port: 8088,
         verifyClient(info, verify) {
           verify(false, 666, "die die die");
-        }
+        },
       });
 
       emitter = Events.connect({
@@ -296,10 +296,10 @@ describe("Events connect() returned emitter", () => {
         url: "ws://localhost:8088/",
         username: "foo",
         password: "bar",
-        reconnect: false
+        reconnect: false,
       });
 
-      emitter.on("error", err => {
+      emitter.on("error", (err) => {
         assert(err);
         done();
       });
