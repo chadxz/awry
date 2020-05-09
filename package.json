@@ -35,12 +35,12 @@
     "request": "^2.75.0",
     "request-promise-native": "^1.0.3",
     "retry": "^0.12.0",
-    "ws": "^6.0.0"
+    "ws": "^7.2.5"
   },
   "devDependencies": {
     "@types/mocha": "^7.0.2",
     "@types/request-promise-native": "^1.0.15",
-    "@types/ws": "^6.0.1",
+    "@types/ws": "^7.2.4",
     "acorn": "^7.2.0",
     "codecov": "^3.0.0",
     "env-test": "^1.0.0",
