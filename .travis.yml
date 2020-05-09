@@ -1,9 +1,9 @@
 language: node_js
 node_js:
-  - 6
-  - 8
   - 10
+  - 12
+  - 14
 before_install:
-  - npm install -g npm@5
+  - npm install -g npm@6
 script:
   - npm run ci-test
