@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## 8.0.0 - 2020-05-10
+
+- (**breaking**) Migrated from request/request-promise-native to axios as the http
+library under the hood. This change does not directly affect the public API of
+this library, but it indirectly may change the behavior of the library in some
+circumstances due to differences in behavior in the two libraries. As such this
+should be considered a breaking change and tested accordingly.
+
+- (**breaking**) Minimum support level is now Node v10.
+
+- (**breaking**) `ws` has been updated to version 7 ([release notes](https://github.com/websockets/ws/releases/tag/7.0.0)).
+The main breaking change relevant to this project is that they dropped support
+for Node 6.
+
 ## 7.2.0 - 2019-04-19
 
 Updated some dev dependencies and addressed a deprecation of an old url method
