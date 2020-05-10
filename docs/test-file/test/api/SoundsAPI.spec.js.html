@@ -94,13 +94,13 @@ describe(&quot;the Sounds API&quot;, () =&gt; {
       const api = new SoundsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .list({
           lang: &quot;en&quot;,
-          format: &quot;ogg&quot;
+          format: &quot;ogg&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -117,12 +117,12 @@ describe(&quot;the Sounds API&quot;, () =&gt; {
       const api = new SoundsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .get({
-          soundId: &quot;foo&quot;
+          soundId: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();

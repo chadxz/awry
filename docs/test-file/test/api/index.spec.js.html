@@ -72,7 +72,7 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">test/api/index.spec.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import assert from &quot;power-assert&quot;;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import assert from &quot;assert&quot;;
 import API from &quot;../../src/api&quot;;
 import ApplicationsAPI from &quot;../../src/api/ApplicationsAPI&quot;;
 import AsteriskAPI from &quot;../../src/api/AsteriskAPI&quot;;
@@ -93,7 +93,7 @@ describe(&quot;API constructed instance&quot;, () =&gt; {
     api = new API({
       username: &quot;username&quot;,
       password: &quot;password&quot;,
-      baseUrl: &quot;http://127.0.0.1/ari&quot;
+      baseUrl: &quot;http://127.0.0.1/ari&quot;,
     });
   });
 

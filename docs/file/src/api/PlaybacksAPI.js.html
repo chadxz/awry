@@ -72,7 +72,7 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/api/PlaybacksAPI.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import rp from &quot;request-promise-native&quot;;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import axios from &quot;axios&quot;;
 
 /**
  * REST API Resource for interacting with Asterisk playbacks.
@@ -95,9 +95,8 @@ export default class PlaybacksAPI {
     this._baseUrl = params.baseUrl;
 
     /** @private */
-    this._request = rp.defaults({
+    this._request = axios.create({
       auth: { username, password },
-      json: true
     });
   }
 
@@ -118,7 +117,7 @@ export default class PlaybacksAPI {
 
     return this._request({
       method: &quot;GET&quot;,
-      uri: `${this._baseUrl}/playbacks/${id}`
+      url: `${this._baseUrl}/playbacks/${id}`,
     });
   }
 
@@ -139,7 +138,7 @@ export default class PlaybacksAPI {
 
     return this._request({
       method: &quot;DELETE&quot;,
-      uri: `${this._baseUrl}/playbacks/${id}`
+      url: `${this._baseUrl}/playbacks/${id}`,
     });
   }
 
@@ -164,8 +163,8 @@ export default class PlaybacksAPI {
 
     return this._request({
       method: &quot;POST&quot;,
-      uri: `${this._baseUrl}/playbacks/${id}/control`,
-      qs: { operation }
+      url: `${this._baseUrl}/playbacks/${id}/control`,
+      params: { operation },
     });
   }
 }

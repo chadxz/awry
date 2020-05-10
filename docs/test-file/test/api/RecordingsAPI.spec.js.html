@@ -93,7 +93,7 @@ describe(&quot;the Recordings API&quot;, () =&gt; {
       const api = new RecordingsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api.listStored().then(() =&gt; {
@@ -111,12 +111,12 @@ describe(&quot;the Recordings API&quot;, () =&gt; {
       const api = new RecordingsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .getStored({
-          recordingName: &quot;foo&quot;
+          recordingName: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -133,12 +133,12 @@ describe(&quot;the Recordings API&quot;, () =&gt; {
       const api = new RecordingsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .destroyStored({
-          recordingName: &quot;foo&quot;
+          recordingName: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -155,12 +155,12 @@ describe(&quot;the Recordings API&quot;, () =&gt; {
       const api = new RecordingsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .getStoredFile({
-          recordingName: &quot;foo&quot;
+          recordingName: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -178,13 +178,13 @@ describe(&quot;the Recordings API&quot;, () =&gt; {
       const api = new RecordingsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .copyStored({
           recordingName: &quot;foo&quot;,
-          destinationRecordingName: &quot;bar&quot;
+          destinationRecordingName: &quot;bar&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -201,12 +201,12 @@ describe(&quot;the Recordings API&quot;, () =&gt; {
       const api = new RecordingsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .getLive({
-          recordingName: &quot;foo&quot;
+          recordingName: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -223,12 +223,12 @@ describe(&quot;the Recordings API&quot;, () =&gt; {
       const api = new RecordingsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .cancel({
-          recordingName: &quot;foo&quot;
+          recordingName: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -245,12 +245,12 @@ describe(&quot;the Recordings API&quot;, () =&gt; {
       const api = new RecordingsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .stop({
-          recordingName: &quot;foo&quot;
+          recordingName: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -267,12 +267,12 @@ describe(&quot;the Recordings API&quot;, () =&gt; {
       const api = new RecordingsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .pause({
-          recordingName: &quot;foo&quot;
+          recordingName: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -289,12 +289,12 @@ describe(&quot;the Recordings API&quot;, () =&gt; {
       const api = new RecordingsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .unpause({
-          recordingName: &quot;foo&quot;
+          recordingName: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -311,12 +311,12 @@ describe(&quot;the Recordings API&quot;, () =&gt; {
       const api = new RecordingsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .mute({
-          recordingName: &quot;foo&quot;
+          recordingName: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -333,12 +333,12 @@ describe(&quot;the Recordings API&quot;, () =&gt; {
       const api = new RecordingsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .unmute({
-          recordingName: &quot;foo&quot;
+          recordingName: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();

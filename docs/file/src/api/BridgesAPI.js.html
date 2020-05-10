@@ -72,7 +72,7 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/api/BridgesAPI.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import rp from &quot;request-promise-native&quot;;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import axios from &quot;axios&quot;;
 
 /**
  * REST API Resource for interacting with Asterisk Bridges and the channels
@@ -96,9 +96,8 @@ export default class BridgesAPI {
     this._baseUrl = params.baseUrl;
 
     /** @private */
-    this._request = rp.defaults({
+    this._request = axios.create({
       auth: { username, password },
-      json: true
     });
   }
 
@@ -113,7 +112,7 @@ export default class BridgesAPI {
   list() {
     return this._request({
       method: &quot;GET&quot;,
-      uri: `${this._baseUrl}/bridges`
+      url: `${this._baseUrl}/bridges`,
     });
   }
 
@@ -140,12 +139,12 @@ export default class BridgesAPI {
 
     return this._request({
       method: &quot;POST&quot;,
-      uri: `${this._baseUrl}/bridges`,
-      qs: {
+      url: `${this._baseUrl}/bridges`,
+      params: {
         name,
         bridgeId,
-        type: [].concat(type).join(&quot;,&quot;)
-      }
+        type: [].concat(type).join(&quot;,&quot;),
+      },
     });
   }
 
@@ -174,11 +173,11 @@ export default class BridgesAPI {
 
     return this._request({
       method: &quot;POST&quot;,
-      uri: `${this._baseUrl}/bridges/${id}`,
-      qs: {
+      url: `${this._baseUrl}/bridges/${id}`,
+      params: {
         name,
-        type: [].concat(type).join(&quot;,&quot;)
-      }
+        type: [].concat(type).join(&quot;,&quot;),
+      },
     });
   }
 
@@ -199,7 +198,7 @@ export default class BridgesAPI {
 
     return this._request({
       method: &quot;GET&quot;,
-      uri: `${this._baseUrl}/bridges/${id}`
+      url: `${this._baseUrl}/bridges/${id}`,
     });
   }
 
@@ -220,7 +219,7 @@ export default class BridgesAPI {
 
     return this._request({
       method: &quot;DELETE&quot;,
-      uri: `${this._baseUrl}/bridges/${id}`
+      url: `${this._baseUrl}/bridges/${id}`,
     });
   }
 
@@ -248,11 +247,11 @@ export default class BridgesAPI {
 
     return this._request({
       method: &quot;POST&quot;,
-      uri: `${this._baseUrl}/bridges/${id}/addChannel`,
-      qs: {
+      url: `${this._baseUrl}/bridges/${id}/addChannel`,
+      params: {
         channel: [].concat(channel).join(&quot;,&quot;),
-        role
-      }
+        role,
+      },
     });
   }
 
@@ -278,8 +277,8 @@ export default class BridgesAPI {
 
     return this._request({
       method: &quot;POST&quot;,
-      uri: `${this._baseUrl}/bridges/${id}/removeChannel`,
-      qs: { channel: [].concat(channel).join(&quot;,&quot;) }
+      url: `${this._baseUrl}/bridges/${id}/removeChannel`,
+      params: { channel: [].concat(channel).join(&quot;,&quot;) },
     });
   }
 
@@ -303,8 +302,8 @@ export default class BridgesAPI {
 
     return this._request({
       method: &quot;POST&quot;,
-      uri: `${this._baseUrl}/bridges/${id}/moh`,
-      qs: { mohClass }
+      url: `${this._baseUrl}/bridges/${id}/moh`,
+      params: { mohClass },
     });
   }
 
@@ -327,7 +326,7 @@ export default class BridgesAPI {
 
     return this._request({
       method: &quot;DELETE&quot;,
-      uri: `${this._baseUrl}/bridges/${id}/moh`
+      url: `${this._baseUrl}/bridges/${id}/moh`,
     });
   }
 
@@ -366,21 +365,21 @@ export default class BridgesAPI {
       playbackId,
       lang,
       offsetms = 0,
-      skipms = 3000
+      skipms = 3000,
     } = params;
 
     const id = encodeURIComponent(bridgeId);
 
     return this._request({
       method: &quot;POST&quot;,
-      uri: `${this._baseUrl}/bridges/${id}/play`,
-      qs: {
+      url: `${this._baseUrl}/bridges/${id}/play`,
+      params: {
         media: [].concat(media).join(&quot;,&quot;),
         lang,
         offsetms,
         skipms,
-        playbackId
-      }
+        playbackId,
+      },
     });
   }
 
@@ -420,20 +419,20 @@ export default class BridgesAPI {
       playbackId,
       lang,
       offsetms = 0,
-      skipms = 3000
+      skipms = 3000,
     } = params;
     const id = encodeURIComponent(bridgeId);
     const playId = encodeURIComponent(playbackId);
 
     return this._request({
       method: &quot;POST&quot;,
-      uri: `${this._baseUrl}/bridges/${id}/play/${playId}`,
-      qs: {
+      url: `${this._baseUrl}/bridges/${id}/play/${playId}`,
+      params: {
         media: [].concat(media).join(&quot;,&quot;),
         lang,
         offsetms,
-        skipms
-      }
+        skipms,
+      },
     });
   }
 
@@ -474,22 +473,22 @@ export default class BridgesAPI {
       maxSilentSeconds = 0,
       ifExists = &quot;fail&quot;,
       beep = true,
-      terminateOn = &quot;none&quot;
+      terminateOn = &quot;none&quot;,
     } = params;
     const id = encodeURIComponent(bridgeId);
 
     return this._request({
       method: &quot;POST&quot;,
-      uri: `${this._baseUrl}/bridges/${id}/record`,
-      qs: {
+      url: `${this._baseUrl}/bridges/${id}/record`,
+      params: {
         name,
         format,
         maxDurationSeconds,
         maxSilentSeconds,
         ifExists,
         beep,
-        terminateOn
-      }
+        terminateOn,
+      },
     });
   }
 }

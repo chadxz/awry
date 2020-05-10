@@ -72,7 +72,7 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/api/EndpointsAPI.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import rp from &quot;request-promise-native&quot;;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import axios from &quot;axios&quot;;
 
 /**
  * REST API Resource for interacting with Asterisk endpoints.
@@ -95,9 +95,8 @@ export default class EndpointsAPI {
     this._baseUrl = params.baseUrl;
 
     /** @private */
-    this._request = rp.defaults({
+    this._request = axios.create({
       auth: { username, password },
-      json: true
     });
   }
 
@@ -111,7 +110,7 @@ export default class EndpointsAPI {
   list() {
     return this._request({
       method: &quot;GET&quot;,
-      uri: `${this._baseUrl}/endpoints`
+      url: `${this._baseUrl}/endpoints`,
     });
   }
 
@@ -141,9 +140,9 @@ export default class EndpointsAPI {
 
     return this._request({
       method: &quot;PUT&quot;,
-      uri: `${this._baseUrl}/endpoints/sendMessage`,
-      qs: { to, from, body },
-      body: { variables }
+      url: `${this._baseUrl}/endpoints/sendMessage`,
+      params: { to, from, body },
+      data: { variables },
     });
   }
 
@@ -164,7 +163,7 @@ export default class EndpointsAPI {
 
     return this._request({
       method: &quot;GET&quot;,
-      uri: `${this._baseUrl}/endpoints/${tech}`
+      url: `${this._baseUrl}/endpoints/${tech}`,
     });
   }
 
@@ -189,7 +188,7 @@ export default class EndpointsAPI {
 
     return this._request({
       method: &quot;GET&quot;,
-      uri: `${this._baseUrl}/endpoints/${tech}/${res}`
+      url: `${this._baseUrl}/endpoints/${tech}/${res}`,
     });
   }
 
@@ -222,9 +221,9 @@ export default class EndpointsAPI {
 
     return this._request({
       method: &quot;PUT&quot;,
-      uri: `${this._baseUrl}/endpoints/${tech}/${res}/sendMessage`,
-      qs: { from, body },
-      body: { variables }
+      url: `${this._baseUrl}/endpoints/${tech}/${res}/sendMessage`,
+      params: { from, body },
+      data: { variables },
     });
   }
 }

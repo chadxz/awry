@@ -73,7 +73,7 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">test/events/ReconnectingWebsocket.spec.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import ws from &quot;ws&quot;;
-import assert from &quot;power-assert&quot;;
+import assert from &quot;assert&quot;;
 import ReconnectingWebSocket from &quot;../../src/events/ReconnectingWebSocket&quot;;
 const WebSocketServer = ws.Server;
 
@@ -93,9 +93,9 @@ describe(&quot;ReconnectingWebSocket&quot;, () =&gt; {
       server.close();
     });
 
-    it(&quot;connects upon creation&quot;, done =&gt; {
+    it(&quot;connects upon creation&quot;, (done) =&gt; {
       ws = new ReconnectingWebSocket({ url: &quot;ws://localhost:8088&quot; });
-      server.on(&quot;connection&quot;, conn =&gt; {
+      server.on(&quot;connection&quot;, (conn) =&gt; {
         ws.on(&quot;open&quot;, () =&gt; {
           assert(conn);
           done();
@@ -103,18 +103,18 @@ describe(&quot;ReconnectingWebSocket&quot;, () =&gt; {
       });
     });
 
-    it(&apos;emits an &quot;open&quot; event on connection&apos;, done =&gt; {
+    it(&apos;emits an &quot;open&quot; event on connection&apos;, (done) =&gt; {
       ws = new ReconnectingWebSocket({ url: &quot;ws://localhost:8088&quot; });
       ws.once(&quot;open&quot;, done);
     });
 
-    it(&quot;disconnects when close is called&quot;, done =&gt; {
+    it(&quot;disconnects when close is called&quot;, (done) =&gt; {
       ws = new ReconnectingWebSocket({
         url: &quot;ws://localhost:8088&quot;,
-        reconnect: false
+        reconnect: false,
       });
 
-      server.once(&quot;connection&quot;, conn =&gt; {
+      server.once(&quot;connection&quot;, (conn) =&gt; {
         conn.once(&quot;close&quot;, () =&gt; {
           done();
         });
@@ -123,12 +123,12 @@ describe(&quot;ReconnectingWebSocket&quot;, () =&gt; {
       ws.once(&quot;open&quot;, () =&gt; ws.close());
     });
 
-    it(&apos;emits a &quot;message&quot; event when a message is received&apos;, done =&gt; {
+    it(&apos;emits a &quot;message&quot; event when a message is received&apos;, (done) =&gt; {
       ws = new ReconnectingWebSocket({ url: &quot;ws://localhost:8088&quot; });
 
-      server.once(&quot;connection&quot;, conn =&gt; {
-        ws.once(&quot;message&quot;, message =&gt; {
-          assert.equal(message, &quot;hidey ho&quot;);
+      server.once(&quot;connection&quot;, (conn) =&gt; {
+        ws.once(&quot;message&quot;, (message) =&gt; {
+          assert.strictEqual(message, &quot;hidey ho&quot;);
           done();
         });
 
@@ -146,7 +146,7 @@ describe(&quot;ReconnectingWebSocket&quot;, () =&gt; {
         port: 8088,
         verifyClient: (info, verify) =&gt; {
           verify(false, 666, &quot;fail&quot;);
-        }
+        },
       });
     });
 
@@ -157,22 +157,22 @@ describe(&quot;ReconnectingWebSocket&quot;, () =&gt; {
       server.close();
     });
 
-    it(&apos;emits &quot;error&quot; event&apos;, done =&gt; {
+    it(&apos;emits &quot;error&quot; event&apos;, (done) =&gt; {
       ws = new ReconnectingWebSocket({
         url: &quot;ws://localhost:8088&quot;,
-        reconnect: false
+        reconnect: false,
       });
 
-      ws.on(&quot;error&quot;, err =&gt; {
+      ws.on(&quot;error&quot;, (err) =&gt; {
         assert(err);
         done();
       });
     });
 
-    it(&apos;emits &quot;close&quot; event&apos;, done =&gt; {
+    it(&apos;emits &quot;close&quot; event&apos;, (done) =&gt; {
       ws = new ReconnectingWebSocket({
         url: &quot;ws://localhost:8088&quot;,
-        reconnect: false
+        reconnect: false,
       });
 
       ws.on(&quot;error&quot;, () =&gt; {});
@@ -196,10 +196,10 @@ describe(&quot;ReconnectingWebSocket&quot;, () =&gt; {
         server.close();
       });
 
-      it(&apos;emits an &quot;error&quot; event&apos;, done =&gt; {
+      it(&apos;emits an &quot;error&quot; event&apos;, (done) =&gt; {
         ws = new ReconnectingWebSocket({
           url: &quot;ws://localhost:8088&quot;,
-          reconnect: false
+          reconnect: false,
         });
 
         ws.on(&quot;open&quot;, () =&gt; {
@@ -207,16 +207,16 @@ describe(&quot;ReconnectingWebSocket&quot;, () =&gt; {
           ws._ws.emit(&quot;error&quot;, new Error(&quot;dangit&quot;));
         });
 
-        ws.once(&quot;error&quot;, err =&gt; {
+        ws.once(&quot;error&quot;, (err) =&gt; {
           assert(err);
           done();
         });
       });
 
-      it(&apos;emits a &quot;close&quot; event&apos;, done =&gt; {
+      it(&apos;emits a &quot;close&quot; event&apos;, (done) =&gt; {
         ws = new ReconnectingWebSocket({
           url: &quot;ws://localhost:8088&quot;,
-          reconnect: false
+          reconnect: false,
         });
 
         ws.on(&quot;open&quot;, () =&gt; {
@@ -245,7 +245,7 @@ describe(&quot;ReconnectingWebSocket&quot;, () =&gt; {
           server.close();
         });
 
-        it(&quot;reconnects&quot;, done =&gt; {
+        it(&quot;reconnects&quot;, (done) =&gt; {
           let connectCount = 0;
           let reconnected = false;
 
@@ -280,7 +280,7 @@ describe(&quot;ReconnectingWebSocket&quot;, () =&gt; {
               verifyClient: (info, verify) =&gt; {
                 numConnectionAttempts++;
                 verify(numConnectionAttempts === 1, 666, &quot;fail&quot;);
-              }
+              },
             });
           });
 
@@ -291,10 +291,10 @@ describe(&quot;ReconnectingWebSocket&quot;, () =&gt; {
             server.close();
           });
 
-          it(&apos;emits an &quot;error&quot; event&apos;, done =&gt; {
+          it(&apos;emits an &quot;error&quot; event&apos;, (done) =&gt; {
             ws = new ReconnectingWebSocket({
               url: &quot;ws://localhost:8088&quot;,
-              retryOptions: { retries: 0 }
+              retryOptions: { retries: 0 },
             });
 
             ws.on(&quot;open&quot;, () =&gt; {
@@ -302,16 +302,16 @@ describe(&quot;ReconnectingWebSocket&quot;, () =&gt; {
               ws._ws.emit(&quot;error&quot;, new Error(&quot;dangit&quot;));
             });
 
-            ws.once(&quot;error&quot;, err =&gt; {
+            ws.once(&quot;error&quot;, (err) =&gt; {
               assert(err);
               done();
             });
           });
 
-          it(&apos;emits a &quot;close&quot; event&apos;, done =&gt; {
+          it(&apos;emits a &quot;close&quot; event&apos;, (done) =&gt; {
             ws = new ReconnectingWebSocket({
               url: &quot;ws://localhost:8088&quot;,
-              retryOptions: { retries: 0 }
+              retryOptions: { retries: 0 },
             });
 
             ws.on(&quot;open&quot;, () =&gt; {
@@ -337,7 +337,7 @@ describe(&quot;ReconnectingWebSocket&quot;, () =&gt; {
               verifyClient: (info, verify) =&gt; {
                 numConnectionAttempts++;
                 verify(numConnectionAttempts % 2 === 0, 666, &quot;fail&quot;);
-              }
+              },
             });
           });
 
@@ -348,10 +348,10 @@ describe(&quot;ReconnectingWebSocket&quot;, () =&gt; {
             server.close();
           });
 
-          it(&quot;reconnects&quot;, done =&gt; {
+          it(&quot;reconnects&quot;, (done) =&gt; {
             ws = new ReconnectingWebSocket({
               url: &quot;ws://localhost:8088&quot;,
-              retryOptions: { retries: 1 }
+              retryOptions: { retries: 1 },
             });
 
             ws.on(&quot;open&quot;, () =&gt; {
@@ -384,13 +384,13 @@ describe(&quot;ReconnectingWebSocket&quot;, () =&gt; {
         server.close();
       });
 
-      it(&apos;emits a &quot;close&quot; event&apos;, done =&gt; {
+      it(&apos;emits a &quot;close&quot; event&apos;, (done) =&gt; {
         ws = new ReconnectingWebSocket({
           url: &quot;ws://localhost:8088&quot;,
-          reconnect: false
+          reconnect: false,
         });
 
-        server.once(&quot;connection&quot;, conn =&gt; {
+        server.once(&quot;connection&quot;, (conn) =&gt; {
           ws.once(&quot;open&quot;, () =&gt; {
             conn.close();
           });
@@ -416,12 +416,12 @@ describe(&quot;ReconnectingWebSocket&quot;, () =&gt; {
           server.close();
         });
 
-        it(&quot;reconnects&quot;, done =&gt; {
+        it(&quot;reconnects&quot;, (done) =&gt; {
           let connectCount = 0;
           let reconnected = false;
 
           ws = new ReconnectingWebSocket({ url: &quot;ws://localhost:8088&quot; });
-          server.on(&quot;connection&quot;, conn =&gt; {
+          server.on(&quot;connection&quot;, (conn) =&gt; {
             connectCount++;
             reconnected = connectCount === 2;
 
@@ -450,7 +450,7 @@ describe(&quot;ReconnectingWebSocket&quot;, () =&gt; {
             verifyClient: (info, verify) =&gt; {
               numConnectionAttempts++;
               verify(numConnectionAttempts === 1, 666, &quot;fail&quot;);
-            }
+            },
           });
         });
 
@@ -461,31 +461,31 @@ describe(&quot;ReconnectingWebSocket&quot;, () =&gt; {
           server.close();
         });
 
-        it(&apos;emits an &quot;error&quot; event&apos;, done =&gt; {
+        it(&apos;emits an &quot;error&quot; event&apos;, (done) =&gt; {
           ws = new ReconnectingWebSocket({
             url: &quot;ws://localhost:8088&quot;,
-            retryOptions: { retries: 0 }
+            retryOptions: { retries: 0 },
           });
 
-          server.once(&quot;connection&quot;, conn =&gt; {
+          server.once(&quot;connection&quot;, (conn) =&gt; {
             ws.once(&quot;open&quot;, () =&gt; {
               conn.close();
             });
           });
 
-          ws.once(&quot;error&quot;, err =&gt; {
+          ws.once(&quot;error&quot;, (err) =&gt; {
             assert(err);
             done();
           });
         });
 
-        it(&apos;emits a &quot;close&quot; event&apos;, done =&gt; {
+        it(&apos;emits a &quot;close&quot; event&apos;, (done) =&gt; {
           ws = new ReconnectingWebSocket({
             url: &quot;ws://localhost:8088&quot;,
-            retryOptions: { retries: 0 }
+            retryOptions: { retries: 0 },
           });
 
-          server.once(&quot;connection&quot;, conn =&gt; {
+          server.once(&quot;connection&quot;, (conn) =&gt; {
             ws.once(&quot;open&quot;, () =&gt; {
               conn.close();
             });

@@ -74,15 +74,15 @@
 <div class="content" data-ice="content"><h1 data-ice="title">test/index.spec.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import awry from &quot;../src&quot;;
 import Events from &quot;../src/events&quot;;
-import assert from &quot;power-assert&quot;;
+import assert from &quot;assert&quot;;
 
 describe(&quot;awry&quot;, () =&gt; {
   it(&quot;exposes the Events module&quot;, () =&gt; {
-    assert.equal(awry.Events, Events);
+    assert.strictEqual(awry.Events, Events);
   });
 
   it(&quot;exposes an API constructor&quot;, () =&gt; {
-    assert.equal(typeof awry.API, &quot;function&quot;);
+    assert.strictEqual(typeof awry.API, &quot;function&quot;);
   });
 });
 </code></pre>

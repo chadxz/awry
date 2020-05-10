@@ -93,7 +93,7 @@ describe(&quot;the Endpoints API&quot;, () =&gt; {
       const api = new EndpointsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api.list().then(() =&gt; {
@@ -106,19 +106,19 @@ describe(&quot;the Endpoints API&quot;, () =&gt; {
     it(&quot;makes the right request&quot;, () =&gt; {
       const mock = nock(&quot;http://fake.local&quot;)
         .put(&quot;/ari/endpoints/sendMessage&quot;, {
-          variables: { var1: &quot;cool&quot;, var2: &quot;rad&quot; }
+          variables: { var1: &quot;cool&quot;, var2: &quot;rad&quot; },
         })
         .query({
           to: &quot;pjsip/foo&quot;,
           from: &quot;pjsip/baz&quot;,
-          body: &quot;hidey ho&quot;
+          body: &quot;hidey ho&quot;,
         })
         .reply(200, { foo: &quot;bar&quot; });
 
       const api = new EndpointsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
@@ -126,7 +126,7 @@ describe(&quot;the Endpoints API&quot;, () =&gt; {
           to: &quot;pjsip/foo&quot;,
           from: &quot;pjsip/baz&quot;,
           body: &quot;hidey ho&quot;,
-          variables: { var1: &quot;cool&quot;, var2: &quot;rad&quot; }
+          variables: { var1: &quot;cool&quot;, var2: &quot;rad&quot; },
         })
         .then(() =&gt; {
           mock.done();
@@ -143,12 +143,12 @@ describe(&quot;the Endpoints API&quot;, () =&gt; {
       const api = new EndpointsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .listByTechnology({
-          technology: &quot;pjsip&quot;
+          technology: &quot;pjsip&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -165,13 +165,13 @@ describe(&quot;the Endpoints API&quot;, () =&gt; {
       const api = new EndpointsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .get({
           technology: &quot;pj sip&quot;,
-          resource: &quot;foo bar&quot;
+          resource: &quot;foo bar&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -183,18 +183,18 @@ describe(&quot;the Endpoints API&quot;, () =&gt; {
     it(&quot;makes the right request&quot;, () =&gt; {
       const mock = nock(&quot;http://fake.local&quot;)
         .put(&quot;/ari/endpoints/pjsip/foo/sendMessage&quot;, {
-          variables: { var1: &quot;cool&quot;, var2: &quot;nice&quot; }
+          variables: { var1: &quot;cool&quot;, var2: &quot;nice&quot; },
         })
         .query({
           from: &quot;pjsip/jenkins&quot;,
-          body: &quot;hidey ho&quot;
+          body: &quot;hidey ho&quot;,
         })
         .reply(200, { foo: &quot;bar&quot; });
 
       const api = new EndpointsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
@@ -203,7 +203,7 @@ describe(&quot;the Endpoints API&quot;, () =&gt; {
           resource: &quot;foo&quot;,
           from: &quot;pjsip/jenkins&quot;,
           body: &quot;hidey ho&quot;,
-          variables: { var1: &quot;cool&quot;, var2: &quot;nice&quot; }
+          variables: { var1: &quot;cool&quot;, var2: &quot;nice&quot; },
         })
         .then(() =&gt; {
           mock.done();

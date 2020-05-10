@@ -72,7 +72,7 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/api/ApplicationsAPI.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import rp from &quot;request-promise-native&quot;;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import axios from &quot;axios&quot;;
 
 /**
  * REST API Resource for interacting with ARI Stasis Applications.
@@ -95,9 +95,8 @@ export default class ApplicationsAPI {
     this._baseUrl = params.baseUrl;
 
     /** @private */
-    this._request = rp.defaults({
+    this._request = axios.create({
       auth: { username, password },
-      json: true
     });
   }
 
@@ -112,7 +111,7 @@ export default class ApplicationsAPI {
   list() {
     return this._request({
       method: &quot;GET&quot;,
-      uri: `${this._baseUrl}/applications`
+      url: `${this._baseUrl}/applications`,
     });
   }
 
@@ -134,7 +133,7 @@ export default class ApplicationsAPI {
 
     return this._request({
       method: &quot;GET&quot;,
-      uri: `${this._baseUrl}/applications/${app}`
+      url: `${this._baseUrl}/applications/${app}`,
     });
   }
 
@@ -166,8 +165,8 @@ export default class ApplicationsAPI {
 
     return this._request({
       method: &quot;POST&quot;,
-      uri: `${this._baseUrl}/applications/${app}/subscription`,
-      qs: { eventSource: [].concat(eventSource).join(&quot;,&quot;) }
+      url: `${this._baseUrl}/applications/${app}/subscription`,
+      params: { eventSource: [].concat(eventSource).join(&quot;,&quot;) },
     });
   }
 
@@ -194,8 +193,8 @@ export default class ApplicationsAPI {
 
     return this._request({
       method: &quot;DELETE&quot;,
-      uri: `${this._baseUrl}/applications/${app}/subscription`,
-      qs: { eventSource: [].concat(eventSource).join(&quot;,&quot;) }
+      url: `${this._baseUrl}/applications/${app}/subscription`,
+      params: { eventSource: [].concat(eventSource).join(&quot;,&quot;) },
     });
   }
 
@@ -221,8 +220,8 @@ export default class ApplicationsAPI {
 
     return this._request({
       method: &quot;PUT&quot;,
-      uri: `${this._baseUrl}/applications/${app}/eventFilter`,
-      body: { filter }
+      url: `${this._baseUrl}/applications/${app}/eventFilter`,
+      data: { filter },
     });
   }
 }

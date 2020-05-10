@@ -73,7 +73,7 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">test/events/index.spec.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { URL } from &quot;url&quot;;
-import assert from &quot;power-assert&quot;;
+import assert from &quot;assert&quot;;
 import ws from &quot;ws&quot;;
 import Events from &quot;../../src/events&quot;;
 const WebSocketServer = ws.Server;
@@ -92,18 +92,18 @@ describe(&quot;Events connect() returned emitter&quot;, () =&gt; {
       server.close();
     });
 
-    it(&quot;subscribes to a single app&quot;, done =&gt; {
+    it(&quot;subscribes to a single app&quot;, (done) =&gt; {
       emitter = Events.connect({
         app: &quot;myApp&quot;,
         url: &quot;ws://localhost:8088/&quot;,
         username: &quot;foo&quot;,
-        password: &quot;bar&quot;
+        password: &quot;bar&quot;,
       });
 
       server.once(&quot;connection&quot;, (conn, req) =&gt; {
         emitter.once(&quot;open&quot;, () =&gt; {
           const parts = new URL(req.url, &quot;ws://localhost:8088/&quot;);
-          assert.equal(parts.searchParams.get(&quot;app&quot;), &quot;myApp&quot;);
+          assert.strictEqual(parts.searchParams.get(&quot;app&quot;), &quot;myApp&quot;);
           done();
         });
       });
@@ -123,18 +123,18 @@ describe(&quot;Events connect() returned emitter&quot;, () =&gt; {
       server.close();
     });
 
-    it(&quot;subscribes to all of the apps&quot;, done =&gt; {
+    it(&quot;subscribes to all of the apps&quot;, (done) =&gt; {
       emitter = Events.connect({
         app: [&quot;app1&quot;, &quot;app2&quot;, &quot;app3&quot;],
         url: &quot;ws://localhost:8088/&quot;,
         username: &quot;foo&quot;,
-        password: &quot;bar&quot;
+        password: &quot;bar&quot;,
       });
 
       server.once(&quot;connection&quot;, (conn, req) =&gt; {
         emitter.once(&quot;open&quot;, () =&gt; {
           const parts = new URL(req.url, &quot;ws://localhost:8088/&quot;);
-          assert.equal(parts.searchParams.get(&quot;app&quot;), &quot;app1,app2,app3&quot;);
+          assert.strictEqual(parts.searchParams.get(&quot;app&quot;), &quot;app1,app2,app3&quot;);
           done();
         });
       });
@@ -154,53 +154,53 @@ describe(&quot;Events connect() returned emitter&quot;, () =&gt; {
       server.close();
     });
 
-    it(&quot;sets api_key with username and password&quot;, done =&gt; {
-      emitter = Events.connect({
-        app: &quot;myApp&quot;,
-        url: &quot;ws://localhost:8088/&quot;,
-        username: &quot;foo&quot;,
-        password: &quot;bar&quot;
-      });
-
-      server.once(&quot;connection&quot;, (conn, req) =&gt; {
-        emitter.once(&quot;open&quot;, () =&gt; {
-          const parts = new URL(req.url, &quot;ws://localhost:8088/&quot;);
-          assert.equal(parts.searchParams.get(&quot;api_key&quot;), &quot;foo:bar&quot;);
-          done();
-        });
-      });
-    });
-
-    it(&quot;defaults to subscribeAll of true&quot;, done =&gt; {
-      emitter = Events.connect({
-        app: &quot;myApp&quot;,
-        url: &quot;ws://localhost:8088/&quot;,
-        username: &quot;foo&quot;,
-        password: &quot;bar&quot;
-      });
-
-      server.once(&quot;connection&quot;, (conn, req) =&gt; {
-        emitter.once(&quot;open&quot;, () =&gt; {
-          const parts = new URL(req.url, &quot;ws://localhost:8088/&quot;);
-          assert.equal(parts.searchParams.get(&quot;subscribeAll&quot;), &quot;true&quot;);
-          done();
-        });
-      });
-    });
-
-    it(&quot;passes along a subscribeAll of false&quot;, done =&gt; {
+    it(&quot;sets api_key with username and password&quot;, (done) =&gt; {
       emitter = Events.connect({
         app: &quot;myApp&quot;,
         url: &quot;ws://localhost:8088/&quot;,
         username: &quot;foo&quot;,
         password: &quot;bar&quot;,
-        subscribeAll: false
       });
 
       server.once(&quot;connection&quot;, (conn, req) =&gt; {
         emitter.once(&quot;open&quot;, () =&gt; {
           const parts = new URL(req.url, &quot;ws://localhost:8088/&quot;);
-          assert.equal(parts.searchParams.get(&quot;subscribeAll&quot;), &quot;false&quot;);
+          assert.strictEqual(parts.searchParams.get(&quot;api_key&quot;), &quot;foo:bar&quot;);
+          done();
+        });
+      });
+    });
+
+    it(&quot;defaults to subscribeAll of true&quot;, (done) =&gt; {
+      emitter = Events.connect({
+        app: &quot;myApp&quot;,
+        url: &quot;ws://localhost:8088/&quot;,
+        username: &quot;foo&quot;,
+        password: &quot;bar&quot;,
+      });
+
+      server.once(&quot;connection&quot;, (conn, req) =&gt; {
+        emitter.once(&quot;open&quot;, () =&gt; {
+          const parts = new URL(req.url, &quot;ws://localhost:8088/&quot;);
+          assert.strictEqual(parts.searchParams.get(&quot;subscribeAll&quot;), &quot;true&quot;);
+          done();
+        });
+      });
+    });
+
+    it(&quot;passes along a subscribeAll of false&quot;, (done) =&gt; {
+      emitter = Events.connect({
+        app: &quot;myApp&quot;,
+        url: &quot;ws://localhost:8088/&quot;,
+        username: &quot;foo&quot;,
+        password: &quot;bar&quot;,
+        subscribeAll: false,
+      });
+
+      server.once(&quot;connection&quot;, (conn, req) =&gt; {
+        emitter.once(&quot;open&quot;, () =&gt; {
+          const parts = new URL(req.url, &quot;ws://localhost:8088/&quot;);
+          assert.strictEqual(parts.searchParams.get(&quot;subscribeAll&quot;), &quot;false&quot;);
           done();
         });
       });
@@ -221,16 +221,16 @@ describe(&quot;Events connect() returned emitter&quot;, () =&gt; {
         server.close();
       });
 
-      it(&quot;reconnects&quot;, done =&gt; {
+      it(&quot;reconnects&quot;, (done) =&gt; {
         emitter = Events.connect({
           app: &quot;myApp&quot;,
           url: &quot;ws://localhost:8088/&quot;,
           username: &quot;foo&quot;,
-          password: &quot;bar&quot;
+          password: &quot;bar&quot;,
         });
 
         // the initial connection...
-        server.once(&quot;connection&quot;, conn =&gt; {
+        server.once(&quot;connection&quot;, (conn) =&gt; {
           // the reconnect!
           server.once(&quot;connection&quot;, () =&gt; {
             emitter.once(&quot;reconnected&quot;, () =&gt; {
@@ -258,17 +258,17 @@ describe(&quot;Events connect() returned emitter&quot;, () =&gt; {
         server.close();
       });
 
-      it(&quot;reconnects&quot;, done =&gt; {
+      it(&quot;reconnects&quot;, (done) =&gt; {
         emitter = Events.connect({
           app: &quot;myApp&quot;,
           url: &quot;ws://localhost:8088/&quot;,
           username: &quot;foo&quot;,
           password: &quot;bar&quot;,
-          reconnect: true
+          reconnect: true,
         });
 
         // the initial connection...
-        server.once(&quot;connection&quot;, conn =&gt; {
+        server.once(&quot;connection&quot;, (conn) =&gt; {
           // the reconnect!
           server.once(&quot;connection&quot;, () =&gt; {
             emitter.once(&quot;reconnected&quot;, () =&gt; {
@@ -296,16 +296,16 @@ describe(&quot;Events connect() returned emitter&quot;, () =&gt; {
         server.close();
       });
 
-      it(&quot;emits &apos;close&apos; event&quot;, done =&gt; {
+      it(&quot;emits &apos;close&apos; event&quot;, (done) =&gt; {
         emitter = Events.connect({
           app: &quot;myApp&quot;,
           url: &quot;ws://localhost:8088/&quot;,
           username: &quot;foo&quot;,
           password: &quot;bar&quot;,
-          reconnect: false
+          reconnect: false,
         });
 
-        server.once(&quot;connection&quot;, conn =&gt; {
+        server.once(&quot;connection&quot;, (conn) =&gt; {
           emitter.once(&quot;close&quot;, done);
 
           emitter.once(&quot;open&quot;, () =&gt; {
@@ -329,8 +329,8 @@ describe(&quot;Events connect() returned emitter&quot;, () =&gt; {
       server.close();
     });
 
-    it(&quot;emits a &apos;message&apos; event&quot;, done =&gt; {
-      server.once(&quot;connection&quot;, conn =&gt; {
+    it(&quot;emits a &apos;message&apos; event&quot;, (done) =&gt; {
+      server.once(&quot;connection&quot;, (conn) =&gt; {
         conn.send(&quot;hidey ho&quot;);
       });
 
@@ -338,11 +338,11 @@ describe(&quot;Events connect() returned emitter&quot;, () =&gt; {
         app: &quot;myApp&quot;,
         url: &quot;ws://localhost:8088/&quot;,
         username: &quot;foo&quot;,
-        password: &quot;bar&quot;
+        password: &quot;bar&quot;,
       });
 
-      emitter.on(&quot;message&quot;, message =&gt; {
-        assert.equal(message, &quot;hidey ho&quot;);
+      emitter.on(&quot;message&quot;, (message) =&gt; {
+        assert.strictEqual(message, &quot;hidey ho&quot;);
         done();
       });
     });
@@ -357,12 +357,12 @@ describe(&quot;Events connect() returned emitter&quot;, () =&gt; {
       server.close();
     });
 
-    it(&quot;emits an &apos;error&apos; event&quot;, done =&gt; {
+    it(&quot;emits an &apos;error&apos; event&quot;, (done) =&gt; {
       server = new WebSocketServer({
         port: 8088,
         verifyClient(info, verify) {
           verify(false, 666, &quot;die die die&quot;);
-        }
+        },
       });
 
       emitter = Events.connect({
@@ -370,10 +370,10 @@ describe(&quot;Events connect() returned emitter&quot;, () =&gt; {
         url: &quot;ws://localhost:8088/&quot;,
         username: &quot;foo&quot;,
         password: &quot;bar&quot;,
-        reconnect: false
+        reconnect: false,
       });
 
-      emitter.on(&quot;error&quot;, err =&gt; {
+      emitter.on(&quot;error&quot;, (err) =&gt; {
         assert(err);
         done();
       });

@@ -72,7 +72,7 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/api/RecordingsAPI.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import rp from &quot;request-promise-native&quot;;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import axios from &quot;axios&quot;;
 
 /**
  * REST API Resource for interacting with both live and stored recordings.
@@ -95,9 +95,8 @@ export default class RecordingsAPI {
     this._baseUrl = params.baseUrl;
 
     /** @private */
-    this._request = rp.defaults({
+    this._request = axios.create({
       auth: { username, password },
-      json: true
     });
   }
 
@@ -111,7 +110,7 @@ export default class RecordingsAPI {
   listStored() {
     return this._request({
       method: &quot;GET&quot;,
-      uri: `${this._baseUrl}/recordings/stored`
+      url: `${this._baseUrl}/recordings/stored`,
     });
   }
 
@@ -132,7 +131,7 @@ export default class RecordingsAPI {
 
     return this._request({
       method: &quot;GET&quot;,
-      uri: `${this._baseUrl}/recordings/stored/${name}`
+      url: `${this._baseUrl}/recordings/stored/${name}`,
     });
   }
 
@@ -153,7 +152,7 @@ export default class RecordingsAPI {
 
     return this._request({
       method: &quot;DELETE&quot;,
-      uri: `${this._baseUrl}/recordings/stored/${name}`
+      url: `${this._baseUrl}/recordings/stored/${name}`,
     });
   }
 
@@ -176,7 +175,7 @@ export default class RecordingsAPI {
 
     return this._request({
       method: &quot;GET&quot;,
-      uri: `${this._baseUrl}/recordings/stored/${name}/file`
+      url: `${this._baseUrl}/recordings/stored/${name}/file`,
     });
   }
 
@@ -203,8 +202,8 @@ export default class RecordingsAPI {
 
     return this._request({
       method: &quot;POST&quot;,
-      uri: `${this._baseUrl}/recordings/stored/${name}/copy`,
-      qs: { destinationRecordingName }
+      url: `${this._baseUrl}/recordings/stored/${name}/copy`,
+      params: { destinationRecordingName },
     });
   }
 
@@ -226,7 +225,7 @@ export default class RecordingsAPI {
 
     return this._request({
       method: &quot;GET&quot;,
-      uri: `${this._baseUrl}/recordings/live/${name}`
+      url: `${this._baseUrl}/recordings/live/${name}`,
     });
   }
 
@@ -247,7 +246,7 @@ export default class RecordingsAPI {
 
     return this._request({
       method: &quot;DELETE&quot;,
-      uri: `${this._baseUrl}/recordings/live/${name}`
+      url: `${this._baseUrl}/recordings/live/${name}`,
     });
   }
 
@@ -268,7 +267,7 @@ export default class RecordingsAPI {
 
     return this._request({
       method: &quot;POST&quot;,
-      uri: `${this._baseUrl}/recordings/live/${name}/stop`
+      url: `${this._baseUrl}/recordings/live/${name}/stop`,
     });
   }
 
@@ -292,7 +291,7 @@ export default class RecordingsAPI {
 
     return this._request({
       method: &quot;POST&quot;,
-      uri: `${this._baseUrl}/recordings/live/${name}/pause`
+      url: `${this._baseUrl}/recordings/live/${name}/pause`,
     });
   }
 
@@ -314,7 +313,7 @@ export default class RecordingsAPI {
 
     return this._request({
       method: &quot;DELETE&quot;,
-      uri: `${this._baseUrl}/recordings/live/${name}/pause`
+      url: `${this._baseUrl}/recordings/live/${name}/pause`,
     });
   }
 
@@ -337,7 +336,7 @@ export default class RecordingsAPI {
 
     return this._request({
       method: &quot;POST&quot;,
-      uri: `${this._baseUrl}/recordings/live/${name}/mute`
+      url: `${this._baseUrl}/recordings/live/${name}/mute`,
     });
   }
 
@@ -359,7 +358,7 @@ export default class RecordingsAPI {
 
     return this._request({
       method: &quot;DELETE&quot;,
-      uri: `${this._baseUrl}/recordings/live/${name}/mute`
+      url: `${this._baseUrl}/recordings/live/${name}/mute`,
     });
   }
 }

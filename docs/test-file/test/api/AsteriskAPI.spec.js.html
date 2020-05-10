@@ -93,14 +93,14 @@ describe(&quot;the Asterisk API&quot;, () =&gt; {
       const api = new AsteriskAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .getObject({
           configClass: &quot;fooClass&quot;,
           objectType: &quot;barType&quot;,
-          id: &quot;baz&quot;
+          id: &quot;baz&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -112,14 +112,14 @@ describe(&quot;the Asterisk API&quot;, () =&gt; {
     it(&quot;makes the right request&quot;, () =&gt; {
       const mock = nock(&quot;http://fake.local&quot;)
         .put(&quot;/ari/asterisk/config/dynamic/fooClass/barType/baz&quot;, {
-          fields: [{ field1: &quot;field1val&quot; }, { field2: &quot;field2val&quot; }]
+          fields: [{ field1: &quot;field1val&quot; }, { field2: &quot;field2val&quot; }],
         })
         .reply(200, { foo: &quot;bar&quot; });
 
       const api = new AsteriskAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
@@ -127,7 +127,7 @@ describe(&quot;the Asterisk API&quot;, () =&gt; {
           configClass: &quot;fooClass&quot;,
           objectType: &quot;barType&quot;,
           id: &quot;baz&quot;,
-          fields: [{ field1: &quot;field1val&quot; }, { field2: &quot;field2val&quot; }]
+          fields: [{ field1: &quot;field1val&quot; }, { field2: &quot;field2val&quot; }],
         })
         .then(() =&gt; {
           mock.done();
@@ -144,14 +144,14 @@ describe(&quot;the Asterisk API&quot;, () =&gt; {
       const api = new AsteriskAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .deleteObject({
           configClass: &quot;fooClass&quot;,
           objectType: &quot;barType&quot;,
-          id: &quot;baz&quot;
+          id: &quot;baz&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -169,12 +169,12 @@ describe(&quot;the Asterisk API&quot;, () =&gt; {
       const api = new AsteriskAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .getInfo({
-          only: [&quot;system&quot;, &quot;build&quot;]
+          only: [&quot;system&quot;, &quot;build&quot;],
         })
         .then(() =&gt; {
           mock.done();
@@ -191,7 +191,7 @@ describe(&quot;the Asterisk API&quot;, () =&gt; {
       const api = new AsteriskAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api.listModules().then(() =&gt; {
@@ -209,12 +209,12 @@ describe(&quot;the Asterisk API&quot;, () =&gt; {
       const api = new AsteriskAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .getModule({
-          moduleName: &quot;myModule&quot;
+          moduleName: &quot;myModule&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -231,12 +231,12 @@ describe(&quot;the Asterisk API&quot;, () =&gt; {
       const api = new AsteriskAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .loadModule({
-          moduleName: &quot;my Module&quot;
+          moduleName: &quot;my Module&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -253,12 +253,12 @@ describe(&quot;the Asterisk API&quot;, () =&gt; {
       const api = new AsteriskAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .unloadModule({
-          moduleName: &quot;my Module&quot;
+          moduleName: &quot;my Module&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -275,12 +275,12 @@ describe(&quot;the Asterisk API&quot;, () =&gt; {
       const api = new AsteriskAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .reloadModule({
-          moduleName: &quot;my Module&quot;
+          moduleName: &quot;my Module&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -297,7 +297,7 @@ describe(&quot;the Asterisk API&quot;, () =&gt; {
       const api = new AsteriskAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api.listLogChannels().then(() =&gt; {
@@ -316,13 +316,13 @@ describe(&quot;the Asterisk API&quot;, () =&gt; {
       const api = new AsteriskAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .addLog({
           logChannelName: &quot;my log channel&quot;,
-          configuration: &quot;i have no idea what i&apos;m doing&quot;
+          configuration: &quot;i have no idea what i&apos;m doing&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -339,12 +339,12 @@ describe(&quot;the Asterisk API&quot;, () =&gt; {
       const api = new AsteriskAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .deleteLog({
-          logChannelName: &quot;my log channel&quot;
+          logChannelName: &quot;my log channel&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -361,12 +361,12 @@ describe(&quot;the Asterisk API&quot;, () =&gt; {
       const api = new AsteriskAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .rotateLog({
-          logChannelName: &quot;my log channel&quot;
+          logChannelName: &quot;my log channel&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -384,12 +384,12 @@ describe(&quot;the Asterisk API&quot;, () =&gt; {
       const api = new AsteriskAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .getGlobalVariable({
-          variable: &quot;something cool&quot;
+          variable: &quot;something cool&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -403,20 +403,20 @@ describe(&quot;the Asterisk API&quot;, () =&gt; {
         .post(&quot;/ari/asterisk/variable&quot;)
         .query({
           variable: &quot;something cool&quot;,
-          value: &quot;do what now&quot;
+          value: &quot;do what now&quot;,
         })
         .reply(200, { foo: &quot;bar&quot; });
 
       const api = new AsteriskAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .setGlobalVariable({
           variable: &quot;something cool&quot;,
-          value: &quot;do what now&quot;
+          value: &quot;do what now&quot;,
         })
         .then(() =&gt; {
           mock.done();

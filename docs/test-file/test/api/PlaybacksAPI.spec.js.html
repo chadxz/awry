@@ -93,12 +93,12 @@ describe(&quot;the Playbacks API&quot;, () =&gt; {
       const api = new PlaybacksAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .get({
-          playbackId: &quot;foo&quot;
+          playbackId: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -115,12 +115,12 @@ describe(&quot;the Playbacks API&quot;, () =&gt; {
       const api = new PlaybacksAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .stop({
-          playbackId: &quot;foo&quot;
+          playbackId: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -138,13 +138,13 @@ describe(&quot;the Playbacks API&quot;, () =&gt; {
       const api = new PlaybacksAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .control({
           playbackId: &quot;foo&quot;,
-          operation: &quot;restart&quot;
+          operation: &quot;restart&quot;,
         })
         .then(() =&gt; {
           mock.done();

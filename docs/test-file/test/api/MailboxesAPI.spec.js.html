@@ -93,7 +93,7 @@ describe(&quot;the Mailboxes API&quot;, () =&gt; {
       const api = new MailboxesAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api.list().then(() =&gt; {
@@ -111,12 +111,12 @@ describe(&quot;the Mailboxes API&quot;, () =&gt; {
       const api = new MailboxesAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .get({
-          mailboxName: &quot;foo&quot;
+          mailboxName: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -134,14 +134,14 @@ describe(&quot;the Mailboxes API&quot;, () =&gt; {
       const api = new MailboxesAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .update({
           mailboxName: &quot;foo&quot;,
           oldMessages: 5,
-          newMessages: 0
+          newMessages: 0,
         })
         .then(() =&gt; {
           mock.done();
@@ -158,12 +158,12 @@ describe(&quot;the Mailboxes API&quot;, () =&gt; {
       const api = new MailboxesAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .destroy({
-          mailboxName: &quot;foo&quot;
+          mailboxName: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();

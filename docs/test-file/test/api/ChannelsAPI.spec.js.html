@@ -93,7 +93,7 @@ describe(&quot;the Channels API&quot;, () =&gt; {
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api.list().then(() =&gt; {
@@ -106,7 +106,7 @@ describe(&quot;the Channels API&quot;, () =&gt; {
     it(&quot;makes the right request&quot;, () =&gt; {
       const mock = nock(&quot;http://fake.local&quot;)
         .post(&quot;/ari/channels&quot;, {
-          variables: { foo: &quot;bar&quot; }
+          variables: { foo: &quot;bar&quot; },
         })
         .query({
           endpoint: &quot;pjsip/foobar&quot;,
@@ -117,14 +117,14 @@ describe(&quot;the Channels API&quot;, () =&gt; {
           channelId: &quot;someChannelId&quot;,
           otherChannelId: &quot;someOtherChannelId&quot;,
           originator: &quot;someOriginator&quot;,
-          formats: &quot;ulaw,slin16&quot;
+          formats: &quot;ulaw,slin16&quot;,
         })
         .reply(200, { foo: &quot;bar&quot; });
 
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
@@ -138,7 +138,7 @@ describe(&quot;the Channels API&quot;, () =&gt; {
           otherChannelId: &quot;someOtherChannelId&quot;,
           originator: &quot;someOriginator&quot;,
           formats: [&quot;ulaw&quot;, &quot;slin16&quot;],
-          variables: { foo: &quot;bar&quot; }
+          variables: { foo: &quot;bar&quot; },
         })
         .then(() =&gt; {
           mock.done();
@@ -157,14 +157,14 @@ describe(&quot;the Channels API&quot;, () =&gt; {
           channelId: &quot;someChannelId&quot;,
           otherChannelId: &quot;someOtherChannelId&quot;,
           originator: &quot;someOriginator&quot;,
-          formats: &quot;ulaw,slin16&quot;
+          formats: &quot;ulaw,slin16&quot;,
         })
         .reply(200, { foo: &quot;bar&quot; });
 
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
@@ -175,7 +175,7 @@ describe(&quot;the Channels API&quot;, () =&gt; {
           channelId: &quot;someChannelId&quot;,
           otherChannelId: &quot;someOtherChannelId&quot;,
           originator: &quot;someOriginator&quot;,
-          formats: [&quot;ulaw&quot;, &quot;slin16&quot;]
+          formats: [&quot;ulaw&quot;, &quot;slin16&quot;],
         })
         .then(() =&gt; {
           mock.done();
@@ -192,12 +192,12 @@ describe(&quot;the Channels API&quot;, () =&gt; {
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .get({
-          channelId: &quot;foo&quot;
+          channelId: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -209,7 +209,7 @@ describe(&quot;the Channels API&quot;, () =&gt; {
     it(&quot;makes the right request&quot;, () =&gt; {
       const mock = nock(&quot;http://fake.local&quot;)
         .post(&quot;/ari/channels/foo&quot;, {
-          variables: { foo: &quot;bar&quot; }
+          variables: { foo: &quot;bar&quot; },
         })
         .query({
           endpoint: &quot;pjsip/foobar&quot;,
@@ -219,14 +219,14 @@ describe(&quot;the Channels API&quot;, () =&gt; {
           timeout: 45,
           otherChannelId: &quot;someOtherChannelId&quot;,
           originator: &quot;someOriginator&quot;,
-          formats: &quot;ulaw,slin16&quot;
+          formats: &quot;ulaw,slin16&quot;,
         })
         .reply(200, { foo: &quot;bar&quot; });
 
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
@@ -240,7 +240,7 @@ describe(&quot;the Channels API&quot;, () =&gt; {
           otherChannelId: &quot;someOtherChannelId&quot;,
           originator: &quot;someOriginator&quot;,
           formats: [&quot;ulaw&quot;, &quot;slin16&quot;],
-          variables: { foo: &quot;bar&quot; }
+          variables: { foo: &quot;bar&quot; },
         })
         .then(() =&gt; {
           mock.done();
@@ -257,12 +257,12 @@ describe(&quot;the Channels API&quot;, () =&gt; {
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .hangup({
-          channelId: &quot;foo&quot;
+          channelId: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -278,14 +278,14 @@ describe(&quot;the Channels API&quot;, () =&gt; {
           context: &quot;someContext&quot;,
           extension: &quot;someExtension&quot;,
           priority: &quot;somePriority&quot;,
-          label: &quot;someLabel&quot;
+          label: &quot;someLabel&quot;,
         })
         .reply(200, { foo: &quot;bar&quot; });
 
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
@@ -294,7 +294,7 @@ describe(&quot;the Channels API&quot;, () =&gt; {
           context: &quot;someContext&quot;,
           extension: &quot;someExtension&quot;,
           priority: &quot;somePriority&quot;,
-          label: &quot;someLabel&quot;
+          label: &quot;someLabel&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -312,13 +312,13 @@ describe(&quot;the Channels API&quot;, () =&gt; {
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .redirect({
           channelId: &quot;foo&quot;,
-          endpoint: &quot;PJSIP/4004&quot;
+          endpoint: &quot;PJSIP/4004&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -335,12 +335,12 @@ describe(&quot;the Channels API&quot;, () =&gt; {
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .answer({
-          channelId: &quot;foo&quot;
+          channelId: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -357,12 +357,12 @@ describe(&quot;the Channels API&quot;, () =&gt; {
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .ring({
-          channelId: &quot;foo&quot;
+          channelId: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -379,12 +379,12 @@ describe(&quot;the Channels API&quot;, () =&gt; {
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .ringStop({
-          channelId: &quot;foo&quot;
+          channelId: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -401,14 +401,14 @@ describe(&quot;the Channels API&quot;, () =&gt; {
           before: 200,
           between: 300,
           duration: 350,
-          after: 250
+          after: 250,
         })
         .reply(200, { foo: &quot;bar&quot; });
 
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
@@ -418,7 +418,7 @@ describe(&quot;the Channels API&quot;, () =&gt; {
           before: 200,
           between: 300,
           duration: 350,
-          after: 250
+          after: 250,
         })
         .then(() =&gt; {
           mock.done();
@@ -436,13 +436,13 @@ describe(&quot;the Channels API&quot;, () =&gt; {
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .mute({
           channelId: &quot;foo&quot;,
-          direction: &quot;out&quot;
+          direction: &quot;out&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -460,13 +460,13 @@ describe(&quot;the Channels API&quot;, () =&gt; {
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .unmute({
           channelId: &quot;foo&quot;,
-          direction: &quot;out&quot;
+          direction: &quot;out&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -483,12 +483,12 @@ describe(&quot;the Channels API&quot;, () =&gt; {
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .hold({
-          channelId: &quot;foo&quot;
+          channelId: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -505,12 +505,12 @@ describe(&quot;the Channels API&quot;, () =&gt; {
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .unhold({
-          channelId: &quot;foo&quot;
+          channelId: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -528,13 +528,13 @@ describe(&quot;the Channels API&quot;, () =&gt; {
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .startMusicOnHold({
           channelId: &quot;foo&quot;,
-          mohClass: &quot;classical&quot;
+          mohClass: &quot;classical&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -551,12 +551,12 @@ describe(&quot;the Channels API&quot;, () =&gt; {
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .stopMusicOnHold({
-          channelId: &quot;foo&quot;
+          channelId: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -573,12 +573,12 @@ describe(&quot;the Channels API&quot;, () =&gt; {
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .startSilence({
-          channelId: &quot;foo&quot;
+          channelId: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -595,12 +595,12 @@ describe(&quot;the Channels API&quot;, () =&gt; {
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .stopSilence({
-          channelId: &quot;foo&quot;
+          channelId: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -617,14 +617,14 @@ describe(&quot;the Channels API&quot;, () =&gt; {
           lang: &quot;en&quot;,
           offsetms: 150,
           skipms: 1500,
-          playbackId: &quot;monkeyAttack&quot;
+          playbackId: &quot;monkeyAttack&quot;,
         })
         .reply(200, { foo: &quot;bar&quot; });
 
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
@@ -634,7 +634,7 @@ describe(&quot;the Channels API&quot;, () =&gt; {
           lang: &quot;en&quot;,
           offsetms: 150,
           skipms: 1500,
-          playbackId: &quot;monkeyAttack&quot;
+          playbackId: &quot;monkeyAttack&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -650,14 +650,14 @@ describe(&quot;the Channels API&quot;, () =&gt; {
           media: &quot;sound:tt-monkeys,sound:helloworld&quot;,
           lang: &quot;en&quot;,
           offsetms: 150,
-          skipms: 1500
+          skipms: 1500,
         })
         .reply(200, { foo: &quot;bar&quot; });
 
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
@@ -667,7 +667,7 @@ describe(&quot;the Channels API&quot;, () =&gt; {
           media: [&quot;sound:tt-monkeys&quot;, &quot;sound:helloworld&quot;],
           lang: &quot;en&quot;,
           offsetms: 150,
-          skipms: 1500
+          skipms: 1500,
         })
         .then(() =&gt; {
           mock.done();
@@ -686,14 +686,14 @@ describe(&quot;the Channels API&quot;, () =&gt; {
           maxSilenceSeconds: 10,
           ifExists: &quot;overwrite&quot;,
           beep: false,
-          terminateOn: &quot;#&quot;
+          terminateOn: &quot;#&quot;,
         })
         .reply(200, { foo: &quot;bar&quot; });
 
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
@@ -705,7 +705,7 @@ describe(&quot;the Channels API&quot;, () =&gt; {
           maxSilenceSeconds: 10,
           ifExists: &quot;overwrite&quot;,
           beep: false,
-          terminateOn: &quot;#&quot;
+          terminateOn: &quot;#&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -723,13 +723,13 @@ describe(&quot;the Channels API&quot;, () =&gt; {
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .getChannelVariable({
           channelId: &quot;foo&quot;,
-          variable: &quot;jenkins&quot;
+          variable: &quot;jenkins&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -743,21 +743,21 @@ describe(&quot;the Channels API&quot;, () =&gt; {
         .post(&quot;/ari/channels/foo/variable&quot;)
         .query({
           variable: &quot;jenkins&quot;,
-          value: &quot;bamboo&quot;
+          value: &quot;bamboo&quot;,
         })
         .reply(200, { foo: &quot;bar&quot; });
 
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .setChannelVariable({
           channelId: &quot;foo&quot;,
           variable: &quot;jenkins&quot;,
-          value: &quot;bamboo&quot;
+          value: &quot;bamboo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -774,14 +774,14 @@ describe(&quot;the Channels API&quot;, () =&gt; {
           spy: &quot;both&quot;,
           whisper: &quot;both&quot;,
           appArgs: &quot;foo=bar&quot;,
-          snoopId: &quot;snoopyDoopy&quot;
+          snoopId: &quot;snoopyDoopy&quot;,
         })
         .reply(200, { foo: &quot;bar&quot; });
 
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
@@ -791,7 +791,7 @@ describe(&quot;the Channels API&quot;, () =&gt; {
           spy: &quot;both&quot;,
           whisper: &quot;both&quot;,
           appArgs: &quot;foo=bar&quot;,
-          snoopId: &quot;snoopyDoopy&quot;
+          snoopId: &quot;snoopyDoopy&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -807,14 +807,14 @@ describe(&quot;the Channels API&quot;, () =&gt; {
           app: &quot;myApp&quot;,
           spy: &quot;both&quot;,
           whisper: &quot;both&quot;,
-          appArgs: &quot;foo=bar&quot;
+          appArgs: &quot;foo=bar&quot;,
         })
         .reply(200, { foo: &quot;bar&quot; });
 
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
@@ -824,7 +824,7 @@ describe(&quot;the Channels API&quot;, () =&gt; {
           app: &quot;myApp&quot;,
           spy: &quot;both&quot;,
           whisper: &quot;both&quot;,
-          appArgs: &quot;foo=bar&quot;
+          appArgs: &quot;foo=bar&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -842,14 +842,14 @@ describe(&quot;the Channels API&quot;, () =&gt; {
       const api = new ChannelsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .dial({
           channelId: &quot;foo&quot;,
           caller: &quot;scooby&quot;,
-          timeout: 60
+          timeout: 60,
         })
         .then(() =&gt; {
           mock.done();

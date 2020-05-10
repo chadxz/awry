@@ -93,7 +93,7 @@ describe(&quot;the Bridges API&quot;, () =&gt; {
       const api = new BridgesAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api.list().then(() =&gt; {
@@ -109,21 +109,21 @@ describe(&quot;the Bridges API&quot;, () =&gt; {
         .query({
           type: &quot;mixing,dtmf_events&quot;,
           bridgeId: &quot;foo&quot;,
-          name: &quot;fooBridge&quot;
+          name: &quot;fooBridge&quot;,
         })
         .reply(200, { foo: &quot;bar&quot; });
 
       const api = new BridgesAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .create({
           bridgeId: &quot;foo&quot;,
           name: &quot;fooBridge&quot;,
-          type: [&quot;mixing&quot;, &quot;dtmf_events&quot;]
+          type: [&quot;mixing&quot;, &quot;dtmf_events&quot;],
         })
         .then(() =&gt; {
           mock.done();
@@ -137,21 +137,21 @@ describe(&quot;the Bridges API&quot;, () =&gt; {
         .post(&quot;/ari/bridges/foo&quot;)
         .query({
           type: &quot;mixing,dtmf_events&quot;,
-          name: &quot;fooBridge&quot;
+          name: &quot;fooBridge&quot;,
         })
         .reply(200, { foo: &quot;bar&quot; });
 
       const api = new BridgesAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .createOrUpdate({
           bridgeId: &quot;foo&quot;,
           name: &quot;fooBridge&quot;,
-          type: [&quot;mixing&quot;, &quot;dtmf_events&quot;]
+          type: [&quot;mixing&quot;, &quot;dtmf_events&quot;],
         })
         .then(() =&gt; {
           mock.done();
@@ -168,12 +168,12 @@ describe(&quot;the Bridges API&quot;, () =&gt; {
       const api = new BridgesAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .get({
-          bridgeId: &quot;foo&quot;
+          bridgeId: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -190,12 +190,12 @@ describe(&quot;the Bridges API&quot;, () =&gt; {
       const api = new BridgesAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .destroy({
-          bridgeId: &quot;foo&quot;
+          bridgeId: &quot;foo&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -209,21 +209,21 @@ describe(&quot;the Bridges API&quot;, () =&gt; {
         .post(&quot;/ari/bridges/foo%20bar/addChannel&quot;)
         .query({
           role: &quot;announcer&quot;,
-          channel: &quot;chan1,chan2&quot;
+          channel: &quot;chan1,chan2&quot;,
         })
         .reply(200, { foo: &quot;bar&quot; });
 
       const api = new BridgesAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .addChannel({
           bridgeId: &quot;foo bar&quot;,
           channel: [&quot;chan1&quot;, &quot;chan2&quot;],
-          role: &quot;announcer&quot;
+          role: &quot;announcer&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -241,13 +241,13 @@ describe(&quot;the Bridges API&quot;, () =&gt; {
       const api = new BridgesAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .removeChannel({
           bridgeId: &quot;foo bar&quot;,
-          channel: [&quot;chan1&quot;, &quot;chan2&quot;]
+          channel: [&quot;chan1&quot;, &quot;chan2&quot;],
         })
         .then(() =&gt; {
           mock.done();
@@ -265,13 +265,13 @@ describe(&quot;the Bridges API&quot;, () =&gt; {
       const api = new BridgesAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .startMusicOnHold({
           bridgeId: &quot;foo bar&quot;,
-          mohClass: &quot;rock_and_roll&quot;
+          mohClass: &quot;rock_and_roll&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -288,12 +288,12 @@ describe(&quot;the Bridges API&quot;, () =&gt; {
       const api = new BridgesAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
         .stopMusicOnHold({
-          bridgeId: &quot;foo bar&quot;
+          bridgeId: &quot;foo bar&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -309,14 +309,14 @@ describe(&quot;the Bridges API&quot;, () =&gt; {
           media: &quot;sound:foo/bar.wav,sound:foo/baz.wav&quot;,
           playbackId: &quot;myPlaybackId&quot;,
           offsetms: 2000,
-          skipms: 5000
+          skipms: 5000,
         })
         .reply(200, { foo: &quot;bar&quot; });
 
       const api = new BridgesAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
@@ -325,7 +325,7 @@ describe(&quot;the Bridges API&quot;, () =&gt; {
           media: [&quot;sound:foo/bar.wav&quot;, &quot;sound:foo/baz.wav&quot;],
           playbackId: &quot;myPlaybackId&quot;,
           offsetms: 2000,
-          skipms: 5000
+          skipms: 5000,
         })
         .then(() =&gt; {
           mock.done();
@@ -340,14 +340,14 @@ describe(&quot;the Bridges API&quot;, () =&gt; {
         .query({
           media: &quot;sound:foo/bar.wav,sound:foo/baz.wav&quot;,
           offsetms: 2000,
-          skipms: 5000
+          skipms: 5000,
         })
         .reply(200, { foo: &quot;bar&quot; });
 
       const api = new BridgesAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
@@ -356,7 +356,7 @@ describe(&quot;the Bridges API&quot;, () =&gt; {
           media: [&quot;sound:foo/bar.wav&quot;, &quot;sound:foo/baz.wav&quot;],
           playbackId: &quot;my playback&quot;,
           offsetms: 2000,
-          skipms: 5000
+          skipms: 5000,
         })
         .then(() =&gt; {
           mock.done();
@@ -375,14 +375,14 @@ describe(&quot;the Bridges API&quot;, () =&gt; {
           maxSilentSeconds: 0,
           ifExists: &quot;overwrite&quot;,
           beep: true,
-          terminateOn: &quot;none&quot;
+          terminateOn: &quot;none&quot;,
         })
         .reply(200, { foo: &quot;bar&quot; });
 
       const api = new BridgesAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
@@ -390,7 +390,7 @@ describe(&quot;the Bridges API&quot;, () =&gt; {
           bridgeId: &quot;foo bar&quot;,
           name: &quot;myRecording&quot;,
           maxDurationSeconds: 60,
-          ifExists: &quot;overwrite&quot;
+          ifExists: &quot;overwrite&quot;,
         })
         .then(() =&gt; {
           mock.done();

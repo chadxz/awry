@@ -73,7 +73,7 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">test/events/ARIWebSocket.spec.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import ws from &quot;ws&quot;;
-import assert from &quot;power-assert&quot;;
+import assert from &quot;assert&quot;;
 import ARIWebSocket from &quot;../../src/events/ARIWebSocket&quot;;
 const WebSocketServer = ws.Server;
 
@@ -92,12 +92,12 @@ describe(&quot;ARIWebSocket&quot;, () =&gt; {
     server.close();
   });
 
-  it(&apos;passes non-&quot;message&quot; events along without parsing&apos;, done =&gt; {
+  it(&apos;passes non-&quot;message&quot; events along without parsing&apos;, (done) =&gt; {
     ws = new ARIWebSocket({ url: &quot;ws://localhost:8088&quot; });
 
     ws.once(&quot;open&quot;, () =&gt; {
-      ws.once(&quot;bugaboo&quot;, message =&gt; {
-        assert.equal(message, &quot;bugaloo&quot;);
+      ws.once(&quot;bugaboo&quot;, (message) =&gt; {
+        assert.strictEqual(message, &quot;bugaloo&quot;);
         done();
       });
 
@@ -105,11 +105,11 @@ describe(&quot;ARIWebSocket&quot;, () =&gt; {
     });
   });
 
-  it(&apos;passes &quot;message&quot; events without a payload along without parsing&apos;, done =&gt; {
+  it(&apos;passes &quot;message&quot; events without a payload along without parsing&apos;, (done) =&gt; {
     ws = new ARIWebSocket({ url: &quot;ws://localhost:8088&quot; });
 
-    server.once(&quot;connection&quot;, conn =&gt; {
-      ws.on(&quot;message&quot;, message =&gt; {
+    server.once(&quot;connection&quot;, (conn) =&gt; {
+      ws.on(&quot;message&quot;, (message) =&gt; {
         assert.deepEqual(message, new Uint8Array(0));
         done();
       });
@@ -118,13 +118,13 @@ describe(&quot;ARIWebSocket&quot;, () =&gt; {
     });
   });
 
-  it(&apos;passes &quot;message&quot; events that are not string along without parsing&apos;, done =&gt; {
+  it(&apos;passes &quot;message&quot; events that are not string along without parsing&apos;, (done) =&gt; {
     ws = new ARIWebSocket({ url: &quot;ws://localhost:8088&quot; });
     const buf = Buffer.from(&quot;string&quot;);
 
-    server.once(&quot;connection&quot;, conn =&gt; {
-      ws.once(&quot;message&quot;, message =&gt; {
-        assert.equal(message.toString(&quot;utf-8&quot;), buf.toString(&quot;utf-8&quot;));
+    server.once(&quot;connection&quot;, (conn) =&gt; {
+      ws.once(&quot;message&quot;, (message) =&gt; {
+        assert.strictEqual(message.toString(&quot;utf-8&quot;), buf.toString(&quot;utf-8&quot;));
         done();
       });
 
@@ -132,12 +132,12 @@ describe(&quot;ARIWebSocket&quot;, () =&gt; {
     });
   });
 
-  it(&apos;passes string &quot;message&quot; events that cannot be parsed as JSON along as-is&apos;, done =&gt; {
+  it(&apos;passes string &quot;message&quot; events that cannot be parsed as JSON along as-is&apos;, (done) =&gt; {
     ws = new ARIWebSocket({ url: &quot;ws://localhost:8088&quot; });
 
-    server.once(&quot;connection&quot;, conn =&gt; {
-      ws.once(&quot;message&quot;, message =&gt; {
-        assert.equal(message, &quot;hidey ho&quot;);
+    server.once(&quot;connection&quot;, (conn) =&gt; {
+      ws.once(&quot;message&quot;, (message) =&gt; {
+        assert.strictEqual(message, &quot;hidey ho&quot;);
         done();
       });
 
@@ -145,11 +145,11 @@ describe(&quot;ARIWebSocket&quot;, () =&gt; {
     });
   });
 
-  it(&apos;parses JSON &quot;message&quot; payloads before triggering the event&apos;, done =&gt; {
+  it(&apos;parses JSON &quot;message&quot; payloads before triggering the event&apos;, (done) =&gt; {
     ws = new ARIWebSocket({ url: &quot;ws://localhost:8088&quot; });
 
-    server.once(&quot;connection&quot;, conn =&gt; {
-      ws.once(&quot;message&quot;, message =&gt; {
+    server.once(&quot;connection&quot;, (conn) =&gt; {
+      ws.once(&quot;message&quot;, (message) =&gt; {
         assert.deepEqual(message, { foo: &quot;bar&quot; });
         done();
       });

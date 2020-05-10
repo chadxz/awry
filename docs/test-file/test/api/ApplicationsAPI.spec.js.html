@@ -94,7 +94,7 @@ describe(&quot;the Applications API&quot;, () =&gt; {
         const api = new ApplicationsAPI({
           baseUrl: &quot;http://fake.local/ari&quot;,
           username: &quot;foo&quot;,
-          password: &quot;bar&quot;
+          password: &quot;bar&quot;,
         });
 
         return api.list().then(() =&gt; {
@@ -105,8 +105,8 @@ describe(&quot;the Applications API&quot;, () =&gt; {
       it(&quot;sends the username and password&quot;, () =&gt; {
         const mock = nock(&quot;http://fake.local&quot;, {
           reqheaders: {
-            authorization: &quot;Basic Zm9vOmJhcg==&quot;
-          }
+            authorization: &quot;Basic Zm9vOmJhcg==&quot;,
+          },
         })
           .get(&quot;/ari/applications&quot;)
           .reply(200, { foo: &quot;bar&quot; });
@@ -114,7 +114,7 @@ describe(&quot;the Applications API&quot;, () =&gt; {
         const api = new ApplicationsAPI({
           baseUrl: &quot;http://fake.local/ari&quot;,
           username: &quot;foo&quot;,
-          password: &quot;bar&quot;
+          password: &quot;bar&quot;,
         });
 
         return api.list().then(() =&gt; {
@@ -125,8 +125,8 @@ describe(&quot;the Applications API&quot;, () =&gt; {
       it(&quot;sets the accept header as json&quot;, () =&gt; {
         const mock = nock(&quot;http://fake.local&quot;, {
           reqHeaders: {
-            accept: &quot;application/json&quot;
-          }
+            accept: &quot;application/json&quot;,
+          },
         })
           .get(&quot;/ari/applications&quot;)
           .reply(200, { foo: &quot;bar&quot; });
@@ -134,7 +134,7 @@ describe(&quot;the Applications API&quot;, () =&gt; {
         const api = new ApplicationsAPI({
           baseUrl: &quot;http://fake.local/ari&quot;,
           username: &quot;foo&quot;,
-          password: &quot;bar&quot;
+          password: &quot;bar&quot;,
         });
 
         return api.list().then(() =&gt; {
@@ -153,7 +153,7 @@ describe(&quot;the Applications API&quot;, () =&gt; {
       const api = new ApplicationsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;foo&quot;,
-        password: &quot;bar&quot;
+        password: &quot;bar&quot;,
       });
 
       return api.get({ applicationName: &quot;foo&quot; }).then(() =&gt; {
@@ -172,13 +172,13 @@ describe(&quot;the Applications API&quot;, () =&gt; {
       const api = new ApplicationsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;foo&quot;,
-        password: &quot;bar&quot;
+        password: &quot;bar&quot;,
       });
 
       return api
         .subscribe({
           applicationName: &quot;foo&quot;,
-          eventSource: &quot;device234&quot;
+          eventSource: &quot;device234&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -196,13 +196,13 @@ describe(&quot;the Applications API&quot;, () =&gt; {
       const api = new ApplicationsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;foo&quot;,
-        password: &quot;bar&quot;
+        password: &quot;bar&quot;,
       });
 
       return api
         .unsubscribe({
           applicationName: &quot;foo&quot;,
-          eventSource: &quot;device234&quot;
+          eventSource: &quot;device234&quot;,
         })
         .then(() =&gt; {
           mock.done();
@@ -216,15 +216,15 @@ describe(&quot;the Applications API&quot;, () =&gt; {
         .put(&quot;/ari/applications/foo/eventFilter&quot;, {
           filter: {
             allowed: [{ type: &quot;StasisStart&quot; }],
-            disallowed: [{ type: &quot;StasisEnd&quot; }]
-          }
+            disallowed: [{ type: &quot;StasisEnd&quot; }],
+          },
         })
         .reply(200, { foo: &quot;bar&quot; });
 
       const api = new ApplicationsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;foo&quot;,
-        password: &quot;bar&quot;
+        password: &quot;bar&quot;,
       });
 
       return api
@@ -232,8 +232,8 @@ describe(&quot;the Applications API&quot;, () =&gt; {
           applicationName: &quot;foo&quot;,
           filter: {
             allowed: [{ type: &quot;StasisStart&quot; }],
-            disallowed: [{ type: &quot;StasisEnd&quot; }]
-          }
+            disallowed: [{ type: &quot;StasisEnd&quot; }],
+          },
         })
         .then(() =&gt; {
           mock.done();

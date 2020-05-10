@@ -88,18 +88,18 @@ describe(&quot;the Events API&quot;, () =&gt; {
     it(&quot;makes the right request&quot;, () =&gt; {
       const mock = nock(&quot;http://fake.local&quot;)
         .post(&quot;/ari/events/user/fooCreated&quot;, {
-          variables: { var1: &quot;cool&quot;, var2: &quot;excellent&quot; }
+          variables: { var1: &quot;cool&quot;, var2: &quot;excellent&quot; },
         })
         .query({
           application: &quot;fooApp&quot;,
-          source: &quot;endpoint:pjsip/6001,deviceStatus:someDevice&quot;
+          source: &quot;endpoint:pjsip/6001,deviceStatus:someDevice&quot;,
         })
         .reply(200, { foo: &quot;bar&quot; });
 
       const api = new EventsAPI({
         baseUrl: &quot;http://fake.local/ari&quot;,
         username: &quot;user&quot;,
-        password: &quot;1234&quot;
+        password: &quot;1234&quot;,
       });
 
       return api
@@ -107,7 +107,7 @@ describe(&quot;the Events API&quot;, () =&gt; {
           eventName: &quot;fooCreated&quot;,
           application: &quot;fooApp&quot;,
           source: [&quot;endpoint:pjsip/6001&quot;, &quot;deviceStatus:someDevice&quot;],
-          variables: { var1: &quot;cool&quot;, var2: &quot;excellent&quot; }
+          variables: { var1: &quot;cool&quot;, var2: &quot;excellent&quot; },
         })
         .then(() =&gt; {
           mock.done();
