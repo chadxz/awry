@@ -1,4 +1,4 @@
-import rp from "request-promise-native";
+import axios from "axios";
 
 /**
  * REST API Resource for interacting with Asterisk playbacks.
@@ -21,9 +21,8 @@ export default class PlaybacksAPI {
     this._baseUrl = params.baseUrl;
 
     /** @private */
-    this._request = rp.defaults({
+    this._request = axios.create({
       auth: { username, password },
-      json: true,
     });
   }
 
@@ -44,7 +43,7 @@ export default class PlaybacksAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/playbacks/${id}`,
+      url: `${this._baseUrl}/playbacks/${id}`,
     });
   }
 
@@ -65,7 +64,7 @@ export default class PlaybacksAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/playbacks/${id}`,
+      url: `${this._baseUrl}/playbacks/${id}`,
     });
   }
 
@@ -90,8 +89,8 @@ export default class PlaybacksAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/playbacks/${id}/control`,
-      qs: { operation },
+      url: `${this._baseUrl}/playbacks/${id}/control`,
+      params: { operation },
     });
   }
 }

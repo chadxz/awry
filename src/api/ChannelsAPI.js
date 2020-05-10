@@ -1,4 +1,4 @@
-import rp from "request-promise-native";
+import axios from "axios";
 
 /**
  * REST API Resource for interacting with Asterisk Channels.
@@ -21,9 +21,8 @@ export default class ChannelsAPI {
     this._baseUrl = params.baseUrl;
 
     /** @private */
-    this._request = rp.defaults({
+    this._request = axios.create({
       auth: { username, password },
-      json: true,
     });
   }
 
@@ -38,7 +37,7 @@ export default class ChannelsAPI {
   list() {
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/channels`,
+      url: `${this._baseUrl}/channels`,
     });
   }
 
@@ -109,8 +108,8 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/channels`,
-      qs: {
+      url: `${this._baseUrl}/channels`,
+      params: {
         endpoint,
         extension,
         context,
@@ -125,7 +124,7 @@ export default class ChannelsAPI {
         originator,
         formats: [].concat(formats).join(","),
       },
-      body: { variables },
+      data: { variables },
     });
   }
 
@@ -169,8 +168,8 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/channels/create`,
-      qs: {
+      url: `${this._baseUrl}/channels/create`,
+      params: {
         endpoint,
         app,
         appArgs,
@@ -199,7 +198,7 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/channels/${id}`,
+      url: `${this._baseUrl}/channels/${id}`,
     });
   }
 
@@ -273,8 +272,8 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/channels/${id}`,
-      qs: {
+      url: `${this._baseUrl}/channels/${id}`,
+      params: {
         endpoint,
         extension,
         context,
@@ -288,7 +287,7 @@ export default class ChannelsAPI {
         originator,
         formats: [].concat(formats).join(","),
       },
-      body: { variables },
+      data: { variables },
     });
   }
 
@@ -311,8 +310,8 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/channels/${id}`,
-      qs: { reason },
+      url: `${this._baseUrl}/channels/${id}`,
+      params: { reason },
     });
   }
 
@@ -339,8 +338,8 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/channels/${id}/continue`,
-      qs: { context, extension, priority, label },
+      url: `${this._baseUrl}/channels/${id}/continue`,
+      params: { context, extension, priority, label },
     });
   }
 
@@ -366,8 +365,8 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/channels/${id}/redirect`,
-      qs: { endpoint },
+      url: `${this._baseUrl}/channels/${id}/redirect`,
+      params: { endpoint },
     });
   }
 
@@ -388,7 +387,7 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/channels/${id}/answer`,
+      url: `${this._baseUrl}/channels/${id}/answer`,
     });
   }
 
@@ -410,7 +409,7 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/channels/${id}/ring`,
+      url: `${this._baseUrl}/channels/${id}/ring`,
     });
   }
 
@@ -432,7 +431,7 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/channels/${id}/ring`,
+      url: `${this._baseUrl}/channels/${id}/ring`,
     });
   }
 
@@ -470,8 +469,8 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/channels/${id}/dtmf`,
-      qs: { dtmf, before, between, duration, after },
+      url: `${this._baseUrl}/channels/${id}/dtmf`,
+      params: { dtmf, before, between, duration, after },
     });
   }
 
@@ -494,8 +493,8 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/channels/${id}/mute`,
-      qs: { direction },
+      url: `${this._baseUrl}/channels/${id}/mute`,
+      params: { direction },
     });
   }
 
@@ -518,8 +517,8 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/channels/${id}/mute`,
-      qs: { direction },
+      url: `${this._baseUrl}/channels/${id}/mute`,
+      params: { direction },
     });
   }
 
@@ -540,7 +539,7 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/channels/${id}/hold`,
+      url: `${this._baseUrl}/channels/${id}/hold`,
     });
   }
 
@@ -561,7 +560,7 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/channels/${id}/hold`,
+      url: `${this._baseUrl}/channels/${id}/hold`,
     });
   }
 
@@ -587,8 +586,8 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/channels/${id}/moh`,
-      qs: { mohClass },
+      url: `${this._baseUrl}/channels/${id}/moh`,
+      params: { mohClass },
     });
   }
 
@@ -609,7 +608,7 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/channels/${id}/moh`,
+      url: `${this._baseUrl}/channels/${id}/moh`,
     });
   }
 
@@ -632,7 +631,7 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/channels/${id}/silence`,
+      url: `${this._baseUrl}/channels/${id}/silence`,
     });
   }
 
@@ -654,7 +653,7 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/channels/${id}/silence`,
+      url: `${this._baseUrl}/channels/${id}/silence`,
     });
   }
 
@@ -696,8 +695,8 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/channels/${id}/play`,
-      qs: {
+      url: `${this._baseUrl}/channels/${id}/play`,
+      params: {
         media: [].concat(media).join(","),
         lang,
         offsetms,
@@ -748,8 +747,8 @@ export default class ChannelsAPI {
     const playId = encodeURIComponent(playbackId);
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/channels/${id}/play/${playId}`,
-      qs: {
+      url: `${this._baseUrl}/channels/${id}/play/${playId}`,
+      params: {
         media: [].concat(media).join(","),
         lang,
         offsetms,
@@ -803,8 +802,8 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/channels/${id}/record`,
-      qs: {
+      url: `${this._baseUrl}/channels/${id}/record`,
+      params: {
         name,
         format,
         maxDurationSeconds,
@@ -836,8 +835,8 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/channels/${id}/variable`,
-      qs: { variable },
+      url: `${this._baseUrl}/channels/${id}/variable`,
+      params: { variable },
     });
   }
 
@@ -862,8 +861,8 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/channels/${id}/variable`,
-      qs: { variable, value },
+      url: `${this._baseUrl}/channels/${id}/variable`,
+      params: { variable, value },
     });
   }
 
@@ -901,8 +900,8 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/channels/${id}/snoop`,
-      qs: { app, spy, whisper, appArgs, snoopId },
+      url: `${this._baseUrl}/channels/${id}/snoop`,
+      params: { app, spy, whisper, appArgs, snoopId },
     });
   }
 
@@ -942,8 +941,8 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/channels/${id}/snoop/${sid}`,
-      qs: { app, spy, whisper, appArgs },
+      url: `${this._baseUrl}/channels/${id}/snoop/${sid}`,
+      params: { app, spy, whisper, appArgs },
     });
   }
 
@@ -968,8 +967,8 @@ export default class ChannelsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/channels/${id}/dial`,
-      qs: { caller, timeout },
+      url: `${this._baseUrl}/channels/${id}/dial`,
+      params: { caller, timeout },
     });
   }
 }

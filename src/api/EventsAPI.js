@@ -1,4 +1,4 @@
-import rp from "request-promise-native";
+import axios from "axios";
 
 /**
  * REST API Resource for creating an Asterisk user event.
@@ -21,9 +21,8 @@ export default class EventsAPI {
     this._baseUrl = params.baseUrl;
 
     /** @private */
-    this._request = rp.defaults({
+    this._request = axios.create({
       auth: { username, password },
-      json: true,
     });
   }
 
@@ -55,12 +54,12 @@ export default class EventsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/events/user/${evt}`,
-      qs: {
+      url: `${this._baseUrl}/events/user/${evt}`,
+      params: {
         application,
         source: [].concat(source).join(","),
       },
-      body: { variables },
+      data: { variables },
     });
   }
 }

@@ -1,4 +1,4 @@
-import rp from "request-promise-native";
+import axios from "axios";
 
 /**
  * REST API Resource for interacting with Asterisk endpoints.
@@ -21,9 +21,8 @@ export default class EndpointsAPI {
     this._baseUrl = params.baseUrl;
 
     /** @private */
-    this._request = rp.defaults({
+    this._request = axios.create({
       auth: { username, password },
-      json: true,
     });
   }
 
@@ -37,7 +36,7 @@ export default class EndpointsAPI {
   list() {
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/endpoints`,
+      url: `${this._baseUrl}/endpoints`,
     });
   }
 
@@ -67,9 +66,9 @@ export default class EndpointsAPI {
 
     return this._request({
       method: "PUT",
-      uri: `${this._baseUrl}/endpoints/sendMessage`,
-      qs: { to, from, body },
-      body: { variables },
+      url: `${this._baseUrl}/endpoints/sendMessage`,
+      params: { to, from, body },
+      data: { variables },
     });
   }
 
@@ -90,7 +89,7 @@ export default class EndpointsAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/endpoints/${tech}`,
+      url: `${this._baseUrl}/endpoints/${tech}`,
     });
   }
 
@@ -115,7 +114,7 @@ export default class EndpointsAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/endpoints/${tech}/${res}`,
+      url: `${this._baseUrl}/endpoints/${tech}/${res}`,
     });
   }
 
@@ -148,9 +147,9 @@ export default class EndpointsAPI {
 
     return this._request({
       method: "PUT",
-      uri: `${this._baseUrl}/endpoints/${tech}/${res}/sendMessage`,
-      qs: { from, body },
-      body: { variables },
+      url: `${this._baseUrl}/endpoints/${tech}/${res}/sendMessage`,
+      params: { from, body },
+      data: { variables },
     });
   }
 }

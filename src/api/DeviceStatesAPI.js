@@ -1,4 +1,4 @@
-import rp from "request-promise-native";
+import axios from "axios";
 
 /**
  * REST API Resource for interacting with device states controlled by ARI.
@@ -21,9 +21,8 @@ export default class DeviceStatesAPI {
     this._baseUrl = params.baseUrl;
 
     /** @private */
-    this._request = rp.defaults({
+    this._request = axios.create({
       auth: { username, password },
-      json: true,
     });
   }
 
@@ -38,7 +37,7 @@ export default class DeviceStatesAPI {
   list() {
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/deviceStates`,
+      url: `${this._baseUrl}/deviceStates`,
     });
   }
 
@@ -59,7 +58,7 @@ export default class DeviceStatesAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/deviceStates/${name}`,
+      url: `${this._baseUrl}/deviceStates/${name}`,
     });
   }
 
@@ -86,8 +85,8 @@ export default class DeviceStatesAPI {
 
     return this._request({
       method: "PUT",
-      uri: `${this._baseUrl}/deviceStates/${name}`,
-      qs: { deviceState },
+      url: `${this._baseUrl}/deviceStates/${name}`,
+      params: { deviceState },
     });
   }
 
@@ -110,7 +109,7 @@ export default class DeviceStatesAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/deviceStates/${name}`,
+      url: `${this._baseUrl}/deviceStates/${name}`,
     });
   }
 }
