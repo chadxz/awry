@@ -1,4 +1,4 @@
-import rp from "request-promise-native";
+import axios from "axios";
 
 /**
  * REST API Resource for interacting with Asterisk mailboxes.
@@ -23,9 +23,8 @@ export default class MailboxesAPI {
     this._baseUrl = params.baseUrl;
 
     /** @private */
-    this._request = rp.defaults({
+    this._request = axios.create({
       auth: { username, password },
-      json: true,
     });
   }
 
@@ -42,7 +41,7 @@ export default class MailboxesAPI {
   list() {
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/mailboxes`,
+      url: `${this._baseUrl}/mailboxes`,
     });
   }
 
@@ -65,7 +64,7 @@ export default class MailboxesAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/mailboxes/${name}`,
+      url: `${this._baseUrl}/mailboxes/${name}`,
     });
   }
 
@@ -89,8 +88,8 @@ export default class MailboxesAPI {
 
     return this._request({
       method: "PUT",
-      uri: `${this._baseUrl}/mailboxes/${name}`,
-      qs: { oldMessages, newMessages },
+      url: `${this._baseUrl}/mailboxes/${name}`,
+      params: { oldMessages, newMessages },
     });
   }
 
@@ -112,7 +111,7 @@ export default class MailboxesAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/mailboxes/${name}`,
+      url: `${this._baseUrl}/mailboxes/${name}`,
     });
   }
 }

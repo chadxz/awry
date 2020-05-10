@@ -1,4 +1,4 @@
-import rp from "request-promise-native";
+import axios from "axios";
 
 /**
  * REST API Resource for interacting with Asterisk sounds.
@@ -21,9 +21,8 @@ export default class SoundsAPI {
     this._baseUrl = params.baseUrl;
 
     /** @private */
-    this._request = rp.defaults({
+    this._request = axios.create({
       auth: { username, password },
-      json: true,
     });
   }
 
@@ -43,8 +42,8 @@ export default class SoundsAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/sounds`,
-      qs: { lang, format },
+      url: `${this._baseUrl}/sounds`,
+      params: { lang, format },
     });
   }
 
@@ -64,7 +63,7 @@ export default class SoundsAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/sounds/${id}`,
+      url: `${this._baseUrl}/sounds/${id}`,
     });
   }
 }

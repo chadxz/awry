@@ -1,4 +1,4 @@
-import rp from "request-promise-native";
+import axios from "axios";
 
 /**
  * REST API Resource for interacting with Asterisk variables, modules,
@@ -22,9 +22,8 @@ export default class AsteriskAPI {
     this._baseUrl = params.baseUrl;
 
     /** @private */
-    this._request = rp.defaults({
+    this._request = axios.create({
       auth: { username, password },
-      json: true,
     });
   }
 
@@ -53,7 +52,7 @@ export default class AsteriskAPI {
     // prettier-ignore
     return this._request({
       method: 'GET',
-      uri: `${this._baseUrl}/asterisk/config/dynamic/${configClass}/${objectType}/${id}`
+      url: `${this._baseUrl}/asterisk/config/dynamic/${configClass}/${objectType}/${id}`
     });
   }
 
@@ -87,8 +86,8 @@ export default class AsteriskAPI {
     // prettier-ignore
     return this._request({
       method: 'PUT',
-      uri: `${this._baseUrl}/asterisk/config/dynamic/${configClass}/${objectType}/${id}`,
-      body: { fields }
+      url: `${this._baseUrl}/asterisk/config/dynamic/${configClass}/${objectType}/${id}`,
+      data: { fields }
     });
   }
 
@@ -118,7 +117,7 @@ export default class AsteriskAPI {
     // prettier-ignore
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/asterisk/config/dynamic/${configClass}/${objectType}/${id}`
+      url: `${this._baseUrl}/asterisk/config/dynamic/${configClass}/${objectType}/${id}`
     });
   }
 
@@ -139,8 +138,8 @@ export default class AsteriskAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/asterisk/info`,
-      qs: { only: [].concat(only).join(",") },
+      url: `${this._baseUrl}/asterisk/info`,
+      params: { only: [].concat(only).join(",") },
     });
   }
 
@@ -157,7 +156,7 @@ export default class AsteriskAPI {
   listModules() {
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/asterisk/modules`,
+      url: `${this._baseUrl}/asterisk/modules`,
     });
   }
 
@@ -180,7 +179,7 @@ export default class AsteriskAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/asterisk/modules/${name}`,
+      url: `${this._baseUrl}/asterisk/modules/${name}`,
     });
   }
 
@@ -202,7 +201,7 @@ export default class AsteriskAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/asterisk/modules/${name}`,
+      url: `${this._baseUrl}/asterisk/modules/${name}`,
     });
   }
 
@@ -225,7 +224,7 @@ export default class AsteriskAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/asterisk/modules/${name}`,
+      url: `${this._baseUrl}/asterisk/modules/${name}`,
     });
   }
 
@@ -248,7 +247,7 @@ export default class AsteriskAPI {
 
     return this._request({
       method: "PUT",
-      uri: `${this._baseUrl}/asterisk/modules/${name}`,
+      url: `${this._baseUrl}/asterisk/modules/${name}`,
     });
   }
 
@@ -265,7 +264,7 @@ export default class AsteriskAPI {
   listLogChannels() {
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/asterisk/logging`,
+      url: `${this._baseUrl}/asterisk/logging`,
     });
   }
 
@@ -289,8 +288,8 @@ export default class AsteriskAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/asterisk/logging/${name}`,
-      qs: { configuration },
+      url: `${this._baseUrl}/asterisk/logging/${name}`,
+      params: { configuration },
     });
   }
 
@@ -312,7 +311,7 @@ export default class AsteriskAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/asterisk/logging/${name}`,
+      url: `${this._baseUrl}/asterisk/logging/${name}`,
     });
   }
 
@@ -334,7 +333,7 @@ export default class AsteriskAPI {
 
     return this._request({
       method: "PUT",
-      uri: `${this._baseUrl}/asterisk/logging/${name}/rotate`,
+      url: `${this._baseUrl}/asterisk/logging/${name}/rotate`,
     });
   }
 
@@ -355,8 +354,8 @@ export default class AsteriskAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/asterisk/variable`,
-      qs: { variable },
+      url: `${this._baseUrl}/asterisk/variable`,
+      params: { variable },
     });
   }
 
@@ -377,8 +376,8 @@ export default class AsteriskAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/asterisk/variable`,
-      qs: { variable, value },
+      url: `${this._baseUrl}/asterisk/variable`,
+      params: { variable, value },
     });
   }
 }

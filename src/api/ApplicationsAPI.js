@@ -1,4 +1,4 @@
-import rp from "request-promise-native";
+import axios from "axios";
 
 /**
  * REST API Resource for interacting with ARI Stasis Applications.
@@ -21,9 +21,8 @@ export default class ApplicationsAPI {
     this._baseUrl = params.baseUrl;
 
     /** @private */
-    this._request = rp.defaults({
+    this._request = axios.create({
       auth: { username, password },
-      json: true,
     });
   }
 
@@ -38,7 +37,7 @@ export default class ApplicationsAPI {
   list() {
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/applications`,
+      url: `${this._baseUrl}/applications`,
     });
   }
 
@@ -60,7 +59,7 @@ export default class ApplicationsAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/applications/${app}`,
+      url: `${this._baseUrl}/applications/${app}`,
     });
   }
 
@@ -92,8 +91,8 @@ export default class ApplicationsAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/applications/${app}/subscription`,
-      qs: { eventSource: [].concat(eventSource).join(",") },
+      url: `${this._baseUrl}/applications/${app}/subscription`,
+      params: { eventSource: [].concat(eventSource).join(",") },
     });
   }
 
@@ -120,8 +119,8 @@ export default class ApplicationsAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/applications/${app}/subscription`,
-      qs: { eventSource: [].concat(eventSource).join(",") },
+      url: `${this._baseUrl}/applications/${app}/subscription`,
+      params: { eventSource: [].concat(eventSource).join(",") },
     });
   }
 
@@ -147,8 +146,8 @@ export default class ApplicationsAPI {
 
     return this._request({
       method: "PUT",
-      uri: `${this._baseUrl}/applications/${app}/eventFilter`,
-      body: { filter },
+      url: `${this._baseUrl}/applications/${app}/eventFilter`,
+      data: { filter },
     });
   }
 }

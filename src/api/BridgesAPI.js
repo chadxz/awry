@@ -1,4 +1,4 @@
-import rp from "request-promise-native";
+import axios from "axios";
 
 /**
  * REST API Resource for interacting with Asterisk Bridges and the channels
@@ -22,9 +22,8 @@ export default class BridgesAPI {
     this._baseUrl = params.baseUrl;
 
     /** @private */
-    this._request = rp.defaults({
+    this._request = axios.create({
       auth: { username, password },
-      json: true,
     });
   }
 
@@ -39,7 +38,7 @@ export default class BridgesAPI {
   list() {
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/bridges`,
+      url: `${this._baseUrl}/bridges`,
     });
   }
 
@@ -66,8 +65,8 @@ export default class BridgesAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/bridges`,
-      qs: {
+      url: `${this._baseUrl}/bridges`,
+      params: {
         name,
         bridgeId,
         type: [].concat(type).join(","),
@@ -100,8 +99,8 @@ export default class BridgesAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/bridges/${id}`,
-      qs: {
+      url: `${this._baseUrl}/bridges/${id}`,
+      params: {
         name,
         type: [].concat(type).join(","),
       },
@@ -125,7 +124,7 @@ export default class BridgesAPI {
 
     return this._request({
       method: "GET",
-      uri: `${this._baseUrl}/bridges/${id}`,
+      url: `${this._baseUrl}/bridges/${id}`,
     });
   }
 
@@ -146,7 +145,7 @@ export default class BridgesAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/bridges/${id}`,
+      url: `${this._baseUrl}/bridges/${id}`,
     });
   }
 
@@ -174,8 +173,8 @@ export default class BridgesAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/bridges/${id}/addChannel`,
-      qs: {
+      url: `${this._baseUrl}/bridges/${id}/addChannel`,
+      params: {
         channel: [].concat(channel).join(","),
         role,
       },
@@ -204,8 +203,8 @@ export default class BridgesAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/bridges/${id}/removeChannel`,
-      qs: { channel: [].concat(channel).join(",") },
+      url: `${this._baseUrl}/bridges/${id}/removeChannel`,
+      params: { channel: [].concat(channel).join(",") },
     });
   }
 
@@ -229,8 +228,8 @@ export default class BridgesAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/bridges/${id}/moh`,
-      qs: { mohClass },
+      url: `${this._baseUrl}/bridges/${id}/moh`,
+      params: { mohClass },
     });
   }
 
@@ -253,7 +252,7 @@ export default class BridgesAPI {
 
     return this._request({
       method: "DELETE",
-      uri: `${this._baseUrl}/bridges/${id}/moh`,
+      url: `${this._baseUrl}/bridges/${id}/moh`,
     });
   }
 
@@ -299,8 +298,8 @@ export default class BridgesAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/bridges/${id}/play`,
-      qs: {
+      url: `${this._baseUrl}/bridges/${id}/play`,
+      params: {
         media: [].concat(media).join(","),
         lang,
         offsetms,
@@ -353,8 +352,8 @@ export default class BridgesAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/bridges/${id}/play/${playId}`,
-      qs: {
+      url: `${this._baseUrl}/bridges/${id}/play/${playId}`,
+      params: {
         media: [].concat(media).join(","),
         lang,
         offsetms,
@@ -406,8 +405,8 @@ export default class BridgesAPI {
 
     return this._request({
       method: "POST",
-      uri: `${this._baseUrl}/bridges/${id}/record`,
-      qs: {
+      url: `${this._baseUrl}/bridges/${id}/record`,
+      params: {
         name,
         format,
         maxDurationSeconds,
