@@ -1,5 +1,5 @@
 import ws from "ws";
-import assert from "power-assert";
+import assert from "assert";
 import ARIWebSocket from "../../src/events/ARIWebSocket";
 const WebSocketServer = ws.Server;
 
@@ -23,7 +23,7 @@ describe("ARIWebSocket", () => {
 
     ws.once("open", () => {
       ws.once("bugaboo", (message) => {
-        assert.equal(message, "bugaloo");
+        assert.strictEqual(message, "bugaloo");
         done();
       });
 
@@ -50,7 +50,7 @@ describe("ARIWebSocket", () => {
 
     server.once("connection", (conn) => {
       ws.once("message", (message) => {
-        assert.equal(message.toString("utf-8"), buf.toString("utf-8"));
+        assert.strictEqual(message.toString("utf-8"), buf.toString("utf-8"));
         done();
       });
 
@@ -63,7 +63,7 @@ describe("ARIWebSocket", () => {
 
     server.once("connection", (conn) => {
       ws.once("message", (message) => {
-        assert.equal(message, "hidey ho");
+        assert.strictEqual(message, "hidey ho");
         done();
       });
 

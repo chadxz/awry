@@ -1,4 +1,4 @@
-import assert from "power-assert";
+import assert from "assert";
 import API from "../../src/api";
 import ApplicationsAPI from "../../src/api/ApplicationsAPI";
 import AsteriskAPI from "../../src/api/AsteriskAPI";

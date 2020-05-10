@@ -1,5 +1,5 @@
 import ws from "ws";
-import assert from "power-assert";
+import assert from "assert";
 import ReconnectingWebSocket from "../../src/events/ReconnectingWebSocket";
 const WebSocketServer = ws.Server;
 
@@ -54,7 +54,7 @@ describe("ReconnectingWebSocket", () => {
 
       server.once("connection", (conn) => {
         ws.once("message", (message) => {
-          assert.equal(message, "hidey ho");
+          assert.strictEqual(message, "hidey ho");
           done();
         });
 
