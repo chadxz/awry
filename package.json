@@ -30,7 +30,7 @@
     "temp-directory": "coverage/.nyc_output"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.20.0",
     "debug": "^4.0.1",
     "esm": "^3.2.22",
     "retry": "^0.12.0",
