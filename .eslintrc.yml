@@ -3,9 +3,7 @@ root: true
 extends:
   - standard
   - prettier
-  - prettier/standard
 plugins:
-  - standard
   - prettier
 rules:
   prettier/prettier: error

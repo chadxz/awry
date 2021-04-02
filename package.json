@@ -19,8 +19,8 @@
   ],
   "license": "MIT",
   "engines": {
-    "node": ">=10",
-    "npm": ">=6"
+    "node": ">=10.24.0",
+    "npm": ">=6.14.11"
   },
   "repository": {
     "type": "git",
@@ -30,31 +30,30 @@
     "temp-directory": "coverage/.nyc_output"
   },
   "dependencies": {
-    "axios": "^0.19.2",
-    "debug": "^4.0.1",
-    "esm": "^3.2.22",
+    "axios": "^0.21.1",
+    "debug": "^4.3.1",
+    "esm": "^3.2.25",
     "retry": "^0.12.0",
-    "ws": "^7.2.5"
+    "ws": "^7.4.4"
   },
   "devDependencies": {
-    "@types/mocha": "^7.0.2",
+    "@types/mocha": "^8.2.2",
     "@types/ws": "^7.2.4",
-    "acorn": "^7.2.0",
+    "acorn": "^8.1.0",
     "codecov": "^3.0.0",
     "env-test": "^1.0.0",
     "esdoc": "^1.0.4",
     "esdoc-standard-plugin": "^1.0.0",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-import": "^2.20.2",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.0.0",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "mocha": "^7.1.2",
-    "nock": "^12.0.3",
-    "nyc": "^15.0.1",
-    "prettier": "^2.0.5"
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.3.1",
+    "mocha": "^8.3.2",
+    "nock": "^13.0.11",
+    "nyc": "^15.1.0",
+    "prettier": "^2.2.1"
   }
 }
