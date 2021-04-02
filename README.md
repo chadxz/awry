@@ -4,8 +4,7 @@
 [![Codecov][Codecov Image]][Codecov Link]
 [![Known Vulnerabilities][Snyk Image]][Snyk Link]
 
-An [Asterisk REST Interface][] websocket and API client library for node.js
-v6+.
+An [Asterisk REST Interface][] websocket and API client library for Node.js.
 
 [Build Status Image]: https://travis-ci.org/chadxz/awry.svg?branch=master
 [Build Status Link]: https://travis-ci.org/chadxz/awry
