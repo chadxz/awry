@@ -1,6 +1,6 @@
 {
   "name": "awry",
-  "version": "8.0.0",
+  "version": "8.1.0",
   "description": "An ARI websocket and API client library",
   "main": "index.js",
   "scripts": {

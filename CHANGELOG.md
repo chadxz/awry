@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## 8.1.0 - 2021-04-01
+
+Updated dependencies and the [ARI_HISTORY.md](ARI_HISTORY.md) file. All minor
+updates and pulling in security fixes.
+
 ## 8.0.0 - 2020-05-10
 
 - (**breaking**) Migrated from request/request-promise-native to axios as the http
