@@ -45,7 +45,19 @@ events.on('message', message => {
 });
 ```
 
-For more details see the [full API documentation](http://chadmcelligott.com/awry).
+### documentation
+
+Documentation is available in the repository. You can compile the documentation
+by doing the following:
+
+```shell
+git clone git@github.com:chadxz/awry.git
+cd awry
+npm install
+npm run docs
+```
+
+The latest documentation can now be found under the `docs` directory.
 
 ### debugging
 
